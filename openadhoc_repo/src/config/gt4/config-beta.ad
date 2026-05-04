@@ -1,0 +1,19 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#include "config-premium.ad"
+
+static NoLicenseDemo = true;
+static DEMO_DISABLE_LANBATTLE = true;

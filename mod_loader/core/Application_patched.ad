@@ -1,0 +1,52 @@
+//---------------------------------------------------------------------------------------
+// Application_patched.ad
+// Modified entry point with ModLoader integration.
+//
+// Changes from original:
+//   1. Loads bootstrap as before
+//   2. Before MainLoop, loads the ModLoader module and runs scanAndLoadMods()
+//   3. On shutdown, calls ModLoader hooks
+//---------------------------------------------------------------------------------------
+
+module ::main
+{
+    static after_boot_project;
+    static mod_loader_ns;
+}
+
+// Load bootstrap phase 1 (unchanged).
+module bootstrap_module {}
+bootstrap_module.load("bootstrap");
+bootstrap_module::execBoot();
+bootstrap_module.clearStatic();
+
+// Load the ModLoader module BEFORE MainLoop starts.
+// This registers all hook points and discovers mods.
+module mod_loader_ns {}
+mod_loader_ns.load("packed_main_loop");
+
+// Initialize the ModLoader (runs mod discovery, loads mod scripts).
+::main::ModLoader::initialize();
+::main::ModLoader::scanAndLoadMods();
+
+// Load bootstrap phase 2 (resident projects, config, etc.).
+module bootstrap2_module {}
+bootstrap2_module.load("bootstrap_phase2");
+bootstrap2_module::execBootPhase2();
+bootstrap2_module.clearStatic();
+
+// Load shutdown handler.
+module shutdown_module {}
+shutdown_module.load("shutdown");
+
+try {
+    MainLoop();
+}
+catch (e) {
+    // Nothing
+}
+
+// Fire shutdown event before final cleanup.
+::main::ModLoader::fireEvent("onShutdown", []);
+shutdown_module::execShutdown();
+shutdown_module.clearStatic();

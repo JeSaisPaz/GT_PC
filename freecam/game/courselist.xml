@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<CourseData>
+	<course id="apricot" code="apricot_ps2" menu_name="Apricot Hill Raceway" has_reverse="true" category="nature" length="3863.7" elevation="25.5" logo="apricot"/>
+	<course id="autumn" code="autumn_ps2" menu_name="Autumn Ring" has_reverse="true" category="nature" length="2950" elevation="30" logo="autumn"/>
+	<course id="mini" code="mini_ps2" menu_name="Autumn Ring Mini" has_reverse="true" category="nature" length="1281" elevation="16.2" logo="mini"/>
+	<course id="20r60r" code="20r60r_ps2" menu_name="Beginner Course" has_reverse="true" category="nature" length="768.7" elevation="1.1" logo="20r60r"/>
+	<course id="montecarlo" code="montecarlo_ps2" menu_name="CÃ´te d'Azur" has_reverse="false" category="city" length="3351.4" elevation="44.2" logo="montecarlo"/>
+	<course id="yosemite_dirt" code="yosemite_dirt_ps2" menu_name="Cathedral Rocks trail Ⅰ" has_reverse="true" category="snow_dirt" length="3519.5" elevation="35" logo="yosemite_dirt"/>
+	<course id="yosemite_dirt_short" code="yosemite_dirt_short_ps2" menu_name="Cathedral Rocks trail Ⅱ" has_reverse="true" category="snow_dirt" length="1934" elevation="31.5" logo="yosemite_dirt_short"/>
+	<course id="yosemite_dirt_mini" code="yosemite_dirt_mini_ps2" menu_name="Cathedral Rocks trail Ⅲ" has_reverse="true" category="snow_dirt" length="810.2" elevation="14.5" logo="yosemite_dirt_mini"/>
+	<course id="nursnow" code="nursnow_ps2" menu_name="Chamonix" has_reverse="true" category="snow_dirt" length="3219.8" elevation="60" logo="nursnow"/>
+	<course id="valencia" code="valencia_ps2" menu_name="Circuit de la Comunitat Valenciana Ricardo Tormo" has_reverse="false" category="circuit" length="4005" elevation="20" logo="valencia"/>
+	<course id="sarthe_old" code="sarthe_old_ps2" menu_name="Circuit de la Sarthe 2" has_reverse="false" category="circuit" length="13588" elevation="37.3" logo="sarthe"/>
+	<course id="sarthe" code="sarthe_ps2" menu_name="Circuit de la Sarthe 2005" has_reverse="false" category="circuit" length="13650" elevation="37.3" logo="sarthe"/>
+	<course id="assisi" code="assisi_ps2" menu_name="Citta di Aria" has_reverse="true" category="city" length="3399.6" elevation="117.3" logo="assisi"/>
+	<course id="capri" code="capri_ps2" menu_name="Costa di Amalfi" has_reverse="true" category="city" length="4019.8" elevation="138" logo="capri"/>
+	<course id="deepforest" code="deepforest_ps2" menu_name="Deep Forest Raceway" has_reverse="true" category="nature" length="3600.8" elevation="45.2" logo="deepforest"/>
+	<course id="yosemite" code="yosemite_ps2" menu_name="El Capitan" has_reverse="true" category="nature" length="4787" elevation="63" logo="yosemite"/>
+	<course id="new_fisco" code="new_fisco_ps2" menu_name="Fuji Speedway" has_reverse="false" category="circuit" length="4563" elevation="27" logo="fisco"/>
+	<course id="fisco" code="fisco_ps2" menu_name="Fuji Speedway 90's" has_reverse="false" category="circuit" length="4400" elevation="38.1" logo="fisco"/>
+	<course id="grandcanyon" code="grandcanyon_ps2" menu_name="Grand Canyon" has_reverse="true" category="snow_dirt" length="3542.7" elevation="58.4" logo="grandcanyon"/>
+	<course id="grandvalley" code="grandvalley_ps2" menu_name="Grand Valley" has_reverse="true" category="nature" length="4944.8" elevation="20.5" logo="grandvalley"/>
+	<course id="grandvalley_east" code="grandvalley_east_ps2" menu_name="Grand Valley East Section" has_reverse="true" category="nature" length="2998.1" elevation="17.4" logo="grandvalley"/>
+	<course id="highspeedring" code="highspeedring_ps2" menu_name="High Speed Ring" has_reverse="true" category="nature" length="4000" elevation="8.5" logo="highspeedring"/>
+	<course id="icerace" code="icerace_ps2" menu_name="Ice Arena" has_reverse="true" category="snow_dirt" length="1035.69" elevation="0" logo="icerace"/>
+	<course id="infineon" code="infineon_ps2" menu_name="Infineon Raceway" has_reverse="false" category="circuit" length="4055.4" elevation="49.8" logo="infineon"/>
+	<course id="laguna" code="laguna_ps2" menu_name="Laguna Seca Speedway" has_reverse="false" category="circuit" length="3601.71" elevation="55" logo="laguna"/>
+	<course id="midfield" code="midfield_ps2" menu_name="Midfield Raceway" has_reverse="true" category="nature" length="3562" elevation="55.5" logo="midfield"/>
+	<course id="kashiwa" code="kashiwa_ps2" menu_name="Motorland" has_reverse="true" category="nature" length="1335.6" elevation="8.3" logo="kashiwa"/>
+	<course id="newyork" code="newyork_ps2" menu_name="New York" has_reverse="true" category="city" length="4170.2" elevation="5.2" logo="newyork"/>
+	<course id="nurburgring" code="nurburgring_ps2" menu_name="Nurburgring" has_reverse="false" category="circuit" length="20832" elevation="300" logo="nurburgring"/>
+	<course id="paris_tarmac" code="paris_tarmac_ps2" menu_name="Opera Paris" has_reverse="true" category="city" length="2875.3" elevation="0" logo="paris_tarmac"/>
+	<course id="seattle" code="seattle_ps2" menu_name="Seattle Circuit" has_reverse="true" category="city" length="3821" elevation="43" logo="seattle"/>
+	<course id="seoul" code="seoul_ps2" menu_name="Seoul Central" has_reverse="true" category="city" length="2723" elevation="3.9" logo="seoul"/>
+	<course id="suzuka" code="suzuka_ps2" menu_name="Suzuka Circuit" has_reverse="false" category="circuit" length="5807" elevation="40" logo="suzuka"/>
+	<course id="suzuka_east" code="suzuka_east_ps2" menu_name="Suzuka Circuit East Course" has_reverse="false" category="circuit" length="2243" elevation="33.6" logo="suzuka"/>
+	<course id="suzuka_west" code="suzuka_west_ps2" menu_name="Suzuka Circuit West Course" has_reverse="false" category="circuit" length="3475" elevation="14.2" logo="suzuka"/>
+	<course id="smtsouth" code="smtsouth_ps2" menu_name="Swiss Alps" has_reverse="true" category="snow_dirt" length="3305.3" elevation="55.8" logo="smtsouth"/>
+	<course id="tahiti_maze" code="tahiti_maze_ps2" menu_name="Tahite Maze" has_reverse="true" category="snow_dirt" length="3597.5" elevation="55.3" logo="tahiti_maze"/>
+	<course id="testcourse" code="testcourse_ps2" menu_name="Test Course" has_reverse="false" category="nature" length="10343" elevation="1.7" logo="testcourse"/>
+	<course id="akasaka" code="akasaka_ps2" menu_name="Tokyo R246" has_reverse="true" category="city" length="5116.7" elevation="23.2" logo="akasaka"/>
+	<course id="trialmt" code="trialmt_ps2" menu_name="Trial Mountain" has_reverse="true" category="nature" length="3982.8" elevation="50.8" logo="trialmt"/>
+	<course id="tsukuba" code="tsukuba_ps2" menu_name="Tsukuba Circuit" has_reverse="false" category="circuit" length="2045" elevation="5.3" logo="tsukuba"/>
+	<course id="motegi_east" code="motegi_east_ps2" menu_name="Twin Ring Motegi East Short Course" has_reverse="false" category="circuit" length="3422.12" elevation="30.4" logo="motegi"/>
+	<course id="motegi" code="motegi_ps2" menu_name="Twin Ring Motegi Road Course" has_reverse="false" category="circuit" length="4801.38" elevation="30.4" logo="motegi"/>
+	<course id="oval" code="oval_ps2" menu_name="Twin Ring Motegi Super Speedway" has_reverse="false" category="circuit" length="2413.87" elevation="3" logo="motegi"/>
+	<course id="motegi_west" code="motegi_west_ps2" menu_name="Twin Ring Motegi West Short Course" has_reverse="false" category="circuit" length="1490.36" elevation="3.1" logo="motegi"/>
+</CourseData>

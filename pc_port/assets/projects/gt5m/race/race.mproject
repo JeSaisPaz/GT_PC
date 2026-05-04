@@ -1,0 +1,9284 @@
+Project{
+project_component MComponent{
+name string{"MComponent"}
+children[4]{
+RootWindow{
+name string{"DetailPopup"}
+children[1]{
+SBox{
+name string{"Pane"}
+has_script digit{1}
+is_component digit{1}
+packable digit{0}
+geometry rectangle{0 0 480 272}
+clip digit{0}
+children[6]{
+ColorFace{
+name string{"bg"}
+is_divide_color digit{1}
+y_divide[6]{
+digit{0}
+digit{0.03}
+digit{0.2}
+digit{0.3}
+digit{0.65}
+digit{1}
+}
+color_divide[7]{
+[4]{
+RGBA{26 26 26 255}
+RGBA{0 0 0 255}
+RGBA{255 255 255 255}
+RGBA{255 255 255 255}
+}
+[4]{
+RGBA{26 26 26 255}
+RGBA{26 26 26 255}
+RGBA{46 46 46 255}
+RGBA{46 46 46 255}
+}
+[4]{
+RGBA{46 46 46 255}
+RGBA{46 46 46 255}
+RGBA{6 6 6 255}
+RGBA{6 6 6 255}
+}
+[4]{
+RGBA{6 6 6 255}
+RGBA{6 6 6 255}
+RGBA{2 2 2 255}
+RGBA{2 2 2 255}
+}
+[4]{
+RGBA{2 2 2 255}
+RGBA{2 2 2 255}
+RGBA{6 6 6 255}
+RGBA{6 6 6 255}
+}
+[4]{
+RGBA{6 6 6 255}
+RGBA{6 6 6 255}
+RGBA{64 64 64 255}
+RGBA{64 64 64 255}
+}
+[1]{
+RGBA{255 255 255 255}
+}
+}
+}
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{0 0 480 32}
+is_divide_color digit{1}
+y_divide[4]{
+digit{0}
+digit{0.15}
+digit{0.4}
+digit{1}
+}
+color_divide[5]{
+[1]{
+RGBA{255 255 255 255}
+}
+[4]{
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+RGBA{68 68 68 200}
+RGBA{68 68 68 200}
+}
+[4]{
+RGBA{68 68 68 200}
+RGBA{68 68 68 200}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+}
+[4]{
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+}
+[1]{
+RGBA{255 255 255 255}
+}
+}
+}
+SBox{
+name string{"Setting"}
+geometry rectangle{260 0 220 232}
+clip digit{0}
+children[3]{
+SBox{
+name string{"bg"}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+geometry rectangle{0 0 220 232}
+children[7]{
+ColorFace{
+name string{"bg"}
+packable digit{1}
+pack_pad_left digit{6}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+geometry rectangle{6 0 214 232}
+opacity digit{0.4}
+is_divide_color digit{1}
+y_divide[2]{
+digit{0.2}
+digit{0.8}
+}
+color_divide[3]{
+[4]{
+RGBA{62 62 62 255}
+RGBA{62 62 62 255}
+RGBA{90 90 90 255}
+RGBA{90 90 90 255}
+}
+[4]{
+RGBA{90 90 90 255}
+RGBA{90 90 90 255}
+RGBA{70 70 70 255}
+RGBA{70 70 70 255}
+}
+[4]{
+RGBA{70 70 70 255}
+RGBA{70 70 70 255}
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+}
+}
+blend_func_name string{"add"}
+}
+ColorFace{
+name string{"bg0"}
+packable digit{1}
+pack_expand_y digit{1}
+pack_fill_y digit{1}
+geometry rectangle{0 0 6 232}
+opacity digit{0.5}
+is_divide_color digit{1}
+y_divide[2]{
+digit{0.2}
+digit{0.8}
+}
+color_divide[3]{
+[4]{
+RGBA{0 0 0 0}
+RGBA{0 0 0 127}
+RGBA{0 0 0 255}
+RGBA{0 0 0 0}
+}
+[4]{
+RGBA{0 0 0 0}
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+RGBA{0 0 0 0}
+}
+[4]{
+RGBA{0 0 0 0}
+RGBA{0 0 0 255}
+RGBA{0 0 0 127}
+RGBA{0 0 0 0}
+}
+}
+}
+ColorFace{
+name string{"bg1"}
+packable digit{1}
+pack_expand_y digit{1}
+pack_fill_y digit{1}
+geometry rectangle{6 0 1 232}
+opacity digit{0.1}
+is_divide_color digit{1}
+y_divide[2]{
+digit{0.2}
+digit{0.8}
+}
+color_divide[3]{
+[4]{
+RGBA{255 255 255 76}
+RGBA{255 255 255 76}
+RGBA{255 255 255 255}
+RGBA{255 255 255 255}
+}
+[4]{
+RGBA{255 255 255 255}
+RGBA{255 255 255 255}
+RGBA{255 255 255 255}
+RGBA{255 255 255 255}
+}
+[4]{
+RGBA{255 255 255 255}
+RGBA{255 255 255 255}
+RGBA{255 255 255 0}
+RGBA{255 255 255 0}
+}
+}
+color[1]{
+RGBA{255 255 255 20}
+}
+}
+ColorFace{
+name string{"bg2"}
+packable digit{1}
+pack_expand_y digit{1}
+pack_fill_y digit{1}
+geometry rectangle{219 0 1 232}
+opacity digit{0.5}
+is_divide_color digit{1}
+y_divide[2]{
+digit{0.2}
+digit{0.8}
+}
+color_divide[3]{
+[4]{
+RGBA{0 0 0 40}
+RGBA{0 0 0 40}
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+}
+[4]{
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+}
+[4]{
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+RGBA{0 0 0 40}
+RGBA{0 0 0 40}
+}
+}
+}
+ColorFace{
+name string{"ColorFace0"}
+geometry rectangle{204 40 1 152}
+color[1]{
+RGBA{0 0 0 16}
+}
+}
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{205 40 4 152}
+color[1]{
+RGBA{0 0 0 86}
+}
+}
+ColorFace{
+name string{"ColorFace1"}
+geometry rectangle{209 40 1 152}
+color[1]{
+RGBA{255 255 255 10}
+}
+}
+}
+}
+SBox{
+name string{"Header"}
+pack_pad_left digit{6}
+pack_pad_right digit{14}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_alignment_y digit{0}
+geometry rectangle{6 0 200 40}
+clip digit{0}
+children[3]{
+TextFace{
+name string{"TextFace"}
+packable digit{1}
+pack_pad_left digit{10}
+pack_pad_right digit{10}
+pack_pad_top digit{9}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_alignment_x digit{0}
+pack_alignment_y digit{0}
+geometry rectangle{10 9 180 21}
+text_color RGBA{222 222 222 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.964286}
+scale_y digit{0.964286}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 128}
+}
+ColorFace{
+name string{"ColorFace"}
+packable digit{1}
+pack_pad_left digit{10}
+pack_pad_right digit{10}
+pack_pad_bottom digit{8}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{10 31 180 1}
+color[1]{
+RGBA{0 0 0 84}
+}
+}
+ColorFace{
+name string{"ColorFace0"}
+packable digit{1}
+pack_pad_left digit{10}
+pack_pad_right digit{10}
+pack_pad_bottom digit{7}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{10 32 180 1}
+color[1]{
+RGBA{255 255 255 84}
+}
+}
+}
+}
+ScrolledWindow{
+name string{"Body"}
+pack_pad_left digit{16}
+pack_pad_right digit{10}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{16 40 194 152}
+clip digit{0}
+children[2]{
+ScrollClip{
+name string{"ScrollClip"}
+geometry rectangle{0 0 214 152}
+clip digit{1}
+children[1]{
+VBox{
+name string{"space"}
+pack_shrink_y digit{1}
+geometry rectangle{0 0 180 0}
+}
+}
+}
+VScrollbar{
+name string{"ScrollBar"}
+geometry rectangle{188 0 6 152}
+children[6]{
+ColorFace{
+name string{"ColorFace0"}
+geometry rectangle{0 0 1 152}
+color[1]{
+RGBA{0 0 0 32}
+}
+}
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{1 0 4 152}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"ColorFace1"}
+geometry rectangle{5 0 1 152}
+color[1]{
+RGBA{255 255 255 12}
+}
+}
+'VScrollbar::dec_arrow'{
+name string{"dec_arrow"}
+visible digit{0}
+geometry rectangle{1 0 4 1}
+children[1]{
+ColorFace{
+name string{"ColorFace"}
+visible_condition digit{1}
+geometry rectangle{0 0.33 4 0.33}
+color[1]{
+RGBA{255 0 0 255}
+}
+round digit{4}
+}
+}
+}
+'VScrollbar::inc_arrow'{
+name string{"inc_arrow"}
+visible digit{0}
+pack_side digit{0}
+pack_expand_x digit{0}
+pack_fill_x digit{0}
+geometry rectangle{1 0 4 1}
+children[1]{
+ColorFace{
+name string{"ColorFace"}
+visible_condition digit{1}
+geometry rectangle{0 0.33 4 0.33}
+color[1]{
+RGBA{0 255 0 255}
+}
+round digit{4}
+}
+}
+}
+'VScrollbar::pinch'{
+name string{"pinch"}
+pack_pad_left digit{2}
+pack_pad_right digit{2}
+pack_pad_top digit{1}
+pack_pad_bottom digit{1}
+pack_expand_x digit{0}
+pack_fill_x digit{0}
+geometry rectangle{2 1 2 150}
+children[1]{
+ColorFace{
+name string{"ColorFace"}
+color[4]{
+RGBA{255 255 255 255}
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+RGBA{255 255 255 255}
+}
+}
+}
+}
+}
+display_policy digit{1}
+}
+}
+}
+}
+}
+ColorFace{
+name string{"ColorFace0"}
+geometry rectangle{0 204 480 28}
+is_divide_color digit{1}
+y_divide[1]{
+digit{0.321429}
+}
+color_divide[2]{
+[4]{
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+RGBA{0 0 0 12}
+RGBA{0 0 0 12}
+}
+[4]{
+RGBA{0 0 0 12}
+RGBA{0 0 0 12}
+RGBA{0 0 0 204}
+RGBA{0 0 0 204}
+}
+}
+color[4]{
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+RGBA{0 0 0 153}
+RGBA{0 0 0 153}
+}
+}
+HBox{
+name string{"About"}
+packable digit{0}
+geometry rectangle{16 205 456 21}
+children[2]{
+SBox{
+name string{"Icon"}
+pack_side digit{1}
+pack_shrink_x digit{1}
+pack_alignment_x digit{0}
+geometry rectangle{0 0 12.79 21}
+children[1]{
+TextFace{
+name string{"TextFace"}
+packable digit{1}
+pack_shrink_x digit{1}
+pack_alignment_x digit{0}
+geometry rectangle{0 0 12.79 21}
+text_color RGBA{246 195 0 255}
+font string{"default"}
+text string{"★"}
+}
+}
+}
+TextFace{
+name string{"TextFace"}
+packable digit{1}
+pack_side digit{1}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+pack_alignment_x digit{0}
+geometry rectangle{12.79 0 443.21 21}
+font string{"default"}
+align digit{3}
+scale_x digit{0.964286}
+scale_y digit{0.964286}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 128}
+text string{"aaa"}
+adjust_scale digit{1}
+}
+}
+}
+SBox{
+name string{"Footer"}
+packable digit{0}
+pack_alignment_y digit{1}
+geometry rectangle{0 232 480 40}
+actor_list[2]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+start_duration digit{0.4}
+interpolation_period digit{0.2}
+start_value digit{1}
+end_value digit{1}
+}
+}
+}
+ScalarInterpolator{
+name string{"ScalarInterpolator1"}
+attribute_name string{"MWidget::y"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+start_duration digit{0.4}
+interpolation_period digit{0.2}
+start_value digit{232}
+end_value digit{232}
+}
+}
+}
+}
+clip digit{0}
+children[3]{
+ImageFace{
+name string{"bgBottom"}
+image_path string{"image/gt5m/panel/arc_bottom.png"}
+}
+SBox{
+name string{"OK"}
+can_focus digit{1}
+pack_pad_right digit{43}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{199.5 8 38 20}
+clip digit{0}
+children[3]{
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"OK"}
+}
+ImageFace{
+name string{"ImageFace"}
+image_path string{"image/gt5m/button/ok.png"}
+}
+ColorFace{
+name string{"Blink"}
+opacity digit{0}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_playing digit{0}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+reverse digit{1}
+section[3]{
+MScalarSection{
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+MScalarSection{
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+MScalarSection{
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+}
+}
+}
+}
+}
+}
+SBox{
+name string{"Cancel"}
+can_focus digit{1}
+pack_pad_left digit{43}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{242.5 8 38 20}
+clip digit{0}
+children[2]{
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"Cancel"}
+}
+ImageFace{
+name string{"ImageFace"}
+image_path string{"image/gt5m/button/cancel_L.png"}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+RootWindow{
+name string{"Buttons"}
+children[2]{
+HBox{
+name string{"YesNo"}
+is_component digit{1}
+geometry rectangle{0 24 104 22}
+clip digit{0}
+children[2]{
+SBox{
+name string{"Yes"}
+has_script digit{1}
+can_focus digit{1}
+pack_allocate_h digit{0}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{0 0 46 22}
+cursor_align_y digit{0.75}
+clip digit{0}
+children[6]{
+ImageFace{
+name string{"bg_tmp0"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{7.11 1 31.78 20}
+image_path string{"image/gt5m/button/ok.png"}
+}
+FrameImageFace{
+name string{"bg"}
+visible digit{0}
+frame_width digit{14}
+frame_height digit{56}
+}
+FrameImageFace{
+name string{"bgf"}
+has_script digit{1}
+visible digit{0}
+visible_condition digit{2}
+visible_compare digit{2}
+actor_list[1]{
+FaceColorInterpolator{
+name string{"FaceColorInterpolator"}
+attribute_name string{"MColorFace::face_color"}
+section[2]{
+MFaceColorSection{
+interpolation_period digit{0.5}
+end_value[1]{
+RGBA{255 255 255 127}
+}
+}
+MFaceColorSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.5}
+end_value[1]{
+RGBA{255 255 255 127}
+}
+}
+}
+}
+}
+frame_width digit{32}
+frame_height digit{56}
+}
+FrameImageFace{
+name string{"bgi"}
+visible digit{0}
+visible_condition digit{8}
+visible_compare digit{8}
+color color_name{ "basic_color_insensitive"}
+frame_width digit{32}
+frame_height digit{56}
+}
+TextFace{
+name string{"label"}
+visible digit{0}
+packable digit{1}
+pack_pad_left digit{16}
+pack_pad_right digit{16}
+pack_allocate_h digit{0}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+visible_compare digit{8}
+geometry rectangle{16 1 23 21}
+text_color RGBA{190 190 190 255}
+font string{"default"}
+shadow_value digit{-2}
+shadow_color RGBA{0 0 0 127}
+localized_text_page string{"Component"}
+key string{"OK"}
+}
+TextFace{
+name string{"labeli"}
+visible digit{0}
+packable digit{1}
+pack_pad_left digit{16}
+pack_pad_right digit{16}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+visible_condition digit{8}
+visible_compare digit{8}
+geometry rectangle{16 1 23 21}
+text_color RGBA{240 240 240 128}
+font string{"default"}
+num_proportional digit{0}
+localized_text_page string{"Component"}
+key string{"OK"}
+}
+}
+inner_pad_top digit{1}
+}
+SBox{
+name string{"No"}
+has_script digit{1}
+can_focus digit{1}
+pack_allocate_h digit{0}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{58 0 46 22}
+cursor_align_y digit{0.75}
+clip digit{0}
+children[6]{
+ImageFace{
+name string{"bg_tmp"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{7.11 1 31.78 20}
+image_path string{"image/gt5m/button/cancel_L.png"}
+}
+FrameImageFace{
+name string{"bg"}
+visible digit{0}
+frame_width digit{14}
+frame_height digit{56}
+}
+FrameImageFace{
+name string{"bgf"}
+has_script digit{1}
+visible digit{0}
+visible_condition digit{2}
+visible_compare digit{2}
+actor_list[1]{
+FaceColorInterpolator{
+name string{"FaceColorInterpolator"}
+attribute_name string{"MColorFace::face_color"}
+section[2]{
+MFaceColorSection{
+interpolation_period digit{0.5}
+end_value[1]{
+RGBA{255 255 255 127}
+}
+}
+MFaceColorSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.5}
+end_value[1]{
+RGBA{255 255 255 127}
+}
+}
+}
+}
+}
+frame_width digit{32}
+frame_height digit{56}
+}
+FrameImageFace{
+name string{"bgi"}
+visible digit{0}
+visible_condition digit{8}
+visible_compare digit{8}
+color color_name{ "basic_color_insensitive"}
+frame_width digit{32}
+frame_height digit{56}
+}
+TextFace{
+name string{"label"}
+visible digit{0}
+packable digit{1}
+pack_pad_left digit{16}
+pack_pad_right digit{16}
+pack_allocate_h digit{0}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+visible_compare digit{8}
+geometry rectangle{16 1 51 21}
+text_color RGBA{190 190 190 255}
+font string{"default"}
+shadow_value digit{-2}
+shadow_color RGBA{0 0 0 127}
+localized_text_page string{"Component"}
+key string{"Cancel"}
+}
+TextFace{
+name string{"labeli"}
+visible digit{0}
+packable digit{1}
+pack_pad_left digit{16}
+pack_pad_right digit{16}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+visible_condition digit{8}
+visible_compare digit{8}
+geometry rectangle{16 1 51 21}
+text_color RGBA{240 240 240 128}
+font string{"default"}
+num_proportional digit{0}
+localized_text_page string{"Component"}
+key string{"Cancel"}
+}
+}
+inner_pad_top digit{1}
+}
+}
+homogeneous digit{1}
+spacing digit{12}
+}
+SBox{
+name string{"ButtonB"}
+is_component digit{1}
+can_focus digit{1}
+pack_allocate_h digit{0}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{0 48 46 22}
+cursor_align_y digit{0.75}
+clip digit{0}
+children[6]{
+ImageFace{
+name string{"bg_tmp0"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{7.11 1 31.78 20}
+image_path string{"image/gt5m/button/cancel_L.png"}
+}
+FrameImageFace{
+name string{"bg"}
+visible digit{0}
+frame_width digit{14}
+frame_height digit{56}
+}
+FrameImageFace{
+name string{"bgf"}
+has_script digit{1}
+visible digit{0}
+visible_condition digit{2}
+visible_compare digit{2}
+actor_list[1]{
+FaceColorInterpolator{
+name string{"FaceColorInterpolator"}
+attribute_name string{"MColorFace::face_color"}
+section[2]{
+MFaceColorSection{
+interpolation_period digit{0.5}
+end_value[1]{
+RGBA{255 255 255 127}
+}
+}
+MFaceColorSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.5}
+end_value[1]{
+RGBA{255 255 255 127}
+}
+}
+}
+}
+}
+frame_width digit{32}
+frame_height digit{56}
+}
+FrameImageFace{
+name string{"bgi"}
+visible digit{0}
+visible_condition digit{8}
+visible_compare digit{8}
+color color_name{ "basic_color_insensitive"}
+frame_width digit{32}
+frame_height digit{56}
+}
+TextFace{
+name string{"label"}
+visible digit{0}
+packable digit{1}
+pack_pad_left digit{16}
+pack_pad_right digit{16}
+pack_allocate_h digit{0}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+visible_compare digit{8}
+geometry rectangle{16 1 23 21}
+text_color RGBA{190 190 190 255}
+font string{"default"}
+shadow_value digit{-2}
+shadow_color RGBA{0 0 0 127}
+localized_text_page string{"Component"}
+key string{"OK"}
+}
+TextFace{
+name string{"labeli"}
+visible digit{0}
+packable digit{1}
+pack_pad_left digit{16}
+pack_pad_right digit{16}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+visible_condition digit{8}
+visible_compare digit{8}
+geometry rectangle{16 1 23 21}
+text_color RGBA{240 240 240 128}
+font string{"default"}
+num_proportional digit{0}
+localized_text_page string{"Component"}
+key string{"OK"}
+}
+}
+inner_pad_top digit{1}
+}
+}
+}
+RootWindow{
+name string{"Tooltip"}
+children[1]{
+Composite{
+name string{"BalloonTip"}
+has_script digit{1}
+is_component digit{1}
+geometry rectangle{0 0 640 480}
+children[1]{
+VBox{
+name string{"Tip"}
+has_script digit{1}
+packable digit{0}
+pack_shrink_x digit{1}
+pack_shrink_y digit{1}
+geometry rectangle{32 16 16 32}
+actor_list[2]{
+ParallelActor{
+name string{"AppearEffect"}
+initial_pause digit{1}
+children[1]{
+VectorInterpolator{
+name string{"Scale"}
+initial_pause digit{1}
+attribute_name string{"MWidget::scale"}
+loop_count digit{1}
+section[1]{
+MVectorSection{
+ease_type_name string{"easeOutExpo"}
+interpolation_period digit{0.2}
+end_value vector{1 1}
+}
+}
+}
+}
+}
+ScalarInterpolator{
+name string{"VisibleEffect"}
+initial_pause digit{1}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeInSine"}
+start_duration digit{3}
+interpolation_period digit{0.5}
+start_value digit{1}
+}
+}
+}
+}
+clip digit{0}
+children[3]{
+SBox{
+name string{"up_tip"}
+visible digit{0}
+pack_allocate_w digit{0}
+pack_allocate_h digit{0}
+geometry rectangle{0 0 12 4}
+clip digit{0}
+children[1]{
+ImageFace{
+name string{"up_tip"}
+packable digit{1}
+pack_expand_y digit{1}
+pack_alignment_y digit{0}
+geometry rectangle{0 0 12 8}
+image_path string{"image/component/psp/tip_up.png"}
+}
+}
+}
+SBox{
+name string{"Text"}
+has_script digit{1}
+geometry rectangle{0 0 16 32}
+clip digit{0}
+children[2]{
+FrameImageFace{
+name string{"ColorFace"}
+tl_image_path string{"image/component/psp/tip_base.png"}
+frame_width digit{7}
+frame_height digit{9}
+}
+TextFace{
+name string{"TextFace"}
+packable digit{1}
+geometry rectangle{8 8 0 16}
+text_color RGBA{0 0 0 255}
+font string{"default"}
+multiline digit{1}
+align digit{3}
+scale_x digit{0.8}
+scale_y digit{0.8}
+nextline_offset digit{-2}
+}
+}
+inner_pad_left digit{8}
+inner_pad_right digit{8}
+}
+SBox{
+name string{"down_tip"}
+visible digit{0}
+pack_allocate_w digit{0}
+pack_allocate_h digit{0}
+geometry rectangle{0 32 12 8}
+clip digit{0}
+children[1]{
+ImageFace{
+name string{"down_tip"}
+packable digit{1}
+pack_side digit{3}
+pack_expand_y digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{0 -4 12 12}
+image_path string{"image/component/psp/tip_down.png"}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+RootWindow{
+name string{"RaceMenu"}
+children[1]{
+Composite{
+name string{"Template"}
+is_component digit{1}
+geometry rectangle{0 0 480 272}
+children[2]{
+SBox{
+name string{"SBox0"}
+pack_allocate_y digit{0}
+pack_expand_x digit{1}
+geometry rectangle{212 200 55 50}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+has_script digit{1}
+attribute_name string{"MWidget::y"}
+loop_count digit{1}
+reverse digit{1}
+section[1]{
+MScalarSection{
+start_duration digit{0.15}
+end_duration digit{0.5}
+interpolation_period digit{0.35}
+tension digit{0.75}
+start_value digit{272}
+end_value digit{202}
+}
+}
+}
+}
+children[2]{
+FrameImageFace{
+name string{"bg"}
+color[1]{
+RGBA{0 0 0 102}
+}
+image_path string{"image/gt5m/test/fr.png"}
+t_image_path string{"image/gt5m/test/fr.png"}
+b_image_path string{"image/gt5m/test/fr.png"}
+l_image_path string{"image/gt5m/test/fr.png"}
+r_image_path string{"image/gt5m/test/fr.png"}
+tl_image_path string{"image/gt5m/test/fr_lt.png"}
+tr_image_path string{"image/gt5m/test/fr_rt.png"}
+bl_image_path string{"image/gt5m/test/fr_lb.png"}
+br_image_path string{"image/gt5m/test/fr_rb.png"}
+frame_width digit{4}
+frame_height digit{4}
+}
+ScrollBox{
+name string{"SBox1"}
+pack_children digit{1}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{0 0 55 50}
+children[4]{
+'HScrollbar::dec_arrow'{
+name string{"dec_arrow"}
+visible digit{0}
+pack_side digit{1}
+geometry rectangle{2 0 20 50}
+children[1]{
+ImageFace{
+name string{"ArrowL"}
+visible_condition digit{1}
+visible_compare digit{1}
+geometry rectangle{3 18 13 13}
+actor_list[1]{
+VectorInterpolator{
+name string{"VectorInterpolator"}
+attribute_name string{"MWidget::translate"}
+section[1]{
+MVectorSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.6}
+tension digit{-0.83}
+end_value vector{-16 0}
+}
+}
+}
+}
+image_path string{"image/gt5m/test/arrow_l.png"}
+}
+}
+}
+'HScrollbar::inc_arrow'{
+name string{"inc_arrow"}
+visible digit{0}
+pack_side digit{0}
+pack_expand_y digit{0}
+pack_fill_y digit{0}
+geometry rectangle{33 0 20 50}
+children[1]{
+ImageFace{
+name string{"ArrowR"}
+visible_condition digit{1}
+visible_compare digit{1}
+geometry rectangle{3 18 13 13}
+actor_list[1]{
+VectorInterpolator{
+name string{"VectorInterpolator"}
+attribute_name string{"MWidget::translate"}
+section[1]{
+MVectorSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.6}
+tension digit{-0.83}
+end_value vector{16 0}
+}
+}
+}
+}
+image_path string{"image/gt5m/test/arrow_r.png"}
+}
+}
+}
+ListBox{
+name string{"ListBox"}
+has_script digit{1}
+can_focus digit{1}
+packable digit{1}
+pack_pad_top digit{6}
+pack_allocate_w digit{0}
+pack_expand_x digit{1}
+geometry rectangle{5 6 45 25}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_pause digit{1}
+attribute_name string{"MWidget::w"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.08}
+start_value digit{40}
+end_value digit{160}
+}
+}
+}
+}
+}
+Composite{
+name string{"Caption"}
+packable digit{1}
+pack_pad_top digit{4}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{2 35 51 12}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.5}
+start_value digit{1}
+}
+}
+}
+}
+children[2]{
+FrameImageFace{
+name string{"bg"}
+geometry rectangle{0 0 50 12}
+color[1]{
+RGBA{0 0 0 102}
+}
+image_path string{"image/gt5m/test/fr.png"}
+t_image_path string{"image/gt5m/test/fr.png"}
+b_image_path string{"image/gt5m/test/fr.png"}
+l_image_path string{"image/gt5m/test/fr.png"}
+r_image_path string{"image/gt5m/test/fr.png"}
+tl_image_path string{"image/gt5m/test/fr_lt.png"}
+tr_image_path string{"image/gt5m/test/fr_rt.png"}
+bl_image_path string{"image/gt5m/test/fr_lb.png"}
+br_image_path string{"image/gt5m/test/fr_rb.png"}
+frame_width digit{4}
+frame_height digit{4}
+}
+TextFace{
+name string{"label"}
+geometry rectangle{0 0 50 12}
+scale_x digit{0.8}
+scale_y digit{0.8}
+}
+}
+}
+}
+inner_pad_left digit{2}
+inner_pad_right digit{2}
+}
+}
+}
+Composite{
+name string{"Item"}
+has_script digit{1}
+can_focus digit{1}
+geometry rectangle{0 0 50 25}
+actor_list[1]{
+ScalarInterpolator{
+name string{"Blink"}
+initial_pause digit{1}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[4]{
+MScalarSection{
+interpolation_period digit{0.1}
+start_value digit{1}
+}
+MScalarSection{
+interpolation_period digit{0.1}
+start_value digit{1}
+}
+MScalarSection{
+interpolation_period digit{0.1}
+start_value digit{1}
+}
+MScalarSection{
+start_duration digit{0.1}
+interpolation_period digit{0}
+start_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"image"}
+geometry rectangle{2 0 45 25}
+}
+ImageFace{
+name string{"separator"}
+geometry rectangle{0 0 1 25}
+image_path string{"image/gt5m/test/line_dot_q.png"}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+name string{"RaceProject"}
+has_script digit{1}
+children[11]{
+RootWindow{
+name string{"LoadingRoot"}
+has_script digit{1}
+children[2]{
+ColorFace{
+name string{"ColorFace"}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+TextFace{
+name string{"Loading"}
+geometry rectangle{248 224 216 32}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeOutCirc"}
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+font string{"default"}
+align digit{5}
+key string{"Loading"}
+}
+}
+}
+RootWindow{
+name string{"OnboardMeterRoot"}
+has_script digit{1}
+children[15]{
+RenderControl{
+name string{"RenderControl"}
+actor_list[2]{
+VectorInterpolator{
+name string{"VectorInterpolator"}
+initial_pause digit{1}
+attribute_name string{"MWidget::window_size"}
+loop_count digit{1}
+section[1]{
+MVectorSection{
+start_duration digit{0.2}
+interpolation_period digit{0.8}
+tension digit{-1}
+start_value vector{480 272}
+end_value vector{240 116}
+}
+}
+}
+VectorInterpolator{
+name string{"VectorInterpolator0"}
+initial_pause digit{1}
+attribute_name string{"MWidget::window_position"}
+loop_count digit{1}
+section[1]{
+MVectorSection{
+start_duration digit{0.2}
+interpolation_period digit{0.8}
+tension digit{-1}
+end_value vector{120 52}
+}
+}
+}
+}
+}
+ColorFace{
+name string{"DisqualifyColorFace"}
+visible digit{0}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_pause digit{1}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.2}
+tension digit{1}
+start_value digit{1}
+end_value digit{1}
+}
+}
+}
+}
+color[1]{
+RGBA{0 0 0 127}
+}
+}
+RaceDisplayFace{
+name string{"RaceDisplayFace"}
+geometry rectangle{0 0 480 232}
+}
+Composite{
+name string{"Footer"}
+geometry rectangle{0 232 480 40}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_pause digit{1}
+attribute_name string{"MWidget::translate_y"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeInCirc"}
+interpolation_period digit{0.2}
+end_value digit{40}
+}
+}
+}
+}
+children[8]{
+Composite{
+name string{"Vlines"}
+geometry rectangle{0 0 480 40}
+children[5]{
+FrameImageFace{
+name string{"FrameImageFace"}
+geometry rectangle{53 0 50 40}
+color[4]{
+RGBA{0 0 0 153}
+RGBA{0 0 0 153}
+RGBA{0 0 0 76}
+RGBA{0 0 0 76}
+}
+tl_image_path string{"image/gt5m/racedisplay/footer_base.png"}
+frame_width digit{4}
+frame_height digit{4}
+}
+FrameImageFace{
+name string{"FrameImageFace0"}
+geometry rectangle{105 0 270 40}
+color[4]{
+RGBA{0 0 0 153}
+RGBA{0 0 0 153}
+RGBA{0 0 0 76}
+RGBA{0 0 0 76}
+}
+tl_image_path string{"image/gt5m/racedisplay/footer_base.png"}
+frame_width digit{4}
+frame_height digit{4}
+}
+FrameImageFace{
+name string{"FrameImageFace1"}
+geometry rectangle{377 0 50 40}
+color[4]{
+RGBA{0 0 0 153}
+RGBA{0 0 0 153}
+RGBA{0 0 0 76}
+RGBA{0 0 0 76}
+}
+tl_image_path string{"image/gt5m/racedisplay/footer_base.png"}
+frame_width digit{4}
+frame_height digit{4}
+}
+FrameImageFace{
+name string{"FrameImageFace2"}
+geometry rectangle{429 0 50 40}
+color[4]{
+RGBA{0 0 0 153}
+RGBA{0 0 0 153}
+RGBA{0 0 0 76}
+RGBA{0 0 0 76}
+}
+tl_image_path string{"image/gt5m/racedisplay/footer_base.png"}
+frame_width digit{4}
+frame_height digit{4}
+}
+FrameImageFace{
+name string{"FrameImageFace3"}
+geometry rectangle{1 0 50 40}
+color[4]{
+RGBA{0 0 0 153}
+RGBA{0 0 0 153}
+RGBA{0 0 0 76}
+RGBA{0 0 0 76}
+}
+tl_image_path string{"image/gt5m/racedisplay/footer_base.png"}
+frame_width digit{4}
+frame_height digit{4}
+}
+}
+}
+Composite{
+name string{"Input"}
+geometry rectangle{112 8 39 25}
+children[2]{
+ImageFace{
+name string{"InputGauge"}
+geometry rectangle{0 0 4 25}
+image_path string{"image/gt5m/racedisplay/race_inputgauge.png"}
+}
+ImageShape{
+name string{"InputShape"}
+image_path string{"image/gt5m/racedisplay/race_inputaccel.png"}
+}
+}
+}
+Composite{
+name string{"SpeedMeter"}
+geometry rectangle{200 7 96 26}
+children[3]{
+ImageFace{
+name string{"speed"}
+geometry rectangle{74 0 23 9}
+color[1]{
+RGBA{170 210 225 255}
+}
+image_path string{"image/gt5m/racedisplay/race_mph.png"}
+}
+ImageFace{
+name string{"speed_kmh"}
+visible digit{0}
+geometry rectangle{74 0 23 9}
+color[1]{
+RGBA{170 210 225 255}
+}
+image_path string{"image/gt5m/racedisplay/race_kmh.png"}
+}
+ImageShape{
+name string{"Num"}
+geometry rectangle{0 0 72 26}
+image_path string{"image/gt5m/racedisplay/RaceFonts.png"}
+base_color RGBA{125 200 225 255}
+}
+}
+}
+Composite{
+name string{"indicator"}
+geometry rectangle{159 0 50 40}
+children[4]{
+ImageFace{
+name string{"IndicateAlert"}
+geometry rectangle{0 20 17 13}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeOutCubic"}
+interpolation_period digit{0.25}
+start_value digit{1}
+end_value digit{0.2}
+}
+}
+}
+}
+color[1]{
+RGBA{40 40 40 127}
+}
+image_path string{"image/gt5m/racedisplay/race_signalert.png"}
+}
+ImageFace{
+name string{"IndicateSideBrake"}
+geometry rectangle{19 20 18 13}
+color[1]{
+RGBA{40 40 40 127}
+}
+image_path string{"image/gt5m/racedisplay/race_signsidebrake.png"}
+}
+ImageFace{
+name string{"AImodebase"}
+geometry rectangle{18 6 20 12}
+opacity digit{0.8}
+color[1]{
+RGBA{40 40 40 128}
+}
+image_path string{"image/gt5m/racedisplay/JP/ai_rd.png"}
+}
+ImageFace{
+name string{"AImode"}
+visible digit{0}
+geometry rectangle{18 6 20 12}
+opacity digit{0.8}
+color[1]{
+RGBA{255 156 0 255}
+}
+image_path string{"image/gt5m/racedisplay/JP/ai_rd.png"}
+}
+}
+}
+Composite{
+name string{"Tachmeter"}
+geometry rectangle{288 23 81 14}
+children[3]{
+ImageShape{
+name string{"tachShape"}
+geometry rectangle{0 0 80 3}
+image_path string{"image/gt5m/racedisplay/race_tachpiece.png"}
+}
+ImageFace{
+name string{"tachGauge"}
+geometry rectangle{0 0 81 3}
+image_path string{"image/gt5m/racedisplay/race_tachgauge.png"}
+}
+Composite{
+name string{"not use"}
+visible digit{0}
+geometry rectangle{0 0 81 14}
+children[5]{
+ImageFace{
+name string{"tachDeco"}
+geometry rectangle{1 13 80 1}
+color[1]{
+RGBA{125 200 225 255}
+}
+image_path string{"image/gt5m/racedisplay/race_tachpiece.png"}
+tex_wrap_name_x string{"repeat"}
+tex_blur_x digit{0.1}
+texcoord[4]{
+vector{0 0}
+vector{2.5 0}
+vector{2.5 1}
+vector{0 1}
+}
+}
+ImageFace{
+name string{"tachDecoRed"}
+geometry rectangle{2 2 80 1}
+color[1]{
+RGBA{255 0 0 255}
+}
+image_path string{"image/gt5m/racedisplay/race_tachpiece.png"}
+tex_wrap_name_x string{"repeat"}
+tex_blur_x digit{0.1}
+texcoord[4]{
+vector{0 0}
+vector{2.5 0}
+vector{2.5 1}
+vector{0 1}
+}
+}
+ImageFace{
+name string{"tachBG"}
+geometry rectangle{1 4 80 8}
+color[1]{
+RGBA{40 40 40 255}
+}
+image_path string{"image/gt5m/racedisplay/race_tachpiece.png"}
+tex_wrap_name_x string{"repeat"}
+tex_blur_x digit{0.1}
+texcoord[4]{
+vector{0 0}
+vector{2.5 0}
+vector{2.5 1}
+vector{0 1}
+}
+}
+ImageFace{
+name string{"tachRed"}
+geometry rectangle{0.63 4 80 8}
+color[1]{
+RGBA{255 0 0 255}
+}
+image_path string{"image/gt5m/racedisplay/race_tachpiece.png"}
+tex_wrap_name_x string{"repeat"}
+tex_wrap_name_y string{"repeat"}
+tex_blur_x digit{0.1}
+texcoord[4]{
+vector{0 0}
+vector{2.5 0}
+vector{2.5 0}
+vector{0 0}
+}
+}
+ImageFace{
+name string{"tachMove"}
+geometry rectangle{0.63 4 80 8}
+color[1]{
+RGBA{125 200 225 255}
+}
+image_path string{"image/gt5m/racedisplay/race_tachpiece.png"}
+tex_wrap_name_x string{"repeat"}
+tex_blur_x digit{0.1}
+texcoord[4]{
+vector{0 0}
+vector{2.5 0}
+vector{2.5 0}
+vector{0 0}
+}
+}
+}
+}
+}
+}
+Composite{
+name string{"Boost"}
+geometry rectangle{380 10 44 22}
+children[4]{
+ImageFace{
+name string{"boostBase"}
+color[1]{
+RGBA{40 40 40 127}
+}
+image_path string{"image/gt5m/racedisplay/race_boostinput.png"}
+}
+ImageFace{
+name string{"boostInput"}
+visible digit{0}
+center vector{0.5 0}
+color[1]{
+RGBA{125 200 225 255}
+}
+image_path string{"image/gt5m/racedisplay/race_boostinput.png"}
+}
+ImageShape{
+name string{"boostShape"}
+image_path string{"image/gt5m/racedisplay/race_boostinput.png"}
+base_color RGBA{125 200 225 255}
+}
+ImageFace{
+name string{"ImageFace"}
+image_path string{"image/gt5m/racedisplay/race_boostmask.png"}
+}
+}
+}
+Composite{
+name string{"Clock"}
+geometry rectangle{431 25 46 10}
+children[1]{
+ImageShape{
+name string{"ClockShape"}
+image_path string{"image/gt5m/racedisplay/RaceFonts.png"}
+base_color RGBA{170 210 225 255}
+}
+}
+}
+Composite{
+name string{"Prize"}
+geometry rectangle{1 0 50 40}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{2 7 46 10}
+color[1]{
+RGBA{170 210 225 255}
+}
+image_path string{"image/gt5m/racedisplay/JP/txt_prize_cr.png"}
+}
+ImageShape{
+name string{"PrizeShape"}
+geometry rectangle{2 24 46 10}
+image_path string{"image/gt5m/racedisplay/RaceFonts.png"}
+base_color RGBA{170 210 225 255}
+}
+}
+}
+}
+}
+Composite{
+name string{"Gear"}
+geometry rectangle{202 198 76 34}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_pause digit{1}
+attribute_name string{"MWidget::translate_y"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeInCirc"}
+interpolation_period digit{0.2}
+end_value digit{74}
+}
+}
+}
+}
+children[7]{
+ImageFace{
+name string{"GearBase"}
+color[1]{
+RGBA{10 10 10 0}
+}
+image_path string{"image/gt5m/racedisplay/race_gearbase.png"}
+}
+ImageFace{
+name string{"GearSuggestedBox"}
+geometry rectangle{5 6 18 22}
+opacity digit{0.6}
+color[1]{
+RGBA{40 40 40 127}
+}
+image_path string{"image/gt5m/racedisplay/race_gearnumbox.png"}
+}
+ImageFace{
+name string{"GearArrow"}
+visible digit{0}
+geometry rectangle{24 13 4 8}
+color[1]{
+RGBA{255 0 0 255}
+}
+image_path string{"image/gt5m/racedisplay/race_geararrow.png"}
+}
+ImageFace{
+name string{"GearNumberBox"}
+geometry rectangle{29 6 18 22}
+color[1]{
+RGBA{170 210 225 127}
+}
+image_path string{"image/gt5m/racedisplay/race_gearnumbox.png"}
+}
+ImageFace{
+name string{"GearAlertBase"}
+geometry rectangle{56 5 8 8}
+color[1]{
+RGBA{255 255 255 127}
+}
+image_path string{"image/gt5m/racedisplay/race_gearalertbase.png"}
+}
+ImageFace{
+name string{"GearAlertRed"}
+geometry rectangle{56 5 8 8}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+section[2]{
+MScalarSection{
+interpolation_period digit{0.12}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.13}
+end_value digit{1}
+}
+}
+}
+}
+image_path string{"image/gt5m/racedisplay/race_gearalertred.png"}
+}
+ImageShape{
+name string{"GearShape"}
+image_path string{"image/gt5m/racedisplay/RaceFonts.png"}
+base_color RGBA{255 0 0 255}
+}
+}
+}
+Composite{
+name string{"WrongWay"}
+visible digit{0}
+geometry rectangle{227 162 26 26}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.25}
+end_value digit{1}
+}
+}
+}
+}
+children[1]{
+ImageFace{
+name string{"WrongWaySign"}
+image_path string{"image/gt5m/racedisplay/race_wrongway.png"}
+}
+}
+}
+Composite{
+name string{"CurrentRecord"}
+visible digit{0}
+geometry rectangle{169 34 122 53}
+children[4]{
+ImageShape{
+name string{"Current"}
+geometry rectangle{34 0 88 16}
+image_path string{"image/gt5m/racedisplay/RaceFonts.png"}
+}
+ImageShape{
+name string{"CurrentEffect"}
+visible digit{0}
+geometry rectangle{34 0 88 16}
+actor_list[3]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.6}
+tension digit{1}
+start_value digit{1}
+}
+}
+}
+ScalarInterpolator{
+name string{"ScalarInterpolatorX"}
+attribute_name string{"MWidget::scale_x"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.6}
+tension digit{1}
+start_value digit{1}
+end_value digit{1.5}
+}
+}
+}
+ScalarInterpolator{
+name string{"ScalarInterpolatorY"}
+attribute_name string{"MWidget::scale_y"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.6}
+tension digit{1}
+start_value digit{1}
+end_value digit{1.5}
+}
+}
+}
+}
+image_path string{"image/gt5m/racedisplay/RaceFonts.png"}
+}
+ImageShape{
+name string{"Sector"}
+geometry rectangle{34 20 88 16}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+start_duration digit{3}
+interpolation_period digit{0.5}
+tension digit{0.8}
+end_value digit{1}
+}
+}
+}
+}
+image_path string{"image/gt5m/racedisplay/RaceFonts.png"}
+}
+ImageShape{
+name string{"Different"}
+geometry rectangle{34 36 88 16}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+start_duration digit{3}
+interpolation_period digit{0.5}
+tension digit{0.8}
+end_value digit{1}
+}
+}
+}
+}
+image_path string{"image/gt5m/racedisplay/RaceFonts.png"}
+}
+}
+}
+Composite{
+name string{"MyRecord"}
+packable digit{1}
+geometry rectangle{348 0 132 232}
+children[4]{
+Composite{
+name string{"Best"}
+geometry rectangle{0 2 132 29}
+children[4]{
+ImageShape{
+name string{"Best"}
+geometry rectangle{42 13 90 16}
+image_path string{"image/gt5m/racedisplay/RaceFonts.png"}
+}
+Composite{
+name string{"BestLapLabel"}
+geometry rectangle{30 0 96 13}
+children[1]{
+ImageFace{
+name string{"BestSign"}
+geometry rectangle{0 -2 96 13}
+color[1]{
+RGBA{200 200 200 255}
+}
+image_path string{"image/gt5m/racedisplay/JP/txt_bestlap.png"}
+}
+}
+}
+Composite{
+name string{"BestLabel"}
+visible digit{0}
+geometry rectangle{30 0 96 13}
+children[1]{
+ImageFace{
+name string{"BestSign"}
+geometry rectangle{0 -2 96 13}
+color[1]{
+RGBA{200 200 200 255}
+}
+image_path string{"image/gt5m/racedisplay/JP/txt_besttime.png"}
+}
+}
+}
+Composite{
+name string{"BestScoreLabel"}
+visible digit{0}
+geometry rectangle{30 0 96 13}
+children[1]{
+ImageFace{
+name string{"BestSign"}
+geometry rectangle{0 -2 96 13}
+color[1]{
+RGBA{200 200 200 255}
+}
+image_path string{"image/gt5m/racedisplay/JP/txt_bestscore.png"}
+}
+}
+}
+}
+}
+Composite{
+name string{"Last"}
+geometry rectangle{0 36 132 29}
+children[4]{
+Composite{
+name string{"LastLapLabel"}
+geometry rectangle{30 0 96 13}
+children[1]{
+ImageFace{
+name string{"LastSign"}
+geometry rectangle{0 -2 96 13}
+color[1]{
+RGBA{200 200 200 255}
+}
+image_path string{"image/gt5m/racedisplay/JP/txt_lastlap.png"}
+}
+}
+}
+Composite{
+name string{"TotalScoreLabel"}
+visible digit{0}
+geometry rectangle{30 0 96 13}
+children[1]{
+ImageFace{
+name string{"LastSign"}
+geometry rectangle{0 -2 96 13}
+color[1]{
+RGBA{200 200 200 255}
+}
+image_path string{"image/gt5m/racedisplay/JP/txt_score.png"}
+}
+}
+}
+Composite{
+name string{"LastLabel"}
+visible digit{0}
+geometry rectangle{30 0 96 13}
+children[2]{
+ImageFace{
+name string{"LastSign0"}
+geometry rectangle{0 -2 96 13}
+opacity digit{0.8}
+color[1]{
+RGBA{0 20 45 255}
+}
+image_path string{"image/gt5m/racedisplay/JP/txt_lastlap.png"}
+}
+ImageFace{
+name string{"LastSign"}
+geometry rectangle{0 -2 96 13}
+color[1]{
+RGBA{190 230 255 255}
+}
+image_path string{"image/gt5m/racedisplay/JP/txt_lastlap.png"}
+}
+}
+}
+ImageShape{
+name string{"Last"}
+geometry rectangle{42 13 90 16}
+image_path string{"image/gt5m/racedisplay/RaceFonts.png"}
+}
+}
+}
+Composite{
+name string{"Remain"}
+geometry rectangle{0 200 132 29}
+children[2]{
+ImageFace{
+name string{"LastSign"}
+geometry rectangle{30 -2 96 13}
+color[1]{
+RGBA{200 200 200 255}
+}
+image_path string{"image/gt5m/racedisplay/JP/txt_timelimit.png"}
+}
+ImageShape{
+name string{"Shape"}
+geometry rectangle{79 13 53 16}
+image_path string{"image/gt5m/racedisplay/RaceFonts.png"}
+}
+}
+}
+Composite{
+name string{"TotalScore"}
+geometry rectangle{0 200 132 29}
+children[2]{
+ImageFace{
+name string{"Label"}
+geometry rectangle{30 -2 96 13}
+color[1]{
+RGBA{200 200 200 255}
+}
+image_path string{"image/gt5m/racedisplay/JP/txt_totalscore.png"}
+}
+ImageShape{
+name string{"Shape"}
+geometry rectangle{42 13 90 16}
+image_path string{"image/gt5m/racedisplay/RaceFonts.png"}
+}
+}
+}
+}
+}
+Composite{
+name string{"ClearTime"}
+packable digit{1}
+geometry rectangle{348 70 132 61}
+children[4]{
+Composite{
+name string{"Gold"}
+geometry rectangle{0 13 128 16}
+children[3]{
+ImageShape{
+name string{"Time"}
+geometry rectangle{41 0 90 16}
+image_path string{"image/gt5m/racedisplay/RaceFonts.png"}
+}
+ImageFace{
+name string{"trophy"}
+geometry rectangle{22 -2 20 20}
+image_path string{"image/gt5m/test/trophy_gold.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{88 -1 40 16}
+font string{"default"}
+scale_x digit{0.928571}
+scale_y digit{0.928571}
+shadow_value digit{1}
+}
+}
+}
+Composite{
+name string{"Silver"}
+geometry rectangle{0 29 128 16}
+children[3]{
+ImageShape{
+name string{"Time"}
+geometry rectangle{41 0 90 16}
+image_path string{"image/gt5m/racedisplay/RaceFonts.png"}
+}
+ImageFace{
+name string{"trophy"}
+geometry rectangle{22 -2 20 20}
+image_path string{"image/gt5m/test/trophy_silver.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{88 -1 40 16}
+font string{"default"}
+scale_x digit{0.928571}
+scale_y digit{0.928571}
+shadow_value digit{1}
+}
+}
+}
+Composite{
+name string{"Bronze"}
+geometry rectangle{0 45 128 16}
+children[3]{
+ImageShape{
+name string{"Time"}
+geometry rectangle{41 0 90 16}
+image_path string{"image/gt5m/racedisplay/RaceFonts.png"}
+}
+ImageFace{
+name string{"trophy"}
+geometry rectangle{22 -2 20 20}
+image_path string{"image/gt5m/test/trophy_bronze.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{88 -1 40 16}
+font string{"default"}
+scale_x digit{0.928571}
+scale_y digit{0.928571}
+shadow_value digit{1}
+}
+}
+}
+Composite{
+name string{"TargetLapLabel"}
+geometry rectangle{30 0 96 13}
+children[1]{
+ImageFace{
+name string{"BestSign"}
+geometry rectangle{0 -2 96 13}
+color[1]{
+RGBA{200 200 200 255}
+}
+image_path string{"image/gt5m/racedisplay/JP/txt_target.png"}
+}
+}
+}
+}
+}
+Composite{
+name string{"CourseMap"}
+geometry rectangle{0 40 140 140}
+center vector{0 0}
+scale vector{0.8 0.8}
+translate vector{0 1.75}
+children[3]{
+ImageFace{
+name string{"CourseMap"}
+cache digit{0}
+from_disk digit{1}
+}
+ImageShape{
+name string{"CarShape"}
+geometry rectangle{0 0 6 6}
+image_path string{"image/gt5m/racedisplay/point_rivalcar.png"}
+}
+ImageFace{
+name string{"OwnCar"}
+visible digit{0}
+geometry rectangle{77 82 10 10}
+image_path string{"image/gt5m/racedisplay/point_owncar.png"}
+}
+}
+}
+Composite{
+name string{"Lap"}
+geometry rectangle{66 2 64 29}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{0 -2 64 13}
+color[1]{
+RGBA{200 200 200 255}
+}
+image_path string{"image/gt5m/racedisplay/JP/txt_lap.png"}
+}
+ImageShape{
+name string{"LapShape"}
+geometry rectangle{6 13 58 16}
+image_path string{"image/gt5m/racedisplay/RaceFonts.png"}
+}
+}
+}
+Composite{
+name string{"Position"}
+geometry rectangle{0 2 60 40}
+children[3]{
+ImageFace{
+name string{"PositionBase"}
+geometry rectangle{17 13 26 26}
+opacity digit{0.7}
+image_path string{"image/gt5m/racedisplay/race_positionbase.png"}
+}
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{-2 -2 64 13}
+color[1]{
+RGBA{200 200 200 255}
+}
+image_path string{"image/gt5m/racedisplay/JP/txt_position.png"}
+}
+ImageShape{
+name string{"PosShape"}
+geometry rectangle{17 13 23 27}
+image_path string{"image/gt5m/racedisplay/RacePositionFont.png"}
+}
+}
+}
+Composite{
+name string{"DriftFlag"}
+is_face digit{1}
+geometry rectangle{147 54 186 20}
+actor_list[2]{
+ScalarInterpolator{
+name string{"FadeInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+start_duration digit{1}
+interpolation_period digit{0.3}
+tension digit{-1}
+start_value digit{1}
+}
+}
+}
+VectorInterpolator{
+name string{"VectorInterpolator"}
+attribute_name string{"MWidget::scale"}
+loop_count digit{1}
+section[1]{
+MVectorSection{
+start_duration digit{1}
+interpolation_period digit{0.3}
+tension digit{-1}
+start_value vector{1 1}
+end_value vector{2 2}
+}
+}
+}
+}
+children[6]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{0 0 24 20}
+color[1]{
+RGBA{60 60 60 153}
+}
+image_path string{"image/gt5m/racedisplay/drift_flag_base.png"}
+}
+Composite{
+name string{"Flag"}
+geometry rectangle{0 0 24 20}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+center vector{0.4 0.95}
+actor_list[2]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+focus_enter_action_name string{"restart"}
+focus_leave_action_name string{"reset"}
+attribute_name string{"MWidget::rotate"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeOutCirc"}
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.2}
+end_value digit{90}
+}
+}
+}
+ScalarInterpolator{
+name string{"ScalarInterpolator0"}
+focus_enter_action_name string{"restart"}
+focus_leave_action_name string{"reset"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.2}
+end_value digit{1}
+}
+}
+}
+}
+image_path string{"image/gt5m/racedisplay/drift_flag.png"}
+}
+ImageFace{
+name string{"ImageFace0"}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+focus_enter_action_name string{"restart"}
+focus_leave_action_name string{"reset"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[2]{
+MScalarSection{
+start_duration digit{0.3}
+interpolation_period digit{0.01}
+end_value digit{1}
+}
+MScalarSection{
+ease_type_name string{"easeInCirc"}
+increase_mode_name string{"decrease"}
+end_duration digit{0.19}
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+blend_func_name string{"add"}
+image_path string{"image/gt5m/racedisplay/drift_flag_base.png"}
+}
+}
+}
+ImageShape{
+name string{"ScoreShadow"}
+geometry rectangle{33 -19 122 15}
+image_path string{"image/gt5m/font/NumFont26.png"}
+base_color RGBA{0 20 45 255}
+shadow_dx digit{1}
+shadow_dy digit{1}
+}
+ImageShape{
+name string{"ScoreEffect"}
+geometry rectangle{32 -20 122 15}
+actor_list[3]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.3}
+tension digit{-0.8}
+start_value digit{0.8}
+}
+}
+}
+ScalarInterpolator{
+name string{"ScalarInterpolatorX"}
+attribute_name string{"MWidget::scale_x"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.3}
+tension digit{-1}
+start_value digit{1}
+end_value digit{1.5}
+}
+}
+}
+ScalarInterpolator{
+name string{"ScalarInterpolatorY"}
+attribute_name string{"MWidget::scale_y"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.3}
+tension digit{-1}
+start_value digit{1}
+end_value digit{1.5}
+}
+}
+}
+}
+image_path string{"image/gt5m/font/NumFont26.png"}
+}
+ImageShape{
+name string{"Score"}
+geometry rectangle{32 -20 122 15}
+image_path string{"image/gt5m/font/NumFont26.png"}
+shadow_dx digit{1}
+shadow_dy digit{1}
+}
+ImageFace{
+name string{"Pts"}
+geometry rectangle{130 -15 64 13}
+opacity digit{0.8}
+image_path string{"image/gt5m/racedisplay/JP/txt_pts.png"}
+}
+}
+}
+Composite{
+name string{"Section"}
+visible digit{0}
+geometry rectangle{66 2 64 29}
+children[2]{
+ImageFace{
+name string{"ImageFace1"}
+geometry rectangle{0 -2 64 13}
+color[1]{
+RGBA{200 200 200 255}
+}
+image_path string{"image/gt5m/racedisplay/JP/txt_section.png"}
+}
+ImageShape{
+name string{"SectionShape"}
+geometry rectangle{6 13 58 16}
+image_path string{"image/gt5m/racedisplay/RaceFonts.png"}
+}
+}
+}
+Composite{
+name string{"UserName"}
+visible digit{0}
+geometry rectangle{348 37 132 64}
+children[5]{
+Composite{
+name string{"UserName"}
+visible digit{0}
+geometry rectangle{0 0 132 16}
+children[4]{
+ImageFace{
+name string{"Tip"}
+geometry rectangle{0 0 16 16}
+color[1]{
+RGBA{0 0 0 255}
+}
+image_path string{"image/gt5m/racedisplay/colortip.png"}
+}
+ImageFace{
+name string{"TipCover"}
+geometry rectangle{0 0 16 16}
+image_path string{"image/gt5m/racedisplay/colortip_cover.png"}
+}
+TextFace{
+name string{"Name"}
+geometry rectangle{20 0 104 16}
+actor_list[1]{
+ColorInterpolator{
+name string{"ColorInterpolator"}
+initial_pause digit{1}
+attribute_name string{"MTextFace::text_color"}
+section[4]{
+MColorSection{
+interpolation_period digit{0.06}
+end_value RGBA{255 177 177 255}
+}
+MColorSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.06}
+start_value RGBA{170 211 255 255}
+end_value RGBA{255 177 177 255}
+}
+MColorSection{
+interpolation_period digit{0.06}
+start_value RGBA{170 211 255 255}
+end_value RGBA{132 255 145 255}
+}
+MColorSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.06}
+end_value RGBA{132 255 145 255}
+}
+}
+}
+}
+text_color RGBA{255 255 255 255}
+font string{"sanserif-b"}
+abbreviate digit{1}
+align digit{3}
+outline_value digit{1}
+}
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{0 0 16 16}
+image_path string{"image/gt5m/racedisplay/pos1.png"}
+}
+}
+}
+Composite{
+name string{"UserName0"}
+visible digit{0}
+geometry rectangle{0 16 132 16}
+children[4]{
+ImageFace{
+name string{"Tip"}
+geometry rectangle{0 0 16 16}
+color[1]{
+RGBA{0 0 0 255}
+}
+image_path string{"image/gt5m/racedisplay/colortip.png"}
+}
+ImageFace{
+name string{"TipCover"}
+geometry rectangle{0 0 16 16}
+image_path string{"image/gt5m/racedisplay/colortip_cover.png"}
+}
+TextFace{
+name string{"Name"}
+geometry rectangle{20 0 104 16}
+actor_list[1]{
+ColorInterpolator{
+name string{"ColorInterpolator"}
+initial_pause digit{1}
+attribute_name string{"MTextFace::text_color"}
+section[4]{
+MColorSection{
+interpolation_period digit{0.06}
+end_value RGBA{255 177 177 255}
+}
+MColorSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.06}
+start_value RGBA{170 211 255 255}
+end_value RGBA{255 177 177 255}
+}
+MColorSection{
+interpolation_period digit{0.06}
+start_value RGBA{170 211 255 255}
+end_value RGBA{132 255 145 255}
+}
+MColorSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.06}
+end_value RGBA{132 255 145 255}
+}
+}
+}
+}
+text_color RGBA{255 255 255 255}
+font string{"sanserif-b"}
+abbreviate digit{1}
+align digit{3}
+outline_value digit{1}
+}
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{0 0 16 16}
+image_path string{"image/gt5m/racedisplay/pos2.png"}
+}
+}
+}
+Composite{
+name string{"UserName1"}
+visible digit{0}
+geometry rectangle{0 32 132 16}
+children[4]{
+ImageFace{
+name string{"Tip"}
+geometry rectangle{0 0 16 16}
+color[1]{
+RGBA{0 0 0 255}
+}
+image_path string{"image/gt5m/racedisplay/colortip.png"}
+}
+ImageFace{
+name string{"TipCover"}
+geometry rectangle{0 0 16 16}
+image_path string{"image/gt5m/racedisplay/colortip_cover.png"}
+}
+TextFace{
+name string{"Name"}
+geometry rectangle{20 0 104 16}
+actor_list[1]{
+ColorInterpolator{
+name string{"ColorInterpolator"}
+initial_pause digit{1}
+attribute_name string{"MTextFace::text_color"}
+section[4]{
+MColorSection{
+interpolation_period digit{0.06}
+end_value RGBA{255 177 177 255}
+}
+MColorSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.06}
+start_value RGBA{170 211 255 255}
+end_value RGBA{255 177 177 255}
+}
+MColorSection{
+interpolation_period digit{0.06}
+start_value RGBA{170 211 255 255}
+end_value RGBA{132 255 145 255}
+}
+MColorSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.06}
+end_value RGBA{132 255 145 255}
+}
+}
+}
+}
+text_color RGBA{255 255 255 255}
+font string{"sanserif-b"}
+abbreviate digit{1}
+align digit{3}
+outline_value digit{1}
+}
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{0 0 16 16}
+image_path string{"image/gt5m/racedisplay/pos3.png"}
+}
+}
+}
+Composite{
+name string{"UserName2"}
+visible digit{0}
+geometry rectangle{0 48 132 16}
+children[4]{
+ImageFace{
+name string{"Tip"}
+geometry rectangle{0 0 16 16}
+color[1]{
+RGBA{0 0 0 255}
+}
+image_path string{"image/gt5m/racedisplay/colortip.png"}
+}
+ImageFace{
+name string{"TipCover"}
+geometry rectangle{0 0 16 16}
+image_path string{"image/gt5m/racedisplay/colortip_cover.png"}
+}
+TextFace{
+name string{"Name"}
+geometry rectangle{20 0 104 16}
+actor_list[1]{
+ColorInterpolator{
+name string{"ColorInterpolator"}
+initial_pause digit{1}
+attribute_name string{"MTextFace::text_color"}
+section[4]{
+MColorSection{
+interpolation_period digit{0.06}
+end_value RGBA{255 177 177 255}
+}
+MColorSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.06}
+start_value RGBA{170 211 255 255}
+end_value RGBA{255 177 177 255}
+}
+MColorSection{
+interpolation_period digit{0.06}
+start_value RGBA{170 211 255 255}
+end_value RGBA{132 255 145 255}
+}
+MColorSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.06}
+end_value RGBA{132 255 145 255}
+}
+}
+}
+}
+text_color RGBA{255 255 255 255}
+font string{"sanserif-b"}
+abbreviate digit{1}
+align digit{3}
+outline_value digit{1}
+}
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{0 0 16 16}
+image_path string{"image/gt5m/racedisplay/pos4.png"}
+}
+}
+}
+ImageFace{
+name string{"JackCircle"}
+geometry rectangle{-16 0 16 16}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::rotate"}
+section[1]{
+MScalarSection{
+start_value digit{1}
+end_value digit{360}
+}
+}
+}
+}
+image_path string{"image/gt5m/racedisplay/JP_tip.png"}
+}
+}
+}
+}
+}
+RootWindow{
+name string{"PrizeRoot"}
+has_script digit{1}
+children[8]{
+ImageFace{
+name string{"bg"}
+cache digit{0}
+from_disk digit{1}
+}
+Composite{
+name string{"tint"}
+is_face digit{1}
+geometry rectangle{0 0 480 272}
+opacity digit{0.9}
+children[2]{
+'DetailPopup::Pane::bg'{
+name string{"bg"}
+}
+'DetailPopup::Pane::ColorFace'{
+name string{"ColorFace"}
+}
+}
+}
+SBox{
+name string{"Header"}
+geometry rectangle{0 0 480 58}
+clip digit{0}
+children[1]{
+SBox{
+name string{"Message"}
+pack_expand_y digit{1}
+geometry rectangle{0 14 480 30}
+children[1]{
+TextFace{
+name string{"label"}
+font string{"default"}
+scale_x digit{1.14286}
+scale_y digit{1.14286}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 128}
+}
+}
+}
+}
+}
+SBox{
+name string{"Body"}
+pack_alignment_y digit{0}
+geometry rectangle{0 58 480 144}
+children[2]{
+SBox{
+name string{"PrizeList"}
+pack_pad_left digit{20}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_alignment_x digit{0}
+geometry rectangle{20 0 180 144}
+children[2]{
+FrameImageFace{
+name string{"bg"}
+packable digit{1}
+pack_pad_left digit{-10}
+pack_pad_right digit{-10}
+pack_pad_top digit{-10}
+pack_pad_bottom digit{-10}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+geometry rectangle{-10 -10 200 164}
+MColorFace_shadow_dx digit{4}
+MColorFace_shadow_dy digit{4}
+MColorFace_penumbra_width digit{2}
+MColorFace_umbra_color RGBA{127 127 127 255}
+tl_image_path string{"image/gt5m/panel/prize_frame.png"}
+frame_width digit{20}
+frame_height digit{20}
+}
+VBox{
+name string{"List"}
+pack_alignment_y digit{1}
+geometry rectangle{0 0 180 144}
+inner_pad_left digit{8}
+inner_pad_right digit{8}
+inner_pad_top digit{8}
+inner_pad_bottom digit{8}
+}
+}
+}
+VBox{
+name string{"PrizeMoney"}
+pack_pad_right digit{20}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_alignment_x digit{1}
+geometry rectangle{220 3 240 138}
+clip digit{0}
+children[5]{
+Composite{
+name string{"line"}
+is_face digit{1}
+packable digit{1}
+geometry rectangle{0 0 240 2}
+children[2]{
+ColorFace{
+name string{"shadow"}
+geometry rectangle{0 0 240 1}
+color[1]{
+RGBA{0 0 0 192}
+}
+}
+ColorFace{
+name string{"highlight"}
+geometry rectangle{0 1 240 1}
+color[1]{
+RGBA{255 255 255 128}
+}
+}
+}
+}
+SBox{
+name string{"Prize"}
+geometry rectangle{0 2 240 66}
+children[2]{
+Composite{
+name string{"Title"}
+packable digit{1}
+pack_pad_left digit{4}
+pack_pad_top digit{3}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_alignment_x digit{0}
+pack_alignment_y digit{0}
+geometry rectangle{4 3 160 20}
+children[1]{
+TextFace{
+name string{"label"}
+text_color RGBA{204 204 204 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 128}
+type_spacing digit{1}
+num_proportional digit{0}
+localized_text_page string{"RaceProject::PrizeRoot"}
+key string{"PRIZE_AMOUNT"}
+}
+}
+}
+HBox{
+name string{"Prize"}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_shrink_x digit{1}
+pack_alignment_x digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{204.55 22 29.45 44}
+children[2]{
+TextFace{
+name string{"unit"}
+packable digit{1}
+pack_pad_bottom digit{5}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{0 9 16.45 30}
+text_color RGBA{179 179 179 255}
+font string{"default"}
+align digit{8}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 128}
+num_proportional digit{0}
+text string{"Cr."}
+}
+ImageShape{
+name string{"ImageShape"}
+packable digit{1}
+pack_pad_left digit{5}
+pack_pad_bottom digit{3}
+pack_allocate_w digit{0}
+pack_allocate_h digit{0}
+pack_expand_y digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{21.45 19 8 22}
+image_path string{"image/gt5m/font/NumFont26.png"}
+has_shadow digit{1}
+shadow_dx digit{1}
+shadow_dy digit{1}
+}
+}
+}
+}
+inner_pad_right digit{6}
+}
+Composite{
+name string{"line0"}
+is_face digit{1}
+packable digit{1}
+geometry rectangle{0 68 240 2}
+children[2]{
+ColorFace{
+name string{"shadow"}
+geometry rectangle{0 0 240 1}
+color[1]{
+RGBA{0 0 0 192}
+}
+}
+ColorFace{
+name string{"highlight"}
+geometry rectangle{0 1 240 1}
+color[1]{
+RGBA{255 255 255 128}
+}
+}
+}
+}
+SBox{
+name string{"Money"}
+geometry rectangle{0 70 240 66}
+children[2]{
+Composite{
+name string{"Title"}
+packable digit{1}
+pack_pad_left digit{4}
+pack_pad_top digit{3}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_alignment_x digit{0}
+pack_alignment_y digit{0}
+geometry rectangle{4 3 160 20}
+children[1]{
+TextFace{
+name string{"label"}
+text_color RGBA{204 204 204 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 128}
+type_spacing digit{1}
+num_proportional digit{0}
+localized_text_page string{"RaceProject::PrizeRoot"}
+key string{"YOUR_MONEY"}
+}
+}
+}
+HBox{
+name string{"Money"}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_shrink_x digit{1}
+pack_alignment_x digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{204.55 22 29.45 44}
+children[2]{
+TextFace{
+name string{"unit"}
+packable digit{1}
+pack_pad_bottom digit{5}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{0 9 16.45 30}
+text_color RGBA{179 179 179 255}
+font string{"default"}
+align digit{8}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 128}
+num_proportional digit{0}
+text string{"Cr."}
+}
+ImageShape{
+name string{"ImageShape"}
+packable digit{1}
+pack_pad_left digit{5}
+pack_pad_bottom digit{3}
+pack_allocate_w digit{0}
+pack_allocate_h digit{0}
+pack_expand_y digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{21.45 19 8 22}
+image_path string{"image/gt5m/font/NumFont26.png"}
+has_shadow digit{1}
+shadow_dx digit{1}
+shadow_dy digit{1}
+}
+}
+}
+}
+inner_pad_right digit{6}
+}
+Composite{
+name string{"line1"}
+is_face digit{1}
+geometry rectangle{0 137 240 2}
+children[2]{
+ColorFace{
+name string{"shadow"}
+geometry rectangle{0 0 240 1}
+color[1]{
+RGBA{0 0 0 192}
+}
+}
+ColorFace{
+name string{"highlight"}
+geometry rectangle{0 1 240 1}
+color[1]{
+RGBA{255 255 255 128}
+}
+}
+}
+}
+}
+}
+}
+}
+SBox{
+name string{"Footer"}
+geometry rectangle{0 214 480 59}
+children[2]{
+VBox{
+name string{"Message"}
+pack_pad_left digit{20}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_shrink_x digit{1}
+pack_shrink_y digit{1}
+pack_alignment_x digit{0}
+pack_alignment_y digit{0}
+geometry rectangle{20 0 392 38}
+clip digit{0}
+children[2]{
+TextFace{
+name string{"label1"}
+packable digit{1}
+geometry rectangle{0 0 392 24}
+font string{"default"}
+align digit{3}
+scale_x digit{0.964286}
+scale_y digit{0.964286}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 128}
+nextline_offset digit{-2}
+adjust_scale digit{1}
+}
+TextFace{
+name string{"label2"}
+packable digit{1}
+geometry rectangle{0 24 392 14}
+text_color RGBA{153 153 153 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 128}
+adjust_scale digit{1}
+}
+}
+}
+SBox{
+name string{"Controller"}
+pack_pad_right digit{24}
+pack_pad_bottom digit{24}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_alignment_x digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{418 15 38 20}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_pause digit{1}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[1]{
+HBox{
+name string{"HBox"}
+pack_expand_x digit{1}
+pack_alignment_x digit{1}
+geometry rectangle{0 0 38 20}
+children[1]{
+'Buttons::ButtonB'{
+name string{"Close"}
+geometry rectangle{0 0 38 20}
+children[6]{
+'Buttons::ButtonB::bg_tmp0'{
+name string{"bg_tmp0"}
+geometry rectangle{0 0 38 20}
+image_path string{"image/gt5m/button/ok.png"}
+}
+'Buttons::ButtonB::bg'{
+name string{"bg"}
+}
+'Buttons::ButtonB::bgf'{
+name string{"bgf"}
+actor_list[1]{
+'Buttons::ButtonB::bgf::FaceColorInterpolator'{
+name string{"FaceColorInterpolator"}
+}
+}
+}
+'Buttons::ButtonB::bgi'{
+name string{"bgi"}
+}
+ImageFace{
+name string{"Blink"}
+opacity digit{0}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_playing digit{0}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[3]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+}
+}
+}
+blend_func_name string{"add"}
+image_path string{"image/gt5m/button/ok.png"}
+}
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Component"}
+key string{"OK"}
+}
+}
+inner_pad_top digit{0}
+}
+}
+}
+}
+}
+}
+}
+SBox{
+name string{"Popup"}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+geometry rectangle{0 0 480 272}
+actor_list[2]{
+ScalarInterpolator{
+name string{"ScalarInterpolator0"}
+initial_pause digit{1}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeOutExpo"}
+interpolation_period digit{0.01}
+end_value digit{1}
+}
+}
+}
+ScalarInterpolator{
+name string{"ScalarInterpolator1"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeOutExpo"}
+interpolation_period digit{0.5}
+start_value digit{1}
+}
+}
+}
+}
+children[2]{
+ColorFace{
+name string{"tint"}
+color[1]{
+RGBA{51 51 51 127}
+}
+}
+SBox{
+name string{"Message"}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+geometry rectangle{80 105.96 320 60.07}
+children[7]{
+FrameImageFace{
+name string{"shadow"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+geometry rectangle{0 0 320 60.07}
+opacity digit{0.6}
+tl_image_path string{"image/gt5m/panel/panel_shadow.png"}
+frame_width digit{12}
+frame_height digit{12}
+}
+ColorFace{
+name string{"base"}
+packable digit{1}
+pack_pad_left digit{5}
+pack_pad_right digit{5}
+pack_pad_top digit{5}
+pack_pad_bottom digit{5}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+geometry rectangle{5 5 310 50.07}
+opacity digit{0.9}
+is_divide_color digit{1}
+color_divide[1]{
+[4]{
+RGBA{0 0 0 255}
+RGBA{50 50 50 255}
+RGBA{0 0 0 255}
+RGBA{50 50 50 255}
+}
+}
+color[1]{
+RGBA{255 255 255 30}
+}
+}
+ColorFace{
+name string{"bevel_top"}
+packable digit{1}
+pack_pad_left digit{5}
+pack_pad_right digit{5}
+pack_pad_top digit{5}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_alignment_y digit{0}
+geometry rectangle{5 5 310 1.06}
+color[1]{
+RGBA{255 255 255 51}
+}
+}
+ColorFace{
+name string{"bevel_left"}
+packable digit{1}
+pack_pad_left digit{5}
+pack_pad_top digit{6}
+pack_pad_bottom digit{6}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_y digit{1}
+pack_alignment_x digit{0}
+geometry rectangle{5 6 1 48.07}
+color[1]{
+RGBA{255 255 255 51}
+}
+}
+ColorFace{
+name string{"bevel_bottom"}
+packable digit{1}
+pack_pad_left digit{5}
+pack_pad_right digit{5}
+pack_pad_bottom digit{5}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{5 53.68 310 1.39}
+color[1]{
+RGBA{0 0 0 102}
+}
+}
+ColorFace{
+name string{"bevel_right"}
+packable digit{1}
+pack_pad_right digit{5}
+pack_pad_top digit{6}
+pack_pad_bottom digit{6}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_y digit{1}
+pack_alignment_x digit{1}
+geometry rectangle{313.82 6 1.18 48.07}
+color[1]{
+RGBA{0 0 0 102}
+}
+}
+TextFace{
+name string{"label"}
+packable digit{1}
+pack_pad_left digit{25}
+pack_pad_right digit{25}
+pack_pad_top digit{20}
+pack_pad_bottom digit{15}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+pack_shrink_x digit{1}
+geometry rectangle{25 20 270 25.07}
+font string{"default"}
+multiline digit{1}
+scale_x digit{0.964286}
+scale_y digit{0.964286}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 153}
+nextline_offset digit{5}
+text string{"AAA"}
+}
+}
+}
+}
+}
+SBox{
+name string{"Item"}
+pack_expand_y digit{1}
+geometry rectangle{0 0 164 32}
+clip digit{0}
+children[2]{
+ColorFace{
+name string{"blink"}
+actor_list[1]{
+FaceColorInterpolator{
+name string{"FaceColorInterpolator"}
+attribute_name string{"MColorFace::face_color"}
+loop_count digit{1}
+section[11]{
+MFaceColorSection{
+ease_type_name string{"easeInExpo"}
+interpolation_period digit{0.15}
+start_value[1]{
+RGBA{255 255 255 0}
+}
+end_value[1]{
+RGBA{255 255 255 42}
+}
+}
+MFaceColorSection{
+ease_type_name string{"easeOutExpo"}
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.3}
+start_value[1]{
+RGBA{255 255 255 0}
+}
+end_value[1]{
+RGBA{255 255 255 42}
+}
+}
+MFaceColorSection{
+ease_type_name string{"easeInExpo"}
+interpolation_period digit{0.15}
+start_value[1]{
+RGBA{255 255 255 0}
+}
+end_value[1]{
+RGBA{255 255 255 42}
+}
+}
+MFaceColorSection{
+ease_type_name string{"easeOutExpo"}
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.3}
+start_value[1]{
+RGBA{255 255 255 0}
+}
+end_value[1]{
+RGBA{255 255 255 42}
+}
+}
+MFaceColorSection{
+ease_type_name string{"easeInExpo"}
+interpolation_period digit{0.15}
+start_value[1]{
+RGBA{255 255 255 0}
+}
+end_value[1]{
+RGBA{255 255 255 42}
+}
+}
+MFaceColorSection{
+ease_type_name string{"easeOutExpo"}
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.3}
+start_value[1]{
+RGBA{255 255 255 0}
+}
+end_value[1]{
+RGBA{255 255 255 42}
+}
+}
+MFaceColorSection{
+ease_type_name string{"easeInExpo"}
+interpolation_period digit{0.15}
+start_value[1]{
+RGBA{255 255 255 0}
+}
+end_value[1]{
+RGBA{255 255 255 42}
+}
+}
+MFaceColorSection{
+ease_type_name string{"easeOutExpo"}
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.3}
+start_value[1]{
+RGBA{255 255 255 0}
+}
+end_value[1]{
+RGBA{255 255 255 42}
+}
+}
+MFaceColorSection{
+ease_type_name string{"easeInExpo"}
+interpolation_period digit{0.15}
+start_value[1]{
+RGBA{255 255 255 0}
+}
+end_value[1]{
+RGBA{255 255 255 42}
+}
+}
+MFaceColorSection{
+ease_type_name string{"easeOutExpo"}
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.3}
+start_value[1]{
+RGBA{255 255 255 0}
+}
+end_value[1]{
+RGBA{255 255 255 42}
+}
+}
+MFaceColorSection{
+ease_type_name string{"easeInExpo"}
+interpolation_period digit{0.15}
+start_value[1]{
+RGBA{255 255 255 0}
+}
+end_value[1]{
+RGBA{255 255 255 42}
+}
+}
+}
+}
+}
+color[1]{
+RGBA{255 255 255 42}
+}
+round digit{2}
+}
+HBox{
+name string{"Content"}
+geometry rectangle{0 0 160 30}
+children[4]{
+SBox{
+name string{"Order"}
+pack_pad_left digit{5}
+pack_expand_y digit{1}
+pack_alignment_x digit{0}
+geometry rectangle{5 0 35 30}
+clip digit{0}
+children[2]{
+TextFace{
+name string{"label"}
+packable digit{1}
+pack_alignment_x digit{0}
+visible_compare digit{8}
+geometry rectangle{0 0 35 30}
+font string{"default"}
+scale_x digit{0.928571}
+scale_y digit{0.928571}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 128}
+nextline_offset digit{-1}
+text string{"aaa"}
+}
+TextFace{
+name string{"labeli"}
+packable digit{1}
+pack_alignment_x digit{0}
+visible_condition digit{8}
+visible_compare digit{8}
+geometry rectangle{0 0 35 30}
+text_color RGBA{102 102 102 255}
+font string{"default"}
+scale_x digit{0.928571}
+scale_y digit{0.928571}
+shadow_value digit{-1}
+shadow_color RGBA{0 0 0 128}
+}
+}
+}
+SBox{
+name string{"Trophy"}
+visible digit{0}
+pack_pad_left digit{5}
+pack_expand_y digit{1}
+pack_alignment_x digit{0}
+geometry rectangle{5 0 36 45}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_pause digit{1}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.01}
+start_value digit{1}
+end_value digit{0.33}
+}
+}
+}
+}
+clip digit{0}
+children[1]{
+ImageFace{
+name string{"image"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+geometry rectangle{0 5 36 36}
+cache digit{0}
+from_disk digit{1}
+}
+}
+}
+SBox{
+name string{"Scaling"}
+pack_pad_right digit{5}
+pack_side digit{2}
+pack_expand_y digit{1}
+pack_alignment_x digit{1}
+geometry rectangle{140 0 15 30}
+clip digit{0}
+children[3]{
+TextFace{
+name string{"label"}
+packable digit{1}
+visible_compare digit{9}
+geometry rectangle{0 0 15 30}
+font string{"default"}
+align digit{5}
+nextline_offset digit{-1}
+}
+TextFace{
+name string{"labela"}
+packable digit{1}
+pack_alignment_x digit{1}
+visible_condition digit{1}
+visible_compare digit{9}
+geometry rectangle{0 0 15 30}
+text_color RGBA{247 181 37 255}
+font string{"default"}
+align digit{5}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 128}
+nextline_offset digit{-1}
+}
+TextFace{
+name string{"labeli"}
+packable digit{1}
+visible_condition digit{8}
+visible_compare digit{9}
+geometry rectangle{0 0 15 30}
+text_color RGBA{102 102 102 255}
+font string{"default"}
+align digit{5}
+nextline_offset digit{-1}
+}
+}
+}
+SBox{
+name string{"Prize"}
+pack_pad_left digit{5}
+pack_pad_right digit{5}
+pack_side digit{2}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_alignment_x digit{0}
+geometry rectangle{45 0 90 30}
+clip digit{0}
+children[3]{
+TextFace{
+name string{"label"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_alignment_x digit{0}
+pack_alignment_y digit{0}
+visible_compare digit{9}
+geometry rectangle{0 0 90 30}
+font string{"default"}
+align digit{5}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 128}
+nextline_offset digit{-1}
+}
+TextFace{
+name string{"labela"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+pack_alignment_x digit{0}
+visible_condition digit{1}
+visible_compare digit{9}
+geometry rectangle{0 0 90 30}
+text_color RGBA{247 181 37 255}
+font string{"default"}
+align digit{5}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 128}
+nextline_offset digit{-1}
+}
+TextFace{
+name string{"labeli"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+pack_alignment_x digit{0}
+visible_condition digit{8}
+visible_compare digit{9}
+geometry rectangle{0 0 90 30}
+text_color RGBA{102 102 102 255}
+font string{"default"}
+align digit{5}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 128}
+nextline_offset digit{-1}
+}
+}
+}
+}
+}
+}
+}
+'Tooltip::BalloonTip'{
+name string{"BalloonTip"}
+packable digit{1}
+clip digit{1}
+children[1]{
+'Tooltip::BalloonTip::Tip'{
+name string{"Tip"}
+actor_list[2]{
+'Tooltip::BalloonTip::Tip::AppearEffect'{
+name string{"AppearEffect"}
+children[1]{
+'Tooltip::BalloonTip::Tip::AppearEffect::Scale'{
+name string{"Scale"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::VisibleEffect'{
+name string{"VisibleEffect"}
+}
+}
+children[3]{
+'Tooltip::BalloonTip::Tip::up_tip'{
+name string{"up_tip"}
+children[1]{
+'Tooltip::BalloonTip::Tip::up_tip::up_tip'{
+name string{"up_tip"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::Text'{
+name string{"Text"}
+children[2]{
+'Tooltip::BalloonTip::Tip::Text::ColorFace'{
+name string{"ColorFace"}
+}
+'Tooltip::BalloonTip::Tip::Text::TextFace'{
+name string{"TextFace"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::down_tip'{
+name string{"down_tip"}
+children[1]{
+'Tooltip::BalloonTip::Tip::down_tip::down_tip'{
+name string{"down_tip"}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+RootWindow{
+name string{"QuickArcadeRoot"}
+has_script digit{1}
+pack_children digit{1}
+children[9]{
+RenderControl{
+name string{"RenderControl"}
+visible digit{0}
+packable digit{1}
+geometry rectangle{144 40 192 120}
+}
+ColorFace{
+name string{"Veil"}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.3}
+end_value digit{1}
+}
+}
+}
+}
+color[1]{
+RGBA{0 0 0 216}
+}
+}
+ImageFace{
+name string{"bg"}
+image_path string{"image/gt5m/bg/arc_quick.dds"}
+}
+HBox{
+name string{"Header"}
+geometry rectangle{24 10 448 27.3}
+children[2]{
+TextFace{
+name string{"TextFace"}
+packable digit{1}
+pack_shrink_x digit{1}
+geometry rectangle{0 0 70.96 27.3}
+text_color RGBA{230 230 230 255}
+font string{"default"}
+scale_x digit{1.17857}
+scale_y digit{1.17857}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 204}
+key string{"PageTitle"}
+}
+TextFace{
+name string{"TextFacePankuzu"}
+packable digit{1}
+pack_pad_left digit{10}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+pack_alignment_x digit{0}
+geometry rectangle{80.96 0 367.04 21}
+text_color RGBA{230 230 230 255}
+font string{"default"}
+align digit{6}
+scale_x digit{0.892857}
+scale_y digit{0.892857}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 204}
+text string{">> Pankuzu >>"}
+adjust_scale digit{1}
+}
+}
+}
+SBox{
+name string{"MainFrame"}
+pack_pad_left digit{40}
+pack_pad_right digit{40}
+pack_pad_bottom digit{40}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_shrink_x digit{1}
+pack_shrink_y digit{1}
+geometry rectangle{240 116 0 0}
+}
+TextFace{
+name string{"TextFaceLoading"}
+geometry rectangle{0 208 480 24}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+text_color RGBA{255 255 255 255}
+font string{"default"}
+scale_x digit{0.892857}
+scale_y digit{0.892857}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 204}
+key string{"Loading"}
+}
+SBox{
+name string{"Controller"}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{0 232 480 40}
+children[2]{
+ColorFace{
+name string{"ImageFace"}
+is_divide_color digit{1}
+y_divide[2]{
+digit{0.0470001}
+digit{0.4}
+}
+color_divide[3]{
+[4]{
+RGBA{128 128 128 255}
+RGBA{128 128 128 255}
+RGBA{64 64 64 255}
+RGBA{64 64 64 255}
+}
+[4]{
+RGBA{64 64 64 255}
+RGBA{64 64 64 255}
+RGBA{36 36 36 255}
+RGBA{36 36 36 255}
+}
+[4]{
+RGBA{36 36 36 255}
+RGBA{36 36 36 255}
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+}
+}
+}
+HBox{
+name string{"HBox"}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_y digit{1}
+pack_shrink_x digit{1}
+geometry rectangle{95 0 290 40}
+children[5]{
+SBox{
+name string{"Info"}
+visible digit{0}
+can_focus digit{1}
+pack_expand_y digit{1}
+pack_shrink_x digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{48 8 38 20}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+packable digit{1}
+geometry rectangle{0 0 38 20}
+image_path string{"image/gt5m/button/manual.png"}
+}
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"Info"}
+}
+}
+}
+SBox{
+name string{"Start"}
+can_focus digit{1}
+pack_expand_y digit{1}
+pack_shrink_x digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{0 8 38 20}
+children[4]{
+ImageFace{
+name string{"dark"}
+packable digit{1}
+visible_compare digit{1}
+geometry rectangle{0 0 38 20}
+color[1]{
+RGBA{128 128 128 255}
+}
+image_path string{"image/gt5m/button/start.png"}
+}
+ImageFace{
+name string{"ImageFace"}
+packable digit{1}
+visible_condition digit{1}
+visible_compare digit{1}
+geometry rectangle{0 0 38 20}
+image_path string{"image/gt5m/button/start.png"}
+}
+ImageFace{
+name string{"Blink"}
+opacity digit{0}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_playing digit{0}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[3]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+}
+}
+}
+blend_func_name string{"add"}
+image_path string{"image/gt5m/button/start.png"}
+}
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"Start"}
+}
+}
+}
+HBox{
+name string{"Replay"}
+pack_expand_y digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{46 8 76 20}
+children[3]{
+ImageFace{
+name string{"ImageFace"}
+image_path string{"image/gt5m/button/replay_save_load.png"}
+}
+SBox{
+name string{"LoadReplay"}
+can_focus digit{1}
+geometry rectangle{0 0 38 20}
+children[1]{
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"LoadReplay"}
+}
+}
+}
+SBox{
+name string{"SaveReplay"}
+can_focus digit{1}
+geometry rectangle{38 0 38 20}
+children[1]{
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"SaveReplay"}
+}
+}
+}
+}
+}
+HBox{
+name string{"Opt"}
+pack_expand_y digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{130 8 114 20}
+children[4]{
+ImageFace{
+name string{"ImageFace"}
+image_path string{"image/gt5m/button/detail_opt.png"}
+}
+SBox{
+name string{"RaceDetail"}
+can_focus digit{1}
+geometry rectangle{0 0 38 20}
+children[1]{
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"RaceDetail"}
+}
+}
+}
+SBox{
+name string{"CourseDetail"}
+can_focus digit{1}
+geometry rectangle{38 0 38 20}
+children[1]{
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"CourseDetail"}
+}
+}
+}
+SBox{
+name string{"CarDetail"}
+can_focus digit{1}
+geometry rectangle{76 0 38 20}
+children[1]{
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"CarDetail"}
+}
+}
+}
+}
+}
+SBox{
+name string{"Exit"}
+can_focus digit{1}
+pack_expand_y digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{252 8 38 20}
+children[3]{
+ImageFace{
+name string{"dark"}
+packable digit{1}
+visible_compare digit{1}
+geometry rectangle{0 0 38 20}
+color[1]{
+RGBA{128 128 128 255}
+}
+image_path string{"image/gt5m/button/exit_L.png"}
+}
+ImageFace{
+name string{"ImageFace"}
+packable digit{1}
+visible_condition digit{1}
+visible_compare digit{1}
+geometry rectangle{0 0 38 20}
+image_path string{"image/gt5m/button/exit_L.png"}
+}
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"Exit"}
+}
+}
+}
+}
+spacing digit{8}
+}
+}
+}
+'Tooltip::BalloonTip'{
+name string{"BalloonTip"}
+packable digit{1}
+children[1]{
+'Tooltip::BalloonTip::Tip'{
+name string{"Tip"}
+actor_list[2]{
+'Tooltip::BalloonTip::Tip::AppearEffect'{
+name string{"AppearEffect"}
+children[1]{
+'Tooltip::BalloonTip::Tip::AppearEffect::Scale'{
+name string{"Scale"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::VisibleEffect'{
+name string{"VisibleEffect"}
+}
+}
+children[3]{
+'Tooltip::BalloonTip::Tip::up_tip'{
+name string{"up_tip"}
+children[1]{
+'Tooltip::BalloonTip::Tip::up_tip::up_tip'{
+name string{"up_tip"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::Text'{
+name string{"Text"}
+children[2]{
+'Tooltip::BalloonTip::Tip::Text::ColorFace'{
+name string{"ColorFace"}
+}
+'Tooltip::BalloonTip::Tip::Text::TextFace'{
+name string{"TextFace"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::down_tip'{
+name string{"down_tip"}
+children[1]{
+'Tooltip::BalloonTip::Tip::down_tip::down_tip'{
+name string{"down_tip"}
+}
+}
+}
+}
+}
+}
+}
+ColorFace{
+name string{"VeilForSave"}
+opacity digit{0}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_playing digit{0}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+}
+cursor_type string{"appear"}
+navigate_wraparound digit{0}
+}
+RootWindow{
+name string{"QuickDriftAttackRoot"}
+has_script digit{1}
+pack_children digit{1}
+children[8]{
+ColorFace{
+name string{"Veil"}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ImageFace{
+name string{"bg"}
+image_path string{"image/gt5m/bg/arc_quick.dds"}
+}
+HBox{
+name string{"Header"}
+geometry rectangle{24 10 448 27.3}
+children[2]{
+TextFace{
+name string{"TextFace"}
+packable digit{1}
+pack_shrink_x digit{1}
+geometry rectangle{0 0 70.96 27.3}
+text_color RGBA{230 230 230 255}
+font string{"default"}
+scale_x digit{1.17857}
+scale_y digit{1.17857}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 204}
+key string{"PageTitle"}
+}
+TextFace{
+name string{"TextFacePankuzu"}
+packable digit{1}
+pack_pad_left digit{10}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+pack_alignment_x digit{0}
+geometry rectangle{80.96 0 367.04 21}
+text_color RGBA{230 230 230 255}
+font string{"default"}
+align digit{6}
+scale_x digit{0.892857}
+scale_y digit{0.892857}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 204}
+text string{">> Pankuzu >>"}
+adjust_scale digit{1}
+}
+}
+}
+SBox{
+name string{"MainFrame"}
+pack_pad_left digit{40}
+pack_pad_right digit{40}
+pack_pad_bottom digit{40}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_shrink_x digit{1}
+pack_shrink_y digit{1}
+geometry rectangle{240 116 0 0}
+}
+TextFace{
+name string{"TextFaceLoading"}
+geometry rectangle{0 208 480 24}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+text_color RGBA{255 255 255 255}
+font string{"default"}
+scale_x digit{0.892857}
+scale_y digit{0.892857}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 204}
+key string{"Loading"}
+}
+SBox{
+name string{"Controller"}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{0 232 480 40}
+children[2]{
+ColorFace{
+name string{"ImageFace"}
+is_divide_color digit{1}
+y_divide[2]{
+digit{0.0470001}
+digit{0.4}
+}
+color_divide[3]{
+[4]{
+RGBA{128 128 128 255}
+RGBA{128 128 128 255}
+RGBA{64 64 64 255}
+RGBA{64 64 64 255}
+}
+[4]{
+RGBA{64 64 64 255}
+RGBA{64 64 64 255}
+RGBA{36 36 36 255}
+RGBA{36 36 36 255}
+}
+[4]{
+RGBA{36 36 36 255}
+RGBA{36 36 36 255}
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+}
+}
+}
+HBox{
+name string{"HBox"}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_y digit{1}
+pack_shrink_x digit{1}
+geometry rectangle{114 0 252 40}
+children[5]{
+SBox{
+name string{"Start"}
+can_focus digit{1}
+pack_expand_y digit{1}
+pack_shrink_x digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{0 8 38 20}
+children[4]{
+ImageFace{
+name string{"dark"}
+packable digit{1}
+visible_compare digit{1}
+geometry rectangle{0 0 38 20}
+color[1]{
+RGBA{128 128 128 255}
+}
+image_path string{"image/gt5m/button/start.png"}
+}
+ImageFace{
+name string{"ImageFace"}
+packable digit{1}
+visible_condition digit{1}
+visible_compare digit{1}
+geometry rectangle{0 0 38 20}
+image_path string{"image/gt5m/button/start.png"}
+}
+ImageFace{
+name string{"Blink"}
+opacity digit{0}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_playing digit{0}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[3]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+}
+}
+}
+blend_func_name string{"add"}
+image_path string{"image/gt5m/button/start.png"}
+}
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"Start"}
+}
+}
+}
+HBox{
+name string{"Replay"}
+pack_expand_y digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{46 8 76 20}
+children[3]{
+ImageFace{
+name string{"ImageFace"}
+image_path string{"image/gt5m/button/replay_save_load.png"}
+}
+SBox{
+name string{"LoadReplay"}
+can_focus digit{1}
+geometry rectangle{0 0 38 20}
+children[1]{
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"LoadReplay"}
+}
+}
+}
+SBox{
+name string{"SaveReplay"}
+can_focus digit{1}
+geometry rectangle{38 0 38 20}
+children[1]{
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"SaveReplay"}
+}
+}
+}
+}
+}
+SBox{
+name string{"Info"}
+visible digit{0}
+can_focus digit{1}
+pack_expand_y digit{1}
+pack_shrink_x digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{48 8 38 20}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+packable digit{1}
+geometry rectangle{0 0 38 20}
+image_path string{"image/gt5m/button/manual.png"}
+}
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"Info"}
+}
+}
+}
+HBox{
+name string{"Opt"}
+pack_expand_y digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{130 8 76 20}
+children[3]{
+ImageFace{
+name string{"ImageFace"}
+image_path string{"image/gt5m/button/detail_opt_course_car.png"}
+}
+SBox{
+name string{"CourseDetail"}
+can_focus digit{1}
+geometry rectangle{0 0 38 20}
+children[1]{
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"CourseDetail"}
+}
+}
+}
+SBox{
+name string{"CarDetail"}
+can_focus digit{1}
+geometry rectangle{38 0 38 20}
+children[1]{
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"CarDetail"}
+}
+}
+}
+}
+}
+SBox{
+name string{"Exit"}
+can_focus digit{1}
+pack_expand_y digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{214 8 38 20}
+children[3]{
+ImageFace{
+name string{"dark"}
+packable digit{1}
+visible_compare digit{1}
+geometry rectangle{0 0 38 20}
+color[1]{
+RGBA{128 128 128 255}
+}
+image_path string{"image/gt5m/button/exit_L.png"}
+}
+ImageFace{
+name string{"ImageFace"}
+packable digit{1}
+visible_condition digit{1}
+visible_compare digit{1}
+geometry rectangle{0 0 38 20}
+image_path string{"image/gt5m/button/exit_L.png"}
+}
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"Exit"}
+}
+}
+}
+}
+spacing digit{8}
+}
+}
+}
+'Tooltip::BalloonTip'{
+name string{"BalloonTip"}
+packable digit{1}
+children[1]{
+'Tooltip::BalloonTip::Tip'{
+name string{"Tip"}
+actor_list[2]{
+'Tooltip::BalloonTip::Tip::AppearEffect'{
+name string{"AppearEffect"}
+children[1]{
+'Tooltip::BalloonTip::Tip::AppearEffect::Scale'{
+name string{"Scale"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::VisibleEffect'{
+name string{"VisibleEffect"}
+}
+}
+children[3]{
+'Tooltip::BalloonTip::Tip::up_tip'{
+name string{"up_tip"}
+children[1]{
+'Tooltip::BalloonTip::Tip::up_tip::up_tip'{
+name string{"up_tip"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::Text'{
+name string{"Text"}
+children[2]{
+'Tooltip::BalloonTip::Tip::Text::ColorFace'{
+name string{"ColorFace"}
+}
+'Tooltip::BalloonTip::Tip::Text::TextFace'{
+name string{"TextFace"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::down_tip'{
+name string{"down_tip"}
+children[1]{
+'Tooltip::BalloonTip::Tip::down_tip::down_tip'{
+name string{"down_tip"}
+}
+}
+}
+}
+}
+}
+}
+ColorFace{
+name string{"VeilForSave"}
+opacity digit{0}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_playing digit{0}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+}
+cursor_type string{"appear"}
+navigate_wraparound digit{0}
+}
+RootWindow{
+name string{"QuickLicenseRoot"}
+has_script digit{1}
+pack_children digit{1}
+children[9]{
+ColorFace{
+name string{"Veil"}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+SBox{
+name string{"bg"}
+geometry rectangle{0 0 480 272}
+children[5]{
+ColorFace{
+name string{"ColorFace"}
+is_divide_color digit{1}
+y_divide[3]{
+digit{0.367647}
+digit{0.544118}
+digit{0.544118}
+}
+color_divide[4]{
+[4]{
+RGBA{240 240 240 255}
+RGBA{240 240 240 255}
+RGBA{240 240 240 255}
+RGBA{240 240 240 255}
+}
+[4]{
+RGBA{240 240 240 255}
+RGBA{240 240 240 255}
+RGBA{211 211 211 255}
+RGBA{211 211 211 255}
+}
+[1]{
+RGBA{255 255 255 255}
+}
+[4]{
+RGBA{211 211 211 255}
+RGBA{211 211 211 255}
+RGBA{211 211 211 255}
+RGBA{211 211 211 255}
+}
+}
+}
+Composite{
+name string{"BG_0"}
+is_face digit{1}
+geometry rectangle{0 0 480 272}
+children[2]{
+ColorFace{
+name string{"base"}
+is_divide_color digit{1}
+y_divide[2]{
+digit{0.36}
+digit{0.9}
+}
+color_divide[3]{
+[4]{
+RGBA{104 158 49 255}
+RGBA{104 158 49 255}
+RGBA{142 175 109 255}
+RGBA{142 175 109 255}
+}
+[4]{
+RGBA{142 175 109 255}
+RGBA{142 175 109 255}
+RGBA{200 200 200 255}
+RGBA{200 200 200 255}
+}
+[4]{
+RGBA{200 200 200 255}
+RGBA{200 200 200 255}
+RGBA{200 200 200 255}
+RGBA{200 200 200 255}
+}
+}
+color[1]{
+RGBA{102 194 0 255}
+}
+}
+Composite{
+name string{"grid"}
+geometry rectangle{0 0 480 272}
+opacity digit{0.1}
+children[11]{
+ColorFace{
+name string{"line"}
+geometry rectangle{0 45 480 1}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line0"}
+geometry rectangle{0 114 480 1}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line1"}
+geometry rectangle{0 184 480 1}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line2"}
+geometry rectangle{0 253 480 1}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line3"}
+geometry rectangle{33 0 1 272}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line4"}
+geometry rectangle{102 0 1 272}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line5"}
+geometry rectangle{171 0 1 272}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line6"}
+geometry rectangle{240 0 1 272}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line7"}
+geometry rectangle{309 0 1 272}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line8"}
+geometry rectangle{377 0 1 272}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line9"}
+geometry rectangle{447 0 1 272}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+}
+}
+}
+}
+Composite{
+name string{"BG_1"}
+is_face digit{1}
+geometry rectangle{0 0 480 272}
+children[2]{
+ColorFace{
+name string{"base"}
+is_divide_color digit{1}
+y_divide[2]{
+digit{0.36}
+digit{0.9}
+}
+color_divide[3]{
+[4]{
+RGBA{219 142 0 255}
+RGBA{219 142 0 255}
+RGBA{212 165 78 255}
+RGBA{212 165 78 255}
+}
+[4]{
+RGBA{212 165 78 255}
+RGBA{212 165 78 255}
+RGBA{200 200 200 255}
+RGBA{200 200 200 255}
+}
+[4]{
+RGBA{200 200 200 255}
+RGBA{200 200 200 255}
+RGBA{200 200 200 255}
+RGBA{200 200 200 255}
+}
+}
+color[1]{
+RGBA{102 194 0 255}
+}
+}
+Composite{
+name string{"grid"}
+geometry rectangle{0 0 480 272}
+opacity digit{0.1}
+children[11]{
+ColorFace{
+name string{"line"}
+geometry rectangle{0 45 480 1}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line0"}
+geometry rectangle{0 114 480 1}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line1"}
+geometry rectangle{0 184 480 1}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line2"}
+geometry rectangle{0 253 480 1}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line3"}
+geometry rectangle{33 0 1 272}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line4"}
+geometry rectangle{102 0 1 272}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line5"}
+geometry rectangle{171 0 1 272}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line6"}
+geometry rectangle{240 0 1 272}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line7"}
+geometry rectangle{309 0 1 272}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line8"}
+geometry rectangle{377 0 1 272}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line9"}
+geometry rectangle{447 0 1 272}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+}
+}
+}
+}
+Composite{
+name string{"BG_2"}
+is_face digit{1}
+geometry rectangle{0 0 480 272}
+children[2]{
+ColorFace{
+name string{"base"}
+is_divide_color digit{1}
+y_divide[2]{
+digit{0.36}
+digit{0.9}
+}
+color_divide[3]{
+[4]{
+RGBA{76 106 182 255}
+RGBA{76 106 182 255}
+RGBA{93 121 191 255}
+RGBA{93 121 191 255}
+}
+[4]{
+RGBA{93 121 191 255}
+RGBA{93 121 191 255}
+RGBA{200 200 200 255}
+RGBA{200 200 200 255}
+}
+[4]{
+RGBA{200 200 200 255}
+RGBA{200 200 200 255}
+RGBA{200 200 200 255}
+RGBA{200 200 200 255}
+}
+}
+color[1]{
+RGBA{102 194 0 255}
+}
+}
+Composite{
+name string{"grid"}
+geometry rectangle{0 0 480 272}
+opacity digit{0.1}
+children[11]{
+ColorFace{
+name string{"line"}
+geometry rectangle{0 45 480 1}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line0"}
+geometry rectangle{0 114 480 1}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line1"}
+geometry rectangle{0 184 480 1}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line2"}
+geometry rectangle{0 253 480 1}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line3"}
+geometry rectangle{33 0 1 272}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line4"}
+geometry rectangle{102 0 1 272}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line5"}
+geometry rectangle{171 0 1 272}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line6"}
+geometry rectangle{240 0 1 272}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line7"}
+geometry rectangle{309 0 1 272}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line8"}
+geometry rectangle{377 0 1 272}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"line9"}
+geometry rectangle{447 0 1 272}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+}
+}
+}
+}
+ColorFace{
+name string{"effect"}
+packable digit{1}
+pack_allocate_w digit{0}
+pack_allocate_h digit{0}
+geometry rectangle{0 0 480 272}
+opacity digit{0.9}
+is_divide_color digit{1}
+x_divide[5]{
+digit{0.0416667}
+digit{0.0833333}
+digit{0.5}
+digit{0.916667}
+digit{0.958333}
+}
+y_divide[6]{
+digit{0.0735294}
+digit{0.147059}
+digit{0.220588}
+digit{0.558824}
+digit{0.852941}
+digit{0.926471}
+}
+color_divide[42]{
+[4]{
+RGBA{0 0 0 255}
+RGBA{0 0 0 242}
+RGBA{0 0 0 140}
+RGBA{0 0 0 178}
+}
+[4]{
+RGBA{0 0 0 242}
+RGBA{0 0 0 229}
+RGBA{0 0 0 128}
+RGBA{0 0 0 140}
+}
+[4]{
+RGBA{0 0 0 229}
+RGBA{0 0 0 218}
+RGBA{0 0 0 116}
+RGBA{0 0 0 128}
+}
+[4]{
+RGBA{0 0 0 218}
+RGBA{0 0 0 229}
+RGBA{0 0 0 128}
+RGBA{0 0 0 116}
+}
+[4]{
+RGBA{0 0 0 229}
+RGBA{0 0 0 242}
+RGBA{0 0 0 140}
+RGBA{0 0 0 128}
+}
+[4]{
+RGBA{0 0 0 242}
+RGBA{0 0 0 255}
+RGBA{0 0 0 178}
+RGBA{0 0 0 140}
+}
+[4]{
+RGBA{0 0 0 178}
+RGBA{0 0 0 140}
+RGBA{0 0 0 64}
+RGBA{0 0 0 153}
+}
+[4]{
+RGBA{0 0 0 140}
+RGBA{0 0 0 128}
+RGBA{0 0 0 32}
+RGBA{0 0 0 64}
+}
+[4]{
+RGBA{0 0 0 128}
+RGBA{0 0 0 116}
+RGBA{0 0 0 8}
+RGBA{0 0 0 32}
+}
+[4]{
+RGBA{0 0 0 116}
+RGBA{0 0 0 128}
+RGBA{0 0 0 32}
+RGBA{0 0 0 8}
+}
+[4]{
+RGBA{0 0 0 128}
+RGBA{0 0 0 140}
+RGBA{0 0 0 64}
+RGBA{0 0 0 32}
+}
+[4]{
+RGBA{0 0 0 140}
+RGBA{0 0 0 178}
+RGBA{0 0 0 153}
+RGBA{0 0 0 64}
+}
+[4]{
+RGBA{0 0 0 153}
+RGBA{0 0 0 64}
+RGBA{0 0 0 32}
+RGBA{0 0 0 128}
+}
+[4]{
+RGBA{0 0 0 64}
+RGBA{0 0 0 32}
+RGBA{0 0 0 0}
+RGBA{0 0 0 32}
+}
+[4]{
+RGBA{0 0 0 32}
+RGBA{0 0 0 8}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+}
+[4]{
+RGBA{0 0 0 8}
+RGBA{0 0 0 32}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+}
+[4]{
+RGBA{0 0 0 32}
+RGBA{0 0 0 64}
+RGBA{0 0 0 32}
+RGBA{0 0 0 0}
+}
+[4]{
+RGBA{0 0 0 64}
+RGBA{0 0 0 153}
+RGBA{0 0 0 128}
+RGBA{0 0 0 32}
+}
+[4]{
+RGBA{0 0 0 128}
+RGBA{0 0 0 32}
+RGBA{0 0 0 0}
+RGBA{0 0 0 91}
+}
+[4]{
+RGBA{0 0 0 32}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+}
+[4]{
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+}
+[4]{
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+}
+[4]{
+RGBA{0 0 0 0}
+RGBA{0 0 0 32}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+}
+[4]{
+RGBA{0 0 0 32}
+RGBA{0 0 0 128}
+RGBA{0 0 0 91}
+RGBA{0 0 0 0}
+}
+[4]{
+RGBA{0 0 0 91}
+RGBA{0 0 0 0}
+RGBA{0 0 0 16}
+RGBA{0 0 0 102}
+}
+[4]{
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+RGBA{0 0 0 16}
+}
+[4]{
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+}
+[4]{
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+}
+[4]{
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+RGBA{0 0 0 16}
+RGBA{0 0 0 0}
+}
+[4]{
+RGBA{0 0 0 0}
+RGBA{0 0 0 91}
+RGBA{0 0 0 102}
+RGBA{0 0 0 16}
+}
+[4]{
+RGBA{0 0 0 102}
+RGBA{0 0 0 16}
+RGBA{0 0 0 32}
+RGBA{0 0 0 102}
+}
+[4]{
+RGBA{0 0 0 16}
+RGBA{0 0 0 0}
+RGBA{0 0 0 16}
+RGBA{0 0 0 32}
+}
+[4]{
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+RGBA{0 0 0 16}
+}
+[4]{
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+RGBA{0 0 0 16}
+RGBA{0 0 0 0}
+}
+[4]{
+RGBA{0 0 0 0}
+RGBA{0 0 0 16}
+RGBA{0 0 0 32}
+RGBA{0 0 0 16}
+}
+[4]{
+RGBA{0 0 0 16}
+RGBA{0 0 0 102}
+RGBA{0 0 0 102}
+RGBA{0 0 0 32}
+}
+[4]{
+RGBA{0 0 0 102}
+RGBA{0 0 0 32}
+RGBA{0 0 0 114}
+RGBA{0 0 0 127}
+}
+[4]{
+RGBA{0 0 0 32}
+RGBA{0 0 0 16}
+RGBA{0 0 0 102}
+RGBA{0 0 0 114}
+}
+[4]{
+RGBA{0 0 0 16}
+RGBA{0 0 0 0}
+RGBA{0 0 0 84}
+RGBA{0 0 0 102}
+}
+[4]{
+RGBA{0 0 0 0}
+RGBA{0 0 0 16}
+RGBA{0 0 0 102}
+RGBA{0 0 0 84}
+}
+[4]{
+RGBA{0 0 0 16}
+RGBA{0 0 0 32}
+RGBA{0 0 0 114}
+RGBA{0 0 0 102}
+}
+[4]{
+RGBA{0 0 0 32}
+RGBA{0 0 0 102}
+RGBA{0 0 0 127}
+RGBA{0 0 0 128}
+}
+}
+color[1]{
+RGBA{132 132 132 255}
+}
+}
+}
+}
+VBox{
+name string{"Header"}
+pack_children digit{0}
+geometry rectangle{0 0 480 85.2}
+children[5]{
+ImageFace{
+name string{"type"}
+geometry rectangle{13 12 63 70}
+}
+ImageFace{
+name string{"category"}
+geometry rectangle{13 12 63 77}
+}
+TextFace{
+name string{"paga_title"}
+packable digit{1}
+pack_pad_top digit{17}
+geometry rectangle{78 14 272 16}
+text_color RGBA{200 200 200 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.9}
+scale_y digit{0.9}
+shadow_value digit{1}
+localized_text_page string{"LicenseGT5M"}
+key string{"CHALLNGE_MISSION"}
+}
+TextFace{
+name string{"title"}
+packable digit{1}
+geometry rectangle{20 31 352 24}
+text_color RGBA{255 255 255 255}
+font string{"default"}
+align digit{3}
+scale_x digit{1.05714}
+scale_y digit{1.05714}
+shadow_value digit{1}
+adjust_scale digit{1}
+}
+TextFace{
+name string{"sub_title"}
+packable digit{1}
+geometry rectangle{78 57 272 16}
+text_color RGBA{12 12 12 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.928571}
+scale_y digit{0.928571}
+adjust_scale digit{1}
+}
+}
+}
+SBox{
+name string{"Body"}
+geometry rectangle{0 0 480 232}
+children[5]{
+SBox{
+name string{"LicenseMap"}
+geometry rectangle{33 80 160 104}
+children[3]{
+ColorFace{
+name string{"ColorFace"}
+color[4]{
+RGBA{255 255 255 89}
+RGBA{255 255 255 89}
+RGBA{255 255 255 51}
+RGBA{255 255 255 51}
+}
+}
+ImageFace{
+name string{"ImageFace"}
+from_disk digit{1}
+}
+GraphFace{
+name string{"GraphFace"}
+translate vector{0 0.52}
+color[1]{
+RGBA{69 173 62 255}
+}
+}
+}
+}
+SBox{
+name string{"Car"}
+geometry rectangle{208 4 268 92}
+clip digit{0}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{168 0 100 75}
+from_disk digit{1}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{0 76 252 16}
+text_color RGBA{12 12 12 255}
+font string{"default"}
+align digit{2}
+scale_x digit{0.785714}
+scale_y digit{0.785714}
+adjust_scale digit{1}
+}
+}
+}
+SBox{
+name string{"Course"}
+geometry rectangle{208 170 248 16}
+children[1]{
+TextFace{
+name string{"TextFace"}
+text_color RGBA{12 12 12 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.785714}
+scale_y digit{0.785714}
+adjust_scale digit{1}
+}
+}
+}
+SBox{
+name string{"Description"}
+geometry rectangle{208 99 252 64}
+children[2]{
+ScrollClip{
+name string{"ScrollClip"}
+packable digit{1}
+geometry rectangle{0 0 252 64}
+children[1]{
+VBox{
+name string{"space"}
+geometry rectangle{0 0 248 24.3}
+children[1]{
+TextFace{
+name string{"TextFace"}
+packable digit{1}
+pack_shrink_y digit{1}
+geometry rectangle{0 0 248 23.14}
+text_color RGBA{12 12 12 255}
+font string{"default"}
+multiline digit{1}
+aligned digit{0}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+shadow_color RGBA{255 255 255 153}
+nextline_offset digit{6}
+text string{"Description"}
+}
+}
+}
+}
+}
+VScrollbar{
+name string{"VScrollbar"}
+pack_expand_x digit{1}
+pack_alignment_x digit{1}
+geometry rectangle{248 0 4 64}
+children[4]{
+ColorFace{
+name string{"ColorFace"}
+opacity digit{0.5}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+'VScrollbar::dec_arrow'{
+name string{"dec_arrow"}
+pack_expand_x digit{0}
+pack_fill_x digit{0}
+geometry rectangle{0 0 4 2}
+}
+'VScrollbar::inc_arrow'{
+name string{"inc_arrow"}
+geometry rectangle{0 62 4 2}
+}
+'VScrollbar::pinch'{
+name string{"pinch"}
+pack_expand_x digit{0}
+pack_fill_x digit{0}
+geometry rectangle{1 2 2 60}
+children[1]{
+ColorFace{
+name string{"ColorFace"}
+color[4]{
+RGBA{255 255 255 255}
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+RGBA{255 255 255 255}
+}
+}
+}
+}
+}
+display_policy digit{1}
+}
+}
+}
+HBox{
+name string{"Prize"}
+pack_expand_x digit{1}
+pack_shrink_x digit{1}
+geometry rectangle{16 190 448 38}
+children[4]{
+SBox{
+name string{"PrizeGold"}
+geometry rectangle{0 0 116 38}
+children[5]{
+ImageFace{
+name string{"ImageFace"}
+packable digit{1}
+geometry rectangle{0 0 32 32}
+image_path string{"image/gt5m/test/trophy_gold.png"}
+}
+TextFace{
+name string{"TextFaceCredit"}
+packable digit{1}
+pack_pad_left digit{36}
+visible_compare digit{8}
+geometry rectangle{36 2 80 15}
+text_color RGBA{32 32 32 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.714286}
+scale_y digit{0.714286}
+}
+TextFace{
+name string{"TextFaceCrediti"}
+packable digit{1}
+pack_pad_left digit{36}
+visible_condition digit{8}
+visible_compare digit{8}
+geometry rectangle{36 2 80 15}
+text_color RGBA{96 96 96 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.714286}
+scale_y digit{0.714286}
+}
+TextFace{
+name string{"TextFaceTime"}
+packable digit{1}
+pack_pad_left digit{36}
+visible_compare digit{8}
+geometry rectangle{36 16 80 19.95}
+text_color RGBA{12 12 12 255}
+font string{"default"}
+scale_x digit{0.928571}
+scale_y digit{0.928571}
+}
+TextFace{
+name string{"TextFaceTimei"}
+packable digit{1}
+pack_pad_left digit{36}
+visible_condition digit{8}
+visible_compare digit{8}
+geometry rectangle{36 16 80 19.95}
+text_color RGBA{96 96 96 255}
+font string{"default"}
+scale_x digit{0.928571}
+scale_y digit{0.928571}
+}
+}
+}
+SBox{
+name string{"PrizeSilver"}
+pack_pad_left digit{4}
+geometry rectangle{120 0 116 38}
+children[5]{
+ImageFace{
+name string{"ImageFace"}
+packable digit{1}
+geometry rectangle{0 0 32 32}
+image_path string{"image/gt5m/test/trophy_silver.png"}
+}
+TextFace{
+name string{"TextFaceCredit"}
+packable digit{1}
+pack_pad_left digit{36}
+visible_compare digit{8}
+geometry rectangle{36 2 80 15}
+text_color RGBA{32 32 32 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.714286}
+scale_y digit{0.714286}
+}
+TextFace{
+name string{"TextFaceCrediti"}
+packable digit{1}
+pack_pad_left digit{36}
+visible_condition digit{8}
+visible_compare digit{8}
+geometry rectangle{36 2 80 15}
+text_color RGBA{96 96 96 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.714286}
+scale_y digit{0.714286}
+}
+TextFace{
+name string{"TextFaceTime"}
+packable digit{1}
+pack_pad_left digit{36}
+visible_compare digit{8}
+geometry rectangle{36 16 80 19.95}
+text_color RGBA{12 12 12 255}
+font string{"default"}
+scale_x digit{0.928571}
+scale_y digit{0.928571}
+}
+TextFace{
+name string{"TextFaceTimei"}
+packable digit{1}
+pack_pad_left digit{36}
+visible_condition digit{8}
+visible_compare digit{8}
+geometry rectangle{36 16 80 19.95}
+text_color RGBA{96 96 96 255}
+font string{"default"}
+scale_x digit{0.928571}
+scale_y digit{0.928571}
+}
+}
+}
+SBox{
+name string{"PrizeBronze"}
+pack_pad_left digit{4}
+geometry rectangle{240 0 116 38}
+children[5]{
+ImageFace{
+name string{"ImageFace"}
+packable digit{1}
+geometry rectangle{0 0 32 32}
+image_path string{"image/gt5m/test/trophy_bronze.png"}
+}
+TextFace{
+name string{"TextFaceCredit"}
+packable digit{1}
+pack_pad_left digit{36}
+visible_compare digit{8}
+geometry rectangle{36 2 80 15}
+text_color RGBA{32 32 32 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.714286}
+scale_y digit{0.714286}
+}
+TextFace{
+name string{"TextFaceCrediti"}
+packable digit{1}
+pack_pad_left digit{36}
+visible_condition digit{8}
+visible_compare digit{8}
+geometry rectangle{36 2 80 15}
+text_color RGBA{96 96 96 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.714286}
+scale_y digit{0.714286}
+}
+TextFace{
+name string{"TextFaceTime"}
+packable digit{1}
+pack_pad_left digit{36}
+visible_compare digit{8}
+geometry rectangle{36 16 80 19.95}
+text_color RGBA{12 12 12 255}
+font string{"default"}
+scale_x digit{0.928571}
+scale_y digit{0.928571}
+}
+TextFace{
+name string{"TextFaceTimei"}
+packable digit{1}
+pack_pad_left digit{36}
+visible_condition digit{8}
+visible_compare digit{8}
+geometry rectangle{36 16 80 19.95}
+text_color RGBA{96 96 96 255}
+font string{"default"}
+scale_x digit{0.928571}
+scale_y digit{0.928571}
+}
+}
+}
+SBox{
+name string{"Best"}
+pack_pad_left digit{4}
+geometry rectangle{360 0 88 38}
+clip digit{0}
+children[2]{
+TextFace{
+name string{"TextFaceBest"}
+packable digit{1}
+geometry rectangle{0 2 88 15}
+text_color RGBA{32 32 32 255}
+font string{"default"}
+align digit{5}
+scale_x digit{0.714286}
+scale_y digit{0.714286}
+}
+TextFace{
+name string{"TextFace"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{0 16 88 20}
+text_color RGBA{12 12 12 255}
+font string{"default"}
+align digit{5}
+scale_x digit{0.928571}
+scale_y digit{0.928571}
+type_spacing digit{1}
+adjust_scale digit{1}
+}
+}
+}
+}
+}
+}
+}
+RenderControl{
+name string{"RenderControl"}
+visible digit{0}
+packable digit{1}
+children[1]{
+ColorFace{
+name string{"ColorFace"}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeInOutQuad"}
+interpolation_period digit{0.5}
+start_value digit{1}
+}
+}
+}
+}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+}
+}
+TextFace{
+name string{"TextFaceLoading"}
+geometry rectangle{0 208 480 24}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+text_color RGBA{255 255 255 255}
+font string{"default"}
+scale_x digit{0.892857}
+scale_y digit{0.892857}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 204}
+key string{"Loading"}
+}
+SBox{
+name string{"Controller"}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{0 232 480 40}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_playing digit{0}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeInOutQuad"}
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[4]{
+ColorFace{
+name string{"ImageFace"}
+is_divide_color digit{1}
+y_divide[2]{
+digit{0.0470001}
+digit{0.4}
+}
+color_divide[3]{
+[4]{
+RGBA{128 128 128 255}
+RGBA{128 128 128 255}
+RGBA{64 64 64 255}
+RGBA{64 64 64 255}
+}
+[4]{
+RGBA{64 64 64 255}
+RGBA{64 64 64 255}
+RGBA{36 36 36 255}
+RGBA{36 36 36 255}
+}
+[4]{
+RGBA{36 36 36 255}
+RGBA{36 36 36 255}
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+}
+}
+}
+HBox{
+name string{"HBox"}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_y digit{1}
+pack_shrink_x digit{1}
+geometry rectangle{110 0 260 40}
+children[5]{
+SBox{
+name string{"Start"}
+can_focus digit{1}
+pack_expand_y digit{1}
+pack_shrink_x digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{0 8 38 20}
+children[4]{
+ImageFace{
+name string{"dark"}
+packable digit{1}
+visible_compare digit{1}
+geometry rectangle{0 0 38 20}
+color[1]{
+RGBA{128 128 128 255}
+}
+image_path string{"image/gt5m/button/start.png"}
+}
+ImageFace{
+name string{"ImageFace"}
+packable digit{1}
+visible_condition digit{1}
+visible_compare digit{1}
+geometry rectangle{0 0 38 20}
+image_path string{"image/gt5m/button/start.png"}
+}
+ImageFace{
+name string{"Blink"}
+opacity digit{0}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_playing digit{0}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[3]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+}
+}
+}
+blend_func_name string{"add"}
+image_path string{"image/gt5m/button/start.png"}
+}
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"Start"}
+}
+}
+}
+SBox{
+name string{"Info"}
+can_focus digit{1}
+pack_expand_y digit{1}
+pack_shrink_x digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{46 8 38 20}
+children[3]{
+ImageFace{
+name string{"dark"}
+packable digit{1}
+visible_compare digit{1}
+geometry rectangle{0 0 38 20}
+color[1]{
+RGBA{128 128 128 255}
+}
+image_path string{"image/gt5m/button/example.png"}
+}
+ImageFace{
+name string{"ImageFace"}
+packable digit{1}
+visible_condition digit{1}
+visible_compare digit{1}
+geometry rectangle{0 0 38 20}
+image_path string{"image/gt5m/button/example.png"}
+}
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"Demo"}
+}
+}
+}
+HBox{
+name string{"Replay"}
+pack_expand_y digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{92 8 76 20}
+children[3]{
+ImageFace{
+name string{"ImageFace"}
+image_path string{"image/gt5m/button/replay_save_load.png"}
+}
+SBox{
+name string{"LoadReplay"}
+can_focus digit{1}
+geometry rectangle{0 0 38 20}
+children[1]{
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"LoadReplay"}
+}
+}
+}
+SBox{
+name string{"SaveReplay"}
+can_focus digit{1}
+geometry rectangle{38 0 38 20}
+children[1]{
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"SaveReplay"}
+}
+}
+}
+}
+}
+HBox{
+name string{"Opt"}
+pack_expand_y digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{176 8 38 20}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+image_path string{"image/gt5m/button/detail_opt_mission.png"}
+}
+SBox{
+name string{"LicenseDetail"}
+can_focus digit{1}
+geometry rectangle{0 0 38 20}
+children[1]{
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"LicenseDetail"}
+}
+}
+}
+}
+}
+SBox{
+name string{"Exit"}
+can_focus digit{1}
+pack_expand_y digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{222 8 38 20}
+children[3]{
+ImageFace{
+name string{"dark"}
+packable digit{1}
+visible_compare digit{1}
+geometry rectangle{0 0 38 20}
+color[1]{
+RGBA{128 128 128 255}
+}
+image_path string{"image/gt5m/button/exit_L.png"}
+}
+ImageFace{
+name string{"ImageFace"}
+packable digit{1}
+visible_condition digit{1}
+visible_compare digit{1}
+geometry rectangle{0 0 38 20}
+image_path string{"image/gt5m/button/exit_L.png"}
+}
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"Exit"}
+}
+}
+}
+}
+spacing digit{8}
+}
+SBox{
+name string{"Next"}
+can_focus digit{1}
+pack_pad_right digit{16}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_shrink_x digit{1}
+pack_alignment_x digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{426 8 38 20}
+children[4]{
+ImageFace{
+name string{"dark"}
+packable digit{1}
+visible_compare digit{1}
+geometry rectangle{0 0 38 20}
+color[1]{
+RGBA{128 128 128 255}
+}
+image_path string{"image/gt5m/button/next_mission.png"}
+}
+ImageFace{
+name string{"ImageFace"}
+packable digit{1}
+visible_condition digit{1}
+visible_compare digit{1}
+geometry rectangle{0 0 38 20}
+image_path string{"image/gt5m/button/next_mission.png"}
+}
+ImageFace{
+name string{"Blink"}
+opacity digit{0}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_playing digit{0}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[3]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+}
+}
+}
+blend_func_name string{"add"}
+image_path string{"image/gt5m/button/next_mission.png"}
+}
+TextFace{
+name string{"balloon"}
+visible digit{0}
+geometry rectangle{0 0 38 24}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"NextLicense"}
+}
+}
+}
+SBox{
+name string{"Prev"}
+can_focus digit{1}
+pack_pad_left digit{16}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_shrink_x digit{1}
+pack_alignment_x digit{0}
+pack_alignment_y digit{0.4}
+geometry rectangle{16 6.4 38 24}
+children[4]{
+ImageFace{
+name string{"dark"}
+packable digit{1}
+visible_compare digit{1}
+geometry rectangle{0 0 38 20}
+color[1]{
+RGBA{128 128 128 255}
+}
+image_path string{"image/gt5m/button/prev_mission.png"}
+}
+ImageFace{
+name string{"ImageFace"}
+packable digit{1}
+visible_condition digit{1}
+visible_compare digit{1}
+geometry rectangle{0 0 38 20}
+image_path string{"image/gt5m/button/prev_mission.png"}
+}
+ImageFace{
+name string{"Blink"}
+opacity digit{0}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_playing digit{0}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[3]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+}
+}
+}
+blend_func_name string{"add"}
+image_path string{"image/gt5m/button/prev_mission.png"}
+}
+TextFace{
+name string{"balloon"}
+visible digit{0}
+geometry rectangle{-410 0 38 24}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"PrevLicense"}
+}
+}
+}
+}
+}
+'Tooltip::BalloonTip'{
+name string{"BalloonTip"}
+packable digit{1}
+geometry rectangle{0 0 480 272}
+children[1]{
+'Tooltip::BalloonTip::Tip'{
+name string{"Tip"}
+actor_list[2]{
+'Tooltip::BalloonTip::Tip::AppearEffect'{
+name string{"AppearEffect"}
+children[1]{
+'Tooltip::BalloonTip::Tip::AppearEffect::Scale'{
+name string{"Scale"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::VisibleEffect'{
+name string{"VisibleEffect"}
+}
+}
+children[3]{
+'Tooltip::BalloonTip::Tip::up_tip'{
+name string{"up_tip"}
+children[1]{
+'Tooltip::BalloonTip::Tip::up_tip::up_tip'{
+name string{"up_tip"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::Text'{
+name string{"Text"}
+children[2]{
+'Tooltip::BalloonTip::Tip::Text::ColorFace'{
+name string{"ColorFace"}
+}
+'Tooltip::BalloonTip::Tip::Text::TextFace'{
+name string{"TextFace"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::down_tip'{
+name string{"down_tip"}
+children[1]{
+'Tooltip::BalloonTip::Tip::down_tip::down_tip'{
+name string{"down_tip"}
+}
+}
+}
+}
+}
+}
+}
+ColorFace{
+name string{"VeilForSave"}
+opacity digit{0}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_playing digit{0}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeInOutQuad"}
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+}
+cursor_type string{"appear"}
+navigate_wraparound digit{0}
+}
+RootWindow{
+name string{"QuickTimeAttackRoot"}
+has_script digit{1}
+pack_children digit{1}
+children[8]{
+ColorFace{
+name string{"Veil"}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ImageFace{
+name string{"bg"}
+image_path string{"image/gt5m/bg/arc_quick.dds"}
+}
+HBox{
+name string{"Header"}
+geometry rectangle{24 10 448 27.3}
+children[2]{
+TextFace{
+name string{"TextFace"}
+packable digit{1}
+pack_shrink_x digit{1}
+geometry rectangle{0 0 70.96 27.3}
+text_color RGBA{230 230 230 255}
+font string{"default"}
+scale_x digit{1.17857}
+scale_y digit{1.17857}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 204}
+key string{"PageTitle"}
+}
+TextFace{
+name string{"TextFacePankuzu"}
+packable digit{1}
+pack_pad_left digit{10}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+pack_alignment_x digit{0}
+geometry rectangle{80.96 0 367.04 21}
+text_color RGBA{230 230 230 255}
+font string{"default"}
+align digit{6}
+scale_x digit{0.892857}
+scale_y digit{0.892857}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 204}
+text string{">> Pankuzu >>"}
+adjust_scale digit{1}
+}
+}
+}
+SBox{
+name string{"MainFrame"}
+pack_pad_left digit{40}
+pack_pad_right digit{40}
+pack_pad_bottom digit{40}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_shrink_x digit{1}
+pack_shrink_y digit{1}
+geometry rectangle{240 116 0 0}
+}
+TextFace{
+name string{"TextFaceLoading"}
+geometry rectangle{0 208 480 24}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+text_color RGBA{255 255 255 255}
+font string{"default"}
+scale_x digit{0.892857}
+scale_y digit{0.892857}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 204}
+key string{"Loading"}
+}
+SBox{
+name string{"Controller"}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{0 232 480 40}
+children[2]{
+ColorFace{
+name string{"ImageFace"}
+is_divide_color digit{1}
+y_divide[2]{
+digit{0.0470001}
+digit{0.4}
+}
+color_divide[3]{
+[4]{
+RGBA{128 128 128 255}
+RGBA{128 128 128 255}
+RGBA{64 64 64 255}
+RGBA{64 64 64 255}
+}
+[4]{
+RGBA{64 64 64 255}
+RGBA{64 64 64 255}
+RGBA{36 36 36 255}
+RGBA{36 36 36 255}
+}
+[4]{
+RGBA{36 36 36 255}
+RGBA{36 36 36 255}
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+}
+}
+}
+HBox{
+name string{"HBox"}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_y digit{1}
+pack_shrink_x digit{1}
+geometry rectangle{49 0 382 40}
+children[7]{
+SBox{
+name string{"Start"}
+can_focus digit{1}
+pack_expand_y digit{1}
+pack_shrink_x digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{0 8 38 20}
+children[4]{
+ImageFace{
+name string{"dark"}
+packable digit{1}
+visible_compare digit{1}
+geometry rectangle{0 0 38 20}
+color[1]{
+RGBA{128 128 128 255}
+}
+image_path string{"image/gt5m/button/start.png"}
+}
+ImageFace{
+name string{"ImageFace"}
+packable digit{1}
+visible_condition digit{1}
+visible_compare digit{1}
+geometry rectangle{0 0 38 20}
+image_path string{"image/gt5m/button/start.png"}
+}
+ImageFace{
+name string{"Blink"}
+opacity digit{0}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_playing digit{0}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[3]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+}
+}
+}
+blend_func_name string{"add"}
+image_path string{"image/gt5m/button/start.png"}
+}
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"Start"}
+}
+}
+}
+SBox{
+name string{"Info"}
+visible digit{0}
+can_focus digit{1}
+pack_expand_y digit{1}
+pack_shrink_x digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{48 8 38 20}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+packable digit{1}
+geometry rectangle{0 0 38 20}
+image_path string{"image/gt5m/button/manual.png"}
+}
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"Info"}
+}
+}
+}
+HBox{
+name string{"Replay"}
+pack_expand_y digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{46 8 76 20}
+children[3]{
+ImageFace{
+name string{"ImageFace"}
+image_path string{"image/gt5m/button/replay_save_load.png"}
+}
+SBox{
+name string{"LoadReplay"}
+can_focus digit{1}
+geometry rectangle{0 0 38 20}
+children[1]{
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"LoadReplay"}
+}
+}
+}
+SBox{
+name string{"SaveReplay"}
+can_focus digit{1}
+geometry rectangle{38 0 38 20}
+children[1]{
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"SaveReplay"}
+}
+}
+}
+}
+}
+SBox{
+name string{"LoadGhost"}
+can_focus digit{1}
+geometry rectangle{130 8 38 20}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+image_path string{"image/gt5m/button/gohst_load.png"}
+}
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"LoadGhost"}
+}
+}
+}
+HBox{
+name string{"Ghost"}
+pack_expand_y digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{176 8 76 20}
+children[3]{
+ImageFace{
+name string{"ImageFace"}
+image_path string{"image/gt5m/button/gohst_save_load.png"}
+}
+SBox{
+name string{"LoadGhost"}
+can_focus digit{1}
+geometry rectangle{0 0 38 20}
+children[1]{
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"LoadGhost"}
+}
+}
+}
+SBox{
+name string{"SaveGhost"}
+can_focus digit{1}
+geometry rectangle{38 0 38 20}
+children[1]{
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"SaveGhost"}
+}
+}
+}
+}
+}
+HBox{
+name string{"Opt"}
+pack_expand_y digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{260 8 76 20}
+children[3]{
+ImageFace{
+name string{"ImageFace"}
+image_path string{"image/gt5m/button/detail_opt_course_car.png"}
+}
+SBox{
+name string{"CourseDetail"}
+can_focus digit{1}
+geometry rectangle{0 0 38 20}
+children[1]{
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"CourseDetail"}
+}
+}
+}
+SBox{
+name string{"CarDetail"}
+can_focus digit{1}
+geometry rectangle{38 0 38 20}
+children[1]{
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"CarDetail"}
+}
+}
+}
+}
+}
+SBox{
+name string{"Exit"}
+can_focus digit{1}
+pack_expand_y digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{344 8 38 20}
+children[3]{
+ImageFace{
+name string{"dark"}
+packable digit{1}
+visible_compare digit{1}
+geometry rectangle{0 0 38 20}
+color[1]{
+RGBA{128 128 128 255}
+}
+image_path string{"image/gt5m/button/exit_L.png"}
+}
+ImageFace{
+name string{"ImageFace"}
+packable digit{1}
+visible_condition digit{1}
+visible_compare digit{1}
+geometry rectangle{0 0 38 20}
+image_path string{"image/gt5m/button/exit_L.png"}
+}
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+key string{"Exit"}
+}
+}
+}
+}
+spacing digit{8}
+}
+}
+}
+'Tooltip::BalloonTip'{
+name string{"BalloonTip"}
+packable digit{1}
+children[1]{
+'Tooltip::BalloonTip::Tip'{
+name string{"Tip"}
+actor_list[2]{
+'Tooltip::BalloonTip::Tip::AppearEffect'{
+name string{"AppearEffect"}
+children[1]{
+'Tooltip::BalloonTip::Tip::AppearEffect::Scale'{
+name string{"Scale"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::VisibleEffect'{
+name string{"VisibleEffect"}
+}
+}
+children[3]{
+'Tooltip::BalloonTip::Tip::up_tip'{
+name string{"up_tip"}
+children[1]{
+'Tooltip::BalloonTip::Tip::up_tip::up_tip'{
+name string{"up_tip"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::Text'{
+name string{"Text"}
+children[2]{
+'Tooltip::BalloonTip::Tip::Text::ColorFace'{
+name string{"ColorFace"}
+}
+'Tooltip::BalloonTip::Tip::Text::TextFace'{
+name string{"TextFace"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::down_tip'{
+name string{"down_tip"}
+children[1]{
+'Tooltip::BalloonTip::Tip::down_tip::down_tip'{
+name string{"down_tip"}
+}
+}
+}
+}
+}
+}
+}
+ColorFace{
+name string{"VeilForSave"}
+opacity digit{0}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_playing digit{0}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+}
+cursor_type string{"appear"}
+navigate_wraparound digit{0}
+}
+RootWindow{
+name string{"RaceRoot"}
+has_script digit{1}
+pack_children digit{1}
+children[6]{
+Composite{
+name string{"Info"}
+geometry rectangle{0 0 480 272}
+children[4]{
+Composite{
+name string{"Go"}
+geometry rectangle{0 0 480 272}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{155 92 170 48}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+start_duration digit{0.30015}
+interpolation_period digit{1.0005}
+tension digit{-1}
+start_value digit{1}
+}
+}
+}
+}
+color[1]{
+RGBA{204 211 239 255}
+}
+image_path string{"image/gt5m/racedisplay/JP/RaceStart.png"}
+}
+ImageFace{
+name string{"ImageFaceEffect"}
+geometry rectangle{155 92 170 48}
+actor_list[3]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.6}
+tension digit{1}
+start_value digit{1}
+}
+}
+}
+ScalarInterpolator{
+name string{"ScalarInterpolatorX"}
+attribute_name string{"MWidget::scale_x"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.6}
+tension digit{1}
+start_value digit{1}
+end_value digit{1.5}
+}
+}
+}
+ScalarInterpolator{
+name string{"ScalarInterpolatorY"}
+attribute_name string{"MWidget::scale_y"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.6}
+tension digit{1}
+start_value digit{1}
+end_value digit{1.5}
+}
+}
+}
+}
+color[1]{
+RGBA{204 211 239 255}
+}
+image_path string{"image/gt5m/racedisplay/JP/RaceStartEffect.png"}
+}
+}
+}
+Composite{
+name string{"Goal"}
+geometry rectangle{0 0 480 272}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{155 92 170 48}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+start_duration digit{0.3}
+tension digit{-1}
+start_value digit{1}
+}
+}
+}
+}
+color[1]{
+RGBA{204 211 239 255}
+}
+image_path string{"image/gt5m/racedisplay/JP/RaceFinish.png"}
+}
+ImageFace{
+name string{"ImageFaceEffect"}
+geometry rectangle{155 92 170 48}
+actor_list[2]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.6}
+tension digit{1}
+start_value digit{1}
+}
+}
+}
+VectorInterpolator{
+name string{"VectorInterpolator"}
+attribute_name string{"MWidget::scale"}
+loop_count digit{1}
+section[1]{
+MVectorSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.6}
+tension digit{1}
+start_value vector{1.5 1.5}
+end_value vector{1 1}
+}
+}
+}
+}
+color[1]{
+RGBA{204 211 239 255}
+}
+image_path string{"image/gt5m/racedisplay/JP/RaceFinishEffect.png"}
+}
+}
+}
+Composite{
+name string{"CountDown"}
+geometry rectangle{0 0 480 272}
+children[3]{
+SBox{
+name string{"CD_3"}
+packable digit{0}
+geometry rectangle{204 76 72 80}
+clip digit{0}
+children[2]{
+ImageFace{
+name string{"ImageFaceEffect"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+geometry rectangle{16 16 40 48}
+actor_list[3]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[2]{
+MScalarSection{
+interpolation_period digit{0.3}
+tension digit{-1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.2}
+end_value digit{1}
+}
+}
+}
+ScalarInterpolator{
+name string{"ScalarInterpolatorX"}
+attribute_name string{"MWidget::scale_x"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.3}
+tension digit{-1}
+start_value digit{2}
+end_value digit{1}
+}
+}
+}
+ScalarInterpolator{
+name string{"ScalarInterpolatorY"}
+attribute_name string{"MWidget::scale_y"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.3}
+tension digit{-1}
+start_value digit{2}
+end_value digit{1}
+}
+}
+}
+}
+image_path string{"image/gt5m/test/Race_cd3effect.png"}
+}
+ImageFace{
+name string{"ImageFace"}
+packable digit{1}
+pack_pad_left digit{16}
+pack_pad_right digit{16}
+pack_pad_top digit{16}
+pack_pad_bottom digit{16}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+geometry rectangle{16 16 40 48}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+start_duration digit{0.6}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+}
+}
+}
+color[1]{
+RGBA{204 211 239 255}
+}
+image_path string{"image/gt5m/test/Race_cd3.png"}
+}
+}
+}
+SBox{
+name string{"CD_2"}
+packable digit{0}
+geometry rectangle{204 76 72 80}
+clip digit{0}
+children[2]{
+ImageFace{
+name string{"ImageFaceEffect"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+geometry rectangle{16 16 40 48}
+actor_list[3]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[2]{
+MScalarSection{
+interpolation_period digit{0.3}
+tension digit{-1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.2}
+end_value digit{1}
+}
+}
+}
+ScalarInterpolator{
+name string{"ScalarInterpolatorX"}
+attribute_name string{"MWidget::scale_x"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.3}
+tension digit{-1}
+start_value digit{2}
+end_value digit{1}
+}
+}
+}
+ScalarInterpolator{
+name string{"ScalarInterpolatorY"}
+attribute_name string{"MWidget::scale_y"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.3}
+tension digit{-1}
+start_value digit{2}
+end_value digit{1}
+}
+}
+}
+}
+image_path string{"image/gt5m/test/Race_cd2effect.png"}
+}
+ImageFace{
+name string{"ImageFace"}
+packable digit{1}
+pack_pad_left digit{16}
+pack_pad_right digit{16}
+pack_pad_top digit{16}
+pack_pad_bottom digit{16}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+geometry rectangle{16 16 40 48}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+start_duration digit{0.6}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+}
+}
+}
+color[1]{
+RGBA{204 211 239 255}
+}
+image_path string{"image/gt5m/test/Race_cd2.png"}
+}
+}
+}
+SBox{
+name string{"CD_1"}
+packable digit{0}
+geometry rectangle{204 76 72 80}
+clip digit{0}
+children[2]{
+ImageFace{
+name string{"ImageFaceEffect"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+geometry rectangle{16 16 40 48}
+actor_list[3]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[2]{
+MScalarSection{
+interpolation_period digit{0.3}
+tension digit{-1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.2}
+end_value digit{1}
+}
+}
+}
+ScalarInterpolator{
+name string{"ScalarInterpolatorX"}
+attribute_name string{"MWidget::scale_x"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.3}
+tension digit{-1}
+start_value digit{2}
+end_value digit{1}
+}
+}
+}
+ScalarInterpolator{
+name string{"ScalarInterpolatorY"}
+attribute_name string{"MWidget::scale_y"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.3}
+tension digit{-1}
+start_value digit{2}
+end_value digit{1}
+}
+}
+}
+}
+image_path string{"image/gt5m/test/Race_cd1effect.png"}
+}
+ImageFace{
+name string{"ImageFace"}
+packable digit{1}
+pack_pad_left digit{16}
+pack_pad_right digit{16}
+pack_pad_top digit{16}
+pack_pad_bottom digit{16}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+geometry rectangle{16 16 40 48}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+start_duration digit{0.6}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+}
+}
+}
+color[1]{
+RGBA{204 211 239 255}
+}
+image_path string{"image/gt5m/test/Race_cd1.png"}
+}
+}
+}
+}
+}
+Composite{
+name string{"NextlapInvalid"}
+visible digit{0}
+geometry rectangle{0 179 182 16}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_pause digit{1}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+start_duration digit{2}
+interpolation_period digit{0.6}
+tension digit{1}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+TextFace{
+name string{"TextFace"}
+geometry rectangle{24 0 158 16}
+text_color RGBA{255 117 117 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.8}
+scale_y digit{0.8}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 204}
+localized_text_page string{"RaceProject::"}
+text string{"次のラップは無効！"}
+}
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{8 0 16 16}
+image_path string{"image/gt5m/racedisplay/info_alert.png"}
+}
+}
+}
+}
+}
+Composite{
+name string{"Keyinfo"}
+visible digit{0}
+packable digit{1}
+geometry rectangle{0 211 182 16}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_pause digit{1}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+start_duration digit{1}
+tension digit{1}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+TextFace{
+name string{"TextFace"}
+geometry rectangle{24 0 158 16}
+text_color RGBA{255 255 255 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.8}
+scale_y digit{0.8}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 204}
+localized_text_page string{"RaceProject::"}
+text string{"アクセル"}
+}
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{8 0 16 16}
+image_path string{"image/gt5m/racedisplay/keys.png"}
+}
+}
+}
+Composite{
+name string{"Jackpot"}
+visible digit{0}
+packable digit{1}
+geometry rectangle{185 82 108 36}
+actor_list[3]{
+VectorInterpolator{
+name string{"VectorInterpolator0"}
+attribute_name string{"MWidget::translate"}
+loop_count digit{1}
+section[1]{
+MVectorSection{
+ease_type_name string{"easeOutQuart"}
+start_duration digit{1}
+end_duration digit{0.7}
+interpolation_period digit{0.3}
+end_value vector{187 100}
+}
+}
+}
+VectorInterpolator{
+name string{"VectorInterpolator"}
+attribute_name string{"MWidget::scale"}
+loop_count digit{1}
+section[2]{
+MVectorSection{
+ease_type_name string{"easeInExpo"}
+end_duration digit{0.7}
+interpolation_period digit{0.3}
+start_value vector{2 2}
+end_value vector{1 1}
+}
+MVectorSection{
+ease_type_name string{"easeInExpo"}
+increase_mode_name string{"decrease"}
+end_duration digit{0.7}
+interpolation_period digit{0.3}
+start_value vector{0.72 0.72}
+end_value vector{1 1}
+}
+}
+}
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeInQuart"}
+end_duration digit{1.7}
+interpolation_period digit{0.3}
+end_value digit{1}
+}
+}
+}
+}
+children[3]{
+ImageFace{
+name string{"ImageFace1"}
+geometry rectangle{38 12 32 32}
+actor_list[2]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::rotate"}
+section[1]{
+MScalarSection{
+start_value digit{1}
+end_value digit{360}
+}
+}
+}
+ScalarInterpolator{
+name string{"ScalarInterpolator0"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeOutCirc"}
+start_duration digit{2}
+end_duration digit{3.7}
+interpolation_period digit{0.3}
+start_value digit{1}
+}
+}
+}
+}
+image_path string{"image/gt5m/racedisplay/JP_tip.png"}
+}
+ImageFace{
+name string{"ImageFace"}
+image_path string{"image/gt5m/racedisplay/JP_LOGO.png"}
+}
+ImageFace{
+name string{"ImageFace0"}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[2]{
+MScalarSection{
+ease_type_name string{"easeInCirc"}
+start_duration digit{0.3}
+interpolation_period digit{0.2}
+end_value digit{1}
+}
+MScalarSection{
+ease_type_name string{"easeInCirc"}
+increase_mode_name string{"decrease"}
+end_duration digit{4.9}
+interpolation_period digit{0.6}
+end_value digit{1}
+}
+}
+}
+}
+image_path string{"image/gt5m/racedisplay/JP_LOGO_f.png"}
+}
+}
+}
+Composite{
+name string{"JPlogoWait"}
+visible digit{0}
+packable digit{1}
+geometry rectangle{372 182 108 36}
+scale vector{0.72 0.72}
+actor_list[2]{
+ScalarInterpolator{
+name string{"MissDrop"}
+initial_pause digit{1}
+attribute_name string{"MWidget::offset_y"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+tension digit{-1}
+end_value digit{50}
+}
+}
+}
+ScalarInterpolator{
+name string{"MissFade"}
+initial_pause digit{1}
+attribute_name string{"MWidget::opacity"}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.2}
+start_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"JPlogo"}
+actor_list[1]{
+ScalarInterpolator{
+name string{"WaitFlash"}
+attribute_name string{"MWidget::opacity"}
+section[2]{
+MScalarSection{
+ease_type_name string{"easeOutQuad"}
+interpolation_period digit{0.25}
+start_value digit{0.3}
+end_value digit{0.8}
+}
+MScalarSection{
+ease_type_name string{"easeOutQuad"}
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.25}
+start_value digit{0.3}
+end_value digit{0.8}
+}
+}
+}
+}
+image_path string{"image/gt5m/racedisplay/JP_LOGO.png"}
+}
+ImageFace{
+name string{"ImageFace0"}
+visible digit{0}
+actor_list[1]{
+ScalarInterpolator{
+name string{"Flash"}
+attribute_name string{"MWidget::opacity"}
+section[2]{
+MScalarSection{
+ease_type_name string{"easeInCirc"}
+interpolation_period digit{0.01}
+end_value digit{1}
+}
+MScalarSection{
+ease_type_name string{"easeInCirc"}
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.2}
+end_value digit{1}
+}
+}
+}
+}
+image_path string{"image/gt5m/racedisplay/JP_LOGO_f.png"}
+}
+}
+}
+TextFace{
+name string{"rate"}
+visible digit{0}
+geometry rectangle{383 214 80 16}
+actor_list[3]{
+ScalarInterpolator{
+name string{"MissDrop"}
+initial_playing digit{0}
+initial_pause digit{1}
+attribute_name string{"MWidget::offset_y"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+tension digit{-1}
+end_value digit{50}
+}
+}
+}
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::translate_x"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeOutBack"}
+start_duration digit{2.1}
+end_duration digit{1.6}
+interpolation_period digit{0.3}
+tension digit{1.70158}
+start_value digit{97}
+}
+}
+}
+ColorInterpolator{
+name string{"ColorInterpolator"}
+attribute_name string{"MTextFace::text_color"}
+section[4]{
+MColorSection{
+interpolation_period digit{0.06}
+end_value RGBA{255 177 177 255}
+}
+MColorSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.06}
+start_value RGBA{170 211 255 255}
+end_value RGBA{255 177 177 255}
+}
+MColorSection{
+interpolation_period digit{0.06}
+start_value RGBA{170 211 255 255}
+end_value RGBA{132 255 145 255}
+}
+MColorSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.06}
+end_value RGBA{132 255 145 255}
+}
+}
+}
+}
+text_color RGBA{255 255 255 255}
+font string{"sanserif-b"}
+align digit{5}
+outline_value digit{1}
+text string{"x10"}
+}
+Composite{
+name string{"Lolipop"}
+visible digit{0}
+packable digit{1}
+geometry rectangle{200 140 78 54}
+children[2]{
+ImageFace{
+name string{"Stop"}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::scale_y"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.1}
+start_value digit{1}
+}
+}
+}
+}
+image_path string{"image/gt5m/racedisplay/lolipop_stop.png"}
+}
+ImageFace{
+name string{"Ready"}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::scale_y"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+start_duration digit{0.1}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+}
+}
+}
+image_path string{"image/gt5m/racedisplay/lolipop_ready.png"}
+}
+}
+}
+}
+}
+RootWindow{
+name string{"ResultRoot"}
+has_script digit{1}
+pack_children digit{1}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[3]{
+ColorFace{
+name string{"ColorFace"}
+color[1]{
+RGBA{0 0 0 192}
+}
+}
+SBox{
+name string{"MainFrame"}
+pack_pad_left digit{40}
+pack_pad_right digit{40}
+pack_pad_bottom digit{30}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_shrink_x digit{1}
+pack_shrink_y digit{1}
+geometry rectangle{240 121 0 0}
+}
+SBox{
+name string{"Info"}
+geometry rectangle{0 0 128 32}
+children[1]{
+SBox{
+name string{"RemainTime"}
+geometry rectangle{0 0 128 32}
+children[1]{
+TextFace{
+name string{"TextFace"}
+font string{"default"}
+}
+}
+}
+}
+}
+}
+}
+RootWindow{
+name string{"Template"}
+has_script digit{1}
+pack_children digit{1}
+children[4]{
+'RaceMenu::Template'{
+name string{"RaceMenu"}
+children[2]{
+'RaceMenu::Template::SBox0'{
+name string{"SBox0"}
+geometry rectangle{202 192 66 64}
+actor_list[1]{
+'RaceMenu::Template::SBox0::ScalarInterpolator'{
+name string{"ScalarInterpolator"}
+section[1]{
+MScalarSection{
+start_duration digit{0.15}
+end_duration digit{0.5}
+interpolation_period digit{0.35}
+tension digit{0.75}
+start_value digit{272}
+end_value digit{192}
+}
+}
+}
+}
+children[2]{
+'RaceMenu::Template::SBox0::bg'{
+name string{"bg"}
+color[1]{
+RGBA{255 255 255 255}
+}
+image_path string{""}
+t_image_path string{""}
+b_image_path string{""}
+l_image_path string{""}
+r_image_path string{""}
+tl_image_path string{"image/gt5m/test/base_quick.png"}
+tr_image_path string{""}
+bl_image_path string{""}
+br_image_path string{""}
+frame_width digit{5}
+frame_height digit{30}
+}
+'RaceMenu::Template::SBox0::SBox1'{
+name string{"SBox1"}
+geometry rectangle{0 0 66 64}
+children[4]{
+'RaceMenu::Template::SBox0::SBox1::dec_arrow'{
+name string{"dec_arrow"}
+pack_side digit{0}
+pack_expand_y digit{0}
+pack_fill_y digit{0}
+geometry rectangle{0 0 24 60}
+children[1]{
+'RaceMenu::Template::SBox0::SBox1::dec_arrow::ArrowL'{
+name string{"ArrowL"}
+geometry rectangle{7 23 10 14}
+actor_list[1]{
+'RaceMenu::Template::SBox0::SBox1::dec_arrow::ArrowL::VectorInterpolator'{
+name string{"VectorInterpolator"}
+}
+}
+}
+}
+}
+'RaceMenu::Template::SBox0::SBox1::inc_arrow'{
+name string{"inc_arrow"}
+geometry rectangle{42 0 24 60}
+children[1]{
+'RaceMenu::Template::SBox0::SBox1::inc_arrow::ArrowR'{
+name string{"ArrowR"}
+geometry rectangle{7 23 10 14}
+actor_list[1]{
+'RaceMenu::Template::SBox0::SBox1::inc_arrow::ArrowR::VectorInterpolator'{
+name string{"VectorInterpolator"}
+}
+}
+}
+}
+}
+'RaceMenu::Template::SBox0::SBox1::ListBox'{
+name string{"ListBox"}
+pack_pad_top digit{8}
+geometry rectangle{6 8 54 30}
+actor_list[1]{
+'RaceMenu::Template::SBox0::SBox1::ListBox::ScalarInterpolator'{
+name string{"ScalarInterpolator"}
+}
+}
+}
+'RaceMenu::Template::SBox0::SBox1::Caption'{
+name string{"Caption"}
+geometry rectangle{3 42 60 18}
+actor_list[1]{
+'RaceMenu::Template::SBox0::SBox1::Caption::ScalarInterpolator'{
+name string{"ScalarInterpolator"}
+}
+}
+clip digit{1}
+children[2]{
+'RaceMenu::Template::SBox0::SBox1::Caption::bg'{
+name string{"bg"}
+geometry rectangle{0 0 60 18}
+color[1]{
+RGBA{255 255 255 255}
+}
+image_path string{""}
+t_image_path string{""}
+b_image_path string{""}
+l_image_path string{""}
+r_image_path string{""}
+tl_image_path string{"image/gt5m/test/base_quick_caption.png"}
+tr_image_path string{""}
+bl_image_path string{""}
+br_image_path string{""}
+}
+'RaceMenu::Template::SBox0::SBox1::Caption::label'{
+name string{"label"}
+geometry rectangle{0 0 60 18}
+font string{"default"}
+scale_x digit{0.75}
+scale_y digit{0.75}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 153}
+text string{"CONTINUE"}
+adjust_scale digit{1}
+}
+}
+}
+}
+inner_pad_left digit{3}
+inner_pad_right digit{3}
+}
+}
+}
+'RaceMenu::Template::Item'{
+name string{"Item"}
+geometry rectangle{0 0 60 30}
+actor_list[1]{
+'RaceMenu::Template::Item::Blink'{
+name string{"Blink"}
+}
+}
+children[2]{
+'RaceMenu::Template::Item::image'{
+name string{"image"}
+geometry rectangle{3 0 54 30}
+}
+'RaceMenu::Template::Item::separator'{
+name string{"separator"}
+geometry rectangle{-2 0 4 30}
+image_path string{"image/gt5m/test/line_quick.png"}
+}
+}
+}
+}
+}
+SBox{
+name string{"QuickBoard"}
+pack_pad_top digit{38}
+pack_pad_bottom digit{22}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_shrink_x digit{1}
+pack_shrink_y digit{1}
+geometry rectangle{5 58 470 172}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.12}
+end_value digit{1}
+}
+}
+}
+}
+clip digit{0}
+children[5]{
+FrameImageFace{
+name string{"bg"}
+packable digit{1}
+pack_pad_left digit{-4}
+pack_pad_right digit{-4}
+pack_pad_top digit{-4}
+pack_pad_bottom digit{-4}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+geometry rectangle{0 -4 470 180}
+color[1]{
+RGBA{220 220 220 153}
+}
+tl_image_path string{"image/gt5m/panel/panel_frame.png"}
+frame_width digit{9}
+frame_height digit{9}
+}
+TextFace{
+name string{"title"}
+packable digit{1}
+pack_pad_left digit{8}
+pack_pad_right digit{8}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{12 0 446 22}
+text_color RGBA{12 12 12 255}
+font string{"default"}
+scale_x digit{0.928571}
+scale_y digit{0.928571}
+nextline_offset digit{-2}
+text string{"QuickArcade"}
+adjust_scale digit{1}
+}
+ListBox{
+name string{"Body"}
+packable digit{1}
+pack_pad_left digit{8}
+pack_pad_right digit{8}
+pack_pad_top digit{22}
+pack_pad_bottom digit{6}
+pack_allocate_h digit{0}
+pack_expand_x digit{1}
+geometry rectangle{12 22 446 144}
+direction digit{1}
+scroll_point digit{1}
+}
+ListBox{
+name string{"Body2"}
+packable digit{1}
+pack_pad_left digit{8}
+pack_pad_right digit{8}
+pack_pad_top digit{22}
+pack_pad_bottom digit{6}
+pack_allocate_h digit{0}
+pack_expand_x digit{1}
+geometry rectangle{54 22 362 144}
+direction digit{1}
+}
+VScrollbar{
+name string{"VScrollbar"}
+pack_pad_top digit{22}
+pack_pad_bottom digit{6}
+pack_expand_x digit{1}
+pack_alignment_x digit{1}
+geometry rectangle{461 22 5 144}
+children[5]{
+ColorFace{
+name string{"bg"}
+geometry rectangle{1 0 4 144}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"bevel_left"}
+geometry rectangle{0 0 1 144}
+color[1]{
+RGBA{0 0 0 102}
+}
+}
+'VScrollbar::dec_arrow'{
+name string{"dec_arrow"}
+visible digit{0}
+geometry rectangle{0 0 5 4}
+}
+'VScrollbar::inc_arrow'{
+name string{"inc_arrow"}
+visible digit{0}
+geometry rectangle{0 140 5 4}
+}
+'VScrollbar::pinch'{
+name string{"pinch"}
+geometry rectangle{0 0 5 144}
+children[1]{
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{2 0 2 144}
+color[4]{
+RGBA{255 255 255 255}
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+RGBA{255 255 255 255}
+}
+round digit{4}
+}
+}
+}
+}
+display_policy digit{1}
+}
+}
+inner_pad_left digit{4}
+inner_pad_right digit{4}
+}
+HBox{
+name string{"QuickBoardItem"}
+pack_expand_x digit{1}
+pack_shrink_x digit{1}
+geometry rectangle{17 0 446 36}
+children[3]{
+SBox{
+name string{"Position"}
+pack_pad_right digit{2}
+pack_pad_top digit{1}
+geometry rectangle{0 1 18 18}
+children[3]{
+ImageFace{
+name string{"ColorFace"}
+is_divide_color digit{1}
+color_divide[1]{
+[4]{
+RGBA{80 80 80 255}
+RGBA{80 80 80 255}
+RGBA{40 40 40 255}
+RGBA{40 40 40 255}
+}
+}
+color[1]{
+RGBA{0 0 0 204}
+}
+image_path string{"image/gt5m/panel/panel_numbase.png"}
+}
+ImageFace{
+name string{"ColorFaceMe"}
+actor_list[1]{
+FaceColorInterpolator{
+name string{"FaceColorInterpolator"}
+attribute_name string{"MColorFace::face_color"}
+section[1]{
+MFaceColorSection{
+interpolation_period digit{0.5}
+start_value[1]{
+RGBA{200 200 200 255}
+}
+end_value[1]{
+RGBA{80 80 80 255}
+}
+}
+}
+}
+}
+color[4]{
+RGBA{80 80 80 255}
+RGBA{80 80 80 255}
+RGBA{40 40 40 255}
+RGBA{40 40 40 255}
+}
+image_path string{"image/gt5m/panel/panel_numbase.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{-1 0 18 18}
+text_color RGBA{230 230 230 255}
+font string{"default"}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+outline_value digit{1}
+outline_color RGBA{0 0 0 127}
+type_spacing digit{-2}
+text string{"10"}
+adjust_scale digit{1}
+}
+}
+}
+SBox{
+name string{"Car"}
+geometry rectangle{20 0 342 36}
+children[5]{
+Composite{
+name string{"ColorFace0"}
+is_face digit{1}
+packable digit{1}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{0 0 342 36}
+children[5]{
+ColorFace{
+name string{"base"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{0 0 342 36}
+color[1]{
+RGBA{0 0 0 178}
+}
+}
+ColorFace{
+name string{"bevel_top"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{0 0 342 1}
+color[1]{
+RGBA{255 255 255 51}
+}
+}
+ColorFace{
+name string{"bevel_left"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{0 1 1 34}
+color[1]{
+RGBA{255 255 255 51}
+}
+}
+ColorFace{
+name string{"bevel_bottom"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{0 35 342 1}
+color[1]{
+RGBA{0 0 0 102}
+}
+}
+ColorFace{
+name string{"bevel_right"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{341 1 1 34}
+color[1]{
+RGBA{0 0 0 102}
+}
+}
+}
+}
+Composite{
+name string{"ColorFace1"}
+is_face digit{1}
+packable digit{1}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{0 0 342 36}
+children[5]{
+ColorFace{
+name string{"base"}
+color[1]{
+RGBA{0 0 0 153}
+}
+}
+ColorFace{
+name string{"bevel_top"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{0 0 342 1}
+color[1]{
+RGBA{255 255 255 51}
+}
+}
+ColorFace{
+name string{"bevel_left"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{0 1 1 34}
+color[1]{
+RGBA{255 255 255 51}
+}
+}
+ColorFace{
+name string{"bevel_bottom"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{0 35 342 1}
+color[1]{
+RGBA{0 0 0 102}
+}
+}
+ColorFace{
+name string{"bevel_right"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{341 1 1 34}
+color[1]{
+RGBA{0 0 0 102}
+}
+}
+}
+}
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{4 0 46 35}
+from_disk digit{1}
+}
+TextFace{
+name string{"TextFace"}
+visible digit{0}
+geometry rectangle{54 0 280 36}
+text_color RGBA{230 230 230 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 128}
+text string{"1"}
+adjust_scale digit{1}
+}
+VBox{
+name string{"VBox"}
+pack_expand_y digit{1}
+pack_shrink_y digit{1}
+geometry rectangle{54 2 280 32}
+children[2]{
+TextFace{
+name string{"TextFace1"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{0 0 280 18}
+text_color RGBA{230 230 230 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 192}
+text string{"1"}
+adjust_scale digit{1}
+}
+TextFace{
+name string{"TextFace2"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{0 18 280 14}
+text_color RGBA{230 230 230 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.785714}
+scale_y digit{0.785714}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 192}
+text string{"1"}
+adjust_scale digit{1}
+}
+}
+}
+}
+}
+SBox{
+name string{"Time"}
+geometry rectangle{362 0 84 36}
+children[3]{
+Composite{
+name string{"ColorFace0"}
+is_face digit{1}
+geometry rectangle{0 0 84 36}
+children[5]{
+ColorFace{
+name string{"base"}
+color[1]{
+RGBA{0 0 0 178}
+}
+}
+ColorFace{
+name string{"bevel_top"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{0 0 84 1}
+color[1]{
+RGBA{255 255 255 51}
+}
+}
+ColorFace{
+name string{"bevel_left"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{0 1 1 34}
+color[1]{
+RGBA{255 255 255 51}
+}
+}
+ColorFace{
+name string{"bevel_bottom"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{0 35 84 1}
+color[1]{
+RGBA{0 0 0 102}
+}
+}
+ColorFace{
+name string{"bevel_right"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{83 1 1 34}
+color[1]{
+RGBA{0 0 0 102}
+}
+}
+}
+}
+Composite{
+name string{"ColorFace1"}
+is_face digit{1}
+geometry rectangle{0 0 84 36}
+children[5]{
+ColorFace{
+name string{"base"}
+color[1]{
+RGBA{0 0 0 153}
+}
+}
+ColorFace{
+name string{"bevel_top"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{0 0 84 1}
+color[1]{
+RGBA{255 255 255 51}
+}
+}
+ColorFace{
+name string{"bevel_left"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{0 1 1 34}
+color[1]{
+RGBA{255 255 255 51}
+}
+}
+ColorFace{
+name string{"bevel_bottom"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{0 35 84 1}
+color[1]{
+RGBA{0 0 0 102}
+}
+}
+ColorFace{
+name string{"bevel_right"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{83 1 1 34}
+color[1]{
+RGBA{0 0 0 102}
+}
+}
+}
+}
+VBox{
+name string{"VBox"}
+pack_expand_y digit{1}
+pack_shrink_y digit{1}
+geometry rectangle{7.5 2 68 32}
+children[2]{
+TextFace{
+name string{"TextFace"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{0 0 68 18}
+text_color RGBA{230 230 230 255}
+font string{"default"}
+align digit{5}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 192}
+text string{"1"}
+adjust_scale digit{1}
+}
+TextFace{
+name string{"TextFaceDiff"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+pack_alignment_y digit{0}
+geometry rectangle{0 18 68 14}
+text_color RGBA{255 100 131 255}
+font string{"default"}
+align digit{5}
+scale_x digit{0.785714}
+scale_y digit{0.785714}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 192}
+text string{"1"}
+adjust_scale digit{1}
+}
+}
+}
+}
+}
+}
+}
+HBox{
+name string{"QuickInfoItem"}
+pack_expand_x digit{1}
+pack_shrink_x digit{1}
+geometry rectangle{59 0 362 24}
+children[2]{
+SBox{
+name string{"Label"}
+geometry rectangle{0 0 252 24}
+children[3]{
+Composite{
+name string{"ColorFace0"}
+is_face digit{1}
+packable digit{1}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+geometry rectangle{0 0 252 24}
+children[5]{
+ColorFace{
+name string{"base"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+geometry rectangle{0 0 252 24}
+color[1]{
+RGBA{0 0 0 178}
+}
+}
+ColorFace{
+name string{"bevel_top"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{0 0 252 1}
+color[1]{
+RGBA{255 255 255 51}
+}
+}
+ColorFace{
+name string{"bevel_left"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{0 1 1 22}
+color[1]{
+RGBA{255 255 255 51}
+}
+}
+ColorFace{
+name string{"bevel_bottom"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{0 23 252 1}
+color[1]{
+RGBA{0 0 0 102}
+}
+}
+ColorFace{
+name string{"bevel_right"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{251 1 1 22}
+color[1]{
+RGBA{0 0 0 102}
+}
+}
+}
+}
+Composite{
+name string{"ColorFace1"}
+is_face digit{1}
+packable digit{1}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+geometry rectangle{0 0 252 24}
+children[5]{
+ColorFace{
+name string{"base"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+geometry rectangle{0 0 252 24}
+color[1]{
+RGBA{0 0 0 153}
+}
+}
+ColorFace{
+name string{"bevel_top"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{0 0 252 1}
+color[1]{
+RGBA{255 255 255 51}
+}
+}
+ColorFace{
+name string{"bevel_left"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{0 1 1 22}
+color[1]{
+RGBA{255 255 255 51}
+}
+}
+ColorFace{
+name string{"bevel_bottom"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{0 23 252 1}
+color[1]{
+RGBA{0 0 0 102}
+}
+}
+ColorFace{
+name string{"bevel_right"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{251 1 1 22}
+color[1]{
+RGBA{0 0 0 102}
+}
+}
+}
+}
+TextFace{
+name string{"TextFace"}
+packable digit{1}
+pack_pad_left digit{8}
+pack_pad_right digit{8}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+pack_alignment_x digit{0}
+geometry rectangle{8 0 236 24}
+text_color RGBA{230 230 230 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 192}
+text string{"a"}
+adjust_scale digit{1}
+}
+}
+}
+SBox{
+name string{"Value"}
+geometry rectangle{252 0 110 24}
+children[3]{
+Composite{
+name string{"ColorFace0"}
+is_face digit{1}
+packable digit{1}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+geometry rectangle{0 0 110 24}
+children[5]{
+ColorFace{
+name string{"base"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+geometry rectangle{0 0 110 24}
+color[1]{
+RGBA{0 0 0 178}
+}
+}
+ColorFace{
+name string{"bevel_top"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{0 0 110 1}
+color[1]{
+RGBA{255 255 255 51}
+}
+}
+ColorFace{
+name string{"bevel_left"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{0 1 1 22}
+color[1]{
+RGBA{255 255 255 51}
+}
+}
+ColorFace{
+name string{"bevel_bottom"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{0 23 110 1}
+color[1]{
+RGBA{0 0 0 102}
+}
+}
+ColorFace{
+name string{"bevel_right"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{109 1 1 22}
+color[1]{
+RGBA{0 0 0 102}
+}
+}
+}
+}
+Composite{
+name string{"ColorFace1"}
+is_face digit{1}
+packable digit{1}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+geometry rectangle{0 0 110 24}
+children[5]{
+ColorFace{
+name string{"base"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+geometry rectangle{0 0 110 24}
+color[1]{
+RGBA{0 0 0 153}
+}
+}
+ColorFace{
+name string{"bevel_top"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{0 0 110 1}
+color[1]{
+RGBA{255 255 255 51}
+}
+}
+ColorFace{
+name string{"bevel_left"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{0 1 1 22}
+color[1]{
+RGBA{255 255 255 51}
+}
+}
+ColorFace{
+name string{"bevel_bottom"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{0 23 110 1}
+color[1]{
+RGBA{0 0 0 102}
+}
+}
+ColorFace{
+name string{"bevel_right"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{109 1 1 22}
+color[1]{
+RGBA{0 0 0 102}
+}
+}
+}
+}
+TextFace{
+name string{"TextFace"}
+packable digit{1}
+pack_pad_left digit{8}
+pack_pad_right digit{8}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+geometry rectangle{8 0 94 24}
+text_color RGBA{230 230 230 255}
+font string{"default"}
+align digit{5}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 192}
+text string{"1"}
+adjust_scale digit{1}
+}
+}
+}
+}
+}
+}
+}
+RootWindow{
+name string{"TrophyRoot"}
+has_script digit{1}
+pack_children digit{1}
+children[4]{
+ColorFace{
+name string{"Veil"}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_pause digit{1}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.3}
+end_value digit{1}
+}
+}
+}
+}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+SceneFace{
+name string{"SceneFace"}
+}
+Composite{
+name string{"Pane"}
+packable digit{1}
+geometry rectangle{0 0 480 272}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_pause digit{1}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[3]{
+Composite{
+name string{"Message"}
+packable digit{1}
+geometry rectangle{0 11 480 42}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_pause digit{1}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeInExpo"}
+start_duration digit{0.2}
+interpolation_period digit{0.8}
+end_value digit{1}
+}
+}
+}
+}
+children[1]{
+TextFace{
+name string{"label"}
+text_color RGBA{230 230 230 255}
+font string{"default"}
+scale_x digit{1.17857}
+scale_y digit{1.17857}
+localized_text_page string{"RaceProject::TrophyRoot"}
+}
+}
+}
+SBox{
+name string{"Info"}
+geometry rectangle{0 0 480 232}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_pause digit{1}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeInExpo"}
+start_duration digit{0.2}
+interpolation_period digit{0.8}
+end_value digit{1}
+}
+}
+}
+}
+children[1]{
+HBox{
+name string{"Prize"}
+pack_expand_x digit{1}
+pack_shrink_x digit{1}
+geometry rectangle{16 182 448 38}
+children[4]{
+SBox{
+name string{"PrizeGold"}
+geometry rectangle{0 0 116 38}
+children[5]{
+ImageFace{
+name string{"ImageFace"}
+packable digit{1}
+geometry rectangle{0 0 32 32}
+image_path string{"image/gt5m/test/trophy_gold.png"}
+}
+TextFace{
+name string{"TextFaceCredit"}
+packable digit{1}
+pack_pad_left digit{36}
+visible_compare digit{8}
+geometry rectangle{36 2 80 15}
+text_color RGBA{231 216 104 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.714286}
+scale_y digit{0.714286}
+}
+TextFace{
+name string{"TextFaceCrediti"}
+packable digit{1}
+pack_pad_left digit{36}
+visible_condition digit{8}
+visible_compare digit{8}
+geometry rectangle{36 2 80 15}
+text_color RGBA{102 102 102 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.714286}
+scale_y digit{0.714286}
+}
+TextFace{
+name string{"TextFaceData"}
+packable digit{1}
+pack_pad_left digit{36}
+visible_compare digit{8}
+geometry rectangle{36 16 80 20}
+font string{"default"}
+scale_x digit{0.928571}
+scale_y digit{0.928571}
+}
+TextFace{
+name string{"TextFaceDatai"}
+packable digit{1}
+pack_pad_left digit{36}
+visible_condition digit{8}
+visible_compare digit{8}
+geometry rectangle{36 16 80 20}
+text_color RGBA{102 102 102 255}
+font string{"default"}
+scale_x digit{0.928571}
+scale_y digit{0.928571}
+}
+}
+}
+SBox{
+name string{"PrizeSilver"}
+pack_pad_left digit{4}
+geometry rectangle{120 0 116 38}
+children[5]{
+ImageFace{
+name string{"ImageFace"}
+packable digit{1}
+geometry rectangle{0 0 32 32}
+image_path string{"image/gt5m/test/trophy_silver.png"}
+}
+TextFace{
+name string{"TextFaceCredit"}
+packable digit{1}
+pack_pad_left digit{36}
+visible_compare digit{8}
+geometry rectangle{36 2 80 15}
+text_color RGBA{170 170 170 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.714286}
+scale_y digit{0.714286}
+}
+TextFace{
+name string{"TextFaceCrediti"}
+packable digit{1}
+pack_pad_left digit{36}
+visible_condition digit{8}
+visible_compare digit{8}
+geometry rectangle{36 2 80 15}
+text_color RGBA{102 102 102 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.714286}
+scale_y digit{0.714286}
+}
+TextFace{
+name string{"TextFaceData"}
+packable digit{1}
+pack_pad_left digit{36}
+visible_compare digit{8}
+geometry rectangle{36 16 80 20}
+font string{"default"}
+scale_x digit{0.928571}
+scale_y digit{0.928571}
+}
+TextFace{
+name string{"TextFaceDatai"}
+packable digit{1}
+pack_pad_left digit{36}
+visible_condition digit{8}
+visible_compare digit{8}
+geometry rectangle{36 16 80 20}
+text_color RGBA{102 102 102 255}
+font string{"default"}
+scale_x digit{0.928571}
+scale_y digit{0.928571}
+}
+}
+}
+SBox{
+name string{"PrizeBronze"}
+pack_pad_left digit{4}
+geometry rectangle{240 0 116 38}
+children[5]{
+ImageFace{
+name string{"ImageFace"}
+packable digit{1}
+geometry rectangle{0 0 32 32}
+image_path string{"image/gt5m/test/trophy_bronze.png"}
+}
+TextFace{
+name string{"TextFaceCredit"}
+packable digit{1}
+pack_pad_left digit{36}
+visible_compare digit{8}
+geometry rectangle{36 2 80 15}
+text_color RGBA{196 145 118 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.714286}
+scale_y digit{0.714286}
+}
+TextFace{
+name string{"TextFaceCrediti"}
+packable digit{1}
+pack_pad_left digit{36}
+visible_condition digit{8}
+visible_compare digit{8}
+geometry rectangle{36 2 80 15}
+text_color RGBA{102 102 102 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.714286}
+scale_y digit{0.714286}
+}
+TextFace{
+name string{"TextFaceData"}
+packable digit{1}
+pack_pad_left digit{36}
+visible_compare digit{8}
+geometry rectangle{36 16 80 20}
+font string{"default"}
+scale_x digit{0.928571}
+scale_y digit{0.928571}
+}
+TextFace{
+name string{"TextFaceDatai"}
+packable digit{1}
+pack_pad_left digit{36}
+visible_condition digit{8}
+visible_compare digit{8}
+geometry rectangle{36 16 80 20}
+text_color RGBA{102 102 102 255}
+font string{"default"}
+scale_x digit{0.928571}
+scale_y digit{0.928571}
+}
+}
+}
+SBox{
+name string{"Last"}
+pack_children digit{0}
+pack_pad_left digit{4}
+geometry rectangle{360 0 88 38}
+children[2]{
+TextFace{
+name string{"TextFaceLast"}
+geometry rectangle{0 2 88 15}
+text_color RGBA{190 190 190 255}
+font string{"default"}
+align digit{5}
+scale_x digit{0.714286}
+scale_y digit{0.714286}
+localized_text_page string{"RaceProject::"}
+}
+TextFace{
+name string{"TextFace"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{0 16 88 20}
+font string{"default"}
+align digit{5}
+scale_x digit{0.928571}
+scale_y digit{0.928571}
+adjust_scale digit{1}
+}
+}
+}
+}
+}
+}
+}
+SBox{
+name string{"Controller"}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{0 232 480 40}
+children[2]{
+ColorFace{
+name string{"bg"}
+is_divide_color digit{1}
+y_divide[2]{
+digit{0.0470001}
+digit{0.4}
+}
+color_divide[3]{
+[4]{
+RGBA{128 128 128 255}
+RGBA{128 128 128 255}
+RGBA{64 64 64 255}
+RGBA{64 64 64 255}
+}
+[4]{
+RGBA{64 64 64 255}
+RGBA{64 64 64 255}
+RGBA{36 36 36 255}
+RGBA{36 36 36 255}
+}
+[4]{
+RGBA{36 36 36 255}
+RGBA{36 36 36 255}
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+}
+}
+}
+'Buttons::YesNo'{
+name string{"HBox"}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_shrink_x digit{1}
+pack_shrink_y digit{1}
+pack_alignment_y digit{0.4}
+geometry rectangle{198 8 84 20}
+children[2]{
+'Buttons::YesNo::Yes'{
+name string{"Yes"}
+pack_alignment_y digit{0.4}
+geometry rectangle{0 0 38 20}
+cursor_align_y digit{0.5}
+children[8]{
+'Buttons::YesNo::Yes::bg_tmp0'{
+name string{"bg_tmp1"}
+geometry rectangle{0 0 38 20}
+image_path string{"image/gt5m/button/start.png"}
+}
+'Buttons::YesNo::Yes::bg_tmp0'{
+name string{"bg_tmp0"}
+geometry rectangle{0 0 38 20}
+}
+'Buttons::YesNo::Yes::bgf'{
+name string{"bgf"}
+actor_list[1]{
+'Buttons::YesNo::Yes::bgf::FaceColorInterpolator'{
+name string{"FaceColorInterpolator"}
+}
+}
+}
+'Buttons::YesNo::Yes::bgi'{
+name string{"bgi"}
+}
+'Buttons::YesNo::Yes::label'{
+name string{"label"}
+geometry rectangle{0 0 38 20}
+key string{""}
+text string{"OK"}
+}
+'Buttons::YesNo::Yes::labeli'{
+name string{"labeli"}
+geometry rectangle{0 0 38 20}
+key string{""}
+text string{"OK"}
+}
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Component"}
+}
+ImageFace{
+name string{"Blink"}
+opacity digit{0}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_playing digit{0}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[3]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+}
+}
+}
+blend_func_name string{"add"}
+image_path string{"image/gt5m/button/ok.png"}
+}
+}
+inner_pad_top digit{0}
+}
+'Buttons::YesNo::No'{
+name string{"No"}
+geometry rectangle{46 0 38 20}
+cursor_align_y digit{0.5}
+children[7]{
+'Buttons::YesNo::No::bg_tmp'{
+name string{"bg_tmp"}
+pack_allocate_y digit{0}
+pack_expand_x digit{0}
+geometry rectangle{0 0 38 20}
+image_path string{"image/gt5m/button/exit_L.png"}
+}
+'Buttons::YesNo::No::bg'{
+name string{"bg"}
+}
+'Buttons::YesNo::No::bgf'{
+name string{"bgf"}
+actor_list[1]{
+'Buttons::YesNo::No::bgf::FaceColorInterpolator'{
+name string{"FaceColorInterpolator"}
+}
+}
+}
+'Buttons::YesNo::No::bgi'{
+name string{"bgi"}
+}
+'Buttons::YesNo::No::label'{
+name string{"label"}
+geometry rectangle{0 0 38 20}
+key string{""}
+text string{"Cancel"}
+}
+'Buttons::YesNo::No::labeli'{
+name string{"labeli"}
+geometry rectangle{0 0 38 20}
+key string{""}
+text string{"Cancel"}
+}
+TextFace{
+name string{"balloon"}
+visible digit{0}
+font string{"default"}
+localized_text_page string{"Balloon"}
+}
+}
+}
+}
+spacing digit{8}
+}
+}
+}
+}
+}
+'Tooltip::BalloonTip'{
+name string{"BalloonTip"}
+packable digit{1}
+children[1]{
+'Tooltip::BalloonTip::Tip'{
+name string{"Tip"}
+actor_list[2]{
+'Tooltip::BalloonTip::Tip::AppearEffect'{
+name string{"AppearEffect"}
+children[1]{
+'Tooltip::BalloonTip::Tip::AppearEffect::Scale'{
+name string{"Scale"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::VisibleEffect'{
+name string{"VisibleEffect"}
+}
+}
+children[3]{
+'Tooltip::BalloonTip::Tip::up_tip'{
+name string{"up_tip"}
+children[1]{
+'Tooltip::BalloonTip::Tip::up_tip::up_tip'{
+name string{"up_tip"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::Text'{
+name string{"Text"}
+children[2]{
+'Tooltip::BalloonTip::Tip::Text::ColorFace'{
+name string{"ColorFace"}
+}
+'Tooltip::BalloonTip::Tip::Text::TextFace'{
+name string{"TextFace"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::down_tip'{
+name string{"down_tip"}
+children[1]{
+'Tooltip::BalloonTip::Tip::down_tip::down_tip'{
+name string{"down_tip"}
+}
+}
+}
+}
+}
+}
+}
+}
+navigate_wraparound digit{0}
+}
+}
+}

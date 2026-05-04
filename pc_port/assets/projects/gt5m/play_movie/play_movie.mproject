@@ -1,0 +1,43 @@
+Project{
+name string{"PlayMovieProject"}
+has_script digit{1}
+children[1]{
+RootWindow{
+name string{"MovieRoot"}
+has_script digit{1}
+children[3]{
+MovieFace{
+name string{"MovieFace"}
+repeat digit{0}
+}
+ScrollClip{
+name string{"ScrollClip"}
+can_focus digit{1}
+packable digit{1}
+geometry rectangle{0 0 480 272}
+children[1]{
+VBox{
+name string{"space"}
+geometry rectangle{0 0 480 420}
+}
+}
+}
+SBox{
+name string{"hidden"}
+geometry rectangle{0 0 480 272}
+children[1]{
+TextFace{
+name string{"TextFace"}
+packable digit{1}
+pack_shrink_y digit{1}
+geometry rectangle{0 0 480 21}
+font string{"default"}
+multiline digit{1}
+}
+}
+}
+}
+cursor_type string{"none"}
+}
+}
+}

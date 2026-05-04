@@ -1,0 +1,1147 @@
+Project {
+	name string {"GTModeProject"}
+	has_script digit {1}
+	children [3] {
+		RootWindow {
+			name string {"TopRoot"}
+			has_script digit {1}
+			clip digit {0}
+			children [6] {
+				ColorFace {
+					name string {"bg"}
+				}
+				ScrolledWindow {
+					name string {"LicenseOutline"}
+					geometry rectangle {0 0 480 272}
+					clip digit {0}
+					children [3] {
+						ScrollClip {
+							name string {"clip"}
+							packable digit {1}
+							pack_expand_x digit {1}
+							pack_expand_y digit {1}
+							pack_fill_x digit {1}
+							pack_fill_y digit {1}
+							geometry rectangle {0 0 480 272}
+							children [1] {
+								Composite {
+									name string {"space"}
+									geometry rectangle {0 0 624 504}
+									children [4] {
+										Composite {
+											name string {"LicenseC"}
+											can_focus digit {1}
+											geometry rectangle {96 64 208 136}
+											children [8] {
+												ColorFace {
+													name string {"ColorFace"}
+													color [1] {
+														RGBA {0 183 10 255}
+													}
+												}
+												ColorFace {
+													name string {"ColorFace0"}
+													geometry rectangle {-16 71 280 2}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+												Composite {
+													name string {"c01"}
+													geometry rectangle {24 64 16 16}
+													children [2] {
+														ColorFace {
+															name string {"ColorFace0"}
+														}
+														ColorFace {
+															name string {"ColorFace"}
+															geometry rectangle {2 2 12 12}
+															color [1] {
+																RGBA {0 0 0 255}
+															}
+														}
+													}
+												}
+												Composite {
+													name string {"c02"}
+													geometry rectangle {64 64 16 16}
+													children [2] {
+														ColorFace {
+															name string {"ColorFace0"}
+														}
+														ColorFace {
+															name string {"ColorFace"}
+															geometry rectangle {2 2 12 12}
+															color [1] {
+																RGBA {0 0 0 255}
+															}
+														}
+													}
+												}
+												Composite {
+													name string {"c03"}
+													geometry rectangle {112 64 16 16}
+													children [2] {
+														ColorFace {
+															name string {"ColorFace0"}
+														}
+														ColorFace {
+															name string {"ColorFace"}
+															geometry rectangle {2 2 12 12}
+															color [1] {
+																RGBA {0 0 0 255}
+															}
+														}
+													}
+												}
+												Composite {
+													name string {"c04"}
+													geometry rectangle {160 64 16 16}
+													children [2] {
+														ColorFace {
+															name string {"ColorFace0"}
+														}
+														ColorFace {
+															name string {"ColorFace"}
+															geometry rectangle {2 2 12 12}
+															color [1] {
+																RGBA {0 0 0 255}
+															}
+														}
+													}
+												}
+												Composite {
+													name string {"c05"}
+													geometry rectangle {248 60 24 24}
+													children [2] {
+														ColorFace {
+															name string {"ColorFace1"}
+															color [1] {
+																RGBA {255 196 0 255}
+															}
+														}
+														ColorFace {
+															name string {"ColorFace"}
+															geometry rectangle {3 3 18 18}
+															color [1] {
+																RGBA {0 0 0 255}
+															}
+														}
+													}
+												}
+												TextFace {
+													name string {"TextFace"}
+													geometry rectangle {-72 64 64 16}
+													text_color RGBA {0 0 0 255}
+													font string {"default"}
+													scale_x digit {0.8}
+													scale_y digit {0.8}
+													text string {"START"}
+												}
+											}
+										}
+										Composite {
+											name string {"LicenseB"}
+											can_focus digit {1}
+											geometry rectangle {328 152 208 136}
+											children [10] {
+												ColorFace {
+													name string {"ColorFace1"}
+													color [1] {
+														RGBA {255 196 0 255}
+													}
+												}
+												ColorFace {
+													name string {"ColorFace"}
+													geometry rectangle {95 32 2 71}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+												ColorFace {
+													name string {"ColorFace3"}
+													geometry rectangle {-40 104 135 2}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+												ColorFace {
+													name string {"ColorFace2"}
+													geometry rectangle {27 31 69 2}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+												ColorFace {
+													name string {"ColorFace0"}
+													geometry rectangle {27 -16 2 48}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+												Composite {
+													name string {"c01"}
+													geometry rectangle {21 24 16 16}
+													children [2] {
+														ColorFace {
+															name string {"ColorFace0"}
+														}
+														ColorFace {
+															name string {"ColorFace"}
+															geometry rectangle {2 2 12 12}
+															color [1] {
+																RGBA {0 0 0 255}
+															}
+														}
+													}
+												}
+												Composite {
+													name string {"c02"}
+													geometry rectangle {88 24 16 16}
+													children [2] {
+														ColorFace {
+															name string {"ColorFace0"}
+														}
+														ColorFace {
+															name string {"ColorFace"}
+															geometry rectangle {2 2 12 12}
+															color [1] {
+																RGBA {0 0 0 255}
+															}
+														}
+													}
+												}
+												Composite {
+													name string {"c03"}
+													geometry rectangle {88 96 16 16}
+													children [2] {
+														ColorFace {
+															name string {"ColorFace0"}
+														}
+														ColorFace {
+															name string {"ColorFace"}
+															geometry rectangle {2 2 12 12}
+															color [1] {
+																RGBA {0 0 0 255}
+															}
+														}
+													}
+												}
+												Composite {
+													name string {"c04"}
+													geometry rectangle {22 96 16 16}
+													children [2] {
+														ColorFace {
+															name string {"ColorFace0"}
+														}
+														ColorFace {
+															name string {"ColorFace"}
+															geometry rectangle {2 2 12 12}
+															color [1] {
+																RGBA {0 0 0 255}
+															}
+														}
+													}
+												}
+												Composite {
+													name string {"c05"}
+													geometry rectangle {-48 93 24 24}
+													children [2] {
+														ColorFace {
+															name string {"ColorFace4"}
+															color [1] {
+																RGBA {71 164 255 255}
+															}
+														}
+														ColorFace {
+															name string {"ColorFace"}
+															geometry rectangle {3 3 18 18}
+															color [1] {
+																RGBA {0 0 0 255}
+															}
+														}
+													}
+												}
+											}
+										}
+										Composite {
+											name string {"LicenseA"}
+											can_focus digit {1}
+											geometry rectangle {56 232 208 136}
+											children [9] {
+												ColorFace {
+													name string {"ColorFace4"}
+													color [1] {
+														RGBA {71 164 255 255}
+													}
+												}
+												ColorFace {
+													name string {"ColorFace3"}
+													geometry rectangle {40 103 193 2}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+												ColorFace {
+													name string {"ColorFace2"}
+													geometry rectangle {40 23 184 2}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+												ColorFace {
+													name string {"ColorFace0"}
+													geometry rectangle {39 24 2 80}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+												Composite {
+													name string {"c01"}
+													geometry rectangle {152 16 16 16}
+													children [2] {
+														ColorFace {
+															name string {"ColorFace0"}
+														}
+														ColorFace {
+															name string {"ColorFace"}
+															geometry rectangle {2 2 12 12}
+															color [1] {
+																RGBA {0 0 0 255}
+															}
+														}
+													}
+												}
+												Composite {
+													name string {"c02"}
+													geometry rectangle {32 16 16 16}
+													children [2] {
+														ColorFace {
+															name string {"ColorFace0"}
+														}
+														ColorFace {
+															name string {"ColorFace"}
+															geometry rectangle {2 2 12 12}
+															color [1] {
+																RGBA {0 0 0 255}
+															}
+														}
+													}
+												}
+												Composite {
+													name string {"c03"}
+													geometry rectangle {32 96 16 16}
+													children [2] {
+														ColorFace {
+															name string {"ColorFace0"}
+														}
+														ColorFace {
+															name string {"ColorFace"}
+															geometry rectangle {2 2 12 12}
+															color [1] {
+																RGBA {0 0 0 255}
+															}
+														}
+													}
+												}
+												Composite {
+													name string {"c04"}
+													geometry rectangle {152 96 16 16}
+													children [2] {
+														ColorFace {
+															name string {"ColorFace0"}
+														}
+														ColorFace {
+															name string {"ColorFace"}
+															geometry rectangle {2 2 12 12}
+															color [1] {
+																RGBA {0 0 0 255}
+															}
+														}
+													}
+												}
+												Composite {
+													name string {"c05"}
+													geometry rectangle {232 92 24 24}
+													children [2] {
+														ColorFace {
+															name string {"ColorFace1"}
+															color [1] {
+																RGBA {255 0 0 255}
+															}
+														}
+														ColorFace {
+															name string {"ColorFace"}
+															geometry rectangle {3 3 18 18}
+															color [1] {
+																RGBA {0 0 0 255}
+															}
+														}
+													}
+												}
+											}
+										}
+										Composite {
+											name string {"LicenseS"}
+											can_focus digit {1}
+											geometry rectangle {328 312 208 136}
+											children [9] {
+												ColorFace {
+													name string {"ColorFace"}
+													color [1] {
+														RGBA {255 0 0 255}
+													}
+												}
+												ColorFace {
+													name string {"ColorFace3"}
+													geometry rectangle {-33 103 193 2}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+												ColorFace {
+													name string {"ColorFace2"}
+													geometry rectangle {-17 23 171 2}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+												ColorFace {
+													name string {"ColorFace0"}
+													geometry rectangle {159 24 2 80}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+												Composite {
+													name string {"c01"}
+													geometry rectangle {32 16 16 16}
+													children [2] {
+														ColorFace {
+															name string {"ColorFace0"}
+														}
+														ColorFace {
+															name string {"ColorFace"}
+															geometry rectangle {2 2 12 12}
+															color [1] {
+																RGBA {0 0 0 255}
+															}
+														}
+													}
+												}
+												Composite {
+													name string {"c02"}
+													geometry rectangle {152 16 16 16}
+													children [2] {
+														ColorFace {
+															name string {"ColorFace0"}
+														}
+														ColorFace {
+															name string {"ColorFace"}
+															geometry rectangle {2 2 12 12}
+															color [1] {
+																RGBA {0 0 0 255}
+															}
+														}
+													}
+												}
+												Composite {
+													name string {"c03"}
+													geometry rectangle {152 96 16 16}
+													children [2] {
+														ColorFace {
+															name string {"ColorFace0"}
+														}
+														ColorFace {
+															name string {"ColorFace"}
+															geometry rectangle {2 2 12 12}
+															color [1] {
+																RGBA {0 0 0 255}
+															}
+														}
+													}
+												}
+												Composite {
+													name string {"c04"}
+													geometry rectangle {32 96 16 16}
+													children [2] {
+														ColorFace {
+															name string {"ColorFace0"}
+														}
+														ColorFace {
+															name string {"ColorFace"}
+															geometry rectangle {2 2 12 12}
+															color [1] {
+																RGBA {0 0 0 255}
+															}
+														}
+													}
+												}
+												TextFace {
+													name string {"TextFace"}
+													geometry rectangle {-96 96 64 16}
+													text_color RGBA {0 0 0 255}
+													font string {"default"}
+													scale_x digit {0.8}
+													scale_y digit {0.8}
+													text string {"GOAL"}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						ColorFace {
+							name string {"line"}
+							geometry rectangle {20 39 440 2}
+							color [1] {
+								RGBA {0 0 0 255}
+							}
+						}
+						TextFace {
+							name string {"TextFace"}
+							geometry rectangle {24 8 368 32}
+							text_color RGBA {2 2 2 255}
+							font string {"default"}
+							align digit {3}
+							text string {"ミッションにチャレンジ"}
+						}
+					}
+				}
+				ScrolledWindow {
+					name string {"LicenseC"}
+					geometry rectangle {0 0 480 272}
+					clip digit {0}
+					children [1] {
+						ScrollClip {
+							name string {"clip"}
+							packable digit {1}
+							pack_expand_x digit {1}
+							pack_expand_y digit {1}
+							pack_fill_x digit {1}
+							pack_fill_y digit {1}
+							geometry rectangle {0 0 480 272}
+							children [1] {
+								Composite {
+									name string {"space"}
+									geometry rectangle {0 0 840 272}
+									children [7] {
+										ColorFace {
+											name string {"ColorFace"}
+											geometry rectangle {0 0 632 272}
+											color [1] {
+												RGBA {0 183 10 255}
+											}
+										}
+										ColorFace {
+											name string {"ColorFace0"}
+											geometry rectangle {0 142 840 2}
+											color [1] {
+												RGBA {0 0 0 255}
+											}
+										}
+										Composite {
+											name string {"c01"}
+											can_focus digit {1}
+											geometry rectangle {56 128 32 32}
+											children [2] {
+												ColorFace {
+													name string {"ColorFace0"}
+												}
+												ColorFace {
+													name string {"ColorFace"}
+													geometry rectangle {4 4 24 24}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+											}
+										}
+										Composite {
+											name string {"c02"}
+											can_focus digit {1}
+											geometry rectangle {192 128 32 32}
+											children [2] {
+												ColorFace {
+													name string {"ColorFace0"}
+												}
+												ColorFace {
+													name string {"ColorFace"}
+													geometry rectangle {4 4 24 24}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+											}
+										}
+										Composite {
+											name string {"c03"}
+											can_focus digit {1}
+											geometry rectangle {344 128 32 32}
+											children [2] {
+												ColorFace {
+													name string {"ColorFace0"}
+												}
+												ColorFace {
+													name string {"ColorFace"}
+													geometry rectangle {4 4 24 24}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+											}
+										}
+										Composite {
+											name string {"c04"}
+											can_focus digit {1}
+											geometry rectangle {504 128 32 32}
+											children [2] {
+												ColorFace {
+													name string {"ColorFace0"}
+												}
+												ColorFace {
+													name string {"ColorFace"}
+													geometry rectangle {4 4 24 24}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+											}
+										}
+										Composite {
+											name string {"c05"}
+											can_focus digit {1}
+											geometry rectangle {704 128 32 32}
+											children [2] {
+												ColorFace {
+													name string {"ColorFace0"}
+												}
+												ColorFace {
+													name string {"ColorFace"}
+													geometry rectangle {4 4 24 24}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				ScrolledWindow {
+					name string {"LicenseB"}
+					geometry rectangle {0 0 480 272}
+					clip digit {0}
+					children [1] {
+						ScrollClip {
+							name string {"clip"}
+							packable digit {1}
+							pack_expand_x digit {1}
+							pack_expand_y digit {1}
+							pack_fill_x digit {1}
+							pack_fill_y digit {1}
+							geometry rectangle {0 0 480 272}
+							children [1] {
+								Composite {
+									name string {"space"}
+									geometry rectangle {0 0 840 272}
+									children [7] {
+										ColorFace {
+											name string {"ColorFace1"}
+											geometry rectangle {0 0 632 272}
+											color [1] {
+												RGBA {255 196 0 255}
+											}
+										}
+										ColorFace {
+											name string {"ColorFace0"}
+											geometry rectangle {0 142 840 2}
+											color [1] {
+												RGBA {0 0 0 255}
+											}
+										}
+										Composite {
+											name string {"c01"}
+											can_focus digit {1}
+											geometry rectangle {56 128 32 32}
+											children [2] {
+												ColorFace {
+													name string {"ColorFace0"}
+												}
+												ColorFace {
+													name string {"ColorFace"}
+													geometry rectangle {4 4 24 24}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+											}
+										}
+										Composite {
+											name string {"c02"}
+											can_focus digit {1}
+											geometry rectangle {192 128 32 32}
+											children [2] {
+												ColorFace {
+													name string {"ColorFace0"}
+												}
+												ColorFace {
+													name string {"ColorFace"}
+													geometry rectangle {4 4 24 24}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+											}
+										}
+										Composite {
+											name string {"c03"}
+											can_focus digit {1}
+											geometry rectangle {344 128 32 32}
+											children [2] {
+												ColorFace {
+													name string {"ColorFace0"}
+												}
+												ColorFace {
+													name string {"ColorFace"}
+													geometry rectangle {4 4 24 24}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+											}
+										}
+										Composite {
+											name string {"c04"}
+											can_focus digit {1}
+											geometry rectangle {504 128 32 32}
+											children [2] {
+												ColorFace {
+													name string {"ColorFace0"}
+												}
+												ColorFace {
+													name string {"ColorFace"}
+													geometry rectangle {4 4 24 24}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+											}
+										}
+										Composite {
+											name string {"c05"}
+											can_focus digit {1}
+											geometry rectangle {704 128 32 32}
+											children [2] {
+												ColorFace {
+													name string {"ColorFace0"}
+												}
+												ColorFace {
+													name string {"ColorFace"}
+													geometry rectangle {4 4 24 24}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				ScrolledWindow {
+					name string {"LicenseA"}
+					geometry rectangle {0 0 480 272}
+					clip digit {0}
+					children [1] {
+						ScrollClip {
+							name string {"clip"}
+							packable digit {1}
+							pack_expand_x digit {1}
+							pack_expand_y digit {1}
+							pack_fill_x digit {1}
+							pack_fill_y digit {1}
+							geometry rectangle {0 0 480 272}
+							children [1] {
+								Composite {
+									name string {"space"}
+									geometry rectangle {0 0 840 272}
+									children [7] {
+										ColorFace {
+											name string {"ColorFace4"}
+											can_focus digit {1}
+											geometry rectangle {0 0 632 272}
+											color [1] {
+												RGBA {71 164 255 255}
+											}
+										}
+										ColorFace {
+											name string {"ColorFace0"}
+											geometry rectangle {0 142 840 2}
+											color [1] {
+												RGBA {0 0 0 255}
+											}
+										}
+										Composite {
+											name string {"c01"}
+											can_focus digit {1}
+											geometry rectangle {56 128 32 32}
+											children [2] {
+												ColorFace {
+													name string {"ColorFace0"}
+												}
+												ColorFace {
+													name string {"ColorFace"}
+													geometry rectangle {4 4 24 24}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+											}
+										}
+										Composite {
+											name string {"c02"}
+											can_focus digit {1}
+											geometry rectangle {192 128 32 32}
+											children [2] {
+												ColorFace {
+													name string {"ColorFace0"}
+												}
+												ColorFace {
+													name string {"ColorFace"}
+													geometry rectangle {4 4 24 24}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+											}
+										}
+										Composite {
+											name string {"c03"}
+											can_focus digit {1}
+											geometry rectangle {344 128 32 32}
+											children [2] {
+												ColorFace {
+													name string {"ColorFace0"}
+												}
+												ColorFace {
+													name string {"ColorFace"}
+													geometry rectangle {4 4 24 24}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+											}
+										}
+										Composite {
+											name string {"c04"}
+											can_focus digit {1}
+											geometry rectangle {504 128 32 32}
+											children [2] {
+												ColorFace {
+													name string {"ColorFace0"}
+												}
+												ColorFace {
+													name string {"ColorFace"}
+													geometry rectangle {4 4 24 24}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+											}
+										}
+										Composite {
+											name string {"c05"}
+											can_focus digit {1}
+											geometry rectangle {704 128 32 32}
+											children [2] {
+												ColorFace {
+													name string {"ColorFace0"}
+												}
+												ColorFace {
+													name string {"ColorFace"}
+													geometry rectangle {4 4 24 24}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				ScrolledWindow {
+					name string {"LicenseS"}
+					geometry rectangle {0 0 480 272}
+					clip digit {0}
+					children [1] {
+						ScrollClip {
+							name string {"clip"}
+							packable digit {1}
+							pack_expand_x digit {1}
+							pack_expand_y digit {1}
+							pack_fill_x digit {1}
+							pack_fill_y digit {1}
+							geometry rectangle {0 0 480 272}
+							children [1] {
+								Composite {
+									name string {"space"}
+									geometry rectangle {0 0 840 272}
+									children [7] {
+										ColorFace {
+											name string {"ColorFace1"}
+											can_focus digit {1}
+											geometry rectangle {0 0 632 272}
+											color [1] {
+												RGBA {255 0 0 255}
+											}
+										}
+										ColorFace {
+											name string {"ColorFace0"}
+											geometry rectangle {0 142 840 2}
+											color [1] {
+												RGBA {0 0 0 255}
+											}
+										}
+										Composite {
+											name string {"c01"}
+											can_focus digit {1}
+											geometry rectangle {56 128 32 32}
+											children [2] {
+												ColorFace {
+													name string {"ColorFace0"}
+												}
+												ColorFace {
+													name string {"ColorFace"}
+													geometry rectangle {4 4 24 24}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+											}
+										}
+										Composite {
+											name string {"c02"}
+											can_focus digit {1}
+											geometry rectangle {192 128 32 32}
+											children [2] {
+												ColorFace {
+													name string {"ColorFace0"}
+												}
+												ColorFace {
+													name string {"ColorFace"}
+													geometry rectangle {4 4 24 24}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+											}
+										}
+										Composite {
+											name string {"c03"}
+											can_focus digit {1}
+											geometry rectangle {344 128 32 32}
+											children [2] {
+												ColorFace {
+													name string {"ColorFace0"}
+												}
+												ColorFace {
+													name string {"ColorFace"}
+													geometry rectangle {4 4 24 24}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+											}
+										}
+										Composite {
+											name string {"c04"}
+											can_focus digit {1}
+											geometry rectangle {504 128 32 32}
+											children [2] {
+												ColorFace {
+													name string {"ColorFace0"}
+												}
+												ColorFace {
+													name string {"ColorFace"}
+													geometry rectangle {4 4 24 24}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+											}
+										}
+										Composite {
+											name string {"c05"}
+											can_focus digit {1}
+											geometry rectangle {704 128 32 32}
+											children [2] {
+												ColorFace {
+													name string {"ColorFace0"}
+												}
+												ColorFace {
+													name string {"ColorFace"}
+													geometry rectangle {4 4 24 24}
+													color [1] {
+														RGBA {0 0 0 255}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		RootWindow {
+			name string {"ActorCollection"}
+			actor_list [4] {
+				ParallelActor {
+					name string {"InEffectForCurrentPage"}
+					children [2] {
+						ScalarInterpolator {
+							name string {"ScalarInterpolator"}
+							attribute_name string {"MWidget::opacity"}
+							loop_count digit {1}
+							section [1] {
+								MScalarSection {
+									ease_type_name string {"easeInOutQuint"}
+									interpolation_period digit {0.6}
+									start_value digit {1}
+								}
+							}
+						}
+						VectorInterpolator {
+							name string {"VectorInterpolator"}
+							attribute_name string {"MWidget::scale"}
+							loop_count digit {1}
+							section [1] {
+								MVectorSection {
+									ease_type_name string {"easeInOutQuint"}
+									interpolation_period digit {0.6}
+									start_value vector {1 1}
+									end_value vector {1.5 1.5}
+								}
+							}
+						}
+					}
+				}
+				ParallelActor {
+					name string {"OutEffectForCurrentPage"}
+					children [2] {
+						ScalarInterpolator {
+							name string {"ScalarInterpolator"}
+							attribute_name string {"MWidget::opacity"}
+							loop_count digit {1}
+							section [1] {
+								MScalarSection {
+									ease_type_name string {"easeInOutQuint"}
+									interpolation_period digit {0.6}
+									start_value digit {1}
+								}
+							}
+						}
+						VectorInterpolator {
+							name string {"VectorInterpolator"}
+							attribute_name string {"MWidget::scale"}
+							loop_count digit {1}
+							section [1] {
+								MVectorSection {
+									ease_type_name string {"easeInOutQuint"}
+									interpolation_period digit {0.6}
+									start_value vector {1 1}
+									end_value vector {0.75 0.75}
+								}
+							}
+						}
+					}
+				}
+				ParallelActor {
+					name string {"InEffectForNextPage"}
+					children [2] {
+						ScalarInterpolator {
+							name string {"ScalarInterpolator"}
+							attribute_name string {"MWidget::opacity"}
+							loop_count digit {1}
+							section [1] {
+								MScalarSection {
+									ease_type_name string {"easeInOutQuint"}
+									interpolation_period digit {0.6}
+									end_value digit {1}
+								}
+							}
+						}
+						VectorInterpolator {
+							name string {"VectorInterpolator"}
+							attribute_name string {"MWidget::scale"}
+							loop_count digit {1}
+							section [1] {
+								MVectorSection {
+									ease_type_name string {"easeInOutQuint"}
+									interpolation_period digit {0.6}
+									start_value vector {0.75 0.75}
+									end_value vector {1 1}
+								}
+							}
+						}
+					}
+				}
+				ParallelActor {
+					name string {"OutEffectForNextPage"}
+					children [2] {
+						ScalarInterpolator {
+							name string {"ScalarInterpolator"}
+							attribute_name string {"MWidget::opacity"}
+							loop_count digit {1}
+							section [1] {
+								MScalarSection {
+									ease_type_name string {"easeOutQuint"}
+									interpolation_period digit {0.6}
+									end_value digit {1}
+								}
+							}
+						}
+						VectorInterpolator {
+							name string {"VectorInterpolator"}
+							attribute_name string {"MWidget::scale"}
+							loop_count digit {1}
+							section [1] {
+								MVectorSection {
+									ease_type_name string {"easeOutQuint"}
+									interpolation_period digit {0.6}
+									start_value vector {2 2}
+									end_value vector {1 1}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		RootWindow {
+			name string {"BaseRoot"}
+			children [1] {
+				ColorFace {
+					name string {"ColorFace"}
+					color [1] {
+						RGBA {0 0 0 255}
+					}
+				}
+			}
+			display_priority digit {-1}
+			react_event digit {0}
+		}
+	}
+}

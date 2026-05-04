@@ -1,0 +1,27 @@
+
+
+//---------------------------------------------------------------------------------------
+// CursorUtil.ad
+//
+// Utility module
+// 
+//---------------------------------------------------------------------------------------
+
+
+//---------------------------------------------------------------------------------------
+// module
+//---------------------------------------------------------------------------------------
+
+module CursorUtil
+{
+    function setCursor(context, name)
+    {
+        // COMPILER NOTE: optimized out if (page == nil) ; block
+        // Should be a JUMP_IF_TRUE
+        var page = context.getCommonPage("CursorRoot");
+        if (page != nil)
+        {
+            page["setIcon"](context, name);
+        }
+    }
+}

@@ -1,0 +1,59 @@
+function setBlinkActor(widget, period)
+{
+	if (period == nil)
+	{
+		period = 0.25;
+	}
+
+	var actor = main::menu::MFadeActor(widget, 1.0);
+	widget.actor = actor;
+	widget.actor.period = period;
+	widget.actor.repeat = true;
+}
+
+function setDialogMoveActorH(widget)
+{
+	var actor = main::menu::MMoveActor(widget, PS2_SCREEN_W_F + widget.w, widget.y);
+	widget.actor = actor;
+	widget.actor.ratio = 0.2;
+	widget.actor.out = true;
+	widget.actor.warp();
+}
+
+function setDialogMoveActorV(widget)
+{
+	var actor = main::menu::MMoveActor(widget, widget.x, PS2_SCREEN_H_F + widget.h);
+	widget.actor = actor;
+	widget.actor.ratio = 0.2;
+	widget.actor.out = true;
+	widget.actor.warp();
+}
+
+function setFadeActor(widget, period)
+{
+	if (period == nil)
+	{
+		period = 0.25;
+	}
+
+	var actor = main::menu::MFadeActor(widget, 1.0);
+	widget.actor = actor;
+	widget.actor.period = period;
+	widget.actor.out = true;
+	widget.actor.warp();
+}
+
+#ifndef NO_RTIME
+function terminateRTIME()
+{
+	if(main::network.isRTIMEInitialized())
+		main::network.terminateRTIME();
+}
+
+function downNetwork()
+{
+	terminateRTIME();
+	main::network.terminateNetwork();
+	main::network.network_enable = false;
+}
+#endif

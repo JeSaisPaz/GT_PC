@@ -1,0 +1,75 @@
+module EyetoyProject::EyetoyRoot
+{
+    static recognized = false;
+    static gtshirt;
+
+	function onInitialize(context)
+	{
+		recognized = false;
+		context.cursor_visible = true;
+	
+		var shirt = main::menu::MGTShirt();
+		gtshirt = shirt;
+	
+		var eyetoy_face = ROOT::Eyetoy::eyetoy;
+		eyetoy_face.processor = shirt;
+		eyetoy_face.mirror = true;
+	
+		var camera = eyetoy_face.device;
+		camera.sampling_speed = 1;
+		camera.mirror = false;
+		camera.start_camera();
+	}
+
+
+	function onFinalize(context)
+	{
+		var camera = ROOT::Eyetoy::eyetoy.device;
+	
+		camera.led_on = false;
+		camera.led_off = true;
+		camera.stop_camera();
+	}
+
+
+	function exit(context)
+	{
+		main::game.next_menu_project = main::game.last_menu_project;
+		start_page(context, nil);
+	}
+
+
+	function onCancel(context)
+	{
+		main::sound.play("cancel");
+		exit(context);
+		
+		return EVENTRESULT_FILTER;
+	}
+
+}
+
+module PROJECT::ROOT::Eyetoy::eyetoy
+{
+	function onError(context)
+	{
+		openConfirmDialog(context, DIALOG_OK, context.translate(ROOT, "error happend"));
+		exit();
+	}
+
+
+	function onGTShirtRecognized(context)
+	{
+		if (!ROOT::recognized)
+		{
+			ROOT::recognized = true;
+			ROOT::gtshirt.render = false;
+			main::sound.play("next");
+			main::game.setCarAvailable("nike_one_04");
+	
+			openConfirmDialog(context, DIALOG_OK, context.translate(ROOT, "now you can buy a nike car."));
+	
+			exit(context);
+		}
+	}
+}

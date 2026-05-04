@@ -1,0 +1,9 @@
+id: infinite_garage
+version: "1.0.0"
+name: "Infinite Garage"
+description: "Removes the garage size cap. Requires core STStructure patch for full effect."
+author: "GT PSP Modding"
+scripts:
+  - source: main.ad
+    target: mods/infinite_garage/main.adc
+assets: []

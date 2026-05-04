@@ -1,0 +1,74 @@
+#ifndef ROOT
+	#err "ROOT not defined"
+#endif
+
+static tirename_tbl = [
+    "tire_short_name_Economy",
+    "tire_short_name_Comfort",
+    "tire_short_name_Street",
+    "tire_short_name_SprortsHard",
+    "tire_short_name_SprortsMedium",
+    "tire_short_name_SprortsSoft",
+    "tire_short_name_RacingSuperHard",
+    "tire_short_name_RacingHard",
+    "tire_short_name_RacingMedium",
+    "tire_short_name_RacingSoft",
+    "tire_short_name_RacingSuperSoft",
+    "tire_short_name_Dirt",
+    "tire_short_name_Snow"
+];
+
+function updateMyCarInfo(context)
+{
+	var quick_work = main::menu::MQuickWork();
+	var i = quick_work.numberOfEntries - 1;
+
+	if (quick_work.getPower(i) == 0)
+	{
+		ROOT["Grid" + (i + 1)]["PS"].text = "--";
+	}
+	else
+	{
+		var ps = (quick_work.getPower(i) * (100 + quick_work.QuickTunePowerLevel)) / 100;
+		ROOT["Grid" + (i + 1)]["PS"].text = main::menu::MUnit::GetPowerForDisplay(ps);
+	}
+	ROOT["Grid" + (i + 1)]["KG"].text = (quick_work.getWeight(i) * (100 + quick_work.QuickTuneWeightLevel)) / 100;
+	setTireText(context, i, quick_work.QuickTuneFrontTireType);
+}
+
+function setTireText(context, grid, type)
+{
+	// If the tire type is invalid, call it "--".
+	if (type >= tirename_tbl.size || type < 0)
+	{
+		// Weird stuff going on here
+#ifdef GT4O_US_BETA
+		if (type != 255)
+			;
+#else
+		type != 255;
+#endif
+
+		ROOT["Grid" + (grid + 1)]["Tire"].text = "--";
+	}
+	else
+	{
+		ROOT["Grid" + (grid + 1)]["Tire"].text = context.translate(ROOT,tirename_tbl[type]);
+	}
+
+	if (type >= 0 && type <= 2)
+	{
+		ROOT["Grid" + (grid + 1)]["Tire"].color = ROOT::Hidden::NormalTireColor.color;
+	}
+
+	if (type >= 3 && type <= 5)
+	{
+		ROOT["Grid" + (grid + 1)]["Tire"].color = ROOT::Hidden::SportsTireColor.color;
+	}
+	
+	if (type >= 6)
+	{
+		//if type equals 255 this one is used
+		ROOT["Grid" + (grid + 1)]["Tire"].color = ROOT::Hidden::RacingTireColor.color;
+	}
+}

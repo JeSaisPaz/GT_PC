@@ -1,0 +1,49 @@
+//---------------------------------------------------------------------------------------
+// mod_template.ad
+// GT PSP Mod — template for new mods.
+//
+// Replace "your_mod_id" with your mod's ID.
+// The _mod_init() function is called when the mod is loaded.
+// Register hooks here using the MOD_* helpers from mod_sdk.inc.
+//---------------------------------------------------------------------------------------
+
+#include "mod_loader/core/mod_sdk.inc"
+
+// ─── Mod state (static variables persist across hooks) ───────────────────
+static _initialized = false;
+
+// ─── Called by ModLoader when this mod is loaded ─────────────────────────
+function _mod_init()
+{
+    if (_initialized) return;
+    _initialized = true;
+
+    // ─── Example: Override a game function ───────────────────────────────
+    // Replaces the function entirely. Call orig() to chain.
+    // MOD_OVERRIDE("::main::SequenceUtil::startPage", function(orig, context, page, extra) {
+    //     MOD_LOG("startPage called: " + page);
+    //     return orig(context, page, extra);
+    // });
+
+    // ─── Example: Pre-hook (runs before original) ────────────────────────
+    // MOD_PRE_HOOK("::main::GlobalStatus::checkout", function(args) {
+    //     MOD_LOG("checkout called");
+    // });
+
+    // ─── Example: Post-hook (runs after original) ────────────────────────
+    // MOD_POST_HOOK("::main::SoundUtil::BGMFadeout", function(result, args) {
+    //     MOD_LOG("BGM faded out");
+    // });
+
+    // ─── Example: Modify player data ─────────────────────────────────────
+    // MOD_SET_CASH(99999999);
+    // MOD_GIVE_ALL_CARS();
+
+    MOD_LOG("Mod loaded successfully!");
+}
+
+// ─── Custom functions (called by hooks) ──────────────────────────────────
+// function myHookCallback(orig_fn, arg1, arg2) {
+//     // Custom logic here
+//     return orig_fn(arg1, arg2);
+// }

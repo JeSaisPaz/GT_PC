@@ -1,0 +1,67 @@
+try
+{
+    var success = true;
+
+    // Initialize
+    if (success)
+    {
+        try 
+        {
+            bootstrap_phase1_module::execBoot();
+        }
+        catch (e)
+        {
+            success = false;
+        }
+        finally { }
+
+        bootstrap_phase1_module.clearStatic();
+    }
+
+    // Load behavior if it exists
+    if (success)
+    {
+        try 
+        {
+            if (GetVersionBranch().beginsWith("behavior"))
+                __module__.load("Behavior");
+        }
+        catch (e)
+        {
+            success = false;
+        }
+        finally {}
+    }
+
+    // Main adhoc loop.
+    if (success) 
+    {
+        try 
+        {
+            MainLoop();
+        }
+        catch (e)
+        {
+            // Nothing
+        }
+        finally { }
+    }
+}
+catch (e)
+{
+    // Nothing
+}
+finally { }
+
+// End reached, cleanup
+try 
+{
+    shutdown_module::execShutdown();
+}
+catch
+{
+    
+}
+
+// Delete all adhoc statics
+shutdown_module.clearStatic();

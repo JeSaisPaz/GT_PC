@@ -1,0 +1,158 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+module ROOT
+{
+    hidden.visible = false;
+
+    method open(context)
+    {
+        SettingFrame.appear();
+        SequenceUtil::pushPage(context, self);
+    }
+
+    method close(context)
+    {
+        var delay_time = SettingFrame.hide();
+        SequenceUtil::popPage(context, self, delay_time);
+    }
+
+    method reflect(context)
+    {
+        var option = main::GAME_STATUS.user_profile.option;
+        SettingFrame::Pane::ScrolledBody::clip::space::UseStereogram::OptionMenu.setIndex(context, 1 - option.monitor_use_parallax_view);
+        SettingFrame::Pane::ScrolledBody::clip::space::ParallaxMode.setIndex(context, option.monitor_parallax_change_mode);
+        SettingFrame::Pane::ScrolledBody::clip::space::Parallax::slider.index = (option.monitor_view_offset_x * 100.0 + 0.5).toInt();
+        SettingFrame::Pane::ScrolledBody::clip::space::Convergence::slider.index = (option.monitor_convergence * 100.0 + 0.5).toInt();
+    }
+
+    method apply(context)
+    {
+        var option = main::GAME_STATUS.user_profile.option;
+        option.monitor_use_parallax_view = 1 - SettingFrame::Pane::ScrolledBody::clip::space::UseStereogram::OptionMenu.index;
+        option.monitor_parallax_change_mode = SettingFrame::Pane::ScrolledBody::clip::space::ParallaxMode::OptionMenu.getItem().real_value;
+        option.monitor_view_offset_x = SettingFrame::Pane::ScrolledBody::clip::space::Parallax::slider.index.toFloat() / 100.0;
+        option.monitor_convergence = SettingFrame::Pane::ScrolledBody::clip::space::Convergence::slider.index.toFloat() / 100.0;
+
+        option.apply();
+    }
+
+    method onInitialize(context)
+    {
+        if (gDirectApplyMode)
+            SettingFrame::Pane::Foot.visible = false;
+
+        SettingFrame::Pane::ScrolledBody::clip::space::ParallaxMode.setPopupItems(context);
+        SettingFrame::Pane::ScrolledBody::clip::space::Parallax::slider.setup(context);
+        SettingFrame::Pane::ScrolledBody::clip::space::Convergence::slider.format_callback = function(context, value) 
+        {
+            var scale = 0.01;
+            var value100 = 100 * ((scale * value) + 0.005);
+            return pdiext::GetNumberString(value100, 2);
+        }
+
+        SettingFrame::Pane::ScrolledBody::clip::space::Convergence::slider.setup(context);
+        SettingFrame::Pane::ScrolledBody::clip::space::Depth::slider.setup(context);
+
+        reflect(context);
+        SettingFrame.adjust_scrolled_body();
+        ROOT.setFocus(SettingFrame::Pane::ScrolledBody::clip::space::UseStereogram::OptionMenu);
+    }
+
+    method onCancel(context, event, item)
+    {
+        main::sound.play("cancel");
+        if (gDirectApplyMode)
+        {
+            ROOT.apply();
+            ROOT.close(context);
+        }
+        else
+            ROOT.setFocus(SettingFrame::Pane::Foot::Cancel);
+        
+        return EVENTRESULT_FILTER;
+    }
+
+    module SettingFrame::Pane::ScrolledBody::clip::space::ParallaxMode
+    {
+        static sIndexMap = nil;
+
+        method onFinalize(context)
+        {
+            OptionMenu::popup::vbox.clearWindow(context);
+        }
+
+        method setIndex(context, real_value)
+        {
+            OptionMenu.setIndex(context, sIndexMap[real_value]);
+        }
+
+        method setPopupItems(context)
+        {
+            sIndexMap = Map();
+            var parallax_mode_list = [
+                ["parallax_mode_3", 3],
+                ["parallax_mode_4", 4],
+                ["parallax_mode_5", 5],
+                ["parallax_mode_6", 6],
+                ["parallax_mode_7", 7],
+                ["parallax_mode_8", 8],
+            ];
+
+            for (var i = 0; i < parallax_mode_list.size; i++)
+            {
+                var parallax_mode = parallax_mode_list[i];
+                var item = hidden::PulldownItem.doCopy();
+
+                item.label.text = context.translate(ROOT, parallax_mode[0]);
+                item.defineAttribute("real_value", 0);
+                item.real_value = parallax_mode[1];
+                sIndexMap[item.real_value] = i;
+
+                var vbox = OptionMenu::popup::vbox;
+                vbox.appendChild(context, item);
+            }
+
+            OptionMenu.applyAppend(context);
+        }
+    }
+
+    module SettingFrame::Pane::Foot::OK
+    {
+        method onActivate(context)
+        {
+            main::sound.play("ok");
+            ROOT.apply();
+            ROOT.close(context);
+            return EVENTRESULT_FILTER;
+        }
+    }
+
+    module SettingFrame::Pane::Foot::Cancel
+    {
+        method onActivate(context)
+        {
+            main::sound.play("ok");
+            ROOT.close(context);
+            return EVENTRESULT_FILTER;
+        }
+
+        method onCancel(context)
+        {
+            main::sound.play("cancel");
+            ROOT.close(context);
+            return EVENTRESULT_FILTER;
+        }
+    }
+}

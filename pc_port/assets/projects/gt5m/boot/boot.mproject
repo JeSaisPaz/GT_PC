@@ -1,0 +1,18 @@
+Project{
+name string{"BootProject"}
+has_script digit{1}
+children[1]{
+RootWindow{
+name string{"BootRoot"}
+has_script digit{1}
+children[1]{
+ColorFace{
+name string{"bg"}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+}
+}
+}
+}

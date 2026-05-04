@@ -1,0 +1,8 @@
+module PROJECT::ROOT
+{
+	function onCancel(context)
+	{
+		context.startPage(FileSelector);
+		EVENTRESULT_FILTER;
+	}
+}

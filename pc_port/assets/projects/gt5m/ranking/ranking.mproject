@@ -1,0 +1,538 @@
+Project{
+project_component MComponent{
+name string{"MComponent"}
+children[1]{
+RootWindow{
+name string{"Pulldown"}
+children[2]{
+OptionMenu{
+name string{"OptionMenu"}
+has_script digit{1}
+is_component digit{1}
+pack_allocate_h digit{0}
+geometry rectangle{0 40 180 18}
+cursor_align_x digit{0.95}
+children[7]{
+FrameImageFace{
+name string{"bg"}
+visible_compare digit{10}
+image_path string{"image/component/psp/pulldown_base.png"}
+r_image_path string{"image/component/psp/pulldown_btn.png"}
+frame_width digit{18}
+frame_height digit{18}
+}
+FrameImageFace{
+name string{"bgf"}
+visible_condition digit{2}
+visible_compare digit{10}
+image_path string{"image/component/psp/pulldown_base.png"}
+r_image_path string{"image/component/psp/pulldown_btn_over.png"}
+frame_width digit{18}
+frame_height digit{18}
+}
+FrameImageFace{
+name string{"bga"}
+visible_condition digit{1}
+visible_compare digit{9}
+color[1]{
+RGBA{255 0 0 255}
+}
+image_path string{"image/component/psp/pulldown_base.png"}
+r_image_path string{"image/component/psp/pulldown_btn_over.png"}
+frame_width digit{18}
+frame_height digit{18}
+}
+FrameImageFace{
+name string{"bgi"}
+visible_condition digit{8}
+visible_compare digit{8}
+image_path string{"image/component/psp/pulldown_base.png"}
+r_image_path string{"image/component/psp/pulldown_btn_i.png"}
+frame_width digit{18}
+frame_height digit{18}
+}
+TextFace{
+name string{"label"}
+visible_compare digit{8}
+geometry rectangle{8 0 147 18}
+text_color RGBA{180 210 225 255}
+font string{"default"}
+align digit{5}
+}
+TextFace{
+name string{"labeli"}
+visible_condition digit{8}
+visible_compare digit{8}
+geometry rectangle{8 0 147 18}
+text_color RGBA{96 96 96 255}
+font string{"default"}
+align digit{5}
+}
+SBox{
+name string{"popup"}
+packable digit{0}
+geometry rectangle{0 0 160 26}
+clip digit{0}
+children[2]{
+FrameImageFace{
+name string{"shadow"}
+geometry rectangle{0 0 138 26}
+opacity digit{0.5}
+MColorFace_shadow_dx digit{2}
+MColorFace_shadow_dy digit{2}
+MColorFace_umbra_color RGBA{0 0 0 101}
+tl_image_path string{"image/component/psp/pulldown_flame.png"}
+frame_width digit{5}
+frame_height digit{5}
+}
+VBox{
+name string{"vbox"}
+pack_pad_left digit{4}
+pack_pad_right digit{4}
+pack_pad_top digit{4}
+pack_pad_bottom digit{4}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{4 4 132 18}
+clip digit{0}
+}
+}
+inner_pad_right digit{20}
+}
+}
+inner_pad_right digit{20}
+}
+SBox{
+name string{"Item"}
+is_component digit{1}
+pack_allocate_h digit{0}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{0 0 138 24}
+clip digit{0}
+children[7]{
+ColorFace{
+name string{"bg0"}
+visible_compare digit{2}
+opacity digit{0.9}
+color[1]{
+RGBA{26 26 26 255}
+}
+MColorFace_shadow_dx digit{2}
+MColorFace_shadow_dy digit{2}
+MColorFace_umbra_color RGBA{0 0 0 101}
+}
+ColorFace{
+name string{"bg1"}
+visible_compare digit{2}
+opacity digit{0.9}
+color[1]{
+RGBA{12 12 12 255}
+}
+MColorFace_shadow_dx digit{2}
+MColorFace_shadow_dy digit{2}
+MColorFace_umbra_color RGBA{0 0 0 101}
+}
+ColorFace{
+name string{"bgf"}
+visible_condition digit{2}
+visible_compare digit{2}
+opacity digit{0.9}
+is_divide_color digit{1}
+y_divide[1]{
+digit{1}
+}
+color_divide[2]{
+[4]{
+RGBA{148 205 235 255}
+RGBA{148 205 235 255}
+RGBA{61 165 217 255}
+RGBA{61 165 217 255}
+}
+[1]{
+RGBA{148 205 235 255}
+}
+}
+color[1]{
+RGBA{148 205 235 255}
+}
+MColorFace_shadow_dx digit{2}
+MColorFace_shadow_dy digit{2}
+MColorFace_umbra_color RGBA{0 0 0 101}
+}
+ColorFace{
+name string{"bgi"}
+visible_condition digit{8}
+visible_compare digit{8}
+opacity digit{0.9}
+color[1]{
+RGBA{128 128 128 255}
+}
+MColorFace_shadow_dx digit{2}
+MColorFace_shadow_dy digit{2}
+MColorFace_umbra_color RGBA{0 0 0 101}
+}
+ImageFace{
+name string{"dot"}
+visible_condition digit{1}
+visible_compare digit{1}
+geometry rectangle{5 10.5 2.59 3}
+image_path string{"image/component/psp/dot.png"}
+}
+TextFace{
+name string{"label"}
+packable digit{1}
+pack_pad_left digit{4}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+visible_compare digit{2}
+geometry rectangle{12 2 119 22}
+text_color RGBA{180 210 225 255}
+font string{"default"}
+align digit{3}
+adjust_scale digit{1}
+}
+TextFace{
+name string{"labelf"}
+packable digit{1}
+pack_pad_left digit{4}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+visible_condition digit{2}
+visible_compare digit{2}
+geometry rectangle{12 2 119 22}
+text_color RGBA{0 0 0 255}
+font string{"default"}
+align digit{3}
+adjust_scale digit{1}
+}
+}
+inner_pad_left digit{8}
+inner_pad_right digit{7}
+inner_pad_top digit{2}
+}
+}
+}
+}
+}
+name string{"RankingProject"}
+has_script digit{1}
+children[1]{
+RootWindow{
+name string{"RankingRoot"}
+has_script digit{1}
+pack_children digit{1}
+children[5]{
+ColorFace{
+name string{"ColorFace"}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+'Pulldown::OptionMenu'{
+name string{"OptionMenuMode"}
+geometry rectangle{20 16 180 18}
+children[7]{
+'Pulldown::OptionMenu::bg'{
+name string{"bg"}
+}
+'Pulldown::OptionMenu::bgf'{
+name string{"bgf"}
+}
+'Pulldown::OptionMenu::bga'{
+name string{"bga"}
+}
+'Pulldown::OptionMenu::bgi'{
+name string{"bgi"}
+}
+'Pulldown::OptionMenu::label'{
+name string{"label"}
+}
+'Pulldown::OptionMenu::labeli'{
+name string{"labeli"}
+}
+'Pulldown::OptionMenu::popup'{
+name string{"popup"}
+children[2]{
+'Pulldown::OptionMenu::popup::shadow'{
+name string{"shadow"}
+}
+'Pulldown::OptionMenu::popup::vbox'{
+name string{"vbox"}
+}
+}
+}
+}
+}
+'Pulldown::OptionMenu'{
+name string{"OptionMenuCategory"}
+geometry rectangle{220 16 180 18}
+children[7]{
+'Pulldown::OptionMenu::bg'{
+name string{"bg"}
+}
+'Pulldown::OptionMenu::bgf'{
+name string{"bgf"}
+}
+'Pulldown::OptionMenu::bga'{
+name string{"bga"}
+}
+'Pulldown::OptionMenu::bgi'{
+name string{"bgi"}
+}
+'Pulldown::OptionMenu::label'{
+name string{"label"}
+}
+'Pulldown::OptionMenu::labeli'{
+name string{"labeli"}
+}
+'Pulldown::OptionMenu::popup'{
+name string{"popup"}
+children[2]{
+'Pulldown::OptionMenu::popup::shadow'{
+name string{"shadow"}
+}
+'Pulldown::OptionMenu::popup::vbox'{
+name string{"vbox"}
+}
+}
+}
+}
+}
+ListBox{
+name string{"ListBox"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{20 56 440 180}
+children[1]{
+ColorFace{
+name string{"ColorFace"}
+color[1]{
+RGBA{220 220 220 153}
+}
+}
+}
+direction digit{1}
+}
+SBox{
+name string{"hidden"}
+packable digit{0}
+pack_children digit{0}
+geometry rectangle{0 0 480 272}
+children[2]{
+'Pulldown::Item'{
+name string{"OptionMenuItem"}
+children[7]{
+'Pulldown::Item::bg0'{
+name string{"bg0"}
+}
+'Pulldown::Item::bg1'{
+name string{"bg1"}
+}
+'Pulldown::Item::bgf'{
+name string{"bgf"}
+}
+'Pulldown::Item::bgi'{
+name string{"bgi"}
+}
+'Pulldown::Item::dot'{
+name string{"dot"}
+}
+'Pulldown::Item::label'{
+name string{"label"}
+}
+'Pulldown::Item::labelf'{
+name string{"labelf"}
+}
+}
+}
+HBox{
+name string{"QuickBoardItem"}
+pack_expand_x digit{1}
+pack_shrink_x digit{1}
+geometry rectangle{17 0 446 36}
+children[3]{
+SBox{
+name string{"Position"}
+pack_pad_right digit{2}
+pack_pad_top digit{1}
+geometry rectangle{0 1 18 18}
+children[3]{
+ColorFace{
+name string{"ColorFace"}
+color[1]{
+RGBA{0 0 0 204}
+}
+round digit{3}
+}
+ColorFace{
+name string{"ColorFaceMe"}
+actor_list[1]{
+FaceColorInterpolator{
+name string{"FaceColorInterpolator"}
+attribute_name string{"MColorFace::face_color"}
+section[1]{
+MFaceColorSection{
+interpolation_period digit{0.5}
+start_value[1]{
+RGBA{0 0 0 25}
+}
+end_value[1]{
+RGBA{0 0 0 204}
+}
+}
+}
+}
+}
+round digit{3}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{-1 0 18 18}
+text_color RGBA{230 230 230 255}
+font string{"default"}
+scale_x digit{0.9}
+scale_y digit{0.9}
+shadow_value digit{1.5}
+type_spacing digit{-2}
+text string{"10"}
+adjust_scale digit{1}
+}
+}
+}
+SBox{
+name string{"Car"}
+geometry rectangle{20 0 342 36}
+children[4]{
+ColorFace{
+name string{"ColorFace0"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{0 0 342 36}
+color[1]{
+RGBA{0 0 0 178}
+}
+}
+ColorFace{
+name string{"ColorFace1"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{0 0 342 36}
+color[1]{
+RGBA{0 0 0 153}
+}
+}
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{2 1 50 34}
+from_disk digit{1}
+}
+VBox{
+name string{"VBox"}
+pack_expand_y digit{1}
+pack_shrink_y digit{1}
+geometry rectangle{54 2 280 32}
+children[2]{
+TextFace{
+name string{"TextFace1"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{0 0 280 18}
+text_color RGBA{230 230 230 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.9}
+scale_y digit{0.9}
+shadow_value digit{1.5}
+text string{"1"}
+adjust_scale digit{1}
+}
+TextFace{
+name string{"TextFace2"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{0 18 280 14}
+text_color RGBA{230 230 230 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.8}
+scale_y digit{0.8}
+shadow_value digit{1.5}
+text string{"1"}
+adjust_scale digit{1}
+}
+}
+}
+}
+}
+SBox{
+name string{"Time"}
+pack_pad_left digit{1}
+geometry rectangle{363 0 83 36}
+children[3]{
+ColorFace{
+name string{"ColorFace0"}
+color[1]{
+RGBA{0 0 0 178}
+}
+}
+ColorFace{
+name string{"ColorFace1"}
+color[1]{
+RGBA{0 0 0 153}
+}
+}
+VBox{
+name string{"VBox"}
+pack_expand_y digit{1}
+pack_shrink_y digit{1}
+geometry rectangle{0 2 68 32}
+children[2]{
+TextFace{
+name string{"TextFace"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{0 0 68 18}
+text_color RGBA{230 230 230 255}
+font string{"default"}
+align digit{5}
+scale_x digit{0.9}
+scale_y digit{0.9}
+shadow_value digit{1.5}
+text string{"1"}
+adjust_scale digit{1}
+}
+TextFace{
+name string{"TextFaceDiff"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+pack_alignment_y digit{0}
+geometry rectangle{0 18 68 14}
+text_color RGBA{255 100 131 255}
+font string{"default"}
+align digit{5}
+scale_x digit{0.8}
+scale_y digit{0.8}
+shadow_value digit{1.5}
+text string{"1"}
+adjust_scale digit{1}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+cursor_type string{"appear"}
+}
+}
+}

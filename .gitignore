@@ -1,0 +1,69 @@
+# ── Rust build artifacts ────────────────────────────────────────
+target/
+*.pdb
+*.d
+*.exp
+*.lib
+
+# ── IDE / Editor ────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── OS files ─────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── Large game assets (4GB+) ─────────────────────────────────────
+files/
+textures/
+test_output/
+
+# ── External source clones (too large to track) ──────────────────
+freecam/source/PPSSPP/
+
+# ── External tools / binaries ────────────────────────────────────
+workflow/ghidra_12.0_PUBLIC/
+workflow/GTAdhocToolchain-master/
+workflow/noesis/
+workflow/quickbms/
+workflow/GTPSPVolTools/
+workflow/GT2TextureEditor/
+workflow/GT3PMBDumper/
+workflow/GTMusicInfEditor/
+workflow/GTSpecDB/
+workflow/img-buster/
+workflow/prxtool-master/
+workflow/seq2midi/
+workflow/TSX3Converter/
+workflow/TXS3Converter/
+workflow/xxd/
+workflow/atrac/
+workflow/comparisons/
+workflow/adhoc-toolchain/
+
+# ── Game binaries ────────────────────────────────────────────────
+EBOOT.BIN
+*.zip
+*.iso
+*.bin
+*.vol
+*.VOL
+
+# ── Ghidra project ───────────────────────────────────────────────
+GTPSP-decompile.gpr
+GTPSP-decompile.rep/
+
+# ── Node modules ──────────────────────────────────────────────────
+node_modules/
+
+# ── Misc logs / temp ─────────────────────────────────────────────
+*.log
+*.tmp
+*.temp
+__pycache__/
+*.pyc
+*.egg-info/
+*.egg

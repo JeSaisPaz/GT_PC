@@ -1,0 +1,154 @@
+//---------------------------------------------------------------------------------------
+// mod_loader.ad
+// GT PSP Mod Loader — Event-based hook system.
+//
+// This module provides an event system that mods can hook into.
+// Core scripts call ModLoader::fireEvent("eventName", [args]) at key points.
+// Mods register callbacks via ModLoader::on("eventName", callback).
+//
+// The event system supports three patterns:
+//   1. Fire-and-forget events — callbacks run, no return value expected
+//   2. Query events — callbacks can return a value (first non-nil wins)
+//   3. Transform events — callbacks can modify arguments in-place
+//
+// No function redefinition needed — events are injected at source level.
+//---------------------------------------------------------------------------------------
+
+module ::main::ModLoader
+{
+    // Registry: event_name -> [callback1, callback2, ...]
+    static _event_registry = Map();
+
+    // Registered mods info
+    static _loaded_mods = [];
+
+    // ─── Event Registration ──────────────────────────────────────────────
+
+    // Register a callback for an event.
+    // callback receives the event's argument array.
+    // For query events, the first non-nil return value wins.
+    function on(event_name, callback)
+    {
+        if (_event_registry[event_name] == nil)
+            _event_registry[event_name] = [];
+        _event_registry[event_name].push(callback);
+    }
+
+    // Register a one-shot callback (fires once, then auto-removes).
+    // Uses ID-based tracking instead of closure-wrapping for compat.
+    static _once_ids = Map();
+    function once(event_name, callback)
+    {
+        var id = callback.toString();
+        if (_once_ids[id] != nil) return;
+        _once_ids[id] = true;
+        on(event_name, callback);
+    }
+
+    // Remove a specific callback from an event.
+    function off(event_name, callback)
+    {
+        var list = _event_registry[event_name];
+        if (list == nil) return;
+        var new_list = [];
+        for (var i = 0; i < list.size; i++)
+        {
+            if (list[i] != callback)
+                new_list.push(list[i]);
+        }
+        _event_registry[event_name] = new_list;
+    }
+
+    // ─── Event Firing (called by core scripts) ───────────────────────────
+
+    // Fire an event to all registered callbacks.
+    // Returns the number of callbacks that ran.
+    function fireEvent(event_name, args)
+    {
+        var list = _event_registry[event_name];
+        if (list == nil) return 0;
+
+        var count = 0;
+        foreach (var cb in list)
+        {
+            cb(args);
+            count++;
+        }
+        return count;
+    }
+
+    // Fire a query event. Returns the first non-nil result from callbacks,
+    // or nil if no callback returned a value.
+    function queryEvent(event_name, args)
+    {
+        var list = _event_registry[event_name];
+        if (list == nil) return nil;
+
+        foreach (var cb in list)
+        {
+            var result = cb(args);
+            if (result != nil)
+                return result;
+        }
+        return nil;
+    }
+
+    // ─── String-based event results (for modifying game flow) ────────────
+
+    // Fire a query event that expects a string result.
+    // Used by: getMenuProject, getCourseOverride, etc.
+    function getEventResultString(event_name)
+    {
+        var result = queryEvent(event_name, []);
+        if (result != nil)
+            return result.toString();
+        return nil;
+    }
+
+    // ─── Mod Lifecycle ───────────────────────────────────────────────────
+
+    // Called once at boot.
+    function initialize()
+    {
+        // Nothing to init — events registered by mods on load
+    }
+
+    // Load a mod from a compiled .adc file.
+    // mod_path: path relative to game root (e.g., "mods/my_mod")
+    function loadMod(mod_path)
+    {
+        module ModLoadTarget {}
+        ModLoadTarget.load(mod_path);
+
+        if (ModLoadTarget.defined("_mod_init"))
+        {
+            ModLoadTarget::_mod_init();
+            var info = Map();
+            info["id"] = mod_path;
+            info["namespace"] = ModLoadTarget;
+            _loaded_mods.push(info);
+            return true;
+        }
+        ModLoadTarget.clearStatic();
+        return false;
+    }
+
+    // Scan for mods (called after EBOOT VFS hook enables dynamic loading).
+    function scanAndLoadMods()
+    {
+        // Phase 1: no-op (mods loaded at build time)
+        // Phase 2: scans ms0:/PSP/MODS/ for mod manifests
+    }
+
+    // ─── Query Functions ─────────────────────────────────────────────────
+
+    function getLoadedMods()
+    {
+        return _loaded_mods;
+    }
+
+    function getEventRegistry()
+    {
+        return _event_registry;
+    }
+}

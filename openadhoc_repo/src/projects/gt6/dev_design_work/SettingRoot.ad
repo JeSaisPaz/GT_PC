@@ -1,0 +1,56 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+module ROOT
+{
+    method onInitialize(context)
+    {
+        var adj = main::menu::MAdjustment();
+        self.ScrolledWindow::VScrollbar.adjustment = adj;
+        self.ScrolledWindow::clip.v_adjustment = adj;
+    }
+
+    method onFinalize(context)
+    {
+
+    }
+
+    method onCancel(context)
+    {
+        sound.play("cancel");
+        SequenceUtil::startPage(context, TopRoot);
+        return EVENTRESULT_FILTER;
+    }
+
+    method onActivate(context)
+    {
+        return EVENTRESULT_FILTER;
+    }
+
+    method clamp(v, min, max)
+    {
+        if (v < min)
+            v = min;
+
+        if (v > max)
+            v = max;
+
+        return v;
+    }
+
+    method onKeyPress(context, event)
+    {
+        return EVENTRESULT_CONTINUE;
+    }
+}
+

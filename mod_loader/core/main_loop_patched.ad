@@ -1,0 +1,132 @@
+//---------------------------------------------------------------------------------------
+// main_loop_patched.ad
+// Modified main game loop with ModLoader event hooks.
+//
+// Design: all original #include paths are relative to THIS file's location
+// (mod_loader/core/). The ModLoader module is added as an extra module.
+// Hook events are injected at the MainLoop dispatch points (MENU, RACE).
+// No original functions are redefined — zero conflicts.
+//---------------------------------------------------------------------------------------
+
+// ─── Original includes (relative to mod_loader/core/) ────────────────────
+#include "../../source/scripts/gt5m/ActorUtil.ad"
+#include "../../source/scripts/gt5m/Debug.ad"
+#include "../../source/scripts/gt5m/DialogUtil.ad"
+#include "../../source/scripts/gt5m/GameContext.ad"
+#include "../../source/scripts/gt5m/GamePlan.ad"
+#include "../../source/scripts/gt5m/GameSequence.ad"
+#include "../../source/scripts/gt5m/GlobalStatusEntry.ad"
+#include "../../source/scripts/gt5m/LeaveDetectUtil.ad"
+#include "../../source/scripts/gt5m/RaceMenuUtil.ad"
+#include "../../source/scripts/gt5m/RandomUtil.ad"
+#include "../../source/scripts/gt5m/SequenceUtil.ad"
+#include "../../source/scripts/gt5m/SoundUtil.ad"
+#include "../../source/scripts/gt5m/TireUtil.ad"
+#include "../../source/scripts/gt5m/WatcherUtil.ad"
+
+// ─── ModLoader module (same directory as this file) ──────────────────────
+#include "mod_loader.ad"
+#include "mod_sdk.inc"
+
+// ─── MainLoop with event hooks ───────────────────────────────────────────
+module ::main
+{
+    var dummy = 0;
+
+    static menu_resource_loaded = false;
+
+    function LoadMenuResource()
+    {
+        if (menu_resource_loaded)
+            return;
+
+        main::pdiext::LoadLatinFont("sanserif-r");
+        main::pdiext::LoadLatinFont("sanserif-i");
+        main::pdiext::LoadLatinFont("sanserif-b");
+        main::pdiext::LoadLatinFont("sanserif-bi");
+        main::pdiext::LoadLatinFont("serif-r");
+        main::pdiext::LoadLatinFont("serif-i");
+        main::pdiext::LoadLatinFont("serif-b");
+        main::pdiext::LoadLatinFont("serif-bi");
+
+        menu_resource_loaded = true;
+    }
+
+    function UnloadMenuResource()
+    {
+        if (!menu_resource_loaded)
+            return;
+
+        main::pdiext::UnloadLatinFont();
+        menu_resource_loaded = false;
+    }
+
+    function execBootRace(bootrace_arg)
+    {
+        |var car_label, var course_label| = bootrace_arg.split(",");
+        var car_code = main::gtengine::MSpecDB::getCarCode(car_label);
+        var course_code = main::gtengine::MSpecDB::getCourseCode(course_label);
+        var cp = main::gtengine::MCarParameter(car_code);
+        var dp = main::gtengine::MCarDriverParameter();
+        dp.setPlayer(0);
+        main::GamePlan::begin();
+        var gp = GamePlan::createSingleRace(course_code, 1, 1,
+                                             0, 0, 0,
+                                             0, [4, 3, 2, 1]);
+        GamePlan::executeOutOfSequence(gp, [cp], [dp]);
+        main::GamePlan::end();
+    }
+
+    function MainLoop()
+    {
+        // ─── MOD EVENT: onGameStart ──────────────────────────────────────
+        ::main::ModLoader::fireEvent("onGameStart", []);
+
+        if (AppOpt["bootrace"] != nil)
+            execBootRace(AppOpt["bootrace"]);
+
+        while (!GameSequence::context.finished && !pdiext::MSystemCondition::IsExitGame())
+        {
+            main::DebugTool::printHeapStatus();
+            switch (GameSequence::getCurrentSequence())
+            {
+                case GameSequence::MENU:
+                    // ─── MOD EVENT: beforeMenu ───────────────────────────
+                    ::main::ModLoader::fireEvent("beforeMenu", []);
+
+                    // Query: allow mods to override the menu project
+                    var mod_project = ::main::ModLoader::getEventResultString("getMenuProject");
+                    if (mod_project != nil && mod_project != "")
+                        GameSequence::context.current_project = mod_project;
+
+                    GameSequence::allocateReplayBuffer();
+                    LoadMenuResource();
+                    GameSequence::setMode(GameSequence::getCurrentSequence());
+                    MGOM.start(GameSequence::getCurrentProject());
+
+                    // ─── MOD EVENT: afterMenu ────────────────────────────
+                    ::main::ModLoader::fireEvent("afterMenu", []);
+
+                    UnloadMenuResource();
+                    GameSequence::freeUnusedReplayBuffer();
+                    break;
+
+                case GameSequence::RACE:
+                    // ─── MOD EVENT: beforeRace ───────────────────────────
+                    ::main::ModLoader::fireEvent("beforeRace", []);
+
+                    SoundUtil::BGMPlayGroup('menu', "before_race", true, 2.0);
+                    GameSequence::setMode(GameSequence::getCurrentSequence());
+                    GameSequence::executeRace();
+                    GameSequence::endUsedReplayBuffer();
+                    GamePlan::executeNext();
+
+                    // ─── MOD EVENT: afterRace ────────────────────────────
+                    ::main::ModLoader::fireEvent("afterRace", []);
+                    break;
+            }
+
+            main::pdiext::ClearFontCache();
+        }
+    }
+}

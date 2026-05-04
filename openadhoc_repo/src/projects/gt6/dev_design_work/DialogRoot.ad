@@ -1,0 +1,252 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+module ROOT
+{
+    method onInitialize(context)
+    {
+        DialogUtil::copyMyMenuDialog(context, ROOT);
+    }
+
+    method onFinalize(context)
+    {
+        DialogUtil::finalize_copyMyMenuDialog(context, ROOT);
+    }
+
+    module VBox
+    {
+        module ConfirmOK
+        {
+            method onActivate(context)
+            {
+                DialogUtil::openConfirmDialog(context, DialogUtil::OK, "WWWWWWWWWWW WWWWWWWWWWWWWW WWWWWWWWWW");
+                return EVENTRESULT_FILTER;
+            }
+        }
+
+        module ConfirmOKAutoClose
+        {
+            method onActivate(context)
+            {
+                DialogUtil::openConfirmDialogAutoClose(context, DialogUtil::OK, "WWWWWWWWWWW WWWWWWWWWWWWWW WWWWWWWWWW", nil, 1.0);
+                return EVENTRESULT_FILTER;
+            }
+        }
+
+        module ConfirmError
+        {
+            method onActivate(context)
+            {
+                DialogUtil::openConfirmDialog(context, DialogUtil::ERROR, "WWWWWWWWWWW WWWWWWWWWWWWWW WWWWWWWWWW");
+                return EVENTRESULT_FILTER;
+            }
+        }
+
+        module ConfirmQuery
+        {
+            method onActivate(context)
+            {
+                DialogUtil::openConfirmDialog(context, DialogUtil::QUERY, "WWWWWWWWWWW WWWWWWWWWWWWWW WWWWWWWWWW");
+                return EVENTRESULT_FILTER;
+            }
+        }
+
+        module ConfirmYesNo
+        {
+            method onActivate(context)
+            {
+                DialogUtil::openConfirmDialog(context, DialogUtil::YESNO, "WWWWWWWWWWW WWWWWWWWWWWWWW WWWWWWWWWW");
+                return EVENTRESULT_FILTER;
+            }
+        }
+
+        module ConfirmDefaultNo
+        {
+            method onActivate(context)
+            {
+                DialogUtil::openConfirmDialog(context, DialogUtil::DEFAULT_NO, "WWWWWWWWWWW WWWWWWWWWWWWWW WWWWWWWWWW");
+                return EVENTRESULT_FILTER;
+            }
+        }
+
+        module ConfirmYesNoClose
+        {
+            method onActivate(context)
+            {
+                var res = DialogUtil::openConfirmDialog(context, DialogUtil::YESNOCLOSE, "WWWWWWWWWWW WWWWWWWWWWWWWW WWWWWWWWWW");
+                return EVENTRESULT_FILTER;
+            }
+        }
+
+        module ConfirmExecDialog
+        {
+            method onActivate(context)
+            {
+                DialogUtil::openConfirmExecDialog(context, "message_begin", "message_waiting", "message_success", "message_failed", function(context, args)
+                {
+                    for (var i = 0; i < 25; i++)
+                        context.wait(0.1);
+                    return true;
+                });
+
+                return EVENTRESULT_FILTER;
+            }
+        }
+
+        module ProgressDialog
+        {
+            static sCancel;
+
+            function complete_cb()
+            {
+
+            }
+
+            method onActivate(context)
+            {
+                sCancel = false;
+                attribute progress = pdistd::MProgress();
+                progress.value = 0.0;
+                DialogUtil::setProgressRawMode(context, true);
+                DialogUtil::setProgressCompleteCB(context, complete_cb);
+                DialogUtil::setProgressOKButton(context);
+                DialogUtil::setProgress(context, progress);
+                DialogUtil::openProgressDialog(context, "progress begin !", "progress end !", "progress faild", function(context, args)
+                {
+                    for (var i = 0; i < 100; i++)
+                    {
+                        if (sCancel)
+                            return false;
+
+                        context.wait(0.1);
+
+                        progress.value = i / 100.0;
+
+                        var percent_text = (i + 1) + " % complete.";
+                        DialogUtil::setProgressLabel(context, percent_text);
+                        yield;
+                    }
+
+                    return true;
+                });
+
+                return EVENTRESULT_FILTER;
+            }
+        }
+
+        module ProgressDialogAutoClose
+        {
+            static sCancel;
+
+            function complete_cb()
+            {
+                return true;
+            }
+
+            function cancel_cb()
+            {
+                sCancel = true;
+            }
+
+            method onActivate(context)
+            {
+                sCancel = false;
+                attribute progress = pdistd::MProgress();
+                progress.value = 0.0;
+                DialogUtil::setProgressRawMode(context, true);
+                DialogUtil::setProgressCompleteCB(context, complete_cb);
+                DialogUtil::setProgressCancelCB(context, cancel_cb, manager.translate("Component", "Label_Cancel"));
+                DialogUtil::setProgressOKButton(context);
+                DialogUtil::setProgress(context, progress);
+                DialogUtil::openProgressDialog(context, "progress begin !", "progress end !", "progress faild", function(context, args)
+                {
+                    for (var i = 0; i < 100; i++)
+                    {
+                        if (sCancel)
+                            return false;
+
+                        context.wait(0.1);
+                        progress.value = i / 100.0;
+                        var percent_text = (i + 1) + " % complete.";
+                        DialogUtil::setProgressLabel(context, percent_text);
+                        yield;
+                    }
+
+                    return true;
+                });
+
+                return EVENTRESULT_FILTER;
+            }
+        }
+
+        module TextReaderDialogShort
+        {
+            method onActivate(context)
+            {
+                var read_text = "";
+                for (var i = 0; i < 1; i++)
+                    read_text += "WWWW WWWWW WWWWW WWWWW WWWW WWWWWWWWW WWWWW WWW";
+
+                DialogUtil::openTextReaderDialog(context, "text reader dialog", read_text);
+                return EVENTRESULT_FILTER;
+            }
+        }
+
+        module TextReaderDialogLong
+        {
+            method onActivate(context)
+            {
+                var read_text = "";
+                for (var i = 0; i < 50; i++)
+                    read_text += "WWWW WWWWW WWWWW WWWWW WWWW WWWWWWWWW WWWWW WWW";
+
+                DialogUtil::openTextReaderDialog(context, "text reader dialog", read_text);
+                return EVENTRESULT_FILTER;
+            }
+        }
+
+        module TutorialDialog
+        {
+            method onActivate(context)
+            {
+                DialogUtil::openTutorialDialog(context, TutorialUtil::m1());
+                DialogUtil::openTutorialDialog(context, TutorialUtil::m9());
+                return EVENTRESULT_FILTER;
+            }
+        }
+
+        module MyMenuDialog
+        {
+            method onActivate(context)
+            {
+                DialogUtil::openMyMenuDialog(context);
+                return EVENTRESULT_FILTER;
+            }
+        }
+
+        module PrizeDialog
+        {
+            method onActivate(context)
+            {
+                DialogUtil::openPrizeDialog(context, 15000, true, nil, [true, false, false]);
+                DialogUtil::openPrizeDialog(context, 15000, true, nil, [false, true, false]);
+                DialogUtil::openPrizeDialog(context, 15000, true, nil, [false, false, true]);
+                DialogUtil::openPrizeDialog(context, 15000, true, nil, [true, true, true]);
+                DialogUtil::openPrizeDialog(context, 15000, true, nil, [false, true, true]);
+                DialogUtil::openPrizeDialog(context, 15000, true, nil, [false, false, false]);
+                return EVENTRESULT_FILTER;
+            }
+        }
+    }
+}

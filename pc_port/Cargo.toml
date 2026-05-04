@@ -1,0 +1,18 @@
+[package]
+name = "adhoc-vm"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+rand = "0.8"
+ab_glyph = "0.2"
+gl = "0.14"
+
+[target.'cfg(windows)'.dependencies]
+sdl2 = { version = "0.37", features = ["mixer"] }
+
+[target.'cfg(windows)'.build-dependencies]
+bindgen = "0.69"
+
+[env]
+SDL2_DIR = { value = "C:/vcpkg/packages/sdl2_x64-windows", relative = false }

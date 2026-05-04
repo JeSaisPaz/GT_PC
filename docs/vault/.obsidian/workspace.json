@@ -1,0 +1,225 @@
+{
+  "main": {
+    "id": "22b57b96cdd530df",
+    "type": "split",
+    "children": [
+      {
+        "id": "e86f2ef1352aff6d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6419282d9effd1a5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "10_PC_Port/11_Course_Models.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "11_Course_Models"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "167a7dc12d2d80ca",
+    "type": "split",
+    "children": [
+      {
+        "id": "58b3baaa3935520a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0b94c971b45f11e8",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "52a588f888bd1cb5",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          },
+          {
+            "id": "ab8c0201733637c1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "ba2c2b5b6327a4be",
+    "type": "split",
+    "children": [
+      {
+        "id": "7656c92ab994a3cc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "50774dca6a6c0716",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "2f908966691ea56a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "054890f4619970c5",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "cff0c228a6814cf3",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "6a52c62475f1837e",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false,
+      "templates:Insert template": false
+    }
+  },
+  "active": "6419282d9effd1a5",
+  "lastOpenFiles": [
+    "10_PC_Port/12_Render_Issue.md",
+    "10_PC_Port/00_Index.md",
+    "10_PC_Port/07_Playable_Game_Guide.md",
+    "10_PC_Port/10_OpenGL_Backend.md",
+    "10_PC_Port/13_Freecam_Tool.md",
+    "20_ADHOC_VM/05_Frames.md",
+    "10_PC_Port/06_Native_API.md",
+    "10_PC_Port/05_Graphics.md",
+    "10_PC_Port/08_VM_Initialization.md",
+    "10_PC_Port/09_SpecDB_Loading.md",
+    "10_PC_Port/11_Menu_UI.md",
+    "10_PC_Port/11_Course_Models.md",
+    "20_ADHOC_VM/06_VM_ANALYSIS.md",
+    "20_ADHOC_VM/00_Index.md",
+    "10_PC_Port/01_Documentation.md",
+    "10_PC_Port/03_Model_Parser.md",
+    "20_ADHOC_VM/01_VM_Engine.md",
+    "Untitled 1.base",
+    "Untitled.base",
+    "2026-04-29.md",
+    "Untitled.canvas",
+    "40_Reference/00_Index.md",
+    "10_PC_Port/04_SpecDB_Reader.md",
+    "3D model.md",
+    "Untitled 1.canvas",
+    "20_ADHOC_VM/03_Main_Loop.md",
+    "10_PC_Port/02_Race_Engine.md",
+    "40_Reference/01_Game_Scripts.md",
+    "90_Legacy_Modding/00_Index.md",
+    "90_Legacy_Modding",
+    "40_Reference",
+    "30_Technical",
+    "20_ADHOC_VM",
+    "10_PC_Port",
+    "60_PC_Port/GTPSP_Adhoc_VM.md",
+    "60_PC_Port",
+    "50_Tools",
+    "40_Mods"
+  ]
+}

@@ -1,0 +1,134 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+module ROOT
+{
+    attribute popup;
+    attribute closed;
+    attribute mode;
+
+    method open(context, mode)
+    {
+        self.mode = mode;
+        self.closed = false;
+        self.popup = main::SequenceUtil::ModalPage(context, ROOT);
+        self.popup.open();
+        self.mode = nil;
+        self.closed = nil;
+        return true;
+    }
+
+    method close(context, ok)
+    {
+        if (self.closed)
+            return;
+
+        self.closed = true;
+
+        if (ok)
+        {
+            self.popup.close();
+            self.popup = nil;
+        }
+        else
+        {
+            FadeActor.on_effect_end = function(context)
+            {
+                if (ROOT.popup != nil)
+                {
+                    ROOT.popup.close();
+                    ROOT.popup = nil;
+                }
+            };
+            FadeActor.out = false;
+        }
+    }
+
+    method onInitialize(context)
+    {
+        return EVENTRESULT_FILTER;
+    }
+
+    method onFinalize(context)
+    {
+        return EVENTRESULT_FILTER;
+    }
+
+    method onCancel(context)
+    {
+        sound.play("cancel");
+        ROOT.setFocus(DialogFrame::Pane::Body::Buttons::Cancel);
+        return EVENTRESULT_FILTER;
+    }
+
+    function saveReplay(context)
+    {
+        var mode = ROOT.mode;
+
+        if (!ReplayFileUtil::canSave(mode))
+        {
+            DialogUtil::openConfirmDialog(context, DialogUtil::ERROR, 
+                manager.translate("QuickMenu", "NO_DATA_TO_BE_SAVED"));
+            return;
+        }
+
+        context.cursor_visible = false;
+
+        var res = ReplayFileUtil::save(context, mode);
+        ROOT::FadeActor.out = false;
+
+        if (res)
+        {
+            DialogUtil::openConfirmDialogAutoClose(context, DialogUtil::OK, 
+                manager.translate("QuickMenu", "SAVE_DONE"), nil, 1.0);
+        }
+        else
+        {
+            DialogUtil::openConfirmDialog(context, DialogUtil::ERROR, 
+                manager.translate("QuickMenu", "SAVE_FAILED"));
+        }
+
+        context.cursor_visible = true;
+    }
+
+    module DialogFrame::Pane
+    {
+        module Body
+        {
+            module Buttons
+            {
+                module OK
+                {
+                    method onActivate(context)
+                    {
+                        sound.play("ok");
+                        saveReplay(context);
+                        ROOT.close(context, true);
+                        return EVENTRESULT_FILTER;
+                    }
+                }
+
+                module Cancel
+                {
+                    method onActivate(context)
+                    {
+                        sound.play("ok");
+                        ROOT.close(context, false);
+                        return EVENTRESULT_FILTER;
+                    }
+                }
+            }
+        }
+    }
+}

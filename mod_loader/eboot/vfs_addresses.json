@@ -1,0 +1,158 @@
+{
+  "_meta": {
+    "game": "Gran Turismo PSP (UCES01245)",
+    "build": "JP2817",
+    "eboot_size": 7058320,
+    "module_name": "PDIAPP",
+    "encryption": "PSP KIRK retail encryption — decrypted via PPSSPP runtime memory dump",
+    "last_updated": "2026-04-24",
+    "description": "EBOOT.BIN analysis results. Decrypted binary was dumped from PPSSPP PSP RAM (0x08800000-0x09000000), imported into Ghidra as Raw Binary MIPS:LE:32:default.",
+    "finding_methods": [
+      "PPSSPP Runtime: Memory dump via WebSocket API (eboot_dump.js)",
+      "Ghidra: Imported decrypted dump, auto-analyzed (non-running PPSSPP)",
+      "PPSSPP WebSocket: Runtime breakpoint on zz_sceIoOpen to trace callers"
+    ]
+  },
+  "decrypted_dump": {
+    "file": "test_output/decrypted/decrypted_eboot.bin",
+    "size_mb": 8.0,
+    "ram_range": "0x08800000 - 0x09000000",
+    "ghidra_project": "gt_psp_decrypted",
+    "ghidra_program": "decrypted_eboot.bin",
+    "import_language": "MIPS:LE:32:default (Raw Binary)",
+    "total_functions_identified": 36038,
+    "key_strings_found": {
+      "PDIAPP": "0x08C7B534",
+      "GT.VOL": "0x08C97A3F (also 0x08CE1AAB)",
+      ".adc": "0x08CB2698",
+      "gt5m": "0x08C9774C",
+      "scripts/": "0x08C97744",
+      "projects/": "0x08D51228",
+      "SpecDB": "0x08C9BD75",
+      "pdiext": "0x08C97D3C",
+      "debug": "0x08C97C40"
+    }
+  },
+  "vfs_load_function": {
+    "address": null,
+    "name": "Not yet identified — see runtime analysis notes",
+    "description": "Main function that loads .adc scripts by name from GT.VOL. Called by Adhoc 'module.load()' and 'load()' instructions.",
+    "known_callers": [
+      "Application.ad: bootstrap_module.load('bootstrap')",
+      "Application.ad: __module__.load('packed_main_loop')",
+      "Application.ad: bootstrap2_module.load('bootstrap_phase2')",
+      "Application.ad: shutdown_module.load('shutdown')",
+      "bootstrap_phase2.ad: sound_module.load('init_sound')",
+      "GlobalStatusEntry.ad: GlobalStatusImpl.load('/scripts/gt5m/global_status/packed_global_status')",
+      "GamePlan.ad: GamePlanImpl.load('/scripts/gt5m/util/GamePlanImpl')"
+    ],
+    "finding_hint": "Run vfs_analyzer.js with PPSSPP: set bp on zz_sceIoOpen, navigate menus to trigger .adc loads, the caller address (ra register) when bootstrap.adc/arcade.adc opens is the VFS dispatch function.",
+    "found": false,
+    "runtime_analysis": {
+      "method": "PPSSPP WebSocket: breakpoint on zz_sceIoOpen",
+      "stub_address": "0x08C7A870",
+      "captured_opens": [
+        "disc0:/PSP_GAME/USRDIR/GT.VOL (seen at boot, no .adc calls yet)",
+        "Run game and navigate menus to trigger .adc loads"
+      ],
+      "status": "Requires user interaction in PPSSPP (navigate menus to trigger script loads)"
+    }
+  },
+  "vfs_file_open": {
+    "address": null,
+    "name": "Unknown — intermediate function between VFS load and sceIoOpen",
+    "description": "Calls sceIoOpen with the resolved GT.VOL path. Identifiable by runtime stack trace.",
+    "found": false
+  },
+  "sce_io_stubs": {
+    "zz_sceIoOpen": {
+      "address": "0x08C7A870",
+      "nid": "0x109F50BC",
+      "found": true,
+      "identified_by": "PPSSPP HLE function listing (hle.func.list)"
+    },
+    "zz_sceIoRead": {
+      "address": "0x08C7A830",
+      "nid": "0x6A638D83",
+      "found": true
+    },
+    "zz_sceIoClose": {
+      "address": "0x08C7A840",
+      "nid": "0x810C84BC",
+      "found": true
+    },
+    "zz_sceIoLseek": {
+      "address": "0x08C7A880",
+      "found": true
+    },
+    "zz_sceKernelAllocatePartitionMemory": {
+      "address": null,
+      "found": false,
+      "note": "Not in PPSSPP HLE stub list; may not use a zz_ stub"
+    }
+  },
+  "heap_alloc_function": {
+    "address": null,
+    "name": "Not identified",
+    "description": "Memory allocation used by game. Patch size parameter to expand heap from 8MB to 32MB.",
+    "found": false
+  },
+  "garage_size_constant": {
+    "address": null,
+    "value": 200,
+    "description": "Hardcoded garage size limit. Not found in decrypted EBOOT scan (likely in script layer).",
+    "found": false
+  },
+  "patches": [
+    {
+      "id": "vfs_redirect_to_ms0",
+      "description": "Redirect adhoc_load to check ms0:/PSP/MODS/ before GT.VOL. Requires VFS function address.",
+      "depends_on": "vfs_load_function.address",
+      "type": "function_hook",
+      "comment": "Redirect Script Load — ms0:/PSP/MODS/",
+      "address": null,
+      "original_value": null,
+      "patch_value": null,
+      "ready": false
+    },
+    {
+      "id": "heap_expansion",
+      "description": "Increase game heap from 8MB to 32MB by patching sceKernelAllocatePartitionMemory size.",
+      "depends_on": "sce_io_stubs.zz_sceKernelAllocatePartitionMemory.address",
+      "type": "constant_patch",
+      "comment": "Extended Memory — 32MB Heap",
+      "address": null,
+      "original_value": "0x800000",
+      "patch_value": "0x2000000",
+      "ready": false
+    },
+    {
+      "id": "garage_size_unlock",
+      "description": "Remove garage size cap (200 → 2000 cars). Done at script level via mod_loader; EBOOT patch not needed.",
+      "depends_on": null,
+      "type": "constant_patch",
+      "comment": "Infinite Garage — 2000 Car Cap",
+      "address": null,
+      "original_value": null,
+      "patch_value": null,
+      "ready": false,
+      "note": "Already achievable via Layer 2 mod_loader script hooks (infinite_garage example mod)"
+    },
+    {
+      "id": "ppsp_clock_speed",
+      "description": "Force max PSP clock speed (333MHz). PPSSPP handles this via settings.",
+      "depends_on": null,
+      "type": "cheat_code",
+      "comment": "Max CPU Speed — 333MHz",
+      "address": null,
+      "value": null,
+      "ready": false,
+      "note": "PPSSPP setting: Settings → System → PSP CPU Clock → 333MHz"
+    }
+  ],
+  "script_tools": {
+    "eboot_dump.js": "Dumps decrypted PSP RAM via WebSocket",
+    "vfs_analyzer.js": "Breakpoint on sceIoOpen, captures caller + filename",
+    "eboot_string_xrefs.java": "Ghidra script to extract string XREFs (Ghidra 12 OSGi issue)"
+  }
+}

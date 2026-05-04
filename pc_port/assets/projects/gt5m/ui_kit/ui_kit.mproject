@@ -1,0 +1,644 @@
+Project{
+project_component MComponent{
+name string{"MComponent"}
+children[1]{
+RootWindow{
+name string{"Buttons"}
+children[1]{
+HBox{
+name string{"YesNo"}
+is_component digit{1}
+geometry rectangle{0 24 104 22}
+clip digit{0}
+children[2]{
+SBox{
+name string{"Yes"}
+has_script digit{1}
+can_focus digit{1}
+pack_allocate_h digit{0}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{0 0 46 22}
+cursor_align_y digit{0.75}
+clip digit{0}
+children[6]{
+ImageFace{
+name string{"bg_tmp0"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{7.11 1 31.78 20}
+image_path string{"image/gt5m/button/ok.png"}
+}
+FrameImageFace{
+name string{"bg"}
+visible digit{0}
+frame_width digit{14}
+frame_height digit{56}
+}
+FrameImageFace{
+name string{"bgf"}
+has_script digit{1}
+visible digit{0}
+visible_condition digit{2}
+visible_compare digit{2}
+actor_list[1]{
+FaceColorInterpolator{
+name string{"FaceColorInterpolator"}
+attribute_name string{"MColorFace::face_color"}
+section[2]{
+MFaceColorSection{
+interpolation_period digit{0.5}
+end_value[1]{
+RGBA{255 255 255 127}
+}
+}
+MFaceColorSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.5}
+end_value[1]{
+RGBA{255 255 255 127}
+}
+}
+}
+}
+}
+frame_width digit{32}
+frame_height digit{56}
+}
+FrameImageFace{
+name string{"bgi"}
+visible digit{0}
+visible_condition digit{8}
+visible_compare digit{8}
+color color_name{ "basic_color_insensitive"}
+frame_width digit{32}
+frame_height digit{56}
+}
+TextFace{
+name string{"label"}
+visible digit{0}
+packable digit{1}
+pack_pad_left digit{16}
+pack_pad_right digit{16}
+pack_allocate_h digit{0}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+visible_compare digit{8}
+geometry rectangle{16 1 23 21}
+text_color RGBA{190 190 190 255}
+font string{"default"}
+shadow_value digit{-2}
+shadow_color RGBA{0 0 0 127}
+localized_text_page string{"Component"}
+key string{"OK"}
+}
+TextFace{
+name string{"labeli"}
+visible digit{0}
+packable digit{1}
+pack_pad_left digit{16}
+pack_pad_right digit{16}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+visible_condition digit{8}
+visible_compare digit{8}
+geometry rectangle{16 1 23 21}
+text_color RGBA{240 240 240 128}
+font string{"default"}
+num_proportional digit{0}
+localized_text_page string{"Component"}
+key string{"OK"}
+}
+}
+inner_pad_top digit{1}
+}
+SBox{
+name string{"No"}
+has_script digit{1}
+can_focus digit{1}
+pack_allocate_h digit{0}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{58 0 46 22}
+cursor_align_y digit{0.75}
+clip digit{0}
+children[6]{
+ImageFace{
+name string{"bg_tmp"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{7.11 1 31.78 20}
+image_path string{"image/gt5m/button/cancel_L.png"}
+}
+FrameImageFace{
+name string{"bg"}
+visible digit{0}
+frame_width digit{14}
+frame_height digit{56}
+}
+FrameImageFace{
+name string{"bgf"}
+has_script digit{1}
+visible digit{0}
+visible_condition digit{2}
+visible_compare digit{2}
+actor_list[1]{
+FaceColorInterpolator{
+name string{"FaceColorInterpolator"}
+attribute_name string{"MColorFace::face_color"}
+section[2]{
+MFaceColorSection{
+interpolation_period digit{0.5}
+end_value[1]{
+RGBA{255 255 255 127}
+}
+}
+MFaceColorSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.5}
+end_value[1]{
+RGBA{255 255 255 127}
+}
+}
+}
+}
+}
+frame_width digit{32}
+frame_height digit{56}
+}
+FrameImageFace{
+name string{"bgi"}
+visible digit{0}
+visible_condition digit{8}
+visible_compare digit{8}
+color color_name{ "basic_color_insensitive"}
+frame_width digit{32}
+frame_height digit{56}
+}
+TextFace{
+name string{"label"}
+visible digit{0}
+packable digit{1}
+pack_pad_left digit{16}
+pack_pad_right digit{16}
+pack_allocate_h digit{0}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+visible_compare digit{8}
+geometry rectangle{16 1 51 21}
+text_color RGBA{190 190 190 255}
+font string{"default"}
+shadow_value digit{-2}
+shadow_color RGBA{0 0 0 127}
+localized_text_page string{"Component"}
+key string{"Cancel"}
+}
+TextFace{
+name string{"labeli"}
+visible digit{0}
+packable digit{1}
+pack_pad_left digit{16}
+pack_pad_right digit{16}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+visible_condition digit{8}
+visible_compare digit{8}
+geometry rectangle{16 1 51 21}
+text_color RGBA{240 240 240 128}
+font string{"default"}
+num_proportional digit{0}
+localized_text_page string{"Component"}
+key string{"Cancel"}
+}
+}
+inner_pad_top digit{1}
+}
+}
+homogeneous digit{1}
+spacing digit{12}
+}
+}
+}
+}
+}
+name string{"UIKitProject"}
+has_script digit{1}
+children[1]{
+RootWindow{
+name string{"SelectRoot"}
+has_script digit{1}
+packable digit{1}
+pack_children digit{1}
+children[3]{
+ColorFace{
+name string{"ColorFace"}
+color[1]{
+RGBA{0 0 0 216}
+}
+}
+VBox{
+name string{"Pane"}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_shrink_y digit{1}
+geometry rectangle{100 27 280 218}
+children[3]{
+Composite{
+name string{"Title"}
+packable digit{1}
+geometry rectangle{0 0 280 18}
+children[4]{
+Composite{
+name string{"bg"}
+is_face digit{1}
+geometry rectangle{0 0 280 20}
+children[3]{
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{0 0 280 2}
+color[4]{
+RGBA{53 53 57 229}
+RGBA{53 53 57 229}
+RGBA{26 26 28 229}
+RGBA{26 26 28 229}
+}
+}
+ColorFace{
+name string{"ColorFace0"}
+geometry rectangle{0 2 280 14}
+color[4]{
+RGBA{3 3 4 229}
+RGBA{3 3 4 229}
+RGBA{31 31 31 229}
+RGBA{31 31 31 229}
+}
+}
+ColorFace{
+name string{"ColorFace1"}
+geometry rectangle{0 16 280 2}
+color[1]{
+RGBA{31 31 31 229}
+}
+}
+}
+}
+Composite{
+name string{"bgE"}
+is_face digit{1}
+geometry rectangle{0 0 280 20}
+children[3]{
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{0 0 280 2}
+color[4]{
+RGBA{53 53 57 229}
+RGBA{53 53 57 229}
+RGBA{26 26 28 229}
+RGBA{26 26 28 229}
+}
+}
+ColorFace{
+name string{"ColorFace0"}
+geometry rectangle{0 2 280 14}
+color[4]{
+RGBA{3 3 4 229}
+RGBA{3 3 4 229}
+RGBA{31 31 31 229}
+RGBA{31 31 31 229}
+}
+}
+ColorFace{
+name string{"ColorFace1"}
+geometry rectangle{0 16 280 2}
+color[1]{
+RGBA{31 31 31 229}
+}
+}
+}
+}
+TextFace{
+name string{"title"}
+geometry rectangle{0 1 280 16}
+text_color RGBA{153 153 153 255}
+font string{"default"}
+scale_x digit{0.7}
+scale_y digit{0.7}
+}
+TextFace{
+name string{"titleE"}
+geometry rectangle{0 1 280 16}
+text_color RGBA{153 153 153 255}
+font string{"default"}
+scale_x digit{0.7}
+scale_y digit{0.7}
+}
+}
+}
+SBox{
+name string{"Body"}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{0 18 280 180}
+children[2]{
+ListBox{
+name string{"ListBox"}
+can_focus digit{1}
+packable digit{1}
+pack_pad_right digit{4}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+geometry rectangle{0 0 276 180}
+direction digit{1}
+}
+VScrollbar{
+name string{"VScrollbar"}
+pack_expand_x digit{1}
+pack_alignment_x digit{1}
+geometry rectangle{276 0 4 180}
+children[4]{
+ColorFace{
+name string{"ColorFace"}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+'VScrollbar::dec_arrow'{
+name string{"dec_arrow"}
+geometry rectangle{0 0 4 4}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[1]{
+ColorFace{
+name string{"ColorFace"}
+round digit{2}
+}
+}
+}
+'VScrollbar::inc_arrow'{
+name string{"inc_arrow"}
+geometry rectangle{0 176 4 4}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[1]{
+ColorFace{
+name string{"ColorFace"}
+round digit{2}
+}
+}
+}
+'VScrollbar::pinch'{
+name string{"pinch"}
+geometry rectangle{0 4 4 172}
+children[1]{
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{0 0 4 22.4}
+color[4]{
+RGBA{255 255 255 255}
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+RGBA{255 255 255 255}
+}
+}
+}
+}
+}
+}
+}
+}
+SBox{
+name string{"Buttons"}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{0 198 280 20}
+clip digit{0}
+children[1]{
+'Buttons::YesNo'{
+name string{"YesNo"}
+pack_expand_x digit{1}
+geometry rectangle{98 0 84 20}
+children[2]{
+'Buttons::YesNo::Yes'{
+name string{"Yes"}
+pack_allocate_h digit{1}
+pack_expand_x digit{0}
+pack_fill_x digit{0}
+geometry rectangle{46 0 38 20}
+children[7]{
+'Buttons::YesNo::Yes::bg_tmp0'{
+name string{"bg_tmp0"}
+geometry rectangle{0 0 38 20}
+}
+'Buttons::YesNo::Yes::bg'{
+name string{"bg"}
+geometry rectangle{0 0 13.88 18.18}
+}
+'Buttons::YesNo::Yes::bgf'{
+name string{"bgf"}
+geometry rectangle{0 0 13.88 18.18}
+actor_list[1]{
+'Buttons::YesNo::Yes::bgf::FaceColorInterpolator'{
+name string{"FaceColorInterpolator"}
+}
+}
+}
+'Buttons::YesNo::Yes::bgi'{
+name string{"bgi"}
+geometry rectangle{0 0 13.88 18.18}
+}
+'Buttons::YesNo::Yes::label'{
+name string{"label"}
+pack_pad_left digit{0}
+pack_pad_right digit{0}
+geometry rectangle{0 0 38 20}
+key string{""}
+}
+'Buttons::YesNo::Yes::labeli'{
+name string{"labeli"}
+pack_pad_left digit{0}
+pack_pad_right digit{0}
+geometry rectangle{0 0 38 20}
+key string{""}
+}
+ImageFace{
+name string{"Blink"}
+opacity digit{0}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_playing digit{0}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[3]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+}
+}
+}
+blend_func_name string{"add"}
+image_path string{"image/gt5m/button/ok.png"}
+}
+}
+inner_pad_top digit{0}
+}
+'Buttons::YesNo::No'{
+name string{"No"}
+pack_allocate_h digit{1}
+pack_expand_x digit{0}
+pack_fill_x digit{0}
+geometry rectangle{0 0 38 20}
+children[6]{
+'Buttons::YesNo::No::bg_tmp'{
+name string{"bg_tmp"}
+geometry rectangle{0 0 38 20}
+}
+'Buttons::YesNo::No::bg'{
+name string{"bg"}
+}
+'Buttons::YesNo::No::bgf'{
+name string{"bgf"}
+actor_list[1]{
+'Buttons::YesNo::No::bgf::FaceColorInterpolator'{
+name string{"FaceColorInterpolator"}
+}
+}
+}
+'Buttons::YesNo::No::bgi'{
+name string{"bgi"}
+}
+'Buttons::YesNo::No::label'{
+name string{"label"}
+pack_pad_left digit{0}
+pack_pad_right digit{0}
+geometry rectangle{0 0 38 20}
+key string{""}
+}
+'Buttons::YesNo::No::labeli'{
+name string{"labeli"}
+pack_pad_left digit{0}
+pack_pad_right digit{0}
+geometry rectangle{0 0 38 20}
+key string{""}
+}
+}
+inner_pad_top digit{0}
+}
+}
+spacing digit{8}
+}
+}
+}
+}
+}
+SBox{
+name string{"hidden"}
+geometry rectangle{0 0 280 21}
+children[1]{
+SBox{
+name string{"Item"}
+can_focus digit{1}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+geometry rectangle{0 0 280 21}
+children[5]{
+ColorFace{
+name string{"ColorFace0"}
+visible_compare digit{1}
+color[1]{
+RGBA{26 26 26 255}
+}
+}
+ColorFace{
+name string{"ColorFace1"}
+visible_compare digit{1}
+color[1]{
+RGBA{12 12 12 255}
+}
+}
+ColorFace{
+name string{"ColorFaceF"}
+visible_condition digit{1}
+visible_compare digit{1}
+color[4]{
+RGBA{148 205 235 255}
+RGBA{148 205 235 255}
+RGBA{61 165 217 255}
+RGBA{61 165 217 255}
+}
+}
+TextFace{
+name string{"TextFace"}
+packable digit{1}
+pack_pad_left digit{20}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+visible_compare digit{1}
+geometry rectangle{20 0 260 21}
+text_color RGBA{180 210 225 255}
+font string{"default"}
+align digit{3}
+}
+TextFace{
+name string{"TextFaceF"}
+packable digit{1}
+pack_pad_left digit{20}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+visible_condition digit{1}
+visible_compare digit{1}
+geometry rectangle{20 0 260 21}
+text_color RGBA{0 0 0 255}
+font string{"default"}
+align digit{3}
+}
+}
+}
+}
+}
+}
+}
+}
+}

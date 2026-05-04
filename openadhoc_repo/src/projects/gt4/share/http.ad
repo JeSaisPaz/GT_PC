@@ -1,0 +1,131 @@
+static http = main::menu::MHttp();
+
+method __init__()
+{
+	http.block = 0;
+	http.timeout = 60 * 30;
+	http.setProxyByNetConf(main::game.option.netconf);
+}
+
+
+method GetMHttp()
+{
+	return http;
+}
+
+method GetXml(url)
+{
+	return http.getXml(url);
+}
+
+method PostXml(url, arg)
+{
+	return http.postXml(url, arg);
+}
+
+method PostSvoLogin(url, user, password, ip, arg)
+{
+	if (!http.SVOLOGIN(url, user, password, ip, arg))
+	{
+		return nil;
+	}
+
+	if (!http.sync())
+	{
+		http.response();
+		return nil;
+	}
+
+	var xml = main::menu::MXml();
+	xml.parse(http.response());
+	return xml.result;
+}
+
+method AsyncGet(url)
+{
+	if (!http.GET(url))
+	{
+		return false;
+	}
+
+	return true;
+}
+
+method Response()
+{
+	return http.response();
+}
+
+method IsDone()
+{
+	return http.isTransactionDone();
+}
+
+method HasError()
+{
+	if (http.isTransactionFailed())
+	{
+		return true;
+	}
+
+	return false;
+}
+
+
+method GetContentLength()
+{
+	return http.contentLength;
+}
+
+method GetEntitySize()
+{
+	return http.entitySize;
+}
+
+method Abort()
+{
+	return http.abort();
+}
+
+method close()
+{
+	http.close();
+}
+
+method ppr(str, level)
+{
+	var p = "";
+	for (var d = 0; d < level; d++)
+		p += "  ";
+}
+
+method PrintXmlNodes(node, level)
+{
+	if (node.value != "")
+		ppr(node.value, level);
+
+	var attrs = node.attrs;
+	for (var a = 0; a < attrs.size; a++)
+	{
+		var p = "";
+		for (var d = 0; d < level; d++)
+			p += "  ";
+		p += ":";
+
+		var attrName = attrs[a];
+		var attrValue = node.getAttribute(attrName);
+	}
+
+	var names = node.elems;
+	for (var i = 0; i < names.size; i++)
+	{
+		var name = names[i];
+		var nodeList = node[name];
+
+		for (var j = 0; j < nodeList.size; j++)
+		{
+			ppr("[" + name + "]", level);
+			PrintXmlNodes(nodeList[j], level + 1);
+		}
+	}
+}

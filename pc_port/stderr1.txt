@@ -1,0 +1,14 @@
+[Game] Loading: assets/scripts\Application.adc
+[Audio] registered (lazy SDL2_mixer + ffmpeg)
+Registered 30 pdistd stubs
+Registered additional pdiext stubs
+Registered 40 pdiapp stubs
+Registered additional gtengine/native API stubs
+[Game] Loading SpecDB from: D:\GTPSP-decompile\files\decompiled\Gran Turismo\PSP_GAME\USRDIR\GT.VOL\specdb\GT_PSP_JP2817
+SpecDB: loaded 54 tables, 0 failed
+[Game] SpecDB loaded successfully
+[Game] Starting VM-driven game loop
+[Module::load] CALLED path="bootstrap"
+[Module::load] Loaded assets/scripts/bootstrap.adc (idx=0)
+[Module::load] CALLED path="packed_main_loop"
+[Module::load] Loaded assets/scripts/packed_main_loop.adc (idx=0)

@@ -1,0 +1,9 @@
+id: skip_intro
+version: "1.0.0"
+name: "Skip Intro"
+description: "Skips the boot intro movies and GT logo, going straight to the main menu."
+author: "GT PSP Modding"
+scripts:
+  - source: main.ad
+    target: mods/skip_intro/main.adc
+assets: []

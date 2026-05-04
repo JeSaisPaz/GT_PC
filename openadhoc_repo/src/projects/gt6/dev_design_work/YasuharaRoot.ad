@@ -1,0 +1,28 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+module ROOT
+{
+    method onInitialize(context)
+    {
+        ORG.bindBenchTestDummy(Composite::ChartFace);
+        Composite::ChartFace.focus_mode = 1;
+        Composite::ChartFace.pitch = [8.0, 2.0];
+    }
+
+    method onActivate(context)
+    {
+        return EVENTRESULT_FILTER;
+    }
+}
+

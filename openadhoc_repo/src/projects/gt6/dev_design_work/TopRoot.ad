@@ -1,0 +1,121 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+module ROOT
+{
+    hidden.visible = false;
+    static sSelectedIndex = nil;
+
+    method onInitialize(context)
+    {
+        IconBox.setItemTemplate(context, hidden::Item);
+        IconBox.setItemCount(4, 10);
+
+        var root_list = [];
+        for (var root = PROJECT
+            .first; root != nil; root = root.next)
+        {
+            if (self != root)
+                root_list.push(root);
+        }
+
+        for (var i = 0; i < IconBox.getItemCount(); i++)
+        {
+            var w = IconBox.getItemWidget(i, context);
+            if (i < root_list.size)
+            {
+                w.root_ = root_list[i];
+                w.TextFace.text = w.root_.name;
+            }
+            else
+            {
+                IconBox.setItemInsensitive(i, true);
+            }
+        }
+
+        ToolTip::tip.remove();
+        ROOT.setFocus(IconBox);
+
+        if (sSelectedIndex != nil)
+            IconBox.focus_index = sSelectedIndex;
+    }
+
+    function onActivate(context, event)
+    {
+        main::sound.play("ok");
+        sSelectedIndex = IconBox.focus_index;
+        var w = IconBox.getItemWidget(IconBox.focus_index);
+        SequenceUtil::startPage(context, w.root_);
+        return EVENTRESULT_FILTER;
+    }
+
+    function onCancel(context)
+    {
+        main::sound.play("cancel");
+        SequenceUtil::startProject(context, "dev_runviewer");
+        return EVENTRESULT_FILTER;
+    }
+}
+
+method onKeyPress(context, event)
+{
+    switch (event.keysym)
+    {
+        case CELL_PAD_CTRL_START:
+            context.finish(true);
+            return EVENTRESULT_FILTER;
+        }
+
+    return EVENTRESULT_CONTINUE;
+}
+
+module ROOT::LaunchRunviewer
+{
+    function onActivate(context, event, item)
+    {
+        main::sound.play("ok");
+        SequenceUtil::startProject(context, "dev_runviewer");
+        return EVENTRESULT_FILTER;
+    }
+}
+
+module ROOT::IconBox
+{
+    method onFocusEnter(context)
+    {
+        self.onFocusNotify(context, self.focus_index);
+        return EVENTRESULT_STOP;
+    }
+
+    method onFocusNotify(context, index)
+    {
+        var w = self.getItemWidget(index);
+        var text = w.root_.name;
+        var root_info = w.root_["root_info"];
+        if (root_info != nil)
+        {
+            var description = w.root_["root_info"]["description"];
+            if (description != nil)
+                text += " : %s ".format(description.text);
+        }
+
+        ToolTip::tip.value = text;
+        return EVENTRESULT_CONTINUE;
+    }
+}
+
+module ROOT::hidden::Item
+{
+    attribute root_;
+}

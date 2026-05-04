@@ -1,0 +1,14 @@
+//---------------------------------------------------------------------------------------
+// skip_intro / main.ad
+// Skips intro movies by redirecting the boot project to arcade directly.
+// Uses the getMenuProject query event.
+//---------------------------------------------------------------------------------------
+
+#include "../../core/mod_sdk.inc"
+
+function _mod_init()
+{
+    MOD_ON_EVENT("getMenuProject", function(args) {
+        return "arcade";
+    });
+}

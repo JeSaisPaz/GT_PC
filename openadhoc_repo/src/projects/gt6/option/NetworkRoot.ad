@@ -1,0 +1,144 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+module ROOT
+{
+    static sOpenMode;
+
+    method open(context, open_mode)
+    {
+        if (open_mode != nil)
+            sOpenMode = open_mode;
+
+        SettingFrame.appear();
+        SequenceUtil::pushPage(context, self);
+    }
+
+    method close(context)
+    {
+        var delay_time = SettingFrame.hide();
+        SequenceUtil::popPage(context, self, delay_time);
+    }
+
+    method reflect(context)
+    {
+        var option = main::GAME_STATUS.user_profile.option;
+    }
+
+    method apply(context)
+    {
+        var option = main::GAME_STATUS.user_profile.option;
+    }
+
+    method onInitialize(context)
+    {
+        if (gDirectApplyMode)
+            SettingFrame::Pane::Foot.visible = false;
+    
+        PROJECT.SetWidgetEnable(false, SettingFrame::Pane::ScrolledBody::clip::space.getChildList());
+
+        var focus_w;
+        switch (sOpenMode)
+        {
+            case "NET_clear":
+                SettingFrame::Pane::Head::label.text = context.translate(OptionRoot, "NET_clear");
+                PROJECT.SetWidgetEnable(true, [SettingFrame::Pane::ScrolledBody::clip::space::ClearCache]);
+                focus_w = SettingFrame::Pane::ScrolledBody::clip::space::ClearCache::vbox::ExecClear;
+                break;
+
+            case "NET_eula":
+                SettingFrame::Pane::Head::label.text = context.translate(OptionRoot, "NET_eula");
+                PROJECT.SetWidgetEnable(true, [SettingFrame::Pane::ScrolledBody::clip::space::ShowEULA]);
+                focus_w = SettingFrame::Pane::ScrolledBody::clip::space::ShowEULA::vbox::Show;
+                break;
+
+        }
+
+        reflect(context);
+        SettingFrame.adjust_scrolled_body();
+        ROOT.setFocus(focus_w);
+        SettingFrame::Pane::ScrolledBody::clip::space.parent.warp(focus_w);
+    }
+
+    method onCancel(context, event, item)
+    {
+        main::sound.play("cancel");
+        if (gDirectApplyMode)
+        {
+            ROOT.apply();
+            ROOT.close(context);
+        }
+        else
+            ROOT.setFocus(SettingFrame::Pane::Foot::Cancel);
+
+        return EVENTRESULT_FILTER;
+    }
+
+    module SettingFrame::Pane::ScrolledBody::clip::space::ClearCache::vbox::ExecClear
+    {
+        function onActivate(context)
+        {
+            main::sound.play("ok");
+
+            var message_begin = context.translate(ROOT, "clear_cache");
+            var message_waiting = context.translate(ROOT, "now_cleaning");
+            var message_success = context.translate(ROOT, "complete");
+            var message_failed = nil;
+            var func = main::Grim2.clearCacheAll;
+            var arg = nil;
+
+            DialogUtil::openConfirmExecDialog(context, message_begin,
+                message_waiting, message_success, message_failed, func, arg);
+            return EVENTRESULT_FILTER;
+        }
+    }
+
+    module SettingFrame::Pane::ScrolledBody::clip::space::ShowEULA::vbox::Show
+    {
+        function onActivate(context)
+        {
+            main::sound.play("ok");
+            LoginUtil::showNpEula(context);
+            return EVENTRESULT_FILTER;
+        }
+    }
+
+    module SettingFrame::Pane::Foot::OK
+    {
+        method onActivate(context)
+        {
+            main::sound.play("ok");
+            ROOT.apply();
+            ROOT.close(context);
+            return EVENTRESULT_FILTER;
+        }
+    }
+
+    module SettingFrame::Pane::Foot::Cancel
+    {
+        method onActivate(context)
+        {
+            main::sound.play("ok");
+            ROOT.close(context);
+            return EVENTRESULT_FILTER;
+        }
+
+        method onCancel(context)
+        {
+            main::sound.play("cancel");
+            ROOT.close(context);
+            return EVENTRESULT_FILTER;
+        }
+    }
+}

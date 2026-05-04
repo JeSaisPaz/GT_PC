@@ -1,0 +1,33 @@
+project_name: RaceProject
+project_folder: ..
+
+base_include_folder: ../../../../
+
+output_name: race
+
+version: 12
+serialize_components: true
+serialize_components_version: 1
+merge_widget: true
+
+files_to_compile: 
+  - name: RaceProjectComponent.ad
+    project_component: true
+  - name: race.ad
+    is_main: true
+  - name: RaceRoot.ad
+  - name: OnboardMeterRoot.ad
+  - name: ResultRoot.ad
+  - name: RaceFadeTransition.ad
+  - name: Template.ad
+  - name: PitRoot.ad
+  - name: QuickOptionRoot.ad
+  - name: RaceStageBeforeStartRoot.ad
+  - name: ReplayMenuRoot.ad
+  - name: LiveTimingRoot.ad
+  - name: QuickReplayOptionRoot.ad
+  - name: LoadingReplayRoot.ad
+  - name: StartingGridRoot.ad
+
+extra_widget_resources:
+  - name: RepatTransition

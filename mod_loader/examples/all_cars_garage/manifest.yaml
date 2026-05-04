@@ -1,0 +1,9 @@
+id: all_cars_garage
+version: "1.0.0"
+name: "All Cars Garage"
+description: "Gives all cars to the player's garage on first menu entry."
+author: "GT PSP Modding"
+scripts:
+  - source: main.ad
+    target: mods/all_cars_garage/main.adc
+assets: []

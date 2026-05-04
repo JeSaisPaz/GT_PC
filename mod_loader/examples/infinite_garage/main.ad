@@ -1,0 +1,13 @@
+//---------------------------------------------------------------------------------------
+// infinite_garage / main.ad
+// Placeholder for removing garage limits.
+// The garage array size is baked into UserProfile's STStructure definition.
+// Full fix requires patching the STStructure in source or via EBOOT hook.
+//---------------------------------------------------------------------------------------
+
+#include "../../core/mod_sdk.inc"
+
+function _mod_init()
+{
+    MOD_LOG("Infinite Garage mod loaded - requires core STStructure patch.");
+}

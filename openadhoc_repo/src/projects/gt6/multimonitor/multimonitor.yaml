@@ -1,0 +1,16 @@
+project_name: MultiMonitorProject
+project_folder: ..
+
+base_include_folder: ../../../../
+
+output_name: multimonitor
+
+version: 12
+serialize_components: true
+serialize_components_version: 1
+merge_widget: true
+
+files_to_compile: 
+  - name: multimonitor.ad
+    is_main: true
+  - name: TopRoot.ad

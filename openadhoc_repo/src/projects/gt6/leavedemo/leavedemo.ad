@@ -1,0 +1,27 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+module PROJECT
+{
+    function onLoad(context)
+    {
+        var render_context = context.getRenderContext(0);
+        SequenceUtil::startPageDirect(render_context, LeaveDemoRoot);
+    }
+
+    function onUnload(context)
+    {
+        
+    }
+}

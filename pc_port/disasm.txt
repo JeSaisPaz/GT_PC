@@ -1,0 +1,2410 @@
+warning: unused manifest key: env
+   Compiling adhoc-vm v0.1.0 (D:\GTPSP-decompile\pc_port)
+warning: variant `await_next` should have an upper camel case name
+  --> src\vm\decoder.rs:97:5
+   |
+97 |     await_next,
+   |     ^^^^^^^^^^ help: convert the identifier to upper camel case: `AwaitNext`
+   |
+   = note: `#[warn(non_camel_case_types)]` (part of `#[warn(nonstandard_style)]`) on by default
+
+warning: variant `await_next` should have an upper camel case name
+   --> src\vm\decoder.rs:298:5
+    |
+298 |     await_next,
+    |     ^^^^^^^^^^ help: convert the identifier to upper camel case: `AwaitNext`
+
+warning: unused doc comment
+   --> src\engine\main_loop.rs:212:17
+    |
+212 |                   /// Call project's onInit/onLoad function after script loads.
+    |                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+213 | /                 LoopPhase::MenuRunInit => {
+214 | |                     let proj = &self.game_sequence.current_project;
+215 | |                     let capitalized = capitalize(proj);
+216 | |                     let names = [
+...   |
+227 | |                     self.phase = LoopPhase::MenuSync;
+228 | |                 }
+    | |_________________- rustdoc does not generate documentation for match arms
+    |
+    = help: use `//` for a plain comment
+    = note: `#[warn(unused_doc_comments)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `std::io::Read`
+  --> src\engine\model.rs:10:5
+   |
+10 | use std::io::Read;
+   |     ^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused import: `std::rc::Rc`
+ --> src\engine\sprite.rs:6:5
+  |
+6 | use std::rc::Rc;
+  |     ^^^^^^^^^^^
+
+warning: unused import: `File`
+ --> src\engine\pdiapp.rs:3:21
+  |
+3 | use std::fs::{self, File};
+  |                     ^^^^
+
+warning: unused imports: `CameraData`, `CarModel`, and `load_course`
+   --> src\engine\pdiapp.rs:390:32
+    |
+390 | pub use crate::engine::model::{CarModel, TrackState, CameraData, load_car_model, load_course, load_camera};
+    |                                ^^^^^^^^              ^^^^^^^^^^                  ^^^^^^^^^^^
+
+warning: unused import: `crate::engine::graphics::get_thread_renderer`
+ --> src\engine\ui.rs:2:5
+  |
+2 | use crate::engine::graphics::get_thread_renderer;
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused imports: `TextureCreator` and `Texture`
+ --> src\engine\graphics.rs:9:28
+  |
+9 | use sdl2::render::{Canvas, Texture, TextureCreator};
+  |                            ^^^^^^^  ^^^^^^^^^^^^^^
+
+warning: unused imports: `GLenum` and `GLint`
+  --> src\engine\graphics.rs:16:25
+   |
+16 | use gl::types::{GLuint, GLenum, GLint};
+   |                         ^^^^^^  ^^^^^
+
+warning: unused import: `engine::main_loop::MainLoopState`
+  --> src\main.rs:33:5
+   |
+33 | use engine::main_loop::MainLoopState;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused variable: `e`
+   --> src\vm\loader.rs:197:21
+    |
+197 |                 Err(e) => {
+    |                     ^ help: if this is intentional, prefix it with an underscore: `_e`
+    |
+    = note: `#[warn(unused_variables)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `cf_start`
+   --> src\vm\loader.rs:331:21
+    |
+331 |                 let cf_start = cursor.position();
+    |                     ^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_cf_start`
+
+warning: unused variable: `var_count`
+   --> src\vm\loader.rs:374:21
+    |
+374 |                 let var_count = cursor.read_i32()?;
+    |                     ^^^^^^^^^
+    |
+help: if this is intentional, prefix it with an underscore
+    |
+374 |                 let _var_count = cursor.read_i32()?;
+    |                     +
+help: you might have meant to pattern match on the similarly named constant `SEQUENCE_RACE`
+    |
+374 -                 let var_count = cursor.read_i32()?;
+374 +                 let engine::main_loop::SEQUENCE_RACE = cursor.read_i32()?;
+    |
+
+warning: unused variable: `value`
+   --> src\vm\loader.rs:401:21
+    |
+401 |                 let value = cursor.read_i32()?;
+    |                     ^^^^^
+    |
+help: if this is intentional, prefix it with an underscore
+    |
+401 |                 let _value = cursor.read_i32()?;
+    |                     +
+help: you might have meant to pattern match on the similarly named constant `SEQUENCE_RACE`
+    |
+401 -                 let value = cursor.read_i32()?;
+401 +                 let engine::main_loop::SEQUENCE_RACE = cursor.read_i32()?;
+    |
+
+warning: unused variable: `cf_start`
+   --> src\vm\loader.rs:412:21
+    |
+412 |                 let cf_start = cursor.position();
+    |                     ^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_cf_start`
+
+warning: variable does not need to be mutable
+  --> src\vm\engine.rs:87:21
+   |
+87 |                 let mut ef = Frame::new(cf_idx, fi.stack_size, fi.local_var_count, new_static_base);
+   |                     ----^^
+   |                     |
+   |                     help: remove this `mut`
+   |
+   = note: `#[warn(unused_mut)]` (part of `#[warn(unused)]`) on by default
+
+warning: variable does not need to be mutable
+   --> src\vm\engine.rs:240:21
+    |
+240 |                 let mut ef = Frame::new(cf_idx, fi.stack_size, fi.local_var_count, 0);
+    |                     ----^^
+    |                     |
+    |                     help: remove this `mut`
+
+warning: unreachable pattern
+    --> src\vm\engine.rs:1028:13
+     |
+ 660 |             Instruction::LocalDefine => Ok(FrameAction::Continue),
+     |             ------------------------ matches all the relevant values
+...
+1028 |             Instruction::LocalDefine => Ok(FrameAction::Continue),
+     |             ^^^^^^^^^^^^^^^^^^^^^^^^ no value can reach this
+     |
+     = note: `#[warn(unreachable_patterns)]` (part of `#[warn(unused)]`) on by default
+
+warning: unused variable: `symbols`
+   --> src\vm\engine.rs:491:44
+    |
+491 |             Instruction::AttributeDefine { symbols } => {
+    |                                            ^^^^^^^ help: try ignoring the field: `symbols: _`
+
+warning: unused variable: `default`
+   --> src\vm\engine.rs:492:21
+    |
+492 |                 let default = pop(self, fi);
+    |                     ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_default`
+
+warning: unused variable: `storage_index`
+   --> src\vm\engine.rs:509:47
+    |
+509 |             Instruction::Assign { symbols: _, storage_index } => {
+    |                                               ^^^^^^^^^^^^^ help: try ignoring the field: `storage_index: _`
+
+warning: unused variable: `o`
+   --> src\vm\engine.rs:996:35
+    |
+996 |                     Value::Object(o) => {
+    |                                   ^ help: if this is intentional, prefix it with an underscore: `_o`
+
+warning: unused variable: `symbols`
+    --> src\vm\engine.rs:1018:36
+     |
+1018 |             Instruction::Require { symbols } => {
+     |                                    ^^^^^^^ help: try ignoring the field: `symbols: _`
+
+warning: unused variable: `symbols`
+    --> src\vm\engine.rs:1021:35
+     |
+1021 |             Instruction::Import { symbols } => {
+     |                                   ^^^^^^^ help: try ignoring the field: `symbols: _`
+
+warning: unused variable: `cf`
+    --> src\vm\engine.rs:1161:61
+     |
+1161 |     fn call_value(&mut self, func: Value, args: Vec<Value>, cf: usize) -> Result<Value, String> {
+     |                                                             ^^ help: if this is intentional, prefix it with an underscore: `_cf`
+
+warning: unused variable: `vm`
+   --> src\engine\main_loop.rs:365:30
+    |
+365 |     fn check_bootrace(&self, vm: &mut Engine) -> Result<(), String> {
+    |                              ^^ help: if this is intentional, prefix it with an underscore: `_vm`
+
+warning: unused variable: `x0b`
+   --> src\engine\model.rs:286:17
+    |
+286 |             let x0b = read_f32(block, v0 + 4);
+    |                 ^^^
+    |
+help: if this is intentional, prefix it with an underscore
+    |
+286 |             let _x0b = read_f32(block, v0 + 4);
+    |                 +
+help: you might have meant to pattern match on the similarly named constant `LAP_CROSS_DIST`
+    |
+286 -             let x0b = read_f32(block, v0 + 4);
+286 +             let engine::race::LAP_CROSS_DIST = read_f32(block, v0 + 4);
+    |
+
+warning: unused variable: `x0c`
+   --> src\engine\model.rs:287:17
+    |
+287 |             let x0c = read_f32(block, v0 + 8);
+    |                 ^^^
+    |
+help: if this is intentional, prefix it with an underscore
+    |
+287 |             let _x0c = read_f32(block, v0 + 8);
+    |                 +
+help: you might have meant to pattern match on the similarly named constant `LAP_CROSS_DIST`
+    |
+287 -             let x0c = read_f32(block, v0 + 8);
+287 +             let engine::race::LAP_CROSS_DIST = read_f32(block, v0 + 8);
+    |
+
+warning: unused variable: `x1a`
+   --> src\engine\model.rs:288:17
+    |
+288 |             let x1a = read_f32(block, v0 + 12);
+    |                 ^^^
+    |
+help: if this is intentional, prefix it with an underscore
+    |
+288 |             let _x1a = read_f32(block, v0 + 12);
+    |                 +
+help: you might have meant to pattern match on the similarly named constant `LAP_CROSS_DIST`
+    |
+288 -             let x1a = read_f32(block, v0 + 12);
+288 +             let engine::race::LAP_CROSS_DIST = read_f32(block, v0 + 12);
+    |
+
+warning: variable `run_count` is assigned to, but never used
+   --> src\engine\model.rs:852:17
+    |
+852 |         let mut run_count = 0usize;
+    |                 ^^^^^^^^^
+    |
+    = note: consider using `_run_count` instead
+
+warning: unused variable: `dpd`
+  --> src\engine\gtengine.rs:19:9
+   |
+19 |     let dpd = &dp.rows[dp_row];
+   |         ^^^ help: if this is intentional, prefix it with an underscore: `_dpd`
+
+warning: unused variable: `idx`
+   --> src\engine\gtengine.rs:184:13
+    |
+184 |         let idx = args.first().and_then(|a| a.as_i32()).unwrap_or(0) as usize;
+    |             ^^^ help: if this is intentional, prefix it with an underscore: `_idx`
+
+warning: unused variable: `args`
+   --> src\engine\gtengine.rs:427:76
+    |
+427 |     registry.register("main,gtengine,MRaceOperator,setOrganizer", Rc::new(|args: &[Value]| {
+    |                                                                            ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+  --> src\engine\menu.rs:50:55
+   |
+50 |     registry.register_fallback("main,menu,", Rc::new(|args: &[Value]| {
+   |                                                       ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+  --> src\engine\menu.rs:53:57
+   |
+53 |     registry.register_fallback("main,pdistd,", Rc::new(|args: &[Value]| {
+   |                                                         ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+  --> src\engine\menu.rs:56:57
+   |
+56 |     registry.register_fallback("main,pdiext,", Rc::new(|args: &[Value]| {
+   |                                                         ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+  --> src\engine\menu.rs:59:57
+   |
+59 |     registry.register_fallback("main,pdiapp,", Rc::new(|args: &[Value]| {
+   |                                                         ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+  --> src\engine\menu.rs:62:59
+   |
+62 |     registry.register_fallback("main,gtengine,", Rc::new(|args: &[Value]| {
+   |                                                           ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+  --> src\engine\menu.rs:67:68
+   |
+67 |     registry.register("main,menu,MMenuGameObjectManager", Rc::new(|args| {
+   |                                                                    ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+  --> src\engine\menu.rs:73:75
+   |
+73 |     registry.register("main,menu,MMenuGameObjectManager,create", Rc::new(|args| {
+   |                                                                           ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+  --> src\engine\menu.rs:85:77
+   |
+85 |     registry.register("main,menu,MMenuGameObjectManager,addChild", Rc::new(|args| Value::Void));
+   |                                                                             ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+  --> src\engine\menu.rs:86:80
+   |
+86 |     registry.register("main,menu,MMenuGameObjectManager,removeChild", Rc::new(|args| Value::Void));
+   |                                                                                ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+  --> src\engine\menu.rs:87:79
+   |
+87 |     registry.register("main,menu,MMenuGameObjectManager,setVisible", Rc::new(|args| Value::Void));
+   |                                                                               ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+  --> src\engine\menu.rs:88:77
+   |
+88 |     registry.register("main,menu,MMenuGameObjectManager,setAlpha", Rc::new(|args| Value::Void));
+   |                                                                             ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+  --> src\engine\menu.rs:89:78
+   |
+89 |     registry.register("main,menu,MMenuGameObjectManager,set_value", Rc::new(|args| Value::Void));
+   |                                                                              ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+  --> src\engine\menu.rs:90:78
+   |
+90 |     registry.register("main,menu,MMenuGameObjectManager,get_value", Rc::new(|args| Value::Nil));
+   |                                                                              ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+  --> src\engine\menu.rs:91:79
+   |
+91 |     registry.register("main,menu,MMenuGameObjectManager,addWatcher", Rc::new(|args| Value::Void));
+   |                                                                               ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+  --> src\engine\menu.rs:92:82
+   |
+92 |     registry.register("main,menu,MMenuGameObjectManager,removeWatcher", Rc::new(|args| Value::Void));
+   |                                                                                  ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+  --> src\engine\menu.rs:93:82
+   |
+93 |     registry.register("main,menu,MMenuGameObjectManager,getChildCount", Rc::new(|args| Value::Int(0)));
+   |                                                                                  ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+  --> src\engine\menu.rs:94:79
+   |
+94 |     registry.register("main,menu,MMenuGameObjectManager,getChildAt", Rc::new(|args| Value::Nil));
+   |                                                                               ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+  --> src\engine\menu.rs:97:61
+   |
+97 |     registry.register("main,menu,MRootTransition", Rc::new(|args| {
+   |                                                             ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:103:67
+    |
+103 |     registry.register("main,menu,MRootTransition,start", Rc::new(|args| Value::Void));
+    |                                                                   ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:104:72
+    |
+104 |     registry.register("main,menu,MRootTransition,setProject", Rc::new(|args| Value::Void));
+    |                                                                        ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:107:60
+    |
+107 |     registry.register("main,menu,MFunctionEvent", Rc::new(|args| {
+    |                                                            ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:113:72
+    |
+113 |     registry.register("main,menu,MFunctionEvent,setFunction", Rc::new(|args| Value::Void));
+    |                                                                        ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:114:65
+    |
+114 |     registry.register("main,menu,MFunctionEvent,call", Rc::new(|args| Value::Nil));
+    |                                                                 ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:117:58
+    |
+117 |     registry.register("main,menu,MScriptEvent", Rc::new(|args| {
+    |                                                          ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:123:68
+    |
+123 |     registry.register("main,menu,MScriptEvent,setScript", Rc::new(|args| Value::Void));
+    |                                                                    ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:124:63
+    |
+124 |     registry.register("main,menu,MScriptEvent,call", Rc::new(|args| Value::Nil));
+    |                                                               ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:127:60
+    |
+127 |     registry.register("main,menu,MActivateEvent", Rc::new(|args| {
+    |                                                            ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:133:65
+    |
+133 |     registry.register("main,menu,MActivateEvent,call", Rc::new(|args| Value::Nil));
+    |                                                                 ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:136:62
+    |
+136 |     registry.register("main,menu,MFocusEnterEvent", Rc::new(|args| {
+    |                                                              ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:142:67
+    |
+142 |     registry.register("main,menu,MFocusEnterEvent,call", Rc::new(|args| Value::Nil));
+    |                                                                   ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:145:56
+    |
+145 |     registry.register("main,menu,MMoveActor", Rc::new(|args| {
+    |                                                        ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:151:66
+    |
+151 |     registry.register("main,menu,MMoveActor,setTarget", Rc::new(|args| Value::Void));
+    |                                                                  ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:152:68
+    |
+152 |     registry.register("main,menu,MMoveActor,setDuration", Rc::new(|args| Value::Void));
+    |                                                                    ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:153:65
+    |
+153 |     registry.register("main,menu,MMoveActor,setDelay", Rc::new(|args| Value::Void));
+    |                                                                 ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:154:61
+    |
+154 |     registry.register("main,menu,MMoveActor,play", Rc::new(|args| Value::Void));
+    |                                                             ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:155:61
+    |
+155 |     registry.register("main,menu,MMoveActor,stop", Rc::new(|args| Value::Void));
+    |                                                             ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:156:62
+    |
+156 |     registry.register("main,menu,MMoveActor,reset", Rc::new(|args| Value::Void));
+    |                                                              ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:157:66
+    |
+157 |     registry.register("main,menu,MMoveActor,isPlaying", Rc::new(|args| Value::Bool(false)));
+    |                                                                  ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:160:56
+    |
+160 |     registry.register("main,menu,MFadeActor", Rc::new(|args| {
+    |                                                        ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:166:71
+    |
+166 |     registry.register("main,menu,MFadeActor,setTargetAlpha", Rc::new(|args| Value::Void));
+    |                                                                       ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:167:68
+    |
+167 |     registry.register("main,menu,MFadeActor,setDuration", Rc::new(|args| Value::Void));
+    |                                                                    ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:168:61
+    |
+168 |     registry.register("main,menu,MFadeActor,play", Rc::new(|args| Value::Void));
+    |                                                             ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:169:61
+    |
+169 |     registry.register("main,menu,MFadeActor,stop", Rc::new(|args| Value::Void));
+    |                                                             ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:172:59
+    |
+172 |     registry.register("main,menu,MInterpolator", Rc::new(|args| {
+    |                                                           ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:178:65
+    |
+178 |     registry.register("main,menu,MInterpolator,start", Rc::new(|args| Value::Void));
+    |                                                                 ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:179:64
+    |
+179 |     registry.register("main,menu,MInterpolator,stop", Rc::new(|args| Value::Void));
+    |                                                                ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:180:65
+    |
+180 |     registry.register("main,menu,MInterpolator,reset", Rc::new(|args| Value::Void));
+    |                                                                 ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:181:70
+    |
+181 |     registry.register("main,menu,MInterpolator,isFinished", Rc::new(|args| Value::Bool(true)));
+    |                                                                      ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:184:60
+    |
+184 |     registry.register("main,menu,MScriptWatcher", Rc::new(|args| {
+    |                                                            ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:190:67
+    |
+190 |     registry.register("main,menu,MScriptWatcher,create", Rc::new(|args| Value::Void));
+    |                                                                   ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:191:66
+    |
+191 |     registry.register("main,menu,MScriptWatcher,start", Rc::new(|args| Value::Void));
+    |                                                                  ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:192:65
+    |
+192 |     registry.register("main,menu,MScriptWatcher,stop", Rc::new(|args| Value::Void));
+    |                                                                 ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:193:70
+    |
+193 |     registry.register("main,menu,MScriptWatcher,isExpired", Rc::new(|args| Value::Bool(false)));
+    |                                                                      ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:194:71
+    |
+194 |     registry.register("main,menu,MScriptWatcher,getElapsed", Rc::new(|args| Value::Int(0)));
+    |                                                                       ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:197:57
+    |
+197 |     registry.register("main,menu,MAdjustment", Rc::new(|args| {
+    |                                                         ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:203:67
+    |
+203 |     registry.register("main,menu,MAdjustment,set_value", Rc::new(|args| Value::Void));
+    |                                                                   ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:204:67
+    |
+204 |     registry.register("main,menu,MAdjustment,get_value", Rc::new(|args| Value::Int(0)));
+    |                                                                   ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:205:66
+    |
+205 |     registry.register("main,menu,MAdjustment,setRange", Rc::new(|args| Value::Void));
+    |                                                                  ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:208:58
+    |
+208 |     registry.register("main,menu,MColorObject", Rc::new(|args| {
+    |                                                          ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:214:67
+    |
+214 |     registry.register("main,menu,MColorObject,setColor", Rc::new(|args| Value::Void));
+    |                                                                   ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:215:67
+    |
+215 |     registry.register("main,menu,MColorObject,getColor", Rc::new(|args| Value::Int(0)));
+    |                                                                   ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:218:57
+    |
+218 |     registry.register("main,menu,MOptionMenu", Rc::new(|args| {
+    |                                                         ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:224:65
+    |
+224 |     registry.register("main,menu,MOptionMenu,addItem", Rc::new(|args| Value::Void));
+    |                                                                 ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:225:71
+    |
+225 |     registry.register("main,menu,MOptionMenu,setActiveItem", Rc::new(|args| Value::Void));
+    |                                                                       ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:226:71
+    |
+226 |     registry.register("main,menu,MOptionMenu,getActiveItem", Rc::new(|args| Value::Int(0)));
+    |                                                                       ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:229:55
+    |
+229 |     registry.register("main,menu,EventLoop", Rc::new(|args| {
+    |                                                       ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:235:59
+    |
+235 |     registry.register("main,menu,EventLoop,run", Rc::new(|args| Value::Void));
+    |                                                           ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:236:60
+    |
+236 |     registry.register("main,menu,EventLoop,stop", Rc::new(|args| Value::Void));
+    |                                                            ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:237:65
+    |
+237 |     registry.register("main,menu,EventLoop,isRunning", Rc::new(|args| Value::Bool(false)));
+    |                                                                 ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:240:65
+    |
+240 |     registry.register("main,menu,MUpdateContext,Sync", Rc::new(|args| Value::Void));
+    |                                                                 ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:243:57
+    |
+243 |     registry.register("main,menu,ScreenWidth", Rc::new(|args| Value::Int(480)));
+    |                                                         ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:244:58
+    |
+244 |     registry.register("main,menu,ScreenHeight", Rc::new(|args| Value::Int(272)));
+    |                                                          ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:247:52
+    |
+247 |     registry.register("main,menu,MActor", Rc::new(|args| {
+    |                                                    ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:253:64
+    |
+253 |     registry.register("main,menu,MActor,setPosition", Rc::new(|args| Value::Void));
+    |                                                                ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:254:60
+    |
+254 |     registry.register("main,menu,MActor,setSize", Rc::new(|args| Value::Void));
+    |                                                            ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:255:63
+    |
+255 |     registry.register("main,menu,MActor,setVisible", Rc::new(|args| Value::Void));
+    |                                                               ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:256:64
+    |
+256 |     registry.register("main,menu,MActor,getPosition", Rc::new(|args| Value::Int(0)));
+    |                                                                ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:257:60
+    |
+257 |     registry.register("main,menu,MActor,getSize", Rc::new(|args| Value::Int(0)));
+    |                                                            ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:260:61
+    |
+260 |     registry.register("main,menu,MCrossfadeGroup", Rc::new(|args| {
+    |                                                             ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:266:67
+    |
+266 |     registry.register("main,menu,MCrossfadeGroup,start", Rc::new(|args| Value::Void));
+    |                                                                   ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:267:66
+    |
+267 |     registry.register("main,menu,MCrossfadeGroup,stop", Rc::new(|args| Value::Void));
+    |                                                                  ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:270:54
+    |
+270 |     registry.register("main,menu,MManager", Rc::new(|args| {
+    |                                                      ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:276:58
+    |
+276 |     registry.register("main,menu,MManager,add", Rc::new(|args| Value::Void));
+    |                                                          ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:277:61
+    |
+277 |     registry.register("main,menu,MManager,remove", Rc::new(|args| Value::Void));
+    |                                                             ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:278:60
+    |
+278 |     registry.register("main,menu,MManager,clear", Rc::new(|args| Value::Void));
+    |                                                            ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:279:63
+    |
+279 |     registry.register("main,menu,MManager,getCount", Rc::new(|args| Value::Int(0)));
+    |                                                               ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:288:55
+    |
+288 |     registry.register("main,menu,ActorUtil", Rc::new(|args| {
+    |                                                       ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:294:59
+    |
+294 |     registry.register("main,menu,ActorUtil,add", Rc::new(|args| Value::Void));
+    |                                                           ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:295:62
+    |
+295 |     registry.register("main,menu,ActorUtil,remove", Rc::new(|args| Value::Void));
+    |                                                              ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:296:61
+    |
+296 |     registry.register("main,menu,ActorUtil,clear", Rc::new(|args| Value::Void));
+    |                                                             ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:297:60
+    |
+297 |     registry.register("main,menu,ActorUtil,find", Rc::new(|args| Value::Nil));
+    |                                                            ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:300:76
+    |
+300 |     registry.register("main,pdistd,DialogUtil,openConfirmDialog", Rc::new(|args| Value::Int(1)));
+    |                                                                            ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:301:74
+    |
+301 |     registry.register("main,pdistd,DialogUtil,openErrorDialog", Rc::new(|args| Value::Int(0)));
+    |                                                                          ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:302:70
+    |
+302 |     registry.register("main,pdistd,DialogUtil,showMessage", Rc::new(|args| Value::Void));
+    |                                                                      ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:305:67
+    |
+305 |     registry.register("main,menu,SuperPortGetButtonBit", Rc::new(|args| Value::Int(0)));
+    |                                                                   ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `args`
+   --> src\engine\menu.rs:306:71
+    |
+306 |     registry.register("main,menu,SuperPortGetAnalogChannel", Rc::new(|args| Value::Int(0)));
+    |                                                                       ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `buttons`
+   --> src\engine\menu.rs:417:9
+    |
+417 |     let buttons = ["cross", "circle", "triangle", "square", "start", "select",
+    |         ^^^^^^^ help: if this is intentional, prefix it with an underscore: `_buttons`
+
+warning: unused variable: `args`
+   --> src\engine\pdiapp.rs:322:63
+    |
+322 |     registry.register("main,pdiapp,MDEBUG,drawLine", Rc::new(|args: &[Value]| {
+    |                                                               ^^^^ help: if this is intentional, prefix it with an underscore: `_args`
+
+warning: unused variable: `gl_context`
+   --> src\engine\graphics.rs:173:17
+    |
+173 |             let gl_context = window.gl_create_context();
+    |                 ^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_gl_context`
+
+warning[E0133]: call to unsafe function `gl::GenVertexArrays` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:769:5
+    |
+769 |     gl::GenVertexArrays(1, &mut vao);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+note: an unsafe function restricts its caller, but its body is safe by default
+   --> src\engine\graphics.rs:767:1
+    |
+767 | unsafe fn create_vao() -> GLuint {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    = note: `#[warn(unsafe_op_in_unsafe_fn)]` (part of `#[warn(rust_2024_compatibility)]`) on by default
+
+warning[E0133]: call to unsafe function `gl::GenBuffers` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:776:5
+    |
+776 |     gl::GenBuffers(1, &mut vbo);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+note: an unsafe function restricts its caller, but its body is safe by default
+   --> src\engine\graphics.rs:774:1
+    |
+774 | unsafe fn create_vbo() -> GLuint {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning[E0133]: call to unsafe function `gl::GenBuffers` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:783:5
+    |
+783 |     gl::GenBuffers(1, &mut ebo);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+note: an unsafe function restricts its caller, but its body is safe by default
+   --> src\engine\graphics.rs:781:1
+    |
+781 | unsafe fn create_ebo() -> GLuint {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning[E0133]: call to unsafe function `engine::graphics::compile_shader` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:809:16
+    |
+809 |     let vert = compile_shader(gl::VERTEX_SHADER, vert_src)?;
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+note: an unsafe function restricts its caller, but its body is safe by default
+   --> src\engine\graphics.rs:788:1
+    |
+788 | unsafe fn compile_shader_program() -> Result<GLuint, String> {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning[E0133]: call to unsafe function `engine::graphics::compile_shader` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:810:16
+    |
+810 |     let frag = compile_shader(gl::FRAGMENT_SHADER, frag_src)?;
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function `gl::CreateProgram` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:812:19
+    |
+812 |     let program = gl::CreateProgram();
+    |                   ^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function `gl::AttachShader` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:813:5
+    |
+813 |     gl::AttachShader(program, vert);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function `gl::AttachShader` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:814:5
+    |
+814 |     gl::AttachShader(program, frag);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function `gl::LinkProgram` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:815:5
+    |
+815 |     gl::LinkProgram(program);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function `gl::GetProgramiv` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:819:5
+    |
+819 |     gl::GetProgramiv(program, gl::LINK_STATUS, &mut status);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function `gl::GetProgramiv` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:822:9
+    |
+822 |         gl::GetProgramiv(program, gl::INFO_LOG_LENGTH, &mut len);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function `gl::GetProgramInfoLog` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:824:9
+    |
+824 |         gl::GetProgramInfoLog(program, len, std::ptr::null_mut(), log.as_ptr() as *mut i8);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function `gl::DeleteShader` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:828:5
+    |
+828 |     gl::DeleteShader(vert);
+    |     ^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function `gl::DeleteShader` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:829:5
+    |
+829 |     gl::DeleteShader(frag);
+    |     ^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function `gl::CreateShader` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:836:18
+    |
+836 |     let shader = gl::CreateShader(ty);
+    |                  ^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+note: an unsafe function restricts its caller, but its body is safe by default
+   --> src\engine\graphics.rs:835:1
+    |
+835 | unsafe fn compile_shader(ty: gl::types::GLenum, src: &str) -> Result<GLuint, String> {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning[E0133]: call to unsafe function `gl::ShaderSource` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:839:5
+    |
+839 |     gl::ShaderSource(shader, 1, &ptr, &len);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function `gl::CompileShader` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:840:5
+    |
+840 |     gl::CompileShader(shader);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function `gl::GetShaderiv` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:844:5
+    |
+844 |     gl::GetShaderiv(shader, gl::COMPILE_STATUS, &mut status);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function `gl::GetShaderiv` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:847:9
+    |
+847 |         gl::GetShaderiv(shader, gl::INFO_LOG_LENGTH, &mut len);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function `gl::GetShaderInfoLog` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:849:9
+    |
+849 |         gl::GetShaderInfoLog(shader, len, std::ptr::null_mut(), log.as_ptr() as *mut i8);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function `engine::graphics::compile_shader` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:882:16
+    |
+882 |     let vert = compile_shader(gl::VERTEX_SHADER, vert_src)?;
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+note: an unsafe function restricts its caller, but its body is safe by default
+   --> src\engine\graphics.rs:857:1
+    |
+857 | unsafe fn compile_textured_shader_program() -> Result<GLuint, String> {
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning[E0133]: call to unsafe function `engine::graphics::compile_shader` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:883:16
+    |
+883 |     let frag = compile_shader(gl::FRAGMENT_SHADER, frag_src)?;
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function `gl::CreateProgram` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:885:19
+    |
+885 |     let program = gl::CreateProgram();
+    |                   ^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function `gl::AttachShader` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:886:5
+    |
+886 |     gl::AttachShader(program, vert);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function `gl::AttachShader` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:887:5
+    |
+887 |     gl::AttachShader(program, frag);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function `gl::LinkProgram` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:888:5
+    |
+888 |     gl::LinkProgram(program);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function `gl::GetProgramiv` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:892:5
+    |
+892 |     gl::GetProgramiv(program, gl::LINK_STATUS, &mut status);
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function `gl::GetProgramiv` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:895:9
+    |
+895 |         gl::GetProgramiv(program, gl::INFO_LOG_LENGTH, &mut len);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function `gl::GetProgramInfoLog` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:897:9
+    |
+897 |         gl::GetProgramInfoLog(program, len, std::ptr::null_mut(), log.as_ptr() as *mut i8);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function `gl::DeleteShader` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:901:5
+    |
+901 |     gl::DeleteShader(vert);
+    |     ^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function `gl::DeleteShader` is unsafe and requires unsafe block
+   --> src\engine\graphics.rs:902:5
+    |
+902 |     gl::DeleteShader(frag);
+    |     ^^^^^^^^^^^^^^^^^^^^^^ call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-lang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.html>
+    = note: consult the function's documentation for information on how to avoid undefined behavior
+
+warning: unused variable: `evt_type`
+   --> src\main.rs:778:14
+    |
+778 |         for (evt_type, widget_name) in script_events {
+    |              ^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_evt_type`
+
+warning: unused variable: `current_project`
+   --> src\main.rs:876:74
+    |
+876 | fn handle_page_navigation(ui: &mut engine::ui::UiManager, focused: &str, current_project: &str) {
+    |                                                                          ^^^^^^^^^^^^^^^ help: if this is intentional, prefix it with an underscore: `_current_project`
+
+warning: variable does not need to be mutable
+   --> src\main.rs:987:17
+    |
+987 |             let mut frame = vm::frame::Frame::new(
+    |                 ----^^^^^
+    |                 |
+    |                 help: remove this `mut`
+
+warning: function `run_vm_function` is never used
+   --> src\main.rs:969:4
+    |
+969 | fn run_vm_function(vm: &mut Engine, name: &str) {
+    |    ^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: variants `ULong`, `Byte`, `UByte`, `Short`, `UShort`, and `Native` are never constructed
+  --> src\vm\value.rs:13:5
+   |
+ 6 | pub enum Value {
+   |          ----- variants in this enum
+...
+13 |     ULong(u64),
+   |     ^^^^^
+...
+16 |     Byte(i8),
+   |     ^^^^
+17 |     UByte(u8),
+   |     ^^^^^
+18 |     Short(i16),
+   |     ^^^^^
+19 |     UShort(u16),
+   |     ^^^^^^
+...
+26 |     Native(Rc<NativeFn>),
+   |     ^^^^^^
+   |
+   = note: `Value` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: field `fields` is never read
+  --> src\vm\value.rs:32:9
+   |
+30 | pub struct ObjectInstance {
+   |            -------------- field in this struct
+31 |     pub class_path: String,
+32 |     pub fields: Vec<Value>,
+   |         ^^^^^^
+   |
+   = note: `ObjectInstance` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: associated function `simple` is never used
+  --> src\vm\value.rs:36:12
+   |
+35 | impl ObjectInstance {
+   | ------------------- associated function in this implementation
+36 |     pub fn simple(class_path: &str) -> Self {
+   |            ^^^^^^
+
+warning: multiple variants are never constructed
+   --> src\vm\decoder.rs:78:5
+    |
+  6 | pub enum Opcode {
+    |          ------ variants in this enum
+...
+ 78 |     Switch,
+    |     ^^^^^^
+ 79 |     Case,
+    |     ^^^^
+ 80 |     JumpTable,
+    |     ^^^^^^^^^
+ 81 |     TailCall,
+    |     ^^^^^^^^
+ 82 |     AsyncFunction,
+    |     ^^^^^^^^^^^^^
+ 83 |     Await,
+    |     ^^^^^
+ 84 |     Yield,
+    |     ^^^^^
+ 85 |     SuperCall,
+    |     ^^^^^^^^^
+ 86 |     FastAttribute,
+    |     ^^^^^^^^^^^^^
+ 87 |     RestParameter,
+    |     ^^^^^^^^^^^^^
+ 88 |     OptionalParameter,
+    |     ^^^^^^^^^^^^^^^^^
+ 89 |     EvalAttribute,
+    |     ^^^^^^^^^^^^^
+ 90 |     EvalAttr,
+    |     ^^^^^^^^
+ 91 |     Super,
+    |     ^^^^^
+ 92 |     NewTarget,
+    |     ^^^^^^^^^
+ 93 |     Spread,
+    |     ^^^^^^
+ 94 |     ArrowFunction,
+    |     ^^^^^^^^^^^^^
+ 95 |     Generator,
+    |     ^^^^^^^^^
+ 96 |     YieldFrom,
+    |     ^^^^^^^^^
+ 97 |     await_next,
+    |     ^^^^^^^^^^
+ 98 |     ReturnToYield,
+    |     ^^^^^^^^^^^^^
+ 99 |     JumpUndefined,
+    |     ^^^^^^^^^^^^^
+100 |     JumpDefined,
+    |     ^^^^^^^^^^^
+101 |     LogicalNullish,
+    |     ^^^^^^^^^^^^^^
+102 |     NullishCoalescing,
+    |     ^^^^^^^^^^^^^^^^^
+103 |     OptionalChaining,
+    |     ^^^^^^^^^^^^^^^^
+104 |     BigIntConst,
+    |     ^^^^^^^^^^^
+105 |     TemplateConst,
+    |     ^^^^^^^^^^^^^
+106 |     ImportMeta,
+    |     ^^^^^^^^^^
+107 |     DynamicImport,
+    |     ^^^^^^^^^^^^^
+    |
+    = note: `Opcode` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: field `symbols` is never read
+   --> src\vm\decoder.rs:207:14
+    |
+207 |     Assign { symbols: Vec<String>, storage_index: i32 },
+    |     ------   ^^^^^^^
+    |     |
+    |     field in this variant
+    |
+    = note: `Instruction` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: field `symbols` is never read
+   --> src\vm\decoder.rs:209:17
+    |
+209 |     AssignOld { symbols: Vec<String>, index: i32 },
+    |     ---------   ^^^^^^^
+    |     |
+    |     field in this variant
+    |
+    = note: `Instruction` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: fields `kind` and `index` are never read
+   --> src\vm\decoder.rs:212:43
+    |
+212 |     AttributePush { symbols: Vec<String>, kind: StorageKind, index: i32 },
+    |     ------------- fields in this variant  ^^^^               ^^^^^
+    |
+    = note: `Instruction` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: fields `op` and `symbols` are never read
+   --> src\vm\decoder.rs:213:28
+    |
+213 |     BinaryAssignOperator { op: String, symbols: Vec<String> },
+    |     --------------------   ^^          ^^^^^^^
+    |     |
+    |     fields in this variant
+    |
+    = note: `Instruction` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: field `value` is never read
+   --> src\vm\decoder.rs:216:17
+    |
+216 |     ByteConst { value: i32 },
+    |     ---------   ^^^^^
+    |     |
+    |     field in this variant
+    |
+    = note: `Instruction` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: field `value` is never read
+   --> src\vm\decoder.rs:217:18
+    |
+217 |     UByteConst { value: i32 },
+    |     ----------   ^^^^^
+    |     |
+    |     field in this variant
+    |
+    = note: `Instruction` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: field `value` is never read
+   --> src\vm\decoder.rs:218:18
+    |
+218 |     ShortConst { value: i32 },
+    |     ----------   ^^^^^
+    |     |
+    |     field in this variant
+    |
+    = note: `Instruction` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: field `value` is never read
+   --> src\vm\decoder.rs:219:19
+    |
+219 |     UShortConst { value: i32 },
+    |     -----------   ^^^^^
+    |     |
+    |     field in this variant
+    |
+    = note: `Instruction` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: field `target` is never read
+   --> src\vm\decoder.rs:223:36
+    |
+223 |     DelegateDefine { name: String, target: String },
+    |     --------------                 ^^^^^^
+    |     |
+    |     field in this variant
+    |
+    = note: `Instruction` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: field `depth` is never read
+   --> src\vm\decoder.rs:237:13
+    |
+237 |     Leave { depth: i32, rewind_locals: i32 },
+    |     -----   ^^^^^
+    |     |
+    |     field in this variant
+    |
+    = note: `Instruction` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: field `symbol` is never read
+   --> src\vm\decoder.rs:256:22
+    |
+256 |     ObjectSelector { symbol: String },
+    |     --------------   ^^^^^^
+    |     |
+    |     field in this variant
+    |
+    = note: `Instruction` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: field `symbols` is never read
+   --> src\vm\decoder.rs:263:18
+    |
+263 |     SourceFile { symbols: Vec<String> },
+    |     ----------   ^^^^^^^
+    |     |
+    |     field in this variant
+    |
+    = note: `Instruction` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: field `value` is never read
+   --> src\vm\decoder.rs:271:18
+    |
+271 |     ULongConst { value: u64 },
+    |     ----------   ^^^^^
+    |     |
+    |     field in this variant
+    |
+    = note: `Instruction` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: multiple variants are never constructed
+   --> src\vm\decoder.rs:259:5
+    |
+203 | pub enum Instruction {
+    |          ----------- variants in this enum
+...
+259 |     Print { arg_count: i32 },
+    |     ^^^^^
+...
+268 |     Throw,
+    |     ^^^^^
+...
+272 |     UnaryAssignOperator { op: String, symbols: Vec<String> },
+    |     ^^^^^^^^^^^^^^^^^^^
+273 |     UnaryOperator { op: String },
+274 |     Undef { symbols: Vec<String> },
+    |     ^^^^^
+...
+279 |     Switch { default_target: i32, case_count: i32 },
+    |     ^^^^^^
+280 |     Case { value: i32, target: i32 },
+    |     ^^^^
+281 |     JumpTable { default_target: i32 },
+    |     ^^^^^^^^^
+282 |     TailCall,
+    |     ^^^^^^^^
+283 |     AsyncFunction,
+    |     ^^^^^^^^^^^^^
+284 |     Await,
+    |     ^^^^^
+285 |     Yield,
+    |     ^^^^^
+286 |     SuperCall,
+    |     ^^^^^^^^^
+287 |     FastAttribute,
+    |     ^^^^^^^^^^^^^
+288 |     RestParameter,
+    |     ^^^^^^^^^^^^^
+289 |     OptionalParameter,
+    |     ^^^^^^^^^^^^^^^^^
+290 |     EvalAttribute { symbols: Vec<String> },
+    |     ^^^^^^^^^^^^^
+291 |     EvalAttr,
+    |     ^^^^^^^^
+292 |     Super,
+    |     ^^^^^
+293 |     NewTarget,
+    |     ^^^^^^^^^
+294 |     Spread,
+    |     ^^^^^^
+295 |     ArrowFunction,
+    |     ^^^^^^^^^^^^^
+296 |     Generator,
+    |     ^^^^^^^^^
+297 |     YieldFrom,
+    |     ^^^^^^^^^
+298 |     await_next,
+    |     ^^^^^^^^^^
+299 |     ReturnToYield,
+    |     ^^^^^^^^^^^^^
+300 |     JumpUndefined { target: i32 },
+    |     ^^^^^^^^^^^^^
+301 |     JumpDefined { target: i32 },
+    |     ^^^^^^^^^^^
+302 |     LogicalNullish { target: i32 },
+    |     ^^^^^^^^^^^^^^
+303 |     NullishCoalescing { target: i32 },
+    |     ^^^^^^^^^^^^^^^^^
+304 |     OptionalChaining,
+    |     ^^^^^^^^^^^^^^^^
+305 |     BigIntConst,
+    |     ^^^^^^^^^^^
+306 |     TemplateConst,
+    |     ^^^^^^^^^^^^^
+307 |     ImportMeta,
+    |     ^^^^^^^^^^
+308 |     DynamicImport,
+    |     ^^^^^^^^^^^^^
+    |
+    = note: `Instruction` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: fields `has_debug`, `param_count`, and `param_names` are never read
+   --> src\vm\decoder.rs:314:9
+    |
+313 | pub struct CodeFrame {
+    |            --------- fields in this struct
+314 |     pub has_debug: bool,
+    |         ^^^^^^^^^
+315 |     pub adhoc_version: u8,
+316 |     pub param_count: i32,
+    |         ^^^^^^^^^^^
+317 |     pub param_names: Vec<String>,
+    |         ^^^^^^^^^^^
+    |
+    = note: `CodeFrame` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: associated function `from_opcode_and_data` is never used
+   --> src\vm\decoder.rs:327:12
+    |
+326 | impl Instruction {
+    | ---------------- associated function in this implementation
+327 |     pub fn from_opcode_and_data(_opcode: Opcode, _cursor: &mut crate::vm::loader::Cursor) -> Result<Self, String> {
+    |            ^^^^^^^^^^^^^^^^^^^^
+
+warning: associated function `read_storage_ref` is never used
+   --> src\vm\loader.rs:550:8
+    |
+ 32 | impl Loader {
+    | ----------- associated function in this implementation
+...
+550 |     fn read_storage_ref(cursor: &mut Cursor) -> Result<(Vec<String>, StorageKind, i32), String> {
+    |        ^^^^^^^^^^^^^^^^
+
+warning: method `size` is never used
+  --> src\vm\storage.rs:66:12
+   |
+44 | impl StaticStorage {
+   | ------------------ method in this implementation
+...
+66 |     pub fn size(&self) -> i32 {
+   |            ^^^^
+
+warning: fields `name`, `full_path`, `classes`, `functions`, `statics`, and `child_modules` are never read
+  --> src\vm\module.rs:9:9
+   |
+ 8 | pub struct Module {
+   |            ------ fields in this struct
+ 9 |     pub name: String,
+   |         ^^^^
+10 |     pub full_path: String,
+   |         ^^^^^^^^^
+11 |     pub classes: Vec<ClassDef>,
+   |         ^^^^^^^
+12 |     pub functions: Vec<FuncDef>,
+   |         ^^^^^^^^^
+13 |     pub statics: StaticStorage,
+   |         ^^^^^^^
+14 |     pub child_modules: Vec<Module>,
+   |         ^^^^^^^^^^^^^
+   |
+   = note: `Module` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: fields `name`, `full_path`, `parent_path`, `attributes`, and `methods` are never read
+  --> src\vm\module.rs:19:9
+   |
+18 | pub struct ClassDef {
+   |            -------- fields in this struct
+19 |     pub name: String,
+   |         ^^^^
+20 |     pub full_path: String,
+   |         ^^^^^^^^^
+21 |     pub parent_path: String,
+   |         ^^^^^^^^^^^
+22 |     pub attributes: Vec<AttrDef>,
+   |         ^^^^^^^^^^
+23 |     pub methods: Vec<FuncDef>,
+   |         ^^^^^^^
+   |
+   = note: `ClassDef` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: fields `name` and `default_value_idx` are never read
+  --> src\vm\module.rs:28:9
+   |
+27 | pub struct AttrDef {
+   |            ------- fields in this struct
+28 |     pub name: String,
+   |         ^^^^
+29 |     pub default_value_idx: usize,
+   |         ^^^^^^^^^^^^^^^^^
+   |
+   = note: `AttrDef` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: fields `name`, `full_path`, `param_count`, `code_frame_index`, `is_method`, and `class_name` are never read
+  --> src\vm\module.rs:34:9
+   |
+33 | pub struct FuncDef {
+   |            ------- fields in this struct
+34 |     pub name: String,
+   |         ^^^^
+35 |     pub full_path: String,
+   |         ^^^^^^^^^
+36 |     pub param_count: i32,
+   |         ^^^^^^^^^^^
+37 |     pub code_frame_index: usize,
+   |         ^^^^^^^^^^^^^^^^
+38 |     pub is_method: bool,
+   |         ^^^^^^^^^
+39 |     pub class_name: Option<String>,
+   |         ^^^^^^^^^^
+   |
+   = note: `FuncDef` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: fields `modules`, `name_to_index`, and `path_to_frame` are never read
+  --> src\vm\module.rs:44:9
+   |
+43 | pub struct ModuleRegistry {
+   |            -------------- fields in this struct
+44 |     pub modules: Vec<Module>,
+   |         ^^^^^^^
+45 |     pub frames: Vec<Arc<CodeFrame>>,
+46 |     pub name_to_index: HashMap<String, usize>,
+   |         ^^^^^^^^^^^^^
+47 |     pub path_to_frame: HashMap<String, usize>,
+   |         ^^^^^^^^^^^^^
+
+warning: field `return_value` is never read
+  --> src\vm\frame.rs:10:9
+   |
+ 5 | pub struct Frame {
+   |            ----- field in this struct
+...
+10 |     pub return_value: Option<Value>,
+   |         ^^^^^^^^^^^^
+
+warning: variant `Exited` is never constructed
+  --> src\vm\frame.rs:27:5
+   |
+23 | pub enum FrameState {
+   |          ---------- variant in this enum
+...
+27 |     Exited,
+   |     ^^^^^^
+   |
+   = note: `FrameState` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: field `loader` is never read
+  --> src\vm\engine.rs:20:9
+   |
+11 | pub struct Engine {
+   |            ------ field in this struct
+...
+20 |     pub loader: Option<Rc<dyn Fn(&str) -> Result<i32, String>>>,
+   |         ^^^^^^
+
+warning: methods `call_global` and `dump_stack` are never used
+    --> src\vm\engine.rs:146:12
+     |
+  36 | impl Engine {
+     | ----------- methods in this implementation
+...
+ 146 |     pub fn call_global(&mut self, fn_name: &str, args: Vec<Value>) -> Result<Value, String> {
+     |            ^^^^^^^^^^^
+...
+1147 |     pub fn dump_stack(&self) {
+     |            ^^^^^^^^^^
+
+warning: function `static_read` is never used
+   --> src\vm\engine.rs:378:12
+    |
+378 |         fn static_read(me: &Engine, fi: usize, idx: i32) -> Value {
+    |            ^^^^^^^^^^^
+
+warning: function `static_write` is never used
+   --> src\vm\engine.rs:382:12
+    |
+382 |         fn static_write(me: &mut Engine, fi: usize, idx: i32, v: Value) {
+    |            ^^^^^^^^^^^^
+
+warning: methods `len` and `iter_paths` are never used
+  --> src\vm\native.rs:43:12
+   |
+13 | impl NativeRegistry {
+   | ------------------- methods in this implementation
+...
+43 |     pub fn len(&self) -> usize {
+   |            ^^^
+...
+47 |     pub fn iter_paths(&self) -> impl Iterator<Item = &String> {
+   |            ^^^^^^^^^^
+
+warning: constant `SEQUENCE_SINGLE_RACE` is never used
+  --> src\engine\main_loop.rs:14:11
+   |
+14 | pub const SEQUENCE_SINGLE_RACE: i32 = 2;
+   |           ^^^^^^^^^^^^^^^^^^^^
+
+warning: fields `prev_sequence` and `prev_project` are never read
+  --> src\engine\main_loop.rs:80:9
+   |
+77 | pub struct GameSequenceCtx {
+   |            --------------- fields in this struct
+...
+80 |     pub prev_sequence: i32,
+   |         ^^^^^^^^^^^^^
+81 |     pub current_project: String,
+82 |     pub prev_project: String,
+   |         ^^^^^^^^^^^^
+   |
+   = note: `GameSequenceCtx` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: method `exec_boot_race` is never used
+   --> src\engine\main_loop.rs:378:8
+    |
+104 | impl MainLoopState {
+    | ------------------ method in this implementation
+...
+378 |     fn exec_boot_race(&mut self, vm: &mut Engine, arg: &str) -> Result<(), String> {
+    |        ^^^^^^^^^^^^^^
+
+warning: fields `normals`, `course_loaded`, `car_loaded`, and `models_loaded` are never read
+  --> src\engine\model.rs:26:9
+   |
+23 | pub struct TrackState {
+   |            ---------- fields in this struct
+...
+26 |     pub normals: Vec<(f32, f32, f32)>,
+   |         ^^^^^^^
+...
+30 |     pub course_loaded: bool,
+   |         ^^^^^^^^^^^^^
+31 |     pub car_loaded: bool,
+   |         ^^^^^^^^^^
+32 |     pub models_loaded: u32,
+   |         ^^^^^^^^^^^^^
+   |
+   = note: `TrackState` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: associated function `new` is never used
+  --> src\engine\model.rs:36:12
+   |
+35 | impl TrackState {
+   | --------------- associated function in this implementation
+36 |     pub fn new() -> Self {
+   |            ^^^
+
+warning: fields `file_size`, `bones_count`, `models_ptr`, `materials_ptr`, and `bones_ptr` are never read
+   --> src\engine\model.rs:109:5
+    |
+108 | struct ModelSet3Header {
+    |        --------------- fields in this struct
+109 |     file_size: u32,
+    |     ^^^^^^^^^
+...
+113 |     bones_count: u16,
+    |     ^^^^^^^^^^^
+114 |     models_ptr: u32,
+    |     ^^^^^^^^^^
+...
+117 |     materials_ptr: u32,
+    |     ^^^^^^^^^^^^^
+118 |     bones_ptr: u32,
+    |     ^^^^^^^^^
+
+warning: struct `ModelEntry` is never constructed
+   --> src\engine\model.rs:123:8
+    |
+123 | struct ModelEntry {
+    |        ^^^^^^^^^^
+
+warning: function `read_models` is never used
+   --> src\engine\model.rs:131:4
+    |
+131 | fn read_models(data: &[u8], models_ptr: u32, model_count: u16) -> Vec<ModelEntry> {
+    |    ^^^^^^^^^^^
+
+warning: function `extract_geometry_from_models` is never used
+   --> src\engine\model.rs:154:4
+    |
+154 | fn extract_geometry_from_models(data: &[u8])
+    |    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: function `load_car_model_hq` is never used
+   --> src\engine\model.rs:589:8
+    |
+589 | pub fn load_car_model_hq(car_id: u32) -> Result<CarModel, String> {
+    |        ^^^^^^^^^^^^^^^^^
+
+warning: constant `GRAVITY` is never used
+  --> src\engine\race.rs:17:7
+   |
+17 | const GRAVITY: f32 = -20.0;
+   |       ^^^^^^^
+
+warning: fields `max_x` and `max_z` are never read
+  --> src\engine\race.rs:83:17
+   |
+82 | struct TrackGrid {
+   |        --------- fields in this struct
+83 |     min_x: f32, max_x: f32, min_z: f32, max_z: f32,
+   |                 ^^^^^                   ^^^^^
+   |
+   = note: `TrackGrid` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: method `project_vertex` is never used
+   --> src\engine\race.rs:712:8
+    |
+110 | impl RaceState {
+    | -------------- method in this implementation
+...
+712 |     fn project_vertex(&self, v: (f32, f32, f32)) -> (f32, f32, f32) {
+    |        ^^^^^^^^^^^^^^
+
+warning: field `string_offset` is never read
+  --> src\engine\specdb.rs:48:9
+   |
+41 | pub struct SpecDBTable {
+   |            ----------- field in this struct
+...
+48 |     pub string_offset: u32,
+   |         ^^^^^^^^^^^^^
+   |
+   = note: `SpecDBTable` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+
+warning: multiple methods are never used
+   --> src\engine\specdb.rs:144:12
+    |
+ 53 | impl SpecDBTable {
+    | ---------------- methods in this implementation
+...
+144 |     pub fn read_u32(&self, row: usize, col: &ColumnDef) -> u32 {
+    |            ^^^^^^^^
+...
+148 |     pub fn read_i32(&self, row: usize, col: &ColumnDef) -> i32 {
+    |            ^^^^^^^^
+...
+152 |     pub fn read_u16(&self, row: usize, col: &ColumnDef) -> u16 {
+    |            ^^^^^^^^
+...
+166 |     pub fn car_price(&self, row: usize) -> u32 {
+    |            ^^^^^^^^^
+...
+174 |     pub fn car_year(&self, row: usize) -> u16 {
+    |            ^^^^^^^^
+...
+191 |     pub fn car_power_min(&self, row: usize) -> u32 {
+    |            ^^^^^^^^^^^^^
+...
+199 |     pub fn car_maker(&self, row: usize) -> u8 {
+    |            ^^^^^^^^^
+...
+207 |     pub fn car_country(&self, row: usize) -> u8 {
+    |            ^^^^^^^^^^^
+...
+223 |     pub fn engine_ps_value(&self, row: usize) -> u32 {
+    |            ^^^^^^^^^^^^^^^
+...
+235 |     pub fn engine_sound_id(&self, row: usize) -> u32 {
+    |            ^^^^^^^^^^^^^^^
+...
+248 |     pub fn course_name_jpn(&self, row: usize) -> String {
+    |            ^^^^^^^^^^^^^^^
+...
+311 |     pub fn race_prize_1st(&self, row: usize) -> u32 {
+    |            ^^^^^^^^^^^^^^
+
+warning: method `set_base_path` is never used
+   --> src\engine\specdb.rs:405:12
+    |
+400 | impl SpecDB {
+    | ----------- method in this implementation
+...
+405 |     pub fn set_base_path(&mut self, path: &str) {
+    |            ^^^^^^^^^^^^^
+
+warning: struct `CachedSprite` is never constructed
+  --> src\engine\sprite.rs:15:8
+   |
+15 | struct CachedSprite {
+   |        ^^^^^^^^^^^^
+
+warning: struct `SpriteCache` is never constructed
+  --> src\engine\sprite.rs:20:12
+   |
+20 | pub struct SpriteCache {
+   |            ^^^^^^^^^^^
+
+warning: associated items `new`, `get_or_load`, `evict_oldest`, and `clear` are never used
+  --> src\engine\sprite.rs:26:12
+   |
+25 | impl SpriteCache {
+   | ---------------- associated items in this implementation
+26 |     pub fn new() -> Self {
+   |            ^^^
+...
+30 |     fn get_or_load(&mut self, path: &str) -> Option<LoadedTexture> {
+   |        ^^^^^^^^^^^
+...
+56 |     fn evict_oldest(&mut self) {
+   |        ^^^^^^^^^^^^
+...
+68 |     pub fn clear(&mut self) { self.textures.clear(); }
+   |            ^^^^^
+
+warning: function `load_img_file` is never used
+  --> src\engine\sprite.rs:71:4
+   |
+71 | fn load_img_file(path: &str) -> Result<LoadedTexture, String> {
+   |    ^^^^^^^^^^^^^
+
+warning: function `load_sprite` is never used
+   --> src\engine\sprite.rs:244:8
+    |
+244 | pub fn load_sprite(path: &str) -> Option<LoadedTexture> {
+    |        ^^^^^^^^^^^
+
+warning: function `draw_sprite` is never used
+   --> src\engine\sprite.rs:249:8
+    |
+249 | pub fn draw_sprite(renderer: &mut GraphicsRenderer, path: &str, x: i32, y: i32, w: u32, h: u32) {
+    |        ^^^^^^^^^^^
+
+warning: function `draw_sprite_tinted` is never used
+   --> src\engine\sprite.rs:259:8
+    |
+259 | pub fn draw_sprite_tinted(renderer: &mut GraphicsRenderer, path: &str, x: i32, y: i32, w: u32, h: u32, _r: u8, _g: u8, _b: u8) {
+    |        ^^^^^^^^^^^^^^^^^^
+
+warning: function `clear_cache` is never used
+   --> src\engine\sprite.rs:264:8
+    |
+264 | pub fn clear_cache() {
+    |        ^^^^^^^^^^^
+
+warning: function `preload_sprites` is never used
+   --> src\engine\sprite.rs:269:8
+    |
+269 | pub fn preload_sprites(paths: &[&str]) {
+    |        ^^^^^^^^^^^^^^^
+
+warning: field `mode` is never read
+  --> src\engine\menu.rs:15:5
+   |
+13 | struct SeqState {
+   |        -------- field in this struct
+14 |     current_sequence: i32, current_project: String, finished: bool,
+15 |     mode: i32, current_mode: i32,
+   |     ^^^^
+
+warning: function `get_current_sequence` is never used
+  --> src\engine\menu.rs:40:8
+   |
+40 | pub fn get_current_sequence() -> i32 {
+   |        ^^^^^^^^^^^^^^^^^^^^
+
+warning: method `project_point` is never used
+  --> src\engine\pdiapp.rs:59:12
+   |
+19 | impl Mat4 {
+   | --------- method in this implementation
+...
+59 |     pub fn project_point(&self, x: f32, y: f32, z: f32) -> Option<(f32, f32, f32)> {
+   |            ^^^^^^^^^^^^^
+
+warning: fields `view`, `proj`, and `viewport` are never read
+  --> src\engine\pdiapp.rs:72:9
+   |
+71 | pub struct Projector {
+   |            --------- fields in this struct
+72 |     pub view: Mat4,
+   |         ^^^^
+73 |     pub proj: Mat4,
+   |         ^^^^
+74 |     pub viewport: (u32, u32),
+   |         ^^^^^^^^
+   |
+   = note: `Projector` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: methods `set_camera` and `project` are never used
+  --> src\engine\pdiapp.rs:86:12
+   |
+77 | impl Projector {
+   | -------------- methods in this implementation
+...
+86 |     pub fn set_camera(&mut self, eye: (f32, f32, f32), center: (f32, f32, f32), up: (f32, f32, f32)) {
+   |            ^^^^^^^^^^
+...
+90 |     pub fn project(&self, x: f32, y: f32, z: f32) -> Option<(i32, i32)> {
+   |            ^^^^^^^
+
+warning: function `get_track_state` is never used
+  --> src\engine\pdiapp.rs:99:8
+   |
+99 | pub fn get_track_state() -> Rc<RefCell<TrackState>> {
+   |        ^^^^^^^^^^^^^^^
+
+warning: function `read_u32` is never used
+   --> src\engine\pdiapp.rs:107:4
+    |
+107 | fn read_u32(data: &[u8], off: usize) -> u32 {
+    |    ^^^^^^^^
+
+warning: function `read_u16` is never used
+   --> src\engine\pdiapp.rs:112:4
+    |
+112 | fn read_u16(data: &[u8], off: usize) -> u16 {
+    |    ^^^^^^^^
+
+warning: fields `r`, `g`, `b`, and `a` are never read
+  --> src\engine\ui.rs:18:23
+   |
+18 | pub struct RGBA { pub r: u8, pub g: u8, pub b: u8, pub a: u8 }
+   |            ----       ^          ^          ^          ^
+   |            |
+   |            fields in this struct
+   |
+   = note: `RGBA` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: fields `is_divide_color`, `y_divide`, `color_divide`, and `opacity` are never read
+  --> src\engine\ui.rs:22:47
+   |
+22 |     RootWindow, ColorFace { color: Vec<RGBA>, is_divide_color: bool, y_divide: Vec<f32>, color_divide: Vec<Vec<RGBA>>, opacity: f32 },
+   |                 ---------                     ^^^^^^^^^^^^^^^        ^^^^^^^^            ^^^^^^^^^^^^                  ^^^^^^^
+   |                 |
+   |                 fields in this variant
+   |
+   = note: `WidgetKind` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: fields `scale_x`, `scale_y`, and `multiline` are never read
+  --> src\engine\ui.rs:23:90
+   |
+23 |     TextFace { text: String, font: String, color: RGBA, shadow: RGBA, shadow_value: i32, scale_x: f32, scale_y: f32, align: i32, multiline: b...
+   |     -------- fields in this variant                                                      ^^^^^^^       ^^^^^^^                   ^^^^^^^^^
+   |
+   = note: `WidgetKind` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: fields `frame_width` and `frame_height` are never read
+  --> src\engine\ui.rs:25:45
+   |
+25 |     FrameImageFace { tl_image_path: String, frame_width: f32, frame_height: f32 },
+   |     -------------- fields in this variant   ^^^^^^^^^^^       ^^^^^^^^^^^^
+   |
+   = note: `WidgetKind` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: field `0` is never read
+  --> src\engine\ui.rs:28:77
+   |
+28 |     MBox, ToolTipFace, ProgressFace, SceneFace, MovieFace, IconBox, Unknown(String),
+   |                                                                     ------- ^^^^^^
+   |                                                                     |
+   |                                                                     field in this variant
+   |
+   = note: `WidgetKind` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+help: consider changing the field to be of unit type to suppress this warning while preserving the field numbering, or remove the field
+   |
+28 -     MBox, ToolTipFace, ProgressFace, SceneFace, MovieFace, IconBox, Unknown(String),
+28 +     MBox, ToolTipFace, ProgressFace, SceneFace, MovieFace, IconBox, Unknown(()),
+   |
+
+warning: multiple fields are never read
+  --> src\engine\ui.rs:36:61
+   |
+32 | pub struct Widget {
+   |            ------ fields in this struct
+...
+36 |     pub geometry: (f32, f32, f32, f32), pub clip: bool, pub opacity: f32,
+   |                                                             ^^^^^^^
+...
+40 |     pub pack_alignment_x: f32, pub pack_alignment_y: f32,
+   |         ^^^^^^^^^^^^^^^^           ^^^^^^^^^^^^^^^^
+41 |     pub pack_pad_left: f32, pub pack_pad_right: f32, pub pack_pad_top: f32, pub pack_pad_bottom: f32,
+   |         ^^^^^^^^^^^^^           ^^^^^^^^^^^^^^           ^^^^^^^^^^^^           ^^^^^^^^^^^^^^^
+42 |     pub pack_allocate_w: bool, pub pack_allocate_h: bool,
+43 |     pub inner_pad_left: f32, pub inner_pad_right: f32, pub inner_pad_top: f32, pub inner_pad_bottom: f32,
+   |         ^^^^^^^^^^^^^^           ^^^^^^^^^^^^^^^           ^^^^^^^^^^^^^           ^^^^^^^^^^^^^^^^
+44 |     pub is_face: bool, pub computed: ComputedLayout,
+   |                            ^^^^^^^^
+45 |     pub actors: Vec<ActorDef>,
+   |         ^^^^^^
+   |
+   = note: `Widget` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: fields `x`, `y`, `w`, and `h` are never read
+  --> src\engine\ui.rs:49:33
+   |
+49 | pub struct ComputedLayout { pub x: f32, pub y: f32, pub w: f32, pub h: f32 }
+   |            --------------       ^           ^           ^           ^
+   |            |
+   |            fields in this struct
+   |
+   = note: `ComputedLayout` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: fields `name`, `attr`, `loop_count`, `reverse`, `initial_playing`, and `sections` are never read
+  --> src\engine\ui.rs:53:26
+   |
+53 |     ScalarInterpolator { name: String, attr: String, loop_count: i32, reverse: bool, initial_playing: bool, sections: Vec<MScalarSection> },
+   |     ------------------   ^^^^          ^^^^          ^^^^^^^^^^       ^^^^^^^        ^^^^^^^^^^^^^^^        ^^^^^^^^
+   |     |
+   |     fields in this variant
+   |
+   = note: `ActorDef` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: field `0` is never read
+  --> src\engine\ui.rs:59:13
+   |
+59 |     Unknown(String),
+   |     ------- ^^^^^^
+   |     |
+   |     field in this variant
+   |
+   = note: `ActorDef` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+help: consider changing the field to be of unit type to suppress this warning while preserving the field numbering, or remove the field
+   |
+59 -     Unknown(String),
+59 +     Unknown(()),
+   |
+
+warning: variants `VectorInterpolator`, `ParallelActor`, `SequenceActor`, `FaceColorInterpolator`, and `MColorInterpolator` are never constructed
+  --> src\engine\ui.rs:54:5
+   |
+52 | pub enum ActorDef {
+   |          -------- variants in this enum
+53 |     ScalarInterpolator { name: String, attr: String, loop_count: i32, reverse: bool, initial_playing: bool, sections: Vec<MScalarSection> },
+54 |     VectorInterpolator { name: String, attr: String, loop_count: i32, reverse: bool, initial_playing: bool, sections: Vec<MVectorSection> },
+   |     ^^^^^^^^^^^^^^^^^^
+55 |     ParallelActor { name: String, initial_pause: bool, children: Vec<ActorDef> },
+   |     ^^^^^^^^^^^^^
+56 |     SequenceActor { name: String, children: Vec<ActorDef> },
+   |     ^^^^^^^^^^^^^
+57 |     FaceColorInterpolator { name: String, attr: String, loop_count: i32, reverse: bool, initial_playing: bool, sections: Vec<MFaceColorSe...
+   |     ^^^^^^^^^^^^^^^^^^^^^
+58 |     MColorInterpolator { name: String, sections: Vec<MFaceColorSection> },
+   |     ^^^^^^^^^^^^^^^^^^
+   |
+   = note: `ActorDef` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: fields `start_duration`, `interp_period`, `start_value`, and `end_value` are never read
+  --> src\engine\ui.rs:61:50
+   |
+61 | #[derive(Clone)] pub struct MScalarSection { pub start_duration: f32, pub interp_period: f32, pub start_value: f32, pub end_value: f32 }
+   |                             --------------       ^^^^^^^^^^^^^^           ^^^^^^^^^^^^^           ^^^^^^^^^^^           ^^^^^^^^^
+   |                             |
+   |                             fields in this struct
+   |
+   = note: `MScalarSection` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: fields `interp_period`, `start_value`, and `end_value` are never read
+  --> src\engine\ui.rs:62:50
+   |
+62 | #[derive(Clone)] pub struct MVectorSection { pub interp_period: f32, pub start_value: (f32, f32), pub end_value: (f32, f32) }
+   |                             --------------       ^^^^^^^^^^^^^           ^^^^^^^^^^^                  ^^^^^^^^^
+   |                             |
+   |                             fields in this struct
+   |
+   = note: `MVectorSection` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: fields `interp_period` and `end_value` are never read
+  --> src\engine\ui.rs:63:53
+   |
+63 | #[derive(Clone)] pub struct MFaceColorSection { pub interp_period: f32, pub end_value: Vec<RGBA> }
+   |                             -----------------       ^^^^^^^^^^^^^           ^^^^^^^^^
+   |                             |
+   |                             fields in this struct
+   |
+   = note: `MFaceColorSection` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: fields `has_script` and `focus` are never read
+  --> src\engine\ui.rs:67:27
+   |
+66 | pub struct MProject {
+   |            -------- fields in this struct
+67 |     pub name: String, pub has_script: bool, pub focus: bool, pub root_windows: Vec<Widget>,
+   |                           ^^^^^^^^^^            ^^^^^
+   |
+   = note: `MProject` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: field `actor_states` is never read
+  --> src\engine\ui.rs:78:5
+   |
+70 | pub struct UiManager {
+   |            --------- field in this struct
+...
+78 |     actor_states: HashMap<String, ActorState>,
+   |     ^^^^^^^^^^^^
+
+warning: fields `time`, `playing`, `reversed`, and `done` are never read
+  --> src\engine\ui.rs:80:21
+   |
+80 | struct ActorState { time: f32, playing: bool, reversed: bool, done: bool }
+   |        ----------   ^^^^       ^^^^^^^        ^^^^^^^^        ^^^^
+   |        |
+   |        fields in this struct
+
+warning: function `is_page_root` is never used
+   --> src\engine\ui.rs:118:4
+    |
+118 | fn is_page_root(name: &str) -> bool {
+    |    ^^^^^^^^^^^^
+
+warning: function `is_shared_root` is never used
+   --> src\engine\ui.rs:127:4
+    |
+127 | fn is_shared_root(name: &str) -> bool {
+    |    ^^^^^^^^^^^^^^
+
+warning: function `has_renderer` is never used
+  --> src\engine\graphics.rs:55:8
+   |
+55 | pub fn has_renderer() -> bool {
+   |        ^^^^^^^^^^^^
+
+warning: function `init_opengl` is never used
+  --> src\engine\graphics.rs:60:8
+   |
+60 | pub fn init_opengl(w: i32, h: i32) -> Option<OpenGLRenderer> {
+   |        ^^^^^^^^^^^
+
+warning: function `init_opengl_internal` is never used
+  --> src\engine\graphics.rs:65:4
+   |
+65 | fn init_opengl_internal(w: i32, h: i32) -> Option<OpenGLRenderer> {
+   |    ^^^^^^^^^^^^^^^^^^^^
+
+warning: method `project` is never used
+   --> src\engine\graphics.rs:121:12
+    |
+120 | impl ProjectorRef {
+    | ----------------- method in this implementation
+121 |     pub fn project(&self, x: f32, y: f32, _z: f32) -> (i32, i32) {
+    |            ^^^^^^^
+
+warning: field `sdl_ctx` is never read
+   --> src\engine\graphics.rs:136:5
+    |
+128 | pub struct GraphicsRenderer {
+    |            ---------------- field in this struct
+...
+136 |     sdl_ctx: Option<sdl2::Sdl>,
+    |     ^^^^^^^
+
+warning: multiple methods are never used
+   --> src\engine\graphics.rs:219:12
+    |
+151 | impl GraphicsRenderer {
+    | --------------------- methods in this implementation
+...
+219 |     pub fn present(&mut self) {
+    |            ^^^^^^^
+...
+258 |     pub fn screen_width(&self) -> i32 { self.width }
+    |            ^^^^^^^^^^^^
+259 |     pub fn screen_height(&self) -> i32 { self.height }
+    |            ^^^^^^^^^^^^^
+260 |     pub fn set_viewport(&mut self, _x: i32, _y: i32, _w: i32, _h: i32) {}
+    |            ^^^^^^^^^^^^
+261 |
+262 |     pub fn set_color(&mut self, r: u8, g: u8, b: u8, _a: u8) {
+    |            ^^^^^^^^^
+...
+268 |     pub fn draw_line(&mut self, x1: i32, y1: i32, x2: i32, y2: i32, r: u8, g: u8, b: u8) -> i32 {
+    |            ^^^^^^^^^
+...
+275 |     pub fn draw_rect(&mut self, x: i32, y: i32, w: i32, h: i32, r: u8, g: u8, b: u8) {
+    |            ^^^^^^^^^
+...
+433 |     pub fn draw_texture_raw(&mut self, path: &str, x: i32, y: i32, w: u32, h: u32) {
+    |            ^^^^^^^^^^^^^^^^
+...
+438 |     pub fn draw_texture_region(&mut self, path: &str, x: i32, y: i32, w: u32, h: u32, _sx: u32, _sy: u32, _sw: u32, _sh: u32) {
+    |            ^^^^^^^^^^^^^^^^^^^
+...
+470 |     pub fn get_texture(&self, path: &str) -> Option<&LoadedTexture> {
+    |            ^^^^^^^^^^^
+
+warning: associated items `new` and `len` are never used
+   --> src\engine\graphics.rs:493:12
+    |
+492 | impl LoadedTexture {
+    | ------------------ associated items in this implementation
+493 |     pub fn new() -> Self {
+    |            ^^^
+...
+496 |     pub fn len(&self) -> usize { self.rgba.len() }
+    |            ^^^
+
+warning: fields `width` and `height` are never read
+   --> src\engine\graphics.rs:543:9
+    |
+541 | pub struct OpenGLTexture {
+    |            ------------- fields in this struct
+542 |     pub id: GLuint,
+543 |     pub width: i32,
+    |         ^^^^^
+544 |     pub height: i32,
+    |         ^^^^^^
+    |
+    = note: `OpenGLTexture` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: methods `bind` and `unbind` are never used
+   --> src\engine\graphics.rs:586:12
+    |
+548 | impl OpenGLTexture {
+    | ------------------ methods in this implementation
+...
+586 |     pub fn bind(&self, slot: u32) {
+    |            ^^^^
+...
+593 |     pub fn unbind(&self) {
+    |            ^^^^^^
+
+warning: fields `width` and `height` are never read
+   --> src\engine\graphics.rs:603:9
+    |
+602 | pub struct OpenGLRenderer {
+    |            -------------- fields in this struct
+603 |     pub width: i32,
+    |         ^^^^^
+604 |     pub height: i32,
+    |         ^^^^^^
+    |
+    = note: `OpenGLRenderer` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: associated items `new` and `draw_wireframe` are never used
+   --> src\engine\graphics.rs:617:12
+    |
+616 | impl OpenGLRenderer {
+    | ------------------- associated items in this implementation
+617 |     pub fn new(w: i32, h: i32) -> Option<Self> {
+    |            ^^^
+...
+757 |     pub fn draw_wireframe(&mut self, vertices: &[f32], indices: &[u32], color: (f32, f32, f32)) {
+    |            ^^^^^^^^^^^^^^
+
+warning: function `create_vao` is never used
+   --> src\engine\graphics.rs:767:11
+    |
+767 | unsafe fn create_vao() -> GLuint {
+    |           ^^^^^^^^^^
+
+warning: function `create_vbo` is never used
+   --> src\engine\graphics.rs:774:11
+    |
+774 | unsafe fn create_vbo() -> GLuint {
+    |           ^^^^^^^^^^
+
+warning: function `create_ebo` is never used
+   --> src\engine\graphics.rs:781:11
+    |
+781 | unsafe fn create_ebo() -> GLuint {
+    |           ^^^^^^^^^^
+
+warning: function `compile_shader_program` is never used
+   --> src\engine\graphics.rs:788:11
+    |
+788 | unsafe fn compile_shader_program() -> Result<GLuint, String> {
+    |           ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: function `compile_shader` is never used
+   --> src\engine\graphics.rs:835:11
+    |
+835 | unsafe fn compile_shader(ty: gl::types::GLenum, src: &str) -> Result<GLuint, String> {
+    |           ^^^^^^^^^^^^^^
+
+warning: function `compile_textured_shader_program` is never used
+   --> src\engine\graphics.rs:857:11
+    |
+857 | unsafe fn compile_textured_shader_program() -> Result<GLuint, String> {
+    |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For more information about this error, try `rustc --explain E0133`.
+warning: `adhoc-vm` (bin "adhoc-vm") generated 270 warnings (run `cargo fix --bin "adhoc-vm"` to apply 22 suggestions)
+    Finished `release` profile [optimized] target(s) in 3.09s
+     Running `target\release\adhoc-vm.exe --disassemble scripts/bootstrap.adc`
+Read error: The system cannot find the path specified. (os error 3)

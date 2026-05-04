@@ -1,0 +1,237 @@
+MComposite {
+	name string {"MComposite"}
+	actor_list [6] {
+		MColorInterpolator {
+			name string {"ColorInterpolator"}
+		}
+		MFaceColorInterpolator {
+			name string {"FaceColorInterpolator"}
+		}
+		MParallelActor {
+			name string {"ParallelActor"}
+		}
+		MScalarInterpolator {
+			name string {"ScalarInterpolator"}
+		}
+		MSequenceActor {
+			name string {"SequenceActor"}
+		}
+		MVectorInterpolator {
+			name string {"VectorInterpolator"}
+		}
+	}
+	children [31] {
+		MColorFace {
+			name string {"ColorFace"}
+			is_face digit {1}
+			width digit {1}
+			height digit {1}
+		}
+		MComposite {
+			name string {"Composite"}
+		}
+		MFBox {
+			name string {"FBox"}
+		}
+		MFrameImageFace {
+			name string {"FrameImageFace"}
+			is_face digit {1}
+			width digit {1}
+			height digit {1}
+		}
+		MGraphFace {
+			name string {"GraphFace"}
+			is_face digit {1}
+			width digit {1}
+			height digit {1}
+		}
+		MHBox {
+			name string {"HBox"}
+		}
+		MHScrollbar {
+			name string {"HScrollbar"}
+			pack_side digit {3}
+			pack_expand_x digit {1}
+			pack_fill_x digit {1}
+			width digit {384}
+			height digit {24}
+			children [3] {
+				MComposite {
+					name string {"dec_arrow"}
+					packable digit {1}
+					pack_expand_y digit {1}
+					pack_fill_y digit {1}
+					width digit {24}
+					height digit {24}
+				}
+				MComposite {
+					name string {"inc_arrow"}
+					packable digit {1}
+					pack_side digit {2}
+					pack_expand_y digit {1}
+					pack_fill_y digit {1}
+					x digit {360}
+					width digit {24}
+					height digit {24}
+				}
+				MComposite {
+					name string {"pinch"}
+					packable digit {1}
+					pack_expand_x digit {1}
+					pack_expand_y digit {1}
+					pack_fill_x digit {1}
+					pack_fill_y digit {1}
+					x digit {24}
+					width digit {336}
+					height digit {24}
+				}
+			}
+		}
+		MIconBox {
+			name string {"IconBox"}
+			clip digit {1}
+		}
+		MImageFace {
+			name string {"ImageFace"}
+			is_face digit {1}
+			width digit {1}
+			height digit {1}
+		}
+		MImageShape {
+			name string {"ImageShape"}
+			is_face digit {1}
+			width digit {1}
+			height digit {1}
+		}
+		MListBox {
+			name string {"ListBox"}
+			clip digit {1}
+		}
+		MMBox {
+			name string {"MBox"}
+		}
+		MMovieFace {
+			name string {"MovieFace"}
+			is_face digit {1}
+			width digit {1}
+			height digit {1}
+		}
+		MOptionMenu {
+			name string {"OptionMenu"}
+		}
+		MProgressFace {
+			name string {"ProgressFace"}
+			is_face digit {1}
+			width digit {1}
+			height digit {1}
+		}
+		MProject {
+			name string {"Project"}
+			width digit {640}
+			height digit {480}
+		}
+		MRaceDisplayFace {
+			name string {"RaceDisplayFace"}
+			is_face digit {1}
+			width digit {1}
+			height digit {1}
+		}
+		MRenderControl {
+			name string {"RenderControl"}
+			width digit {480}
+			height digit {272}
+		}
+		MRootWindow {
+			name string {"RootWindow"}
+			width digit {480}
+			height digit {272}
+		}
+		MSBox {
+			name string {"SBox"}
+		}
+		MScaleBar {
+			name string {"ScaleBar"}
+		}
+		MSceneFace {
+			name string {"SceneFace"}
+			is_face digit {1}
+			width digit {1}
+			height digit {1}
+		}
+		MScrollBox {
+			name string {"ScrollBox"}
+		}
+		MScrollClip {
+			name string {"ScrollClip"}
+		}
+		MScrollable {
+			name string {"Scrollable"}
+		}
+		MScrolledWindow {
+			name string {"ScrolledWindow"}
+		}
+		MTextBoxFace {
+			name string {"TextBoxFace"}
+			is_face digit {1}
+			width digit {1}
+			height digit {1}
+			font string {"hn_14"}
+		}
+		MTextFace {
+			name string {"TextFace"}
+			is_face digit {1}
+			width digit {1}
+			height digit {1}
+			font string {"hn_14"}
+		}
+		MToolTipFace {
+			name string {"ToolTipFace"}
+			is_face digit {1}
+			width digit {1}
+			height digit {1}
+			font string {"hn_14"}
+		}
+		MVBox {
+			name string {"VBox"}
+		}
+		MVScrollbar {
+			name string {"VScrollbar"}
+			pack_side digit {2}
+			pack_expand_y digit {1}
+			pack_fill_y digit {1}
+			width digit {24}
+			height digit {384}
+			children [3] {
+				MComposite {
+					name string {"dec_arrow"}
+					packable digit {1}
+					pack_expand_x digit {1}
+					pack_fill_x digit {1}
+					width digit {24}
+					height digit {24}
+				}
+				MComposite {
+					name string {"inc_arrow"}
+					packable digit {1}
+					pack_side digit {2}
+					pack_expand_x digit {1}
+					pack_fill_x digit {1}
+					y digit {360}
+					width digit {24}
+					height digit {24}
+				}
+				MComposite {
+					name string {"pinch"}
+					packable digit {1}
+					pack_expand_x digit {1}
+					pack_expand_y digit {1}
+					pack_fill_x digit {1}
+					pack_fill_y digit {1}
+					y digit {24}
+					width digit {24}
+					height digit {336}
+				}
+			}
+		}
+	}
+}

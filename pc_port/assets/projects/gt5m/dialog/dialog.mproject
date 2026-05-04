@@ -1,0 +1,1268 @@
+Project{
+project_component MComponent{
+name string{"MComponent"}
+children[2]{
+RootWindow{
+name string{"Buttons"}
+children[2]{
+HBox{
+name string{"YesNo"}
+is_component digit{1}
+geometry rectangle{0 24 104 22}
+clip digit{0}
+children[2]{
+SBox{
+name string{"Yes"}
+has_script digit{1}
+can_focus digit{1}
+pack_allocate_h digit{0}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{0 0 46 22}
+cursor_align_y digit{0.75}
+clip digit{0}
+children[6]{
+ImageFace{
+name string{"bg_tmp0"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{7.11 1 31.78 20}
+image_path string{"image/gt5m/button/ok.png"}
+}
+FrameImageFace{
+name string{"bg"}
+visible digit{0}
+frame_width digit{14}
+frame_height digit{56}
+}
+FrameImageFace{
+name string{"bgf"}
+has_script digit{1}
+visible digit{0}
+visible_condition digit{2}
+visible_compare digit{2}
+actor_list[1]{
+FaceColorInterpolator{
+name string{"FaceColorInterpolator"}
+attribute_name string{"MColorFace::face_color"}
+section[2]{
+MFaceColorSection{
+interpolation_period digit{0.5}
+end_value[1]{
+RGBA{255 255 255 127}
+}
+}
+MFaceColorSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.5}
+end_value[1]{
+RGBA{255 255 255 127}
+}
+}
+}
+}
+}
+frame_width digit{32}
+frame_height digit{56}
+}
+FrameImageFace{
+name string{"bgi"}
+visible digit{0}
+visible_condition digit{8}
+visible_compare digit{8}
+color color_name{ "basic_color_insensitive"}
+frame_width digit{32}
+frame_height digit{56}
+}
+TextFace{
+name string{"label"}
+visible digit{0}
+packable digit{1}
+pack_pad_left digit{16}
+pack_pad_right digit{16}
+pack_allocate_h digit{0}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+visible_compare digit{8}
+geometry rectangle{16 1 23 21}
+text_color RGBA{190 190 190 255}
+font string{"default"}
+shadow_value digit{-2}
+shadow_color RGBA{0 0 0 127}
+localized_text_page string{"Component"}
+key string{"OK"}
+}
+TextFace{
+name string{"labeli"}
+visible digit{0}
+packable digit{1}
+pack_pad_left digit{16}
+pack_pad_right digit{16}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+visible_condition digit{8}
+visible_compare digit{8}
+geometry rectangle{16 1 23 21}
+text_color RGBA{240 240 240 128}
+font string{"default"}
+num_proportional digit{0}
+localized_text_page string{"Component"}
+key string{"OK"}
+}
+}
+inner_pad_top digit{1}
+}
+SBox{
+name string{"No"}
+has_script digit{1}
+can_focus digit{1}
+pack_allocate_h digit{0}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{58 0 46 22}
+cursor_align_y digit{0.75}
+clip digit{0}
+children[6]{
+ImageFace{
+name string{"bg_tmp"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{7.11 1 31.78 20}
+image_path string{"image/gt5m/button/cancel_L.png"}
+}
+FrameImageFace{
+name string{"bg"}
+visible digit{0}
+frame_width digit{14}
+frame_height digit{56}
+}
+FrameImageFace{
+name string{"bgf"}
+has_script digit{1}
+visible digit{0}
+visible_condition digit{2}
+visible_compare digit{2}
+actor_list[1]{
+FaceColorInterpolator{
+name string{"FaceColorInterpolator"}
+attribute_name string{"MColorFace::face_color"}
+section[2]{
+MFaceColorSection{
+interpolation_period digit{0.5}
+end_value[1]{
+RGBA{255 255 255 127}
+}
+}
+MFaceColorSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.5}
+end_value[1]{
+RGBA{255 255 255 127}
+}
+}
+}
+}
+}
+frame_width digit{32}
+frame_height digit{56}
+}
+FrameImageFace{
+name string{"bgi"}
+visible digit{0}
+visible_condition digit{8}
+visible_compare digit{8}
+color color_name{ "basic_color_insensitive"}
+frame_width digit{32}
+frame_height digit{56}
+}
+TextFace{
+name string{"label"}
+visible digit{0}
+packable digit{1}
+pack_pad_left digit{16}
+pack_pad_right digit{16}
+pack_allocate_h digit{0}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+visible_compare digit{8}
+geometry rectangle{16 1 51 21}
+text_color RGBA{190 190 190 255}
+font string{"default"}
+shadow_value digit{-2}
+shadow_color RGBA{0 0 0 127}
+localized_text_page string{"Component"}
+key string{"Cancel"}
+}
+TextFace{
+name string{"labeli"}
+visible digit{0}
+packable digit{1}
+pack_pad_left digit{16}
+pack_pad_right digit{16}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+visible_condition digit{8}
+visible_compare digit{8}
+geometry rectangle{16 1 51 21}
+text_color RGBA{240 240 240 128}
+font string{"default"}
+num_proportional digit{0}
+localized_text_page string{"Component"}
+key string{"Cancel"}
+}
+}
+inner_pad_top digit{1}
+}
+}
+homogeneous digit{1}
+spacing digit{12}
+}
+SBox{
+name string{"ButtonA"}
+is_component digit{1}
+can_focus digit{1}
+pack_allocate_h digit{0}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{56 48 46 22}
+cursor_align_y digit{0.75}
+clip digit{0}
+children[6]{
+ImageFace{
+name string{"bg_tmp0"}
+packable digit{1}
+pack_expand_x digit{1}
+geometry rectangle{7.11 1 31.78 20}
+image_path string{"image/gt5m/button/ok.png"}
+}
+FrameImageFace{
+name string{"bg"}
+visible digit{0}
+frame_width digit{14}
+frame_height digit{56}
+}
+FrameImageFace{
+name string{"bgf"}
+has_script digit{1}
+visible digit{0}
+visible_condition digit{2}
+visible_compare digit{2}
+actor_list[1]{
+FaceColorInterpolator{
+name string{"FaceColorInterpolator"}
+attribute_name string{"MColorFace::face_color"}
+section[2]{
+MFaceColorSection{
+interpolation_period digit{0.5}
+end_value[1]{
+RGBA{255 255 255 127}
+}
+}
+MFaceColorSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.5}
+end_value[1]{
+RGBA{255 255 255 127}
+}
+}
+}
+}
+}
+frame_width digit{32}
+frame_height digit{56}
+}
+FrameImageFace{
+name string{"bgi"}
+visible digit{0}
+visible_condition digit{8}
+visible_compare digit{8}
+color color_name{ "basic_color_insensitive"}
+frame_width digit{32}
+frame_height digit{56}
+}
+TextFace{
+name string{"label"}
+visible digit{0}
+packable digit{1}
+pack_pad_left digit{16}
+pack_pad_right digit{16}
+pack_allocate_h digit{0}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+visible_compare digit{8}
+geometry rectangle{16 1 23 21}
+text_color RGBA{190 190 190 255}
+font string{"default"}
+shadow_value digit{-2}
+shadow_color RGBA{0 0 0 127}
+localized_text_page string{"Component"}
+key string{"OK"}
+}
+TextFace{
+name string{"labeli"}
+visible digit{0}
+packable digit{1}
+pack_pad_left digit{16}
+pack_pad_right digit{16}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+visible_condition digit{8}
+visible_compare digit{8}
+geometry rectangle{16 1 23 21}
+text_color RGBA{240 240 240 128}
+font string{"default"}
+num_proportional digit{0}
+localized_text_page string{"Component"}
+key string{"OK"}
+}
+}
+inner_pad_top digit{1}
+}
+}
+}
+RootWindow{
+name string{"Tooltip"}
+children[1]{
+Composite{
+name string{"BalloonTip"}
+has_script digit{1}
+is_component digit{1}
+geometry rectangle{0 0 640 480}
+children[1]{
+VBox{
+name string{"Tip"}
+has_script digit{1}
+packable digit{0}
+pack_shrink_x digit{1}
+pack_shrink_y digit{1}
+geometry rectangle{32 16 16 32}
+actor_list[2]{
+ParallelActor{
+name string{"AppearEffect"}
+initial_pause digit{1}
+children[1]{
+VectorInterpolator{
+name string{"Scale"}
+initial_pause digit{1}
+attribute_name string{"MWidget::scale"}
+loop_count digit{1}
+section[1]{
+MVectorSection{
+ease_type_name string{"easeOutExpo"}
+interpolation_period digit{0.2}
+end_value vector{1 1}
+}
+}
+}
+}
+}
+ScalarInterpolator{
+name string{"VisibleEffect"}
+initial_pause digit{1}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeInSine"}
+start_duration digit{3}
+interpolation_period digit{0.5}
+start_value digit{1}
+}
+}
+}
+}
+clip digit{0}
+children[3]{
+SBox{
+name string{"up_tip"}
+visible digit{0}
+pack_allocate_w digit{0}
+pack_allocate_h digit{0}
+geometry rectangle{0 0 12 4}
+clip digit{0}
+children[1]{
+ImageFace{
+name string{"up_tip"}
+packable digit{1}
+pack_expand_y digit{1}
+pack_alignment_y digit{0}
+geometry rectangle{0 0 12 8}
+image_path string{"image/component/psp/tip_up.png"}
+}
+}
+}
+SBox{
+name string{"Text"}
+has_script digit{1}
+geometry rectangle{0 0 16 32}
+clip digit{0}
+children[2]{
+FrameImageFace{
+name string{"ColorFace"}
+tl_image_path string{"image/component/psp/tip_base.png"}
+frame_width digit{7}
+frame_height digit{9}
+}
+TextFace{
+name string{"TextFace"}
+packable digit{1}
+geometry rectangle{8 8 0 16}
+text_color RGBA{0 0 0 255}
+font string{"default"}
+multiline digit{1}
+align digit{3}
+scale_x digit{0.8}
+scale_y digit{0.8}
+nextline_offset digit{-2}
+}
+}
+inner_pad_left digit{8}
+inner_pad_right digit{8}
+}
+SBox{
+name string{"down_tip"}
+visible digit{0}
+pack_allocate_w digit{0}
+pack_allocate_h digit{0}
+geometry rectangle{0 32 12 8}
+clip digit{0}
+children[1]{
+ImageFace{
+name string{"down_tip"}
+packable digit{1}
+pack_side digit{3}
+pack_expand_y digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{0 -4 12 12}
+image_path string{"image/component/psp/tip_down.png"}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+name string{"DialogProject"}
+has_script digit{1}
+children[2]{
+RootWindow{
+name string{"ConfirmDialog"}
+has_script digit{1}
+packable digit{1}
+pack_children digit{1}
+pack_allocate_w digit{0}
+pack_allocate_h digit{0}
+children[3]{
+Composite{
+name string{"base"}
+packable digit{1}
+geometry rectangle{0 0 480 272}
+actor_list[2]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::scale_x"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeInOutExpo"}
+interpolation_period digit{0.3}
+start_value digit{1.08}
+end_value digit{1}
+}
+}
+}
+ScalarInterpolator{
+name string{"ScalarInterpolator0"}
+attribute_name string{"MWidget::scale_y"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeInOutExpo"}
+interpolation_period digit{0.3}
+start_value digit{1.08}
+end_value digit{1}
+}
+}
+}
+}
+children[10]{
+ColorFace{
+name string{"ColorFace"}
+color[1]{
+RGBA{0 0 0 229}
+}
+}
+ColorFace{
+name string{"ColorFace0"}
+geometry rectangle{0 0 10 272}
+color[1]{
+RGBA{255 255 255 30}
+}
+}
+ColorFace{
+name string{"ColorFace1"}
+geometry rectangle{470 0 10 272}
+color[1]{
+RGBA{255 255 255 30}
+}
+}
+ColorFace{
+name string{"ColorFace2"}
+geometry rectangle{10 0 460 10}
+color[1]{
+RGBA{255 255 255 30}
+}
+}
+ColorFace{
+name string{"ColorFace3"}
+geometry rectangle{10 262 460 10}
+color[1]{
+RGBA{255 255 255 30}
+}
+}
+ColorFace{
+name string{"ColorFace4"}
+geometry rectangle{10 10 460 252}
+opacity digit{0.5}
+is_divide_color digit{1}
+color_divide[1]{
+[4]{
+RGBA{0 0 0 255}
+RGBA{50 50 50 255}
+RGBA{0 0 0 255}
+RGBA{50 50 50 255}
+}
+}
+color[1]{
+RGBA{255 255 255 30}
+}
+blend_func_name string{"add"}
+}
+ColorFace{
+name string{"ColorFace5"}
+geometry rectangle{10 11 1 251}
+color[1]{
+RGBA{255 255 255 42}
+}
+}
+ColorFace{
+name string{"ColorFace6"}
+geometry rectangle{469 10 1 252}
+color[1]{
+RGBA{0 0 0 81}
+}
+}
+ColorFace{
+name string{"ColorFace7"}
+geometry rectangle{10 10 460 1}
+color[1]{
+RGBA{255 255 255 42}
+}
+}
+ColorFace{
+name string{"ColorFace8"}
+geometry rectangle{10 261 460 1}
+color[1]{
+RGBA{0 0 0 81}
+}
+}
+}
+}
+VBox{
+name string{"Dialog"}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+geometry rectangle{30 29 420 212}
+children[2]{
+VBox{
+name string{"Message"}
+pack_pad_top digit{20}
+pack_allocate_w digit{0}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_alignment_y digit{0}
+geometry rectangle{0 20 420 152}
+clip digit{0}
+children[2]{
+ColorFace{
+name string{"bg"}
+visible digit{0}
+color[1]{
+RGBA{31 31 31 229}
+}
+}
+TextFace{
+name string{"message"}
+is_face digit{0}
+packable digit{1}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+geometry rectangle{0 0 420 152}
+text_color RGBA{216 216 216 255}
+font string{"default"}
+multiline digit{1}
+scale_x digit{0.964286}
+scale_y digit{0.964286}
+shadow_value digit{1}
+nextline_offset digit{5}
+adjust_scale digit{1}
+}
+}
+}
+SBox{
+name string{"Buttons"}
+pack_pad_bottom digit{10}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{0 182 420 20}
+clip digit{0}
+children[3]{
+'Buttons::YesNo'{
+name string{"YesNo"}
+pack_expand_x digit{1}
+geometry rectangle{169 0 82 20}
+children[2]{
+'Buttons::YesNo::Yes'{
+name string{"Yes"}
+pack_allocate_h digit{1}
+pack_expand_x digit{0}
+pack_fill_x digit{0}
+geometry rectangle{0 0 38 20}
+children[4]{
+'Buttons::YesNo::Yes::bg_tmp0'{
+name string{"bg"}
+geometry rectangle{0 0 38 20}
+}
+'Buttons::YesNo::Yes::label'{
+name string{"label"}
+pack_pad_left digit{0}
+pack_pad_right digit{0}
+geometry rectangle{0 0 38 20}
+}
+'Buttons::YesNo::Yes::labeli'{
+name string{"labeli"}
+pack_pad_left digit{0}
+pack_pad_right digit{0}
+geometry rectangle{0 0 38 20}
+}
+ImageFace{
+name string{"Blink"}
+opacity digit{0}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_playing digit{0}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[3]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+}
+}
+}
+blend_func_name string{"add"}
+image_path string{"image/gt5m/button/ok.png"}
+}
+}
+inner_pad_top digit{0}
+}
+'Buttons::YesNo::No'{
+name string{"No"}
+pack_allocate_h digit{1}
+pack_expand_x digit{0}
+pack_fill_x digit{0}
+geometry rectangle{44 0 38 20}
+children[3]{
+'Buttons::YesNo::No::bg_tmp'{
+name string{"bg"}
+geometry rectangle{0 0 38 20}
+}
+'Buttons::YesNo::No::label'{
+name string{"label"}
+pack_pad_left digit{0}
+pack_pad_right digit{0}
+geometry rectangle{0 0 38 20}
+}
+'Buttons::YesNo::No::labeli'{
+name string{"labeli"}
+pack_pad_left digit{0}
+pack_pad_right digit{0}
+geometry rectangle{0 0 38 20}
+}
+}
+inner_pad_top digit{0}
+}
+}
+spacing digit{6}
+}
+'Buttons::ButtonA'{
+name string{"OK"}
+geometry rectangle{0 0 420 20}
+children[3]{
+'Buttons::ButtonA::bg_tmp0'{
+name string{"bg"}
+geometry rectangle{191 0 38 20}
+image_path string{"image/gt5m/button/close_L.png"}
+}
+'Buttons::ButtonA::label'{
+name string{"label"}
+geometry rectangle{0 0 38 20}
+}
+'Buttons::ButtonA::labeli'{
+name string{"labeli"}
+geometry rectangle{0 0 38 20}
+}
+}
+inner_pad_top digit{0}
+}
+'Buttons::YesNo::No'{
+name string{"Abort"}
+pack_allocate_h digit{1}
+pack_fill_x digit{0}
+geometry rectangle{191 0 38 20}
+children[3]{
+'Buttons::YesNo::No::bg_tmp'{
+name string{"bg"}
+geometry rectangle{0 0 38 20}
+}
+'Buttons::YesNo::No::label'{
+name string{"label"}
+pack_pad_left digit{0}
+pack_pad_right digit{0}
+geometry rectangle{0 0 38 20}
+key string{"Abort"}
+}
+'Buttons::YesNo::No::labeli'{
+name string{"labeli"}
+pack_pad_left digit{0}
+pack_pad_right digit{0}
+geometry rectangle{0 0 38 20}
+key string{"Abort"}
+}
+}
+inner_pad_top digit{0}
+}
+}
+}
+}
+}
+'Tooltip::BalloonTip'{
+name string{"BalloonTip"}
+packable digit{1}
+children[1]{
+'Tooltip::BalloonTip::Tip'{
+name string{"Tip"}
+actor_list[2]{
+'Tooltip::BalloonTip::Tip::AppearEffect'{
+name string{"AppearEffect"}
+children[1]{
+'Tooltip::BalloonTip::Tip::AppearEffect::Scale'{
+name string{"Scale"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::VisibleEffect'{
+name string{"VisibleEffect"}
+}
+}
+children[3]{
+'Tooltip::BalloonTip::Tip::up_tip'{
+name string{"up_tip"}
+children[1]{
+'Tooltip::BalloonTip::Tip::up_tip::up_tip'{
+name string{"up_tip"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::Text'{
+name string{"Text"}
+children[2]{
+'Tooltip::BalloonTip::Tip::Text::ColorFace'{
+name string{"ColorFace"}
+}
+'Tooltip::BalloonTip::Tip::Text::TextFace'{
+name string{"TextFace"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::down_tip'{
+name string{"down_tip"}
+children[1]{
+'Tooltip::BalloonTip::Tip::down_tip::down_tip'{
+name string{"down_tip"}
+}
+}
+}
+}
+}
+}
+}
+}
+inner_pad_bottom digit{2}
+cursor_type string{"appear"}
+preload digit{1}
+}
+RootWindow{
+name string{"ConfirmExecDialog"}
+has_script digit{1}
+packable digit{1}
+pack_children digit{1}
+children[3]{
+Composite{
+name string{"base"}
+packable digit{1}
+geometry rectangle{0 0 480 272}
+actor_list[2]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::scale_x"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeInOutExpo"}
+interpolation_period digit{0.3}
+start_value digit{1.08}
+end_value digit{1}
+}
+}
+}
+ScalarInterpolator{
+name string{"ScalarInterpolator0"}
+attribute_name string{"MWidget::scale_y"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeInOutExpo"}
+interpolation_period digit{0.3}
+start_value digit{1.08}
+end_value digit{1}
+}
+}
+}
+}
+children[10]{
+ColorFace{
+name string{"ColorFace"}
+color[1]{
+RGBA{0 0 0 229}
+}
+}
+ColorFace{
+name string{"ColorFace0"}
+geometry rectangle{0 0 10 272}
+color[1]{
+RGBA{255 255 255 30}
+}
+}
+ColorFace{
+name string{"ColorFace1"}
+geometry rectangle{470 0 10 272}
+color[1]{
+RGBA{255 255 255 30}
+}
+}
+ColorFace{
+name string{"ColorFace2"}
+geometry rectangle{10 0 460 10}
+color[1]{
+RGBA{255 255 255 30}
+}
+}
+ColorFace{
+name string{"ColorFace3"}
+geometry rectangle{10 262 460 10}
+color[1]{
+RGBA{255 255 255 30}
+}
+}
+ColorFace{
+name string{"ColorFace4"}
+geometry rectangle{10 10 460 252}
+opacity digit{0.5}
+is_divide_color digit{1}
+color_divide[1]{
+[4]{
+RGBA{0 0 0 255}
+RGBA{50 50 50 255}
+RGBA{0 0 0 255}
+RGBA{50 50 50 255}
+}
+}
+color[1]{
+RGBA{255 255 255 30}
+}
+blend_func_name string{"add"}
+}
+ColorFace{
+name string{"ColorFace5"}
+geometry rectangle{10 11 1 251}
+color[1]{
+RGBA{255 255 255 42}
+}
+}
+ColorFace{
+name string{"ColorFace6"}
+geometry rectangle{469 10 1 252}
+color[1]{
+RGBA{0 0 0 81}
+}
+}
+ColorFace{
+name string{"ColorFace7"}
+geometry rectangle{10 10 460 1}
+color[1]{
+RGBA{255 255 255 42}
+}
+}
+ColorFace{
+name string{"ColorFace8"}
+geometry rectangle{10 261 460 1}
+color[1]{
+RGBA{0 0 0 81}
+}
+}
+}
+}
+VBox{
+name string{"Dialog"}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+geometry rectangle{30 29 420 212}
+children[2]{
+VBox{
+name string{"Message"}
+pack_pad_top digit{20}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_alignment_y digit{0}
+geometry rectangle{0 20 420 152}
+clip digit{0}
+children[2]{
+ColorFace{
+name string{"bg"}
+visible digit{0}
+color[1]{
+RGBA{31 31 31 229}
+}
+}
+TextFace{
+name string{"message"}
+is_face digit{0}
+packable digit{1}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+geometry rectangle{0 0 420 152}
+text_color RGBA{215 215 215 255}
+font string{"default"}
+multiline digit{1}
+scale_x digit{0.964286}
+scale_y digit{0.964286}
+shadow_value digit{1}
+nextline_offset digit{5}
+adjust_scale digit{1}
+}
+}
+}
+SBox{
+name string{"Buttons"}
+pack_pad_bottom digit{10}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{0 182 420 20}
+clip digit{0}
+children[3]{
+'Buttons::YesNo'{
+name string{"YesNo"}
+pack_expand_x digit{1}
+geometry rectangle{169 0 82 20}
+children[2]{
+'Buttons::YesNo::Yes'{
+name string{"Yes"}
+pack_allocate_h digit{1}
+pack_expand_x digit{0}
+pack_fill_x digit{0}
+geometry rectangle{0 0 38 20}
+children[7]{
+'Buttons::YesNo::Yes::bg_tmp0'{
+name string{"bg_tmp0"}
+geometry rectangle{0 0 38 20}
+}
+'Buttons::YesNo::Yes::bg'{
+name string{"bg"}
+geometry rectangle{0 0 30.72 20}
+}
+'Buttons::YesNo::Yes::bgf'{
+name string{"bgf"}
+geometry rectangle{0 0 30.72 20}
+actor_list[1]{
+'Buttons::YesNo::Yes::bgf::FaceColorInterpolator'{
+name string{"FaceColorInterpolator"}
+}
+}
+}
+'Buttons::YesNo::Yes::bgi'{
+name string{"bgi"}
+geometry rectangle{0 0 30.72 20}
+}
+'Buttons::YesNo::Yes::label'{
+name string{"label"}
+pack_pad_left digit{0}
+pack_pad_right digit{0}
+geometry rectangle{0 0 38 20}
+}
+'Buttons::YesNo::Yes::labeli'{
+name string{"labeli"}
+pack_pad_left digit{0}
+pack_pad_right digit{0}
+geometry rectangle{0 0 38 20}
+}
+ImageFace{
+name string{"Blink"}
+opacity digit{0}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_playing digit{0}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[3]{
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.1}
+end_value digit{1}
+}
+}
+}
+}
+blend_func_name string{"add"}
+image_path string{"image/gt5m/button/ok.png"}
+}
+}
+inner_pad_top digit{0}
+}
+'Buttons::YesNo::No'{
+name string{"No"}
+geometry rectangle{44 0 38 20}
+children[6]{
+'Buttons::YesNo::No::bg_tmp'{
+name string{"bg_tmp"}
+geometry rectangle{0 0 38 20}
+}
+'Buttons::YesNo::No::bg'{
+name string{"bg"}
+geometry rectangle{0 0 25.79 20}
+}
+'Buttons::YesNo::No::bgf'{
+name string{"bgf"}
+geometry rectangle{0 0 25.79 20}
+actor_list[1]{
+'Buttons::YesNo::No::bgf::FaceColorInterpolator'{
+name string{"FaceColorInterpolator"}
+}
+}
+}
+'Buttons::YesNo::No::bgi'{
+name string{"bgi"}
+geometry rectangle{0 0 25.79 20}
+}
+'Buttons::YesNo::No::label'{
+name string{"label"}
+pack_pad_left digit{0}
+pack_pad_right digit{0}
+pack_allocate_h digit{1}
+pack_expand_x digit{0}
+pack_fill_x digit{0}
+geometry rectangle{0 0 38 20}
+}
+'Buttons::YesNo::No::labeli'{
+name string{"labeli"}
+pack_pad_left digit{0}
+pack_pad_right digit{0}
+geometry rectangle{0 0 38 20}
+}
+}
+inner_pad_top digit{0}
+}
+}
+spacing digit{6}
+}
+'Buttons::ButtonA'{
+name string{"OK"}
+geometry rectangle{0 0 420 20}
+children[6]{
+'Buttons::ButtonA::bg_tmp0'{
+name string{"bg_tmp0"}
+geometry rectangle{191 0 38 20}
+image_path string{"image/gt5m/button/close_L.png"}
+}
+'Buttons::ButtonA::bg'{
+name string{"bg"}
+geometry rectangle{0 0 420 18.18}
+}
+'Buttons::ButtonA::bgf'{
+name string{"bgf"}
+geometry rectangle{0 0 420 18.18}
+actor_list[1]{
+'Buttons::ButtonA::bgf::FaceColorInterpolator'{
+name string{"FaceColorInterpolator"}
+}
+}
+}
+'Buttons::ButtonA::bgi'{
+name string{"bgi"}
+geometry rectangle{0 0 420 18.18}
+}
+'Buttons::ButtonA::label'{
+name string{"label"}
+pack_pad_left digit{0}
+pack_pad_right digit{0}
+geometry rectangle{0 0 38 20}
+}
+'Buttons::ButtonA::labeli'{
+name string{"labeli"}
+pack_pad_left digit{0}
+pack_pad_right digit{0}
+geometry rectangle{0 0 38 20}
+}
+}
+inner_pad_top digit{0}
+}
+'Buttons::YesNo::No'{
+name string{"Abort"}
+pack_allocate_h digit{1}
+pack_fill_x digit{0}
+geometry rectangle{0 0 420 20}
+children[6]{
+'Buttons::YesNo::No::bg_tmp'{
+name string{"bg_tmp"}
+geometry rectangle{191 0 38 20}
+}
+'Buttons::YesNo::No::bg'{
+name string{"bg"}
+geometry rectangle{2.96 0 56.2 20}
+}
+'Buttons::YesNo::No::bgf'{
+name string{"bgf"}
+geometry rectangle{2.96 0 56.2 20}
+actor_list[1]{
+'Buttons::YesNo::No::bgf::FaceColorInterpolator'{
+name string{"FaceColorInterpolator"}
+}
+}
+}
+'Buttons::YesNo::No::bgi'{
+name string{"bgi"}
+geometry rectangle{2.96 0 56.2 20}
+}
+'Buttons::YesNo::No::label'{
+name string{"label"}
+pack_pad_left digit{0}
+pack_pad_right digit{0}
+geometry rectangle{2 0 38 20}
+}
+'Buttons::YesNo::No::labeli'{
+name string{"labeli"}
+pack_pad_left digit{0}
+pack_pad_right digit{0}
+geometry rectangle{2 0 38 20}
+}
+}
+inner_pad_top digit{0}
+}
+}
+}
+}
+}
+'Tooltip::BalloonTip'{
+name string{"BalloonTip"}
+packable digit{1}
+children[1]{
+'Tooltip::BalloonTip::Tip'{
+name string{"Tip"}
+actor_list[2]{
+'Tooltip::BalloonTip::Tip::AppearEffect'{
+name string{"AppearEffect"}
+children[1]{
+'Tooltip::BalloonTip::Tip::AppearEffect::Scale'{
+name string{"Scale"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::VisibleEffect'{
+name string{"VisibleEffect"}
+}
+}
+children[3]{
+'Tooltip::BalloonTip::Tip::up_tip'{
+name string{"up_tip"}
+children[1]{
+'Tooltip::BalloonTip::Tip::up_tip::up_tip'{
+name string{"up_tip"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::Text'{
+name string{"Text"}
+children[2]{
+'Tooltip::BalloonTip::Tip::Text::ColorFace'{
+name string{"ColorFace"}
+}
+'Tooltip::BalloonTip::Tip::Text::TextFace'{
+name string{"TextFace"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::down_tip'{
+name string{"down_tip"}
+children[1]{
+'Tooltip::BalloonTip::Tip::down_tip::down_tip'{
+name string{"down_tip"}
+}
+}
+}
+}
+}
+}
+}
+}
+inner_pad_bottom digit{2}
+cursor_type string{"appear"}
+preload digit{1}
+}
+}
+}

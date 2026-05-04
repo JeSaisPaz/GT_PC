@@ -1,0 +1,106 @@
+
+
+
+//---------------------------------------------------------------------------------------
+// AdjustScreenRoot.ad
+//
+// (例)
+// AdjustScreenRoot.ad
+//---------------------------------------------------------------------------------------
+
+
+//---------------------------------------------------------------------------------------
+// function
+//---------------------------------------------------------------------------------------
+
+
+module ROOT
+{
+    attribute isSD = pdiext::MSystemConfiguration::isSDTV();
+
+    method isDone()
+    {
+        var option = GAME_STATUS.user_profile.option;
+        if (self.isSD)
+            return option.display_margin_sd_adjust_done;
+        else
+            return option.display_margin_hd_adjust_done;
+    }
+
+    method apply()
+    {
+        var option = GAME_STATUS.user_profile.option;
+        var scale = self.isSD ? option.display_margin_sd : option.display_margin_hd;
+        var margin = scale.toFloat() / 100.0;
+        pdiext::MSystemConfiguration::SetDisplayMargin(margin);
+    }
+
+    method open(context)
+    {
+        apply();
+        SequenceUtil::startPageDirect(context, ROOT);
+    }
+
+    method end(context)
+    {
+        var option = GAME_STATUS.user_profile.option;
+        if (self.isSD)
+            option.display_margin_sd_adjust_done = true;
+        else
+            option.display_margin_hd_adjust_done = true;
+    }
+
+    method onInitialize(context)
+    {
+        var tf_list = [Title::label, Message::label, Button::label];
+        foreach (var tf in tf_list)
+        {
+            tf.text = context.translate(ROOT, tf.key);
+        }
+    }
+
+    method onCancel(context)
+    {
+        return EVENTRESULT_FILTER;
+    }
+
+    method onKeyPress(context, event)
+    {
+        var option = GAME_STATUS.user_profile.option;
+        var margin_ref = self.isSD ? (&option.display_margin_sd) : &option.display_margin_hd;
+        if (event.keysym == CELL_PAD_CTRL_L3_UP)
+        {
+            if (*margin_ref > 0)
+            {
+                main::sound.play("cursor");
+                *margin_ref--;
+                apply();
+            }
+
+            return EVENTRESULT_FILTER;
+        }
+        else if (event.keysym == CELL_PAD_CTRL_L3_DOWN)
+        {
+            if (*margin_ref < 15)
+            {
+                main::sound.play("cursor");
+                *margin_ref++;
+                apply();
+            }
+
+            return EVENTRESULT_FILTER;
+        }
+
+        return EVENTRESULT_CONTINUE;
+    }
+
+    module Button
+    {
+        method onActivate(context)
+        {
+            main::sound.play("ok");
+            ROOT.end(context);
+            return EVENTRESULT_FILTER;
+        }
+    }
+}

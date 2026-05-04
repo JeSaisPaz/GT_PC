@@ -1,0 +1,85 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+module ROOT
+{
+    method open(context)
+    {
+        SettingFrame.appear();
+        SequenceUtil::pushPage(context, self);
+    }
+
+    method close(context)
+    {
+        var delay_time = SettingFrame.hide();
+        SequenceUtil::popPage(context, self, delay_time);
+    }
+
+    method reflect(context)
+    {
+        var option = main::GAME_STATUS.user_profile.option;
+        SettingFrame::Pane::ScrolledBody::clip::space::ServerSpecialValue::Text::input.value = option.server_special_value;
+    }
+
+    method apply(context)
+    {
+        var option = main::GAME_STATUS.user_profile.option;
+        var value = SettingFrame::Pane::ScrolledBody::clip::space::ServerSpecialValue::Text::input.value;
+        option.server_special_value = value;
+        main::Grim2.setSpecialRequestHeader("X-gt-special", value);
+    }
+
+    method onInitialize(context)
+    {
+        reflect(context);
+        SettingFrame.adjust_scrolled_body();
+        ROOT.setFocus(SettingFrame::Pane::ScrolledBody::clip::space::ServerSpecialValue::Text::input);
+    }
+
+    method onCancel(context, event, item)
+    {
+        main::sound.play("cancel");
+        ROOT.apply();
+        ROOT.close(context);
+        return EVENTRESULT_FILTER;
+    }
+
+    module SettingFrame::Pane::Foot::OK
+    {
+        method onActivate(context)
+        {
+            main::sound.play("ok");
+            ROOT.apply();
+            ROOT.close(context);
+            return EVENTRESULT_FILTER;
+        }
+    }
+    
+    module SettingFrame::Pane::Foot::Cancel
+    {
+        method onActivate(context)
+        {
+            main::sound.play("ok");
+            ROOT.close(context);
+            return EVENTRESULT_FILTER;
+        }
+
+        method onCancel(context)
+        {
+            main::sound.play("cancel");
+            ROOT.close(context);
+            return EVENTRESULT_FILTER;
+        }
+    }
+}

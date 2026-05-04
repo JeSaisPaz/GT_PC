@@ -1,0 +1,21 @@
+project_name: GarageProject
+project_folder: ..
+
+base_include_folder: ../../../../
+
+output_name: garage
+
+version: 12
+build_package: true
+serialize_components: true
+serialize_components_version: 1
+merge_widget: true
+
+files_to_compile: 
+  - name: GarageProjectComponent.ad
+    project_component: true
+  - name: garage.ad
+    is_main: true
+  - name: CarSelectPopup.ad
+  - name: CarPopup.ad
+  - name: CarOrderPopup.ad

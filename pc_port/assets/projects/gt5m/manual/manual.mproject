@@ -1,0 +1,4338 @@
+Project{
+project_component MComponent{
+name string{"MComponent"}
+children[1]{
+RootWindow{
+name string{"Tooltip"}
+children[1]{
+Composite{
+name string{"BalloonTip"}
+has_script digit{1}
+is_component digit{1}
+geometry rectangle{0 0 640 480}
+children[1]{
+VBox{
+name string{"Tip"}
+has_script digit{1}
+packable digit{0}
+pack_shrink_x digit{1}
+pack_shrink_y digit{1}
+geometry rectangle{32 16 16 32}
+actor_list[2]{
+ParallelActor{
+name string{"AppearEffect"}
+initial_pause digit{1}
+children[1]{
+VectorInterpolator{
+name string{"Scale"}
+initial_pause digit{1}
+attribute_name string{"MWidget::scale"}
+loop_count digit{1}
+section[1]{
+MVectorSection{
+ease_type_name string{"easeOutExpo"}
+interpolation_period digit{0.2}
+end_value vector{1 1}
+}
+}
+}
+}
+}
+ScalarInterpolator{
+name string{"VisibleEffect"}
+initial_pause digit{1}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeInSine"}
+start_duration digit{3}
+interpolation_period digit{0.5}
+start_value digit{1}
+}
+}
+}
+}
+clip digit{0}
+children[3]{
+SBox{
+name string{"up_tip"}
+visible digit{0}
+pack_allocate_w digit{0}
+pack_allocate_h digit{0}
+geometry rectangle{0 0 12 4}
+clip digit{0}
+children[1]{
+ImageFace{
+name string{"up_tip"}
+packable digit{1}
+pack_expand_y digit{1}
+pack_alignment_y digit{0}
+geometry rectangle{0 0 12 8}
+image_path string{"image/component/psp/tip_up.png"}
+}
+}
+}
+SBox{
+name string{"Text"}
+has_script digit{1}
+geometry rectangle{0 0 16 32}
+clip digit{0}
+children[2]{
+FrameImageFace{
+name string{"ColorFace"}
+tl_image_path string{"image/component/psp/tip_base.png"}
+frame_width digit{7}
+frame_height digit{9}
+}
+TextFace{
+name string{"TextFace"}
+packable digit{1}
+geometry rectangle{8 8 0 16}
+text_color RGBA{0 0 0 255}
+font string{"default"}
+multiline digit{1}
+align digit{3}
+scale_x digit{0.8}
+scale_y digit{0.8}
+nextline_offset digit{-2}
+}
+}
+inner_pad_left digit{8}
+inner_pad_right digit{8}
+}
+SBox{
+name string{"down_tip"}
+visible digit{0}
+pack_allocate_w digit{0}
+pack_allocate_h digit{0}
+geometry rectangle{0 32 12 8}
+clip digit{0}
+children[1]{
+ImageFace{
+name string{"down_tip"}
+packable digit{1}
+pack_side digit{3}
+pack_expand_y digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{0 -4 12 12}
+image_path string{"image/component/psp/tip_down.png"}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+name string{"ManualProject"}
+has_script digit{1}
+focus digit{1}
+children[2]{
+RootWindow{
+name string{"ManualRoot"}
+has_script digit{1}
+pack_children digit{1}
+children[10]{
+ColorFace{
+name string{"ColorFace"}
+color[4]{
+RGBA{50 50 50 255}
+RGBA{50 50 50 255}
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+}
+}
+ScrolledWindow{
+name string{"ScrolledWindow"}
+packable digit{0}
+pack_children digit{0}
+geometry rectangle{0 40 480 232}
+children[5]{
+ListBox{
+name string{"ListBox"}
+can_focus digit{1}
+packable digit{1}
+pack_pad_top digit{25}
+pack_expand_x digit{1}
+pack_expand_y digit{1}
+pack_fill_x digit{1}
+pack_fill_y digit{1}
+geometry rectangle{0 0 480 226}
+}
+HScrollbar{
+name string{"HAllow"}
+pack_expand_y digit{1}
+geometry rectangle{0 0 480 28}
+children[2]{
+'HScrollbar::dec_arrow'{
+name string{"dec_arrow"}
+geometry rectangle{0 0 50 28}
+children[1]{
+ImageFace{
+name string{"TextFace"}
+geometry rectangle{20 2 20 20}
+image_path string{"image/gt5m/manual/Arrow_l.png"}
+}
+}
+}
+'HScrollbar::inc_arrow'{
+name string{"inc_arrow"}
+geometry rectangle{430 0 50 28}
+children[1]{
+ImageFace{
+name string{"TextFace"}
+geometry rectangle{10 2 20 20}
+image_path string{"image/gt5m/manual/Arrow_r.png"}
+}
+}
+}
+}
+display_policy digit{1}
+}
+HScrollbar{
+name string{"HScrollbar"}
+pack_expand_y digit{1}
+pack_alignment_y digit{1}
+geometry rectangle{0 226 480 6}
+children[1]{
+'HScrollbar::pinch'{
+name string{"pinch"}
+geometry rectangle{0 0 480 6}
+children[1]{
+ColorFace{
+name string{"ColorFace"}
+visible digit{0}
+}
+}
+}
+}
+}
+Composite{
+name string{"Title"}
+is_face digit{1}
+geometry rectangle{50 0 380 28}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+TextFace{
+name string{"Title"}
+alias_name string{"ScrolledWindow_Title_Title"}
+geometry rectangle{38 0 890.63 28}
+font string{"default"}
+align digit{3}
+scale_x digit{1.2}
+scale_y digit{1.2}
+text string{"Title"}
+}
+ImageFace{
+name string{"bg"}
+geometry rectangle{6 6 24 15}
+round digit{4}
+image_path string{"image/gt5m/manual/icon_book.png"}
+}
+}
+}
+VScrollbar{
+name string{"ScrollBar"}
+packable digit{0}
+pack_expand_x digit{1}
+pack_alignment_x digit{1}
+geometry rectangle{472 28 4 198}
+children[4]{
+ColorFace{
+name string{"ColorFace"}
+color[1]{
+RGBA{0 0 0 255}
+}
+}
+'VScrollbar::dec_arrow'{
+name string{"dec_arrow"}
+visible digit{0}
+geometry rectangle{0 0 4 5}
+children[1]{
+TextFace{
+name string{"TextFace"}
+actor_list[1]{
+VectorInterpolator{
+name string{"VectorInterpolator"}
+attribute_name string{"MWidget::translate"}
+section[1]{
+MVectorSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.6}
+tension digit{-0.83}
+start_value vector{0 -4}
+}
+}
+}
+}
+font string{"default"}
+text string{"^"}
+}
+}
+}
+'VScrollbar::inc_arrow'{
+name string{"inc_arrow"}
+visible digit{0}
+geometry rectangle{0 187 4 5}
+children[1]{
+TextFace{
+name string{"TextFace"}
+actor_list[1]{
+VectorInterpolator{
+name string{"VectorInterpolator"}
+attribute_name string{"MWidget::translate"}
+section[1]{
+MVectorSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.6}
+tension digit{-0.83}
+end_value vector{0 4}
+}
+}
+}
+}
+font string{"default"}
+text string{"V"}
+}
+}
+}
+'VScrollbar::pinch'{
+name string{"pinch"}
+pack_expand_x digit{0}
+pack_fill_x digit{0}
+geometry rectangle{0 0 4 198}
+children[1]{
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{1 0 2 198}
+color[4]{
+RGBA{255 255 255 255}
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+RGBA{255 255 255 255}
+}
+}
+}
+}
+}
+display_policy digit{1}
+}
+}
+}
+SBox{
+name string{"hidden"}
+geometry rectangle{0 40 480 226}
+children[9]{
+TextFace{
+name string{"TextItem"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{0 28 480 22.03}
+font string{"default"}
+multiline digit{1}
+aligned digit{0}
+align digit{3}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+nextline_offset digit{4.7}
+}
+TextFace{
+name string{"TextItem_Center"}
+packable digit{1}
+geometry rectangle{8 28 452 23.14}
+font string{"default"}
+multiline digit{1}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+nextline_offset digit{4.7}
+}
+SBox{
+name string{"GraphItem"}
+packable digit{0}
+geometry rectangle{0 0 0 0}
+}
+Composite{
+name string{"TemplateIndex"}
+packable digit{1}
+geometry rectangle{0 0 480 226}
+cursor_target digit{0}
+children[4]{
+Composite{
+name string{"Graph"}
+geometry rectangle{0 0 172 226}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{41 33 90 140}
+image_path string{"image/gt5m/manual/coverart.png"}
+}
+TextFace{
+name string{"Version"}
+geometry rectangle{16.23 178 146 20}
+text_color RGBA{160 160 160 255}
+font string{"sanserif-r"}
+scale_x digit{0.714286}
+scale_y digit{0.714286}
+text string{"Version"}
+}
+}
+}
+Composite{
+name string{"IndexList"}
+geometry rectangle{172 28 288 198}
+clip digit{1}
+children[1]{
+ListBox{
+name string{"ListBox"}
+geometry rectangle{0 8 288 192}
+clip digit{0}
+direction digit{1}
+}
+}
+}
+TextFace{
+name string{"Title"}
+geometry rectangle{208 0 230 24}
+cursor_target digit{0}
+font string{"default"}
+align digit{3}
+key string{"CONTENTS"}
+}
+ColorFace{
+name string{"ColorFace1"}
+geometry rectangle{170 28 310 3.32}
+is_divide_color digit{1}
+x_divide[2]{
+digit{0.00980392}
+digit{0.0196078}
+}
+y_divide[1]{
+digit{0.500001}
+}
+color_divide[6]{
+[4]{
+RGBA{0 0 0 127}
+RGBA{0 0 0 127}
+RGBA{0 0 0 64}
+RGBA{0 0 0 0}
+}
+[4]{
+RGBA{0 0 0 127}
+RGBA{0 0 0 127}
+RGBA{0 0 0 64}
+RGBA{0 0 0 64}
+}
+[4]{
+RGBA{0 0 0 127}
+RGBA{0 0 0 127}
+RGBA{0 0 0 64}
+RGBA{0 0 0 64}
+}
+[4]{
+RGBA{0 0 0 0}
+RGBA{0 0 0 64}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+}
+[4]{
+RGBA{0 0 0 64}
+RGBA{0 0 0 64}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+}
+[4]{
+RGBA{0 0 0 64}
+RGBA{0 0 0 64}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+}
+}
+color[4]{
+RGBA{0 0 0 127}
+RGBA{0 0 0 127}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+}
+}
+}
+}
+HBox{
+name string{"IndexItem"}
+can_focus digit{1}
+geometry rectangle{172 34 288 24}
+cursor_align_x digit{0.047}
+children[2]{
+HBox{
+name string{"label"}
+is_face digit{1}
+packable digit{0}
+pack_pad_left digit{24}
+geometry rectangle{36 0 252 24}
+children[2]{
+SBox{
+name string{"label"}
+is_face digit{1}
+pack_shrink_x digit{1}
+geometry rectangle{0 0 24.43 24}
+children[1]{
+TextFace{
+name string{"label"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_shrink_x digit{1}
+pack_alignment_x digit{0}
+geometry rectangle{0 0 24.43 24}
+font string{"default"}
+align digit{3}
+text string{"000"}
+}
+}
+}
+SBox{
+name string{"DotLine"}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{24.43 22 227.57 2}
+children[1]{
+ImageFace{
+name string{"ImageFace"}
+}
+}
+}
+}
+}
+ImageFace{
+name string{"bg"}
+geometry rectangle{4.47 4.5 26.79 15}
+round digit{4}
+image_path string{"image/gt5m/manual/icon_book.png"}
+}
+}
+}
+Composite{
+name string{"Template01"}
+can_focus digit{1}
+packable digit{1}
+geometry rectangle{0 0 480 226}
+cursor_align_x digit{0.142}
+cursor_align_y digit{0.044}
+children[1]{
+Composite{
+name string{"Graph"}
+geometry rectangle{4 34 472 180}
+children[1]{
+ColorFace{
+name string{"ColorFace"}
+color[1]{
+RGBA{0 0 0 0}
+}
+}
+}
+}
+}
+}
+Composite{
+name string{"Template02"}
+can_focus digit{1}
+packable digit{1}
+geometry rectangle{0 0 480 226}
+cursor_align_x digit{0.142}
+cursor_align_y digit{0.044}
+children[3]{
+Composite{
+name string{"Graph"}
+geometry rectangle{0 28 212 198}
+children[1]{
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{20 25.78 180 105.19}
+color[1]{
+RGBA{0 0 0 0}
+}
+}
+}
+}
+ScrolledWindow{
+name string{"TextBox"}
+geometry rectangle{212 28 248 198}
+children[1]{
+ScrollClip{
+name string{"ScrollClip"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{0 6 248 192}
+children[1]{
+VBox{
+name string{"space"}
+geometry rectangle{0 0 248 192}
+clip digit{0}
+}
+}
+}
+}
+}
+ColorFace{
+name string{"ColorFace1"}
+geometry rectangle{0 28 480 3.32}
+is_divide_color digit{1}
+x_divide[1]{
+digit{0.0127119}
+}
+y_divide[1]{
+digit{0.500001}
+}
+color_divide[4]{
+[4]{
+RGBA{0 0 0 127}
+RGBA{0 0 0 127}
+RGBA{0 0 0 64}
+RGBA{0 0 0 0}
+}
+[4]{
+RGBA{0 0 0 127}
+RGBA{0 0 0 127}
+RGBA{0 0 0 64}
+RGBA{0 0 0 64}
+}
+[4]{
+RGBA{0 0 0 0}
+RGBA{0 0 0 64}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+}
+[4]{
+RGBA{0 0 0 64}
+RGBA{0 0 0 64}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+}
+}
+color[4]{
+RGBA{0 0 0 127}
+RGBA{0 0 0 127}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+}
+}
+}
+}
+Composite{
+name string{"Template03"}
+can_focus digit{1}
+packable digit{1}
+geometry rectangle{0 0 480 226}
+cursor_align_x digit{0.142}
+cursor_align_y digit{0.044}
+children[2]{
+ScrolledWindow{
+name string{"TextBox"}
+geometry rectangle{40 28 400 198}
+children[1]{
+ScrollClip{
+name string{"ScrollClip"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{0 6 400 192}
+cursor_align_x digit{0}
+cursor_align_y digit{0}
+cursor_angle digit{45}
+children[1]{
+VBox{
+name string{"space"}
+geometry rectangle{0 0 400 192}
+clip digit{0}
+}
+}
+}
+}
+}
+ColorFace{
+name string{"ColorFace1"}
+geometry rectangle{0 28 480 3.32}
+color[4]{
+RGBA{0 0 0 127}
+RGBA{0 0 0 127}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+}
+}
+}
+}
+Composite{
+name string{"Template04"}
+can_focus digit{1}
+packable digit{1}
+geometry rectangle{0 0 480 226}
+cursor_align_x digit{0.142}
+cursor_align_y digit{0.044}
+children[2]{
+ScrolledWindow{
+name string{"TextBox"}
+geometry rectangle{8 28 452 198}
+children[1]{
+ScrollClip{
+name string{"ScrollClip"}
+packable digit{1}
+pack_expand_x digit{1}
+pack_fill_x digit{1}
+geometry rectangle{0 6 452 192}
+cursor_align_x digit{0}
+cursor_align_y digit{0}
+cursor_angle digit{45}
+children[1]{
+VBox{
+name string{"space"}
+geometry rectangle{0 0 452 192}
+clip digit{0}
+}
+}
+}
+}
+}
+ColorFace{
+name string{"ColorFace1"}
+geometry rectangle{0 28 480 3.32}
+color[4]{
+RGBA{0 0 0 127}
+RGBA{0 0 0 127}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+}
+}
+}
+}
+}
+}
+TextFace{
+name string{"page_index"}
+geometry rectangle{360 12 60 20}
+font string{"default"}
+align digit{5}
+shadow_value digit{1}
+text string{"20 / 20"}
+}
+Composite{
+name string{"ManualItem"}
+visible digit{0}
+packable digit{1}
+}
+SBox{
+name string{"Header"}
+geometry rectangle{0 0 480 40}
+children[2]{
+TextFace{
+name string{"TextFace"}
+geometry rectangle{22 8 208 24}
+font string{"default"}
+align digit{3}
+scale_x digit{1.25}
+scale_y digit{1.25}
+shadow_value digit{1}
+localized_text_page string{"ManualGT5M"}
+key string{"00Index_a_Title"}
+}
+Composite{
+name string{"Exit"}
+can_focus digit{1}
+packable digit{1}
+focus digit{1}
+geometry rectangle{426 11 38 20}
+navigate_source region{-418 0 38 20}
+navigate_target region{-418 0 38 20}
+children[1]{
+ImageFace{
+name string{"ImageFace"}
+focus digit{1}
+image_path string{"image/gt5m/button/exit.png"}
+}
+}
+}
+}
+}
+'Tooltip::BalloonTip'{
+name string{"BalloonTip"}
+packable digit{1}
+children[1]{
+'Tooltip::BalloonTip::Tip'{
+name string{"Tip"}
+actor_list[2]{
+'Tooltip::BalloonTip::Tip::AppearEffect'{
+name string{"AppearEffect"}
+children[1]{
+'Tooltip::BalloonTip::Tip::AppearEffect::Scale'{
+name string{"Scale"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::VisibleEffect'{
+name string{"VisibleEffect"}
+}
+}
+children[3]{
+'Tooltip::BalloonTip::Tip::up_tip'{
+name string{"up_tip"}
+children[1]{
+'Tooltip::BalloonTip::Tip::up_tip::up_tip'{
+name string{"up_tip"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::Text'{
+name string{"Text"}
+children[2]{
+'Tooltip::BalloonTip::Tip::Text::ColorFace'{
+name string{"ColorFace"}
+}
+'Tooltip::BalloonTip::Tip::Text::TextFace'{
+name string{"TextFace"}
+}
+}
+}
+'Tooltip::BalloonTip::Tip::down_tip'{
+name string{"down_tip"}
+children[1]{
+'Tooltip::BalloonTip::Tip::down_tip::down_tip'{
+name string{"down_tip"}
+}
+}
+}
+}
+}
+}
+}
+ColorFace{
+name string{"Left"}
+geometry rectangle{0 0 4 272}
+color[4]{
+RGBA{50 50 50 255}
+RGBA{50 50 50 255}
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"Right"}
+geometry rectangle{476 0 4 272}
+color[4]{
+RGBA{50 50 50 255}
+RGBA{50 50 50 255}
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+}
+}
+ColorFace{
+name string{"ColorFace2"}
+has_script digit{1}
+alias_name string{"Header_ColorFace0"}
+geometry rectangle{0 0 480 32}
+is_divide_color digit{1}
+y_divide[4]{
+digit{0}
+digit{0.15}
+digit{0.4}
+digit{1}
+}
+color_divide[5]{
+[1]{
+RGBA{255 255 255 255}
+}
+[4]{
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+RGBA{68 68 68 200}
+RGBA{68 68 68 200}
+}
+[4]{
+RGBA{68 68 68 200}
+RGBA{68 68 68 200}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+}
+[4]{
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+RGBA{0 0 0 0}
+}
+[1]{
+RGBA{255 255 255 255}
+}
+}
+}
+}
+navigate_wraparound digit{0}
+}
+RootWindow{
+name string{"ManualItem"}
+children[1]{
+Composite{
+name string{"PageItem"}
+geometry rectangle{0 40 480 226}
+children[4]{
+Composite{
+name string{"Item01"}
+geometry rectangle{0 0 480 226}
+}
+Composite{
+name string{"Item02"}
+geometry rectangle{0 0 212 226}
+children[54]{
+Composite{
+name string{"Play_01"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 102}
+image_path string{"image/gt5m/manual/car_flower.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"Play_02"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[3]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 0 180 102}
+image_path string{"image/gt5m/bg/adhoc.png"}
+}
+Composite{
+name string{"Composite"}
+geometry rectangle{20 102 180 40}
+children[1]{
+ImageFace{
+name string{"ImageFace"}
+scale vector{1 -1}
+image_path string{"image/gt5m/bg/adhoc.png"}
+}
+}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"Begin_01"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 102}
+image_path string{"image/gt5m/manual/Begin_01.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"Begin_02"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 102}
+image_path string{"image/gt5m/manual/Begin_02.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"Begin_03"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 109}
+image_path string{"image/gt5m/manual/Begin_03.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"Begin_04"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+center vector{0 0.5}
+scale vector{0.9 0.9}
+image_path string{"image/gt5m/manual/Begin_04.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"Howto_01"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 181 103}
+image_path string{"image/gt5m/manual/JP/Howto_01.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+scale_x digit{0.821429}
+scale_y digit{0.821429}
+localized_text_page string{"ManualGT5M"}
+key string{"04Howto_c_cap01"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"Howto_02"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 6 180 130}
+image_path string{"image/gt5m/manual/JP/Howto_02.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+scale_x digit{0.821429}
+scale_y digit{0.821429}
+localized_text_page string{"ManualGT5M"}
+key string{"04Howto_c_cap02"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"Howto_021"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 102}
+image_path string{"image/gt5m/manual/JP/Howto021.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+scale_x digit{0.821429}
+scale_y digit{0.821429}
+localized_text_page string{"ManualGT5M"}
+key string{"04Howto_c_cap021"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"Howto_t021"}
+geometry rectangle{0 34 248 394}
+children[13]{
+Composite{
+name string{"Line01"}
+geometry rectangle{0 0 248 28}
+children[3]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{6 4 38 20}
+image_path string{"image/gt5m/button/start.png"}
+}
+TextFace{
+name string{"TextFace0"}
+geometry rectangle{58 4 190 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"04Howto_d_cap01"}
+adjust_scale digit{1}
+}
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{58 27 190 1}
+color[1]{
+RGBA{80 80 80 255}
+}
+}
+}
+}
+Composite{
+name string{"Line02"}
+geometry rectangle{0 28 248 28}
+children[3]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{6 4 38 20}
+image_path string{"image/gt5m/button/replay_load.png"}
+}
+TextFace{
+name string{"TextFace0"}
+geometry rectangle{58 4 190 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"04Howto_d_cap02"}
+adjust_scale digit{1}
+}
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{58 27 190 1}
+color[1]{
+RGBA{80 80 80 255}
+}
+}
+}
+}
+Composite{
+name string{"Line03"}
+geometry rectangle{0 56 248 28}
+children[3]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{6 4 38 20}
+image_path string{"image/gt5m/manual/icon_saveRep.png"}
+}
+TextFace{
+name string{"TextFace0"}
+geometry rectangle{58 4 190 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"04Howto_d_cap03"}
+adjust_scale digit{1}
+}
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{58 27 190 1}
+color[1]{
+RGBA{80 80 80 255}
+}
+}
+}
+}
+Composite{
+name string{"Line04"}
+geometry rectangle{0 84 248 28}
+children[3]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{6 4 38 20}
+image_path string{"image/gt5m/button/gohst_load.png"}
+}
+TextFace{
+name string{"TextFace0"}
+geometry rectangle{58 4 190 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"04Howto_d_cap04"}
+adjust_scale digit{1}
+}
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{58 27 190 1}
+color[1]{
+RGBA{80 80 80 255}
+}
+}
+}
+}
+Composite{
+name string{"Line05"}
+geometry rectangle{0 112 248 28}
+children[3]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{6 4 38 20}
+image_path string{"image/gt5m/manual/icon_saveGho.png"}
+}
+TextFace{
+name string{"TextFace0"}
+geometry rectangle{58 4 190 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"04Howto_d_cap05"}
+adjust_scale digit{1}
+}
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{58 27 190 1}
+color[1]{
+RGBA{80 80 80 255}
+}
+}
+}
+}
+Composite{
+name string{"Line06"}
+geometry rectangle{0 140 248 28}
+children[3]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{6 4 38 20}
+image_path string{"image/gt5m/manual/icon_optRace.png"}
+}
+TextFace{
+name string{"TextFace0"}
+geometry rectangle{58 4 190 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"04Howto_d_cap06"}
+adjust_scale digit{1}
+}
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{58 27 190 1}
+color[1]{
+RGBA{80 80 80 255}
+}
+}
+}
+}
+Composite{
+name string{"Line07"}
+geometry rectangle{0 168 248 28}
+children[3]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{6 4 38 20}
+image_path string{"image/gt5m/manual/icon_optCrs.png"}
+}
+TextFace{
+name string{"TextFace0"}
+geometry rectangle{58 4 190 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"04Howto_d_cap07"}
+adjust_scale digit{1}
+}
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{58 27 190 1}
+color[1]{
+RGBA{80 80 80 255}
+}
+}
+}
+}
+Composite{
+name string{"Line08"}
+geometry rectangle{0 196 248 28}
+children[3]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{6 4 38 20}
+image_path string{"image/gt5m/button/detail_opt_car.png"}
+}
+TextFace{
+name string{"TextFace0"}
+geometry rectangle{58 4 190 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"04Howto_d_cap08"}
+adjust_scale digit{1}
+}
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{58 27 190 1}
+color[1]{
+RGBA{80 80 80 255}
+}
+}
+}
+}
+Composite{
+name string{"Line09"}
+geometry rectangle{0 224 248 28}
+children[3]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{6 4 38 20}
+image_path string{"image/gt5m/button/detail_opt_mission.png"}
+}
+TextFace{
+name string{"TextFace0"}
+geometry rectangle{58 4 190 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"04Howto_d_cap09"}
+adjust_scale digit{1}
+}
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{58 27 190 1}
+color[1]{
+RGBA{80 80 80 255}
+}
+}
+}
+}
+Composite{
+name string{"Line10"}
+geometry rectangle{0 252 248 28}
+children[3]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{6 4 38 20}
+image_path string{"image/gt5m/button/example.png"}
+}
+TextFace{
+name string{"TextFace0"}
+geometry rectangle{58 4 190 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"04Howto_d_cap10"}
+adjust_scale digit{1}
+}
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{58 27 190 1}
+color[1]{
+RGBA{80 80 80 255}
+}
+}
+}
+}
+Composite{
+name string{"Line11"}
+geometry rectangle{0 280 248 28}
+children[3]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{6 4 38 20}
+image_path string{"image/gt5m/button/next_mission.png"}
+}
+TextFace{
+name string{"TextFace0"}
+geometry rectangle{58 4 190 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"04Howto_d_cap11"}
+adjust_scale digit{1}
+}
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{58 27 190 1}
+color[1]{
+RGBA{80 80 80 255}
+}
+}
+}
+}
+Composite{
+name string{"Line111"}
+geometry rectangle{0 308 248 28}
+children[3]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{6 4 38 20}
+image_path string{"image/gt5m/button/prev_mission.png"}
+}
+TextFace{
+name string{"TextFace0"}
+geometry rectangle{58 4 190 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+nextline_offset digit{11}
+localized_text_page string{"Balloon"}
+key string{"PrevLicense"}
+adjust_scale digit{1}
+}
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{58 27 190 1}
+color[1]{
+RGBA{80 80 80 255}
+}
+}
+}
+}
+Composite{
+name string{"Line12"}
+geometry rectangle{0 336 248 28}
+children[3]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{6 4 38 20}
+image_path string{"image/gt5m/button/exit_L.png"}
+}
+TextFace{
+name string{"TextFace0"}
+geometry rectangle{58 4 190 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"04Howto_d_cap12"}
+adjust_scale digit{1}
+}
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{58 27 190 1}
+color[1]{
+RGBA{80 80 80 255}
+}
+}
+}
+}
+}
+}
+Composite{
+name string{"Howto_03"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 102}
+image_path string{"image/gt5m/manual/Howto_03.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+scale_x digit{0.821429}
+scale_y digit{0.821429}
+localized_text_page string{"ManualGT5M"}
+key string{"04Howto_c_cap03"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"Howto_t03"}
+geometry rectangle{0 96 212 91}
+children[1]{
+Composite{
+name string{"Gear"}
+geometry rectangle{68 17 76 34}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+initial_pause digit{1}
+attribute_name string{"MWidget::translate_y"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeInCirc"}
+interpolation_period digit{0.2}
+end_value digit{74}
+}
+}
+}
+}
+children[6]{
+ImageFace{
+name string{"GearBase"}
+color[1]{
+RGBA{10 10 10 0}
+}
+image_path string{"image/gt5m/racedisplay/race_gearbase.png"}
+}
+ImageFace{
+name string{"GearSuggestedBox"}
+geometry rectangle{5 6 18 22}
+opacity digit{0.6}
+color[1]{
+RGBA{60 60 60 178}
+}
+image_path string{"image/gt5m/racedisplay/race_gearnumbox.png"}
+}
+ImageFace{
+name string{"GearNumberBox"}
+geometry rectangle{29 6 18 22}
+color[1]{
+RGBA{170 210 225 127}
+}
+image_path string{"image/gt5m/racedisplay/race_gearnumbox.png"}
+}
+ImageFace{
+name string{"GearAlertBase"}
+geometry rectangle{56 5 8 8}
+image_path string{"image/gt5m/racedisplay/race_gearalertbase.png"}
+}
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{7 8 14 18}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+section[2]{
+MScalarSection{
+interpolation_period digit{0.2}
+start_value digit{0.3}
+end_value digit{1}
+}
+MScalarSection{
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.2}
+start_value digit{0.3}
+end_value digit{1}
+}
+}
+}
+}
+image_path string{"image/gt5m/racedisplay/dummyGear3.png"}
+}
+ImageFace{
+name string{"ImageFace0"}
+geometry rectangle{31 8 14 18}
+image_path string{"image/gt5m/racedisplay/dummyGear4.png"}
+}
+}
+}
+}
+}
+Composite{
+name string{"Howto_04"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{65 28 82 106}
+scale vector{0.8 0.8}
+image_path string{"image/gt5m/manual/Howto_04.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+localized_text_page string{"ManualGT5M"}
+}
+}
+}
+Composite{
+name string{"Howto_041"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{65 28 82 106}
+scale vector{0.8 0.8}
+image_path string{"image/gt5m/manual/Howto_041.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+scale_x digit{0.821429}
+scale_y digit{0.821429}
+localized_text_page string{"ManualGT5M"}
+key string{"04Howto_c_cap05"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"Howto_05"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace0"}
+geometry rectangle{65 28 82 106}
+image_path string{"image/gt5m/manual/Howto_05.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+scale_x digit{0.821429}
+scale_y digit{0.821429}
+localized_text_page string{"ManualGT5M"}
+key string{"04Howto_c_cap06"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"Howto_06"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{59.5 20 93 102}
+image_path string{"image/gt5m/manual/UMD.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+scale_x digit{0.821429}
+scale_y digit{0.821429}
+localized_text_page string{"ManualGT5M"}
+key string{"04Howto_c_cap07"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"OneP_01"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+Composite{
+name string{"Icon"}
+is_face digit{1}
+geometry rectangle{58 32 96 92}
+children[2]{
+Composite{
+name string{"Shadow"}
+is_face digit{1}
+geometry rectangle{0 0 96 92}
+children[1]{
+ImageFace{
+name string{"board_shadow"}
+visible_compare digit{2}
+geometry rectangle{4 50 88 42}
+image_path string{"image/gt5m/panel/boad_shadow.png"}
+}
+}
+}
+Composite{
+name string{"Body"}
+is_face digit{1}
+geometry rectangle{0 0 96 92}
+children[2]{
+ImageFace{
+name string{"board"}
+geometry rectangle{0 36 96 42}
+image_path string{"image/gt5m/panel/boad_race.png"}
+}
+ImageFace{
+name string{"icon"}
+geometry rectangle{8 0 80 65.17}
+image_path string{"image/gt5m/icon/top_single.png"}
+}
+}
+}
+}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"OneP_011"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+Composite{
+name string{"DrivingModeSelect"}
+can_focus digit{1}
+tooltip digit{1}
+packable digit{1}
+geometry rectangle{61 38 90 69}
+tooltip_key string{"DrivingModeSelect"}
+children[4]{
+ColorFace{
+name string{"base"}
+opacity digit{0.4}
+is_divide_color digit{1}
+y_divide[5]{
+digit{0}
+digit{0.05}
+digit{0.4}
+digit{0.95}
+digit{1}
+}
+color_divide[6]{
+[4]{
+RGBA{66 66 71 255}
+RGBA{17 17 17 214}
+RGBA{17 17 17 214}
+RGBA{17 17 17 214}
+}
+[4]{
+RGBA{66 66 71 255}
+RGBA{66 66 71 255}
+RGBA{26 26 26 255}
+RGBA{26 26 26 255}
+}
+[4]{
+RGBA{26 26 26 255}
+RGBA{26 26 26 255}
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+}
+[1]{
+RGBA{0 0 0 255}
+}
+[4]{
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+RGBA{26 26 26 255}
+RGBA{26 26 26 255}
+}
+[4]{
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+RGBA{17 17 17 214}
+RGBA{17 17 17 214}
+}
+}
+color[1]{
+RGBA{17 17 17 214}
+}
+}
+ImageFace{
+name string{"env"}
+geometry rectangle{0 0 90 32}
+opacity digit{0.8}
+image_path string{"image/gt5m/panel/arc_env.png"}
+}
+ImageFace{
+name string{"No_select"}
+geometry rectangle{18 13.5 54 42}
+image_path string{"image/gt5m/icon/arc_mode.png"}
+}
+Composite{
+name string{"no_lock"}
+is_face digit{1}
+geometry rectangle{0 0 90 69}
+children[4]{
+ImageFace{
+name string{"changeL"}
+geometry rectangle{-8 0 24 32}
+opacity digit{0.6}
+image_path string{"image/gt5m/panel/arc_change_L.png"}
+}
+ImageFace{
+name string{"changeL_f"}
+geometry rectangle{-8 0 24 32}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeOutQuart"}
+interpolation_period digit{0.8}
+end_value digit{1}
+}
+}
+}
+}
+image_path string{"image/gt5m/panel/arc_change_L_a.png"}
+}
+ImageFace{
+name string{"changeR"}
+geometry rectangle{74 37 24 32}
+opacity digit{0.6}
+image_path string{"image/gt5m/panel/arc_change_R.png"}
+}
+ImageFace{
+name string{"changeR_f"}
+geometry rectangle{74 36.53 24 32}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeOutQuart"}
+interpolation_period digit{0.8}
+end_value digit{1}
+}
+}
+}
+}
+image_path string{"image/gt5m/panel/arc_change_R_a.png"}
+}
+}
+}
+}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"OneP_02"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+Composite{
+name string{"CarSelect"}
+can_focus digit{1}
+tooltip digit{1}
+geometry rectangle{61 38 90 69}
+tooltip_key string{"CarSelect"}
+children[4]{
+ColorFace{
+name string{"base"}
+opacity digit{0.4}
+is_divide_color digit{1}
+y_divide[5]{
+digit{0}
+digit{0.05}
+digit{0.4}
+digit{0.95}
+digit{1}
+}
+color_divide[6]{
+[4]{
+RGBA{66 66 71 255}
+RGBA{17 17 17 214}
+RGBA{17 17 17 214}
+RGBA{17 17 17 214}
+}
+[4]{
+RGBA{66 66 71 255}
+RGBA{66 66 71 255}
+RGBA{26 26 26 255}
+RGBA{26 26 26 255}
+}
+[4]{
+RGBA{26 26 26 255}
+RGBA{26 26 26 255}
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+}
+[1]{
+RGBA{0 0 0 255}
+}
+[4]{
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+RGBA{26 26 26 255}
+RGBA{26 26 26 255}
+}
+[4]{
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+RGBA{17 17 17 214}
+RGBA{17 17 17 214}
+}
+}
+color[1]{
+RGBA{17 17 17 214}
+}
+}
+ImageFace{
+name string{"env"}
+geometry rectangle{0 0 90 32}
+opacity digit{0.8}
+image_path string{"image/gt5m/panel/arc_env.png"}
+}
+ImageFace{
+name string{"No_select"}
+geometry rectangle{18 13.5 54 42}
+image_path string{"image/gt5m/icon/arc_car.png"}
+}
+Composite{
+name string{"no_lock"}
+is_face digit{1}
+geometry rectangle{0 0 90 69}
+children[4]{
+ImageFace{
+name string{"changeL"}
+geometry rectangle{-8 0 24 32}
+opacity digit{0.6}
+image_path string{"image/gt5m/panel/arc_change_L.png"}
+}
+ImageFace{
+name string{"changeL_f"}
+geometry rectangle{-8 0 24 32}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeOutQuart"}
+interpolation_period digit{0.8}
+end_value digit{1}
+}
+}
+}
+}
+image_path string{"image/gt5m/panel/arc_change_L_a.png"}
+}
+ImageFace{
+name string{"changeR"}
+geometry rectangle{74 37 24 32}
+opacity digit{0.6}
+image_path string{"image/gt5m/panel/arc_change_R.png"}
+}
+ImageFace{
+name string{"changeR_f"}
+geometry rectangle{74 36.53 24 32}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeOutQuart"}
+interpolation_period digit{0.8}
+end_value digit{1}
+}
+}
+}
+}
+image_path string{"image/gt5m/panel/arc_change_R_a.png"}
+}
+}
+}
+}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"OneP_03"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+Composite{
+name string{"CourseSelect"}
+can_focus digit{1}
+tooltip digit{1}
+packable digit{1}
+geometry rectangle{61 38 90 69}
+tooltip_key string{"CourseSelect"}
+children[4]{
+ColorFace{
+name string{"base"}
+opacity digit{0.4}
+is_divide_color digit{1}
+y_divide[5]{
+digit{0}
+digit{0.05}
+digit{0.4}
+digit{0.95}
+digit{1}
+}
+color_divide[6]{
+[4]{
+RGBA{66 66 71 255}
+RGBA{17 17 17 214}
+RGBA{17 17 17 214}
+RGBA{17 17 17 214}
+}
+[4]{
+RGBA{66 66 71 255}
+RGBA{66 66 71 255}
+RGBA{26 26 26 255}
+RGBA{26 26 26 255}
+}
+[4]{
+RGBA{26 26 26 255}
+RGBA{26 26 26 255}
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+}
+[1]{
+RGBA{0 0 0 255}
+}
+[4]{
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+RGBA{26 26 26 255}
+RGBA{26 26 26 255}
+}
+[4]{
+RGBA{0 0 0 255}
+RGBA{0 0 0 255}
+RGBA{17 17 17 214}
+RGBA{17 17 17 214}
+}
+}
+color[1]{
+RGBA{17 17 17 214}
+}
+}
+ImageFace{
+name string{"env"}
+geometry rectangle{0 0 90 32}
+opacity digit{0.8}
+image_path string{"image/gt5m/panel/arc_env.png"}
+}
+ImageFace{
+name string{"No_select"}
+geometry rectangle{18 13.5 54 42}
+image_path string{"image/gt5m/icon/arc_course.png"}
+}
+Composite{
+name string{"no_lock"}
+is_face digit{1}
+geometry rectangle{0 0 90 69}
+children[4]{
+ImageFace{
+name string{"changeL"}
+geometry rectangle{-8 0 24 32}
+opacity digit{0.6}
+image_path string{"image/gt5m/panel/arc_change_L.png"}
+}
+ImageFace{
+name string{"changeL_f"}
+geometry rectangle{-8 0 24 32}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeOutQuart"}
+interpolation_period digit{0.8}
+end_value digit{1}
+}
+}
+}
+}
+image_path string{"image/gt5m/panel/arc_change_L_a.png"}
+}
+ImageFace{
+name string{"changeR"}
+geometry rectangle{74 37 24 32}
+opacity digit{0.6}
+image_path string{"image/gt5m/panel/arc_change_R.png"}
+}
+ImageFace{
+name string{"changeR_f"}
+geometry rectangle{74 36.53 24 32}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+section[1]{
+MScalarSection{
+ease_type_name string{"easeOutQuart"}
+interpolation_period digit{0.8}
+end_value digit{1}
+}
+}
+}
+}
+image_path string{"image/gt5m/panel/arc_change_R_a.png"}
+}
+}
+}
+}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"OneP_04"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 126}
+image_path string{"image/gt5m/flyer/mode_singlerace.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"OneP_05"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 126}
+image_path string{"image/gt5m/flyer/mode_freerun.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"OneP_051"}
+geometry rectangle{0 34 212 36}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[1]{
+Composite{
+name string{"NextlapInvalid"}
+geometry rectangle{15 0 182 16}
+children[2]{
+TextFace{
+name string{"TextFace"}
+geometry rectangle{28 0 154 16}
+text_color RGBA{255 117 117 255}
+font string{"default"}
+align digit{3}
+scale_x digit{0.8}
+scale_y digit{0.8}
+shadow_value digit{1}
+shadow_color RGBA{0 0 0 204}
+localized_text_page string{"ManualGT5M"}
+key string{"05OneP_c_cap02"}
+}
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{8 0 16 16}
+image_path string{"image/gt5m/racedisplay/info_alert.png"}
+}
+}
+}
+}
+}
+Composite{
+name string{"OneP_06"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 126}
+image_path string{"image/gt5m/flyer/mode_drift.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"Multi_01"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+Composite{
+name string{"Icon"}
+is_face digit{1}
+geometry rectangle{58 32 96 92}
+children[2]{
+Composite{
+name string{"Shadow"}
+is_face digit{1}
+geometry rectangle{0 0 96 92}
+children[1]{
+ImageFace{
+name string{"board_shadow"}
+visible_compare digit{2}
+geometry rectangle{4 50 88 42}
+image_path string{"image/gt5m/panel/boad_shadow.png"}
+}
+}
+}
+Composite{
+name string{"Body"}
+is_face digit{1}
+geometry rectangle{0 0 96 92}
+children[2]{
+ImageFace{
+name string{"board"}
+geometry rectangle{0 36 96 42}
+image_path string{"image/gt5m/panel/boad_race.png"}
+}
+ImageFace{
+name string{"icon"}
+geometry rectangle{8 0 80 68}
+image_path string{"image/gt5m/icon/top_online.png"}
+}
+}
+}
+}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"Multi_02"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 126}
+image_path string{"image/gt5m/flyer/adhoc_battle.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"Multi_03"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 102}
+image_path string{"image/gt5m/manual/JP/AdhocRace.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+scale_x digit{0.821429}
+scale_y digit{0.821429}
+localized_text_page string{"ManualGT5M"}
+key string{"06MultiP_c_cap02"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"Multi_04"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 102}
+image_path string{"image/gt5m/manual/temp.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+localized_text_page string{"ManualGT5M"}
+}
+}
+}
+Composite{
+name string{"Multi_05"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 126}
+image_path string{"image/gt5m/flyer/adhoc_professional.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"Multi_06"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 126}
+image_path string{"image/gt5m/flyer/adhoc_amateur.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"Multi_07"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 126}
+image_path string{"image/gt5m/flyer/adhoc_shuffle.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"Multi_08"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[3]{
+ImageFace{
+name string{"ImageFace0"}
+geometry rectangle{90 65 32 32}
+image_path string{"image/gt5m/racedisplay/JP_tip.png"}
+}
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{52 50 108 36}
+image_path string{"image/gt5m/racedisplay/JP_LOGO.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+scale_x digit{0.821429}
+scale_y digit{0.821429}
+localized_text_page string{"ManualGT5M"}
+key string{"06MultiP_c_cap03"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"Multi_081"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 126}
+image_path string{"image/gt5m/flyer/adhoc_share_trade.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"Multi_09"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[3]{
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+Composite{
+name string{"view1"}
+geometry rectangle{0 0 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+section[2]{
+MScalarSection{
+ease_type_name string{"easeOutCubic"}
+end_duration digit{1}
+interpolation_period digit{0.25}
+end_value digit{1}
+}
+MScalarSection{
+ease_type_name string{"easeOutCubic"}
+increase_mode_name string{"decrease"}
+end_duration digit{1.5}
+interpolation_period digit{0.25}
+end_value digit{1}
+}
+}
+}
+}
+children[1]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 126}
+image_path string{"image/gt5m/flyer/adhoc_give.png"}
+}
+}
+}
+Composite{
+name string{"view4"}
+geometry rectangle{0 0 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+section[2]{
+MScalarSection{
+ease_type_name string{"easeOutCubic"}
+start_duration digit{1.5}
+end_duration digit{1}
+interpolation_period digit{0.25}
+end_value digit{1}
+}
+MScalarSection{
+ease_type_name string{"easeOutCubic"}
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.25}
+end_value digit{1}
+}
+}
+}
+}
+children[1]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 126}
+image_path string{"image/gt5m/flyer/adhoc_take.png"}
+}
+}
+}
+}
+}
+Composite{
+name string{"Multi_10"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace0"}
+geometry rectangle{20 20 180 126}
+image_path string{"image/gt5m/flyer/adhoc_trade.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"Multi_11"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace0"}
+geometry rectangle{65 28 82 106}
+image_path string{"image/gt5m/manual/multi03.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"Mission_01"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+Composite{
+name string{"Icon"}
+is_face digit{1}
+geometry rectangle{58 32 96 92}
+children[2]{
+Composite{
+name string{"Shadow"}
+is_face digit{1}
+geometry rectangle{0 0 96 92}
+children[1]{
+ImageFace{
+name string{"board_shadow"}
+visible_compare digit{2}
+geometry rectangle{4 50 88 42}
+image_path string{"image/gt5m/panel/boad_shadow.png"}
+}
+}
+}
+Composite{
+name string{"Body"}
+is_face digit{1}
+geometry rectangle{0 0 96 92}
+children[2]{
+ImageFace{
+name string{"board"}
+geometry rectangle{0 36 96 42}
+image_path string{"image/gt5m/panel/boad_race.png"}
+}
+ImageFace{
+name string{"icon"}
+geometry rectangle{8 0 80 68}
+image_path string{"image/gt5m/icon/top_mission.png"}
+}
+}
+}
+}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+localized_text_page string{"ManualGT5M"}
+}
+}
+}
+Composite{
+name string{"Mission_02"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace0"}
+geometry rectangle{65 28 82 106}
+image_path string{"image/gt5m/manual/MIssion02.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+scale_x digit{0.821429}
+scale_y digit{0.821429}
+localized_text_page string{"ManualGT5M"}
+key string{"07Mission_c_cap02"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"AboutCar_01"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 102}
+image_path string{"image/gt5m/manual/JP/Aboutcar01.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+scale_x digit{0.821429}
+scale_y digit{0.821429}
+localized_text_page string{"ManualGT5M"}
+key string{"08AboutCar_c_cap01"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"AboutCar_02"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace0"}
+geometry rectangle{65 28 82 106}
+image_path string{"image/gt5m/manual/Aboutcar02.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+scale_x digit{0.821429}
+scale_y digit{0.821429}
+localized_text_page string{"ManualGT5M"}
+key string{"08AboutCar_c_cap02"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"AboutCar_03"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 102}
+image_path string{"image/gt5m/manual/temp.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+localized_text_page string{"ManualGT5M"}
+}
+}
+}
+Composite{
+name string{"Status_01"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+Composite{
+name string{"Icon"}
+is_face digit{1}
+geometry rectangle{58 32 96 92}
+children[2]{
+Composite{
+name string{"Shadow"}
+is_face digit{1}
+geometry rectangle{0 0 96 92}
+children[1]{
+ImageFace{
+name string{"board_shadow"}
+visible_compare digit{2}
+geometry rectangle{4 50 88 42}
+image_path string{"image/gt5m/panel/boad_shadow.png"}
+}
+}
+}
+Composite{
+name string{"Body"}
+is_face digit{1}
+geometry rectangle{0 0 96 92}
+children[2]{
+ImageFace{
+name string{"board"}
+geometry rectangle{0 36 96 42}
+image_path string{"image/gt5m/panel/boad.png"}
+}
+ImageFace{
+name string{"icon"}
+geometry rectangle{8 0 80 68}
+image_path string{"image/gt5m/icon/top_status.png"}
+}
+}
+}
+}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"Theater_01"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+Composite{
+name string{"Icon"}
+is_face digit{1}
+geometry rectangle{58 32 96 92}
+children[2]{
+Composite{
+name string{"Shadow"}
+is_face digit{1}
+geometry rectangle{0 0 96 92}
+children[1]{
+ImageFace{
+name string{"board_shadow"}
+visible_compare digit{2}
+geometry rectangle{4 50 88 42}
+image_path string{"image/gt5m/panel/boad_shadow.png"}
+}
+}
+}
+Composite{
+name string{"Body"}
+is_face digit{1}
+geometry rectangle{0 0 96 92}
+children[2]{
+ImageFace{
+name string{"board"}
+geometry rectangle{0 36 96 42}
+image_path string{"image/gt5m/panel/boad.png"}
+}
+ImageFace{
+name string{"icon"}
+geometry rectangle{8 0 80 68}
+image_path string{"image/gt5m/icon/top_theater.png"}
+}
+}
+}
+}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"Option_01"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+Composite{
+name string{"Icon"}
+is_face digit{1}
+geometry rectangle{58 32 96 92}
+children[2]{
+Composite{
+name string{"Shadow"}
+is_face digit{1}
+geometry rectangle{0 0 96 92}
+children[1]{
+ImageFace{
+name string{"board_shadow"}
+visible_compare digit{2}
+geometry rectangle{4 50 88 42}
+image_path string{"image/gt5m/panel/boad_shadow.png"}
+}
+}
+}
+Composite{
+name string{"Body"}
+is_face digit{1}
+geometry rectangle{0 0 96 92}
+children[2]{
+ImageFace{
+name string{"board"}
+geometry rectangle{0 36 96 42}
+image_path string{"image/gt5m/panel/boad.png"}
+}
+ImageFace{
+name string{"icon"}
+geometry rectangle{8 0 80 68}
+image_path string{"image/gt5m/icon/top_option.png"}
+}
+}
+}
+}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"Dealer_01"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+Composite{
+name string{"Icon"}
+is_face digit{1}
+geometry rectangle{58 32 96 92}
+children[2]{
+Composite{
+name string{"Shadow"}
+is_face digit{1}
+geometry rectangle{0 0 96 92}
+children[1]{
+ImageFace{
+name string{"board_shadow"}
+visible_compare digit{2}
+geometry rectangle{4 50 88 42}
+image_path string{"image/gt5m/panel/boad_shadow.png"}
+}
+}
+}
+Composite{
+name string{"Body"}
+is_face digit{1}
+geometry rectangle{0 0 96 92}
+children[2]{
+ImageFace{
+name string{"board"}
+geometry rectangle{0 36 96 42}
+image_path string{"image/gt5m/panel/boad.png"}
+}
+ImageFace{
+name string{"icon"}
+geometry rectangle{8 0 80 68}
+image_path string{"image/gt5m/icon/top_dealer.png"}
+}
+}
+}
+}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"Ope_01"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace0"}
+geometry rectangle{65 28 82 106}
+image_path string{"image/gt5m/manual/opt02.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"Ope_02"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[4]{
+Composite{
+name string{"view1"}
+geometry rectangle{0 0 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+section[2]{
+MScalarSection{
+ease_type_name string{"easeOutCubic"}
+end_duration digit{1}
+interpolation_period digit{0.25}
+end_value digit{1}
+}
+MScalarSection{
+ease_type_name string{"easeOutCubic"}
+increase_mode_name string{"decrease"}
+end_duration digit{4.5}
+interpolation_period digit{0.25}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 102}
+image_path string{"image/gt5m/manual/view1.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+scale_x digit{0.821429}
+scale_y digit{0.821429}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_c_cap01"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"view2"}
+geometry rectangle{0 0 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+section[2]{
+MScalarSection{
+ease_type_name string{"easeOutCubic"}
+start_duration digit{1.5}
+end_duration digit{1}
+interpolation_period digit{0.25}
+end_value digit{1}
+}
+MScalarSection{
+ease_type_name string{"easeOutCubic"}
+increase_mode_name string{"decrease"}
+end_duration digit{3}
+interpolation_period digit{0.25}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 102}
+image_path string{"image/gt5m/manual/view2.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+scale_x digit{0.821429}
+scale_y digit{0.821429}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_c_cap02"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"view3"}
+geometry rectangle{0 0 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+section[2]{
+MScalarSection{
+ease_type_name string{"easeOutCubic"}
+start_duration digit{3}
+end_duration digit{1}
+interpolation_period digit{0.25}
+end_value digit{1}
+}
+MScalarSection{
+ease_type_name string{"easeOutCubic"}
+increase_mode_name string{"decrease"}
+end_duration digit{1.5}
+interpolation_period digit{0.25}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 102}
+image_path string{"image/gt5m/manual/view3.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+scale_x digit{0.821429}
+scale_y digit{0.821429}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_c_cap031"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"view4"}
+geometry rectangle{0 0 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+section[2]{
+MScalarSection{
+ease_type_name string{"easeOutCubic"}
+start_duration digit{4.5}
+end_duration digit{1}
+interpolation_period digit{0.25}
+end_value digit{1}
+}
+MScalarSection{
+ease_type_name string{"easeOutCubic"}
+increase_mode_name string{"decrease"}
+interpolation_period digit{0.25}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 102}
+image_path string{"image/gt5m/manual/view4.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+scale_x digit{0.821429}
+scale_y digit{0.821429}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_c_cap04"}
+adjust_scale digit{1}
+}
+}
+}
+}
+}
+Composite{
+name string{"Ope_03"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 102}
+image_path string{"image/gt5m/manual/JP/Ope03.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+scale_x digit{0.821429}
+scale_y digit{0.821429}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_c_cap05"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"Ope_04"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 102}
+image_path string{"image/gt5m/manual/temp.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_c_cap06"}
+}
+}
+}
+Composite{
+name string{"Ope_05"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 102}
+image_path string{"image/gt5m/manual/Ope05.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+scale_x digit{0.821429}
+scale_y digit{0.821429}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_c_cap07"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"Ope_t06"}
+geometry rectangle{0 34 248 280}
+children[11]{
+Composite{
+name string{"Line01"}
+geometry rectangle{0 0 248 22}
+children[4]{
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{0 0 123 20}
+color[1]{
+RGBA{40 40 40 255}
+}
+}
+ColorFace{
+name string{"ColorFace0"}
+geometry rectangle{125 0 123 20}
+color[1]{
+RGBA{40 40 40 255}
+}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{3 1 118 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.678571}
+scale_y digit{0.678571}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_d_cap01"}
+adjust_scale digit{1}
+}
+TextFace{
+name string{"TextFace0"}
+geometry rectangle{128 1 118 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.678571}
+scale_y digit{0.678571}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_e_cap01"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"Line02"}
+geometry rectangle{0 22 248 22}
+children[4]{
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{0 0 123 20}
+color[1]{
+RGBA{60 60 60 255}
+}
+}
+ColorFace{
+name string{"ColorFace0"}
+geometry rectangle{125 0 123 20}
+color[1]{
+RGBA{60 60 60 255}
+}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{3 1 118 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.678571}
+scale_y digit{0.678571}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_d_cap02"}
+adjust_scale digit{1}
+}
+TextFace{
+name string{"TextFace0"}
+geometry rectangle{128 1 118 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.678571}
+scale_y digit{0.678571}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_e_cap02"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"Line03"}
+geometry rectangle{0 44 248 22}
+children[4]{
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{0 0 123 20}
+color[1]{
+RGBA{40 40 40 255}
+}
+}
+ColorFace{
+name string{"ColorFace0"}
+geometry rectangle{125 0 123 20}
+color[1]{
+RGBA{40 40 40 255}
+}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{3 1 118 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.678571}
+scale_y digit{0.678571}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_d_cap03"}
+adjust_scale digit{1}
+}
+TextFace{
+name string{"TextFace0"}
+geometry rectangle{128 1 118 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.678571}
+scale_y digit{0.678571}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_e_cap03"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"Line04"}
+geometry rectangle{0 66 248 22}
+children[4]{
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{0 0 123 20}
+color[1]{
+RGBA{60 60 60 255}
+}
+}
+ColorFace{
+name string{"ColorFace0"}
+geometry rectangle{125 0 123 20}
+color[1]{
+RGBA{60 60 60 255}
+}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{3 1 118 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.678571}
+scale_y digit{0.678571}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_d_cap04"}
+adjust_scale digit{1}
+}
+TextFace{
+name string{"TextFace0"}
+geometry rectangle{128 1 118 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.678571}
+scale_y digit{0.678571}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_e_cap04"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"Line05"}
+geometry rectangle{0 88 248 22}
+children[4]{
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{0 0 123 20}
+color[1]{
+RGBA{40 40 40 255}
+}
+}
+ColorFace{
+name string{"ColorFace0"}
+geometry rectangle{125 0 123 20}
+color[1]{
+RGBA{40 40 40 255}
+}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{3 1 118 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.678571}
+scale_y digit{0.678571}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_d_cap05"}
+adjust_scale digit{1}
+}
+TextFace{
+name string{"TextFace0"}
+geometry rectangle{128 1 118 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.678571}
+scale_y digit{0.678571}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_e_cap05"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"Line06"}
+geometry rectangle{0 110 248 22}
+children[4]{
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{0 0 123 20}
+color[1]{
+RGBA{60 60 60 255}
+}
+}
+ColorFace{
+name string{"ColorFace0"}
+geometry rectangle{125 0 123 20}
+color[1]{
+RGBA{60 60 60 255}
+}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{3 1 118 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.678571}
+scale_y digit{0.678571}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_d_cap06"}
+adjust_scale digit{1}
+}
+TextFace{
+name string{"TextFace0"}
+geometry rectangle{128 1 118 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.678571}
+scale_y digit{0.678571}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_e_cap06"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"Line07"}
+geometry rectangle{0 132 248 22}
+children[4]{
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{0 0 123 20}
+color[1]{
+RGBA{40 40 40 255}
+}
+}
+ColorFace{
+name string{"ColorFace0"}
+geometry rectangle{125 0 123 20}
+color[1]{
+RGBA{40 40 40 255}
+}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{3 1 118 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.678571}
+scale_y digit{0.678571}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_d_cap07"}
+adjust_scale digit{1}
+}
+TextFace{
+name string{"TextFace0"}
+geometry rectangle{128 1 118 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.678571}
+scale_y digit{0.678571}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_e_cap07"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"Line08"}
+geometry rectangle{0 154 248 22}
+children[4]{
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{0 0 123 20}
+color[1]{
+RGBA{60 60 60 255}
+}
+}
+ColorFace{
+name string{"ColorFace0"}
+geometry rectangle{125 0 123 20}
+color[1]{
+RGBA{60 60 60 255}
+}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{3 1 118 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.678571}
+scale_y digit{0.678571}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_d_cap08"}
+adjust_scale digit{1}
+}
+TextFace{
+name string{"TextFace0"}
+geometry rectangle{128 1 118 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.678571}
+scale_y digit{0.678571}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_e_cap08"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"Line09"}
+geometry rectangle{0 176 248 22}
+children[4]{
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{0 0 123 20}
+color[1]{
+RGBA{40 40 40 255}
+}
+}
+ColorFace{
+name string{"ColorFace0"}
+geometry rectangle{125 0 123 20}
+color[1]{
+RGBA{40 40 40 255}
+}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{3 1 118 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.678571}
+scale_y digit{0.678571}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_d_cap09"}
+adjust_scale digit{1}
+}
+TextFace{
+name string{"TextFace0"}
+geometry rectangle{128 1 118 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.678571}
+scale_y digit{0.678571}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_e_cap09"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"Line10"}
+geometry rectangle{0 198 248 22}
+children[4]{
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{0 0 123 20}
+color[1]{
+RGBA{60 60 60 255}
+}
+}
+ColorFace{
+name string{"ColorFace0"}
+geometry rectangle{125 0 123 20}
+color[1]{
+RGBA{60 60 60 255}
+}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{3 1 118 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.678571}
+scale_y digit{0.678571}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_d_cap10"}
+adjust_scale digit{1}
+}
+TextFace{
+name string{"TextFace0"}
+geometry rectangle{128 1 118 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.678571}
+scale_y digit{0.678571}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_e_cap10"}
+adjust_scale digit{1}
+}
+}
+}
+Composite{
+name string{"Line11"}
+geometry rectangle{0 220 248 22}
+children[4]{
+ColorFace{
+name string{"ColorFace"}
+geometry rectangle{0 0 123 20}
+color[1]{
+RGBA{40 40 40 255}
+}
+}
+ColorFace{
+name string{"ColorFace0"}
+geometry rectangle{125 0 123 20}
+color[1]{
+RGBA{40 40 40 255}
+}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{3 1 118 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.678571}
+scale_y digit{0.678571}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_d_cap11"}
+adjust_scale digit{1}
+}
+TextFace{
+name string{"TextFace0"}
+geometry rectangle{128 1 118 28}
+font string{"default"}
+align digit{3}
+scale_x digit{0.678571}
+scale_y digit{0.678571}
+nextline_offset digit{11}
+localized_text_page string{"ManualGT5M"}
+key string{"041Operate_e_cap11"}
+adjust_scale digit{1}
+}
+}
+}
+}
+}
+Composite{
+name string{"Option_02"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace0"}
+geometry rectangle{65 28 82 106}
+image_path string{"image/gt5m/manual/opt02.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"Option_03"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace0"}
+geometry rectangle{65 28 82 106}
+image_path string{"image/gt5m/manual/opt03.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+Composite{
+name string{"Option_04"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace0"}
+geometry rectangle{65 28 82 106}
+image_path string{"image/gt5m/manual/opt04.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+}
+}
+Composite{
+name string{"Item03"}
+geometry rectangle{0 0 480 226}
+children[2]{
+Composite{
+name string{"Credit_01"}
+geometry rectangle{0 34 480 192}
+children[1]{
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 0 440 192}
+font string{"default"}
+align digit{1}
+scale_x digit{0.857143}
+scale_y digit{0.857143}
+nextline_offset digit{4.7}
+text string{"Credit_01"}
+}
+}
+}
+Composite{
+name string{"Credit_02"}
+geometry rectangle{40 15 400 199}
+children[1]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{0 42 400 112}
+image_path string{"image/gt5m/manual/creditLogo.png"}
+}
+}
+}
+}
+}
+Composite{
+name string{"Item04"}
+geometry rectangle{0 0 480 226}
+children[1]{
+Composite{
+name string{"Begin_03"}
+geometry rectangle{0 34 212 192}
+actor_list[1]{
+ScalarInterpolator{
+name string{"ScalarInterpolator"}
+attribute_name string{"MWidget::opacity"}
+loop_count digit{1}
+section[1]{
+MScalarSection{
+interpolation_period digit{0.5}
+end_value digit{1}
+}
+}
+}
+}
+children[2]{
+ImageFace{
+name string{"ImageFace"}
+geometry rectangle{20 20 180 109}
+image_path string{"image/gt5m/manual/Begin_03.png"}
+}
+TextFace{
+name string{"TextFace"}
+geometry rectangle{20 135 180 20}
+font string{"default"}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}
+}

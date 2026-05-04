@@ -1,0 +1,26 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+module PROJECT
+{
+    method onLoad(context)
+    {
+        
+    }
+
+    method onUnload(context)
+    {
+
+    }
+}

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "cross-fetch": "^4.1.0",
+    "ws": "^8.20.0"
+  }
+}

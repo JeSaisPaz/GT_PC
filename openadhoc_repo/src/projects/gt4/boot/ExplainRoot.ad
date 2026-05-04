@@ -1,0 +1,72 @@
+
+
+
+
+
+
+
+
+
+module PROJECT::ROOT
+{
+    Arrow.actor = main::menu::MMoveActor(Arrow, Arrow.x - 16.0, Arrow.y + 32.0);
+    Arrow.actor.repeat = true;
+    Arrow.actor.flip = true;
+    Arrow.actor.linear = true;
+    Arrow.actor.ratio = 0.1;
+
+    function onInitialize(context)
+    {
+        context.pushEvent(main::menu::MScriptEvent(context, ROOT, "init"));
+        Arrow.visible = false;
+    }
+
+    function onFinalize(context)
+    {
+
+    }
+
+    function init(context)
+    {
+        setMcAccessIndicator(Memorycard);
+
+        openConfirmDialog(context, DIALOG_OK, context.translate(ROOT, "gt4 use autosave"));
+
+        Arrow.visible = true;
+        beginAccessIndicator(true);
+
+        openConfirmDialog(context, DIALOG_OK, context.translate(ROOT, "kounaru"));
+        openConfirmDialog(context, DIALOG_OK, context.translate(ROOT, "dont unplug"));
+
+        endAccessIndicator();
+        Arrow.visible = false;
+
+        if (main::menu::MSystem::GetRegionCode() != "tw" && 
+#ifdef GT4O_US_BETA
+            main::menu::MSystem::GetRegionCode() != "cn" && main::menu::MSystem::GetVersionBranch() != "beta" &&
+#endif
+            openConfirmDialog(context, DIALOG_QUERY, context.translate(ROOT, "GT savedate is available")))
+        {
+            var end_flg = false;
+            while (!end_flg)
+            {
+                if (main::menu::MSystem::GetRegionCode() != "kr")
+                    openConfirmDialog(context, DIALOG_OK, context.translate(ROOT, "GT3 savedata is available").format(main::menu::MUtility::GetMoneyString(100000)));
+
+                openConfirmDialog(context, DIALOG_OK, context.translate(ROOT, "GT4P savedata is available"));
+
+                openConfirmDialog(context, DIALOG_OK, context.translate(ROOT, "goto STATUS"));
+                end_flg = openConfirmDialog(context, DIALOG_QUERY, context.translate(ROOT, "introduction done"), nil,
+                    context.translate(ROOT, "start game"),
+                    context.translate(ROOT, "again"));
+            }
+        }
+
+        exitBootSequence(context);
+    }
+
+    function onCancel(context, event, item)
+    {
+        return EVENTRESULT_FILTER;
+    }
+}

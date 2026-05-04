@@ -1,0 +1,17 @@
+//---------------------------------------------------------------------------------------
+// custom_hud / main.ad
+// Example: react to race start/end events.
+//---------------------------------------------------------------------------------------
+
+#include "../../core/mod_sdk.inc"
+
+function _mod_init()
+{
+    MOD_ON_EVENT("beforeRace", function(args) {
+        MOD_LOG("Race starting - custom HUD logic here.");
+    });
+
+    MOD_ON_EVENT("afterRace", function(args) {
+        MOD_LOG("Race ended.");
+    });
+}

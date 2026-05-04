@@ -1,0 +1,53 @@
+# GT PSP Mod Manifest
+# This file describes a mod: what scripts to compile, what hooks to register,
+# what assets to replace, and what EBOOT patches to apply.
+
+# ─── Required: mod identifier (lowercase, no spaces) ──────────────────────
+id: my_mod
+
+# ─── Metadata ─────────────────────────────────────────────────────────────
+version: "1.0.0"
+name: "My Mod Name"
+description: "What this mod does"
+author: "Your Name"
+
+# ─── Scripts to compile ───────────────────────────────────────────────────
+# Each script is compiled from .ad to .adc via GTAdhocToolchain.
+# The target path is relative to the game's VFS root.
+scripts:
+  - source: main.ad                    # Source path relative to manifest
+    target: mods/my_mod/main.adc       # Target in GT.VOL / PPSSPP replacement
+
+# ─── Hooks ───────────────────────────────────────────────────────────────
+# Types:
+#   override - completely replace a function (callback receives original_fn, ...args)
+#   pre      - run before the original function (callback receives args)
+#   post     - run after the original function (callback receives result, args)
+hooks:
+  - type: override
+    function: "::main::SequenceUtil::startPage"
+    callback: "mods_my_mod::onStartPage"
+  - type: pre
+    function: "::main::GlobalStatus::checkout"
+    callback: "mods_my_mod::beforeCheckout"
+  - type: post
+    function: "::main::GameSequence::setNextSequence"
+    callback: "mods_my_mod::afterSequenceChange"
+
+# ─── Assets to replace ────────────────────────────────────────────────────
+# Source: path relative to manifest directory
+# Target: path within GT.VOL (e.g., piece_gt5m/, car/, textdata/gt5m/)
+assets:
+  - source: assets/my_texture.png
+    target: piece_gt5m/my_texture_replacement.img
+    format: RGBA4444
+  - source: assets/course_list.xml
+    target: textdata/gt5m/courselist.xml
+
+# ─── EBOOT memory patches (PPSSPP cheat format) ──────────────────────────
+# address: hex memory address in PSP address space
+# value: hex value to write
+eboot_patches:
+  - address: "08800000"
+    value: "00000000"
+    comment: "Example patch — placeholder"

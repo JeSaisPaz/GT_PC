@@ -1,0 +1,21 @@
+//---------------------------------------------------------------------------------------
+// all_cars_garage / main.ad
+// Gives all 831+ cars + max cash on first menu entry.
+// Uses MOD_ON_EVENT from the event-based API.
+//---------------------------------------------------------------------------------------
+
+#include "../../core/mod_sdk.inc"
+
+static _has_given_cars = false;
+
+function _mod_init()
+{
+    MOD_ON_EVENT("beforeMenu", function(args) {
+        if (!_has_given_cars)
+        {
+            MOD_GIVE_ALL_CARS();
+            MOD_SET_CASH(99999999);
+            _has_given_cars = true;
+        }
+    });
+}

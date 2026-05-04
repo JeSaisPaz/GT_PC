@@ -1,0 +1,9 @@
+id: custom_hud
+version: "1.0.0"
+name: "Custom Race HUD"
+description: "Demonstrates hooking race start to inject custom HUD logic."
+author: "GT PSP Modding"
+scripts:
+  - source: main.ad
+    target: mods/custom_hud/main.adc
+assets: []
