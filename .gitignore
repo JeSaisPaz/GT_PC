@@ -52,6 +52,16 @@ EBOOT.BIN
 *.vol
 *.VOL
 
+# ── Large media files (>10MB) ────────────────────────────────────
+*.pmf
+*.at3
+*.vag
+*.wav
+*.mp4
+*.m4v
+*.avi
+!assets/arial.ttf
+
 # ── Ghidra project ───────────────────────────────────────────────
 GTPSP-decompile.gpr
 GTPSP-decompile.rep/

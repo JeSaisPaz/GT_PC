@@ -44,6 +44,12 @@ Full documentation is in `docs/`:
 - OpenGL 3.3+ (for PC port)
 - Vulkan (for freecam)
 
+The freecam references PPSSPP source code for texture format research. To build with full texture decoding:
+```bash
+cd freecam/source
+git clone --depth 1 https://github.com/hrydgard/ppsspp.git PPSSPP
+```
+
 ## Third-Party Projects & Credits
 
 This project builds upon and incorporates work from the following projects:
